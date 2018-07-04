@@ -1,14 +1,40 @@
 ;(function ($) {
     $('#ajaxForm').on('submit', function (event) {
         event.preventDefault();
+        $('#comment').val($('#comment').attr('value')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
         var $this = $(this),
             data = $this.serialize(),
-            url = $this.attr('action'),
-            type = $this.attr('method');
+            config = {
+                fields: {
+                    "Name": "#name", // Имя посетителя, заполнившего форму
+                    "Email": "#email", // Email посетителя
+                    "MobilePhone": "#phone", // Телефон посетителя
+                    "Commentary": "#comment" // Примечание
+                },
+                landingId: "570cfcd4-dc74-4602-8099-1bf016246fbe",
+                serviceUrl: "https://farmmac.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
+                redirectUrl: ""
+            };
+
+        /**
+         * Функция ниже создает объект из введенных данных.
+         * Привяжите вызов этой функции к событию "onSubmit" формы или любому другому элементу события.
+         * Пример: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
+         */
+
+            landing.createObjectFromLanding(config);
+
+        /**
+         * Функция ниже инициализирует лендинг из параметров URL.
+         */
+        function initLanding() {
+            landing.initLanding(config)
+        }
+        jQuery(document).ready(initLanding);
 
         $.ajax({
-            url: url,
-            method: type,
+            url: $this.attr('action'),
+            method: $this.attr('method'),
             data: data,
             dataType: 'json',
             beforeSend: function () {
@@ -16,10 +42,14 @@
             },
             success: function (response) {
                 console.log("success");
-                $('#texthere').html('Your name is ' + response.name);
+                $('#texthere').html('Your name is ' + response.name +
+                    '<br>' + 'Your mail is ' + response.email +
+                    '<br>' + 'Your phone is ' + response.phone +
+                    '<br>' + 'Your comment is ' + response.comment);
             },
             error: function () {
                 console.log('Some error');
+                alert('Ошибка отправки формы');
             }
         });
     });
@@ -88,7 +118,7 @@
             }
             $answer.html('XL ' + model);
 
-        }  else if ($moisture === '30-14' && $performance < 60) {
+        } else if ($moisture === '30-14' && $performance < 60) {
             switch (true) {
                 case $performance < 45:
                     model = 120;
@@ -154,6 +184,7 @@
             }
             return str.join('.');
         }
+
         diesel_sum = addCommas(diesel_sum);
 
         $('.resultAnswer').html(
