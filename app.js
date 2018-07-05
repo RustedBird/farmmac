@@ -1,4 +1,11 @@
 ;(function ($) {
+    var currentLocation = window.location.pathname;
+    if (currentLocation.indexOf('ua') > -1) {
+        console.log('Ваша мова українська');
+    } else {
+        console.log('your language is English');
+    }
+
     $('.btn').removeAttr('disabled');
     $('#ajaxForm').on('submit', function (event) {
         event.preventDefault();
@@ -29,7 +36,7 @@
          * Функция ниже инициализирует лендинг из параметров URL.
          */
         function initLanding() {
-            landing.initLanding(config)
+            // landing.initLanding(config)
         }
         jQuery(document).ready(initLanding);
 
