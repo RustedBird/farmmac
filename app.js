@@ -1,4 +1,5 @@
 ;(function ($) {
+    $('.btn').removeAttr('disabled');
     $('#ajaxForm').on('submit', function (event) {
         event.preventDefault();
         $('#comment').val($('#comment').attr('value')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
@@ -22,7 +23,7 @@
          * Пример: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
          */
 
-            landing.createObjectFromLanding(config);
+            // landing.createObjectFromLanding(config);
 
         /**
          * Функция ниже инициализирует лендинг из параметров URL.
