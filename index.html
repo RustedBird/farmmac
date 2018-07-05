@@ -33,31 +33,32 @@
     <!-- OUR FORM -->
     <form class="ajaxForm" method="post" action="process.php">
         <!-- NAME -->
-        <div id="name-group" class="form-group">
+        <div class="form-group">
             <h4>Name</h4>
-            <input type="text" class="form-control" name="name" placeholder="Your name">
+            <input type="text" class="form-control " name="name" placeholder="Your name">
             <!-- errors will go here -->
         </div>
         <!-- EMAIL -->
-        <div id="email-group" class="form-group">
+        <div class="form-group">
             <h4>Email</h4>
             <input type="email" class="form-control" name="email" placeholder="Your email">
             <!-- errors will go here -->
         </div>
 
         <!-- PHONE -->
-        <div id="phone-group" class="form-group">
+        <div class="form-group">
             <h4>Phone</h4>
             <input type="tel" class="form-control" name="phone" placeholder="Your phone">
 
             <!-- errors will go here -->
 
         </div>
-        <div id="comment-group" class="form-group">
-            <h4>comment</h4>
-            <input type="text" value="Заявка с формы №1" class="form-control hidden" name="comment">
-            <!--errors will go here-->
-        </div>
+        <input type="text" value="Заявка с формы №1" class="form-control hidden" name="comment">
+        <!--<div class="form-group">-->
+            <!--<h4>comment</h4>-->
+            <!--<input type="text" value="Заявка с формы №1" class="form-control hidden" name="comment">-->
+            <!--&lt;!&ndash;errors will go here&ndash;&gt;-->
+        <!--</div>-->
 
         <button class="btn btn-success" data-comment="Data from form 1" disabled>Submit <span class="fa fa-arrow-right"></span></button>
 
@@ -156,12 +157,7 @@
                             <!-- errors will go here -->
 
                         </div>
-                        <div class="form-group">
-                            <h4>comment</h4>
-                            <input type="text" value="" class="form-control hidden" name="comment">
-                            <!--errors will go here-->
-                        </div>
-
+                        <input type="text" value="" class="form-control hidden" name="comment">
                         <button class="btn btn-success" disabled data-comment="">Submit <span class="fa fa-arrow-right"></span></button>
 
                     </form>
