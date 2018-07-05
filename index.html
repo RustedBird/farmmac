@@ -8,6 +8,7 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
     <!-- load bootstrap via CDN -->
 </head>
@@ -30,40 +31,145 @@
     <h1>AJAX Form test11sdgdbg1</h1>
 
     <!-- OUR FORM -->
-    <form id="ajaxForm" method="post" action="process.php">
+    <form class="ajaxForm" method="post" action="process.php">
         <!-- NAME -->
         <div id="name-group" class="form-group">
             <h4>Name</h4>
-            <input id="name" type="text" class="form-control" name="name" placeholder="Your name">
+            <input type="text" class="form-control" name="name" placeholder="Your name">
             <!-- errors will go here -->
         </div>
         <!-- EMAIL -->
         <div id="email-group" class="form-group">
             <h4>Email</h4>
-            <input id="email" type="email" class="form-control" name="email" placeholder="Your email">
+            <input type="email" class="form-control" name="email" placeholder="Your email">
             <!-- errors will go here -->
         </div>
 
         <!-- PHONE -->
         <div id="phone-group" class="form-group">
             <h4>Phone</h4>
-            <input id="phone" type="tel" class="form-control" name="phone" placeholder="Your phone">
+            <input type="tel" class="form-control" name="phone" placeholder="Your phone">
 
             <!-- errors will go here -->
 
         </div>
         <div id="comment-group" class="form-group">
             <h4>comment</h4>
-            <input id="comment" type="text" value="Заявка с формы №1" class="form-control hidden" name="comment">
+            <input type="text" value="Заявка с формы №1" class="form-control hidden" name="comment">
             <!--errors will go here-->
         </div>
 
-        <button class="btn btn-success" disabled>Submit <span class="fa fa-arrow-right"></span></button>
+        <button class="btn btn-success" data-comment="Data from form 1" disabled>Submit <span class="fa fa-arrow-right"></span></button>
 
     </form>
     <div id="texthere">Going to be updated when button is clicked</div>
     <hr>
-    <img src="screencapture-bestgiftformen-ru-1515401620722.png" alt="big picture">
+    <div class="row">
+        <div class="col-md-4" style="padding: 15px;">
+            <p style="height: 380px; background: #d6d6d6; color: #252525; padding: 5px">Объём бункера 12 -19 м3 (9-14 тонн)<br><br>
+
+                Производительность: Кукуруза (25% -14%)   40-60 тонн/сутки<br>
+                Пшеница (20%-15%)<br>
+                50 - 90 тонн/сутки<br>
+                Подсолнух (14%-8%)<br>
+                35 - 50 тонн/сутки<br><br>
+
+                Идеальное решение для небольших хозяйств
+                <button type="button" class="myBtn btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-comment="Data from basicModel form">
+                    Запросить <br>
+                    технические <br>
+                    характеристики
+                </button>
+                <p>всех моделей серии Basic</p>
+            </p>
+
+        </div>
+        <div class="col-md-4" style="padding: 15px;">
+            <p style="height: 380px; background: #d6d6d6; color: #252525; padding: 5px">Объём бункера 12 -19 м3 (9-14 тонн)<br><br>
+
+                Производительность: Кукуруза (25% -14%)   40-60 тонн/сутки<br>
+                Пшеница (20%-15%)<br>
+                50 - 90 тонн/сутки<br>
+                Подсолнух (14%-8%)<br>
+                35 - 50 тонн/сутки<br><br>
+
+                Идеальное решение для небольших хозяйств
+                <button type="button" class="myBtn btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-comment="Data from LargeModel form">
+                    Запросить <br>
+                    технические <br>
+                    характеристики
+                </button>
+            <p>всех моделей серии Large</p>
+            </p>
+        </div>
+        <div class="col-md-4" style="padding: 15px;">
+            <p style="height: 380px; background: #d6d6d6; color: #252525; padding: 5px">Объём бункера 12 -19 м3 (9-14 тонн)<br><br>
+
+                Производительность: Кукуруза (25% -14%)   40-60 тонн/сутки<br>
+                Пшеница (20%-15%)<br>
+                50 - 90 тонн/сутки<br>
+                Подсолнух (14%-8%)<br>
+                35 - 50 тонн/сутки<br><br>
+
+                Идеальное решение для небольших хозяйств
+                <button type="button" class="myBtn btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-comment="Data from XLModel form">
+                    Запросить <br>
+                    технические <br>
+                    характеристики
+                </button>
+            <p>всех моделей серии XL</p>
+            </p>
+        </div>
+    </div>
+    <!--<img src="screencapture-bestgiftformen-ru-1515401620722.png" alt="big picture">-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="ajaxForm" method="post" action="process.php">
+                        <!-- NAME -->
+                        <div class="form-group">
+                            <h4>Name</h4>
+                            <input type="text" class="form-control" name="name" placeholder="Your name">
+                            <!-- errors will go here -->
+                        </div>
+                        <!-- EMAIL -->
+                        <div class="form-group">
+                            <h4>Email</h4>
+                            <input type="email" class="form-control" name="email" placeholder="Your email">
+                            <!-- errors will go here -->
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="form-group">
+                            <h4>Phone</h4>
+                            <input type="tel" class="form-control" name="phone" placeholder="Your phone">
+
+                            <!-- errors will go here -->
+
+                        </div>
+                        <div class="form-group">
+                            <h4>comment</h4>
+                            <input type="text" value="" class="form-control hidden" name="comment">
+                            <!--errors will go here-->
+                        </div>
+
+                        <button class="btn btn-success" disabled data-comment="">Submit <span class="fa fa-arrow-right"></span></button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--<h1>Calculation test</h1>-->
 
     <!--<form id="selectionForm" action="">-->

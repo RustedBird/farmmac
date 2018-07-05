@@ -6,18 +6,22 @@
         console.log('your language is English');
     }
 
+    $('.myBtn').on('click', function () {
+        $('.modal-body .btn').attr('data-comment', $(this).attr('data-comment'));
+    });
+
     $('.btn').removeAttr('disabled');
-    $('#ajaxForm').on('submit', function (event) {
+    $('.ajaxForm').on('submit', function (event) {
         event.preventDefault();
-        $('#comment').val($('#comment').attr('value')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
-        var $this = $(this),
-            data = $this.serialize(),
+        var $this = $(this);
+        $this.find('input[name=comment]').val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
+        var data = $this.serialize(),
             config = {
                 fields: {
-                    "Name": "#name", // Имя посетителя, заполнившего форму
-                    "Email": "#email", // Email посетителя
-                    "MobilePhone": "#phone", // Телефон посетителя
-                    "Commentary": "#comment" // Примечание
+                    "Name": "input[name=name]", // Имя посетителя, заполнившего форму
+                    "Email": "input[name=email]", // Email посетителя
+                    "MobilePhone": "input[name=phone]", // Телефон посетителя
+                    "Commentary": "input[name=comment]" // Примечание
                 },
                 landingId: "570cfcd4-dc74-4602-8099-1bf016246fbe",
                 serviceUrl: "https://farmmac.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",

@@ -62,6 +62,20 @@
     </form>
     <div id="texthere">Going to be updated when button is clicked</div>
     <hr>
+    <div class="col-md-6">
+        <div class="col-md-4">
+            <p style="height: 300px; background: #333">Объём бункера 12 -19 м3 (9-14 тонн)<br><br>
+
+                Производительность: Кукуруза (25% -14%)   40-60 тонн/сутки<br>
+                Пшеница (20%-15%)<br>
+                50 - 90 тонн/сутки<br>
+                Подсолнух (14%-8%)<br>
+                35 - 50 тонн/сутки<br><br>
+
+                Идеальное решение для небольших хозяйств
+            </p>
+        </div>
+    </div>
     <img src="../screencapture-bestgiftformen-ru-1515401620722.png" alt="big picture">
     <!--<h1>Calculation test</h1>-->
 
