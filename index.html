@@ -2,241 +2,318 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AJAX test</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-    <!-- load bootstrap via CDN -->
+    <title>FarmMak</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="row">
-    <div class="col-sm-1 col-sm-offset-10">
-        <h5><a href="/">ENG</a></h5>
-    </div>
-    <div class="col-sm-1">
-        <h5><a href="/ua">UA</a></h5>
-    </div>
-</div>
-<style>
-    h5 {
-        cursor: pointer;
-    }
-</style>
-<div class="col-sm-6 col-sm-offset-3">
 
-    <h1>AJAX Form test11sdgdbg1</h1>
-
-    <!-- OUR FORM -->
-    <form class="ajaxForm" method="post" action="process.php">
-        <!-- NAME -->
-        <div class="form-group">
-            <h4>Name</h4>
-            <input type="text" class="form-control " name="name" placeholder="Your name">
-            <!-- errors will go here -->
-        </div>
-        <!-- EMAIL -->
-        <div class="form-group">
-            <h4>Email</h4>
-            <input type="email" class="form-control" name="email" placeholder="Your email">
-            <!-- errors will go here -->
-        </div>
-
-        <!-- PHONE -->
-        <div class="form-group">
-            <h4>Phone</h4>
-            <input type="tel" class="form-control" name="phone" placeholder="Your phone">
-
-            <!-- errors will go here -->
-
-        </div>
-        <input type="text" value="Заявка с формы №1" class="form-control hidden" name="comment">
-        <!--<div class="form-group">-->
-            <!--<h4>comment</h4>-->
-            <!--<input type="text" value="Заявка с формы №1" class="form-control hidden" name="comment">-->
-            <!--&lt;!&ndash;errors will go here&ndash;&gt;-->
-        <!--</div>-->
-
-        <button class="btn btn-success" data-comment="Data from form 1" disabled>Submit <span class="fa fa-arrow-right"></span></button>
-
-    </form>
-    <div id="texthere">Going to be updated when button is clicked</div>
-    <hr>
-    <div class="row">
-        <div class="col-md-4" style="padding: 15px;">
-            <p style="height: 380px; background: #d6d6d6; color: #252525; padding: 5px">Объём бункера 12 -19 м3 (9-14 тонн)<br><br>
-
-                Производительность: Кукуруза (25% -14%)   40-60 тонн/сутки<br>
-                Пшеница (20%-15%)<br>
-                50 - 90 тонн/сутки<br>
-                Подсолнух (14%-8%)<br>
-                35 - 50 тонн/сутки<br><br>
-
-                Идеальное решение для небольших хозяйств
-                <button type="button" class="myBtn btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-comment="Data from basicModel form">
-                    Запросить <br>
-                    технические <br>
-                    характеристики
-                </button>
-                <p>всех моделей серии Basic</p>
-            </p>
-
-        </div>
-        <div class="col-md-4" style="padding: 15px;">
-            <p style="height: 380px; background: #d6d6d6; color: #252525; padding: 5px">Объём бункера 12 -19 м3 (9-14 тонн)<br><br>
-
-                Производительность: Кукуруза (25% -14%)   40-60 тонн/сутки<br>
-                Пшеница (20%-15%)<br>
-                50 - 90 тонн/сутки<br>
-                Подсолнух (14%-8%)<br>
-                35 - 50 тонн/сутки<br><br>
-
-                Идеальное решение для небольших хозяйств
-                <button type="button" class="myBtn btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-comment="Data from LargeModel form">
-                    Запросить <br>
-                    технические <br>
-                    характеристики
-                </button>
-            <p>всех моделей серии Large</p>
-            </p>
-        </div>
-        <div class="col-md-4" style="padding: 15px;">
-            <p style="height: 380px; background: #d6d6d6; color: #252525; padding: 5px">Объём бункера 12 -19 м3 (9-14 тонн)<br><br>
-
-                Производительность: Кукуруза (25% -14%)   40-60 тонн/сутки<br>
-                Пшеница (20%-15%)<br>
-                50 - 90 тонн/сутки<br>
-                Подсолнух (14%-8%)<br>
-                35 - 50 тонн/сутки<br><br>
-
-                Идеальное решение для небольших хозяйств
-                <button type="button" class="myBtn btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-comment="Data from XLModel form">
-                    Запросить <br>
-                    технические <br>
-                    характеристики
-                </button>
-            <p>всех моделей серии XL</p>
-            </p>
-        </div>
-    </div>
-    <!--<img src="screencapture-bestgiftformen-ru-1515401620722.png" alt="big picture">-->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form class="ajaxForm" method="post" action="process.php">
-                        <!-- NAME -->
-                        <div class="form-group">
-                            <h4>Name</h4>
-                            <input type="text" class="form-control" name="name" placeholder="Your name">
-                            <!-- errors will go here -->
-                        </div>
-                        <!-- EMAIL -->
-                        <div class="form-group">
-                            <h4>Email</h4>
-                            <input type="email" class="form-control" name="email" placeholder="Your email">
-                            <!-- errors will go here -->
-                        </div>
-
-                        <!-- PHONE -->
-                        <div class="form-group">
-                            <h4>Phone</h4>
-                            <input type="tel" class="form-control" name="phone" placeholder="Your phone">
-
-                            <!-- errors will go here -->
-
-                        </div>
-                        <input type="text" value="" class="form-control hidden" name="comment">
-                        <button class="btn btn-success" disabled data-comment="">Submit <span class="fa fa-arrow-right"></span></button>
-
-                    </form>
-                </div>
+<section class="container-fluid section2">
+    <div class="container">
+        <h6 class="sectionTitle text-center">несколько фактов о нас</h6>
+        <div class="row col-row">
+            <div class="col-md-2 col-item">
+                <p class="goldText">9 <span>ЛЕТ</span></p>
+                <p class="subText botText">на рынке Украины</p>
+            </div>
+            <div class="col-md-3 col-item">
+                <p class="subText topText">продукция представлена в</p>
+                <p class="goldText">15 <span class="smallerText">РЕГИОНАХ</span></p>
+                <p class="subText botText">Украины</p>
+            </div>
+            <div class="col-md-2 col-item">
+                <p class="goldText">100+</p>
+                <p class="subText botText">довольных клиентов</p>
+            </div>
+            <div class="col-md-3 col-item">
+                <p class="subText topText">оборудование представлено в</p>
+                <p class="goldText">52 <span class="smallerText">СТРАНАХ</span></p>
+                <p class="subText botText">Мира</p>
+            </div>
+            <div class="col-md-2 col-item">
+                <p class="subText topText">выпускается с</p>
+                <p class="goldText">1958</p>
+                <p class="subText botText">Года</p>
             </div>
         </div>
     </div>
+</section>
 
-    <!--<h1>Calculation test</h1>-->
+<section class="container-fluid section3">
+    <div class="container">
+        <h6 class="sectionTitle text-center">Зачем украинскому фермеру<br>
+            мобильная зерносушилка Pedrotti</h6>
+        <div class="row">
+            <div class="col-md-3 picBlock text-left">
+                <img src="img/sec3Roundpic1.jpg" alt="pic1">
+                <p class="underText">Сухое зерно стоит дороже, потому что перестает быть скоропортящимся продуктом,
+                    который надо быстрее продать по низкой цене</p>
+            </div>
+            <div class="col-md-4 offset-md-1 picBlock">
+                <img src="img/sec3Roundpic1.jpg" alt="pic1">
+                <p class="underText">Сухое зерно лучше хранится, поэтому Вы можете дождаться самой выгодной цены для
+                    продажи</p>
+            </div>
+            <div class="col-md-3 offset-md-1 picBlock text-right">
+                <img src="img/sec3Roundpic1.jpg" alt="pic1">
+                <p class="underText">Вы не зависите от элеватора и сушите зерно сами тогда, когда вам это нужно, а не
+                    когда подошла очередь
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 offset-md-2 picBlock">
+                <img src="img/sec3Roundpic1.jpg" alt="pic1">
+                <p class="underText">Вы снижаете себестоимость, избавляя себя от лишних расходов на транспортировку и
+                    сушку на элеваторе</p>
+            </div>
+            <div class="col-md-3 offset-md-2 picBlock">
+                <img src="img/sec3Roundpic1.jpg" alt="pic1">
+                <p class="underText">Вы управляете качеством своего зерна и прибылью, которую хотите получить</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-4 picBlock">
+                <img src="img/sec3Roundpic1.jpg" alt="pic1">
+                <p class="underText">Мобильная зерносушилка, в отличие от элеватора, не обманет Вас на влаге, сорности,
+                    качестве</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!--<form id="selectionForm" action="">-->
-    <!--<div class="form-group">-->
-    <!--<h4>Снятие влаги</h4>-->
-    <!--<input type="radio" name="moisture" value="25-14" checked>25%-14%-->
-    <!--<input type="radio" name="moisture" value="30-14">30%-14%-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-    <!--<h4>Производительность</h4>-->
-    <!--<select class="performance">-->
-    <!--<option value="" disabled selected>Выбирите</option>-->
-    <!--<option value="35">35</option>-->
-    <!--<option value="45">45</option>-->
-    <!--<option value="50">50</option>-->
-    <!--<option value="60">60</option>-->
-    <!--<option value="70">70</option>-->
-    <!--<option value="80">80</option>-->
-    <!--<option value="90">90</option>-->
-    <!--<option value="100">100</option>-->
-    <!--<option value="115">115</option>-->
-    <!--<option value="120">120</option>-->
-    <!--<option value="150">150</option>-->
-    <!--<option value="180">180</option>-->
-    <!--<option value="200">200</option>-->
-    <!--<option value="230">230</option>-->
-    <!--<option value="250">250</option>-->
-    <!--<option value="300">300</option>-->
-    <!--</select>-->
-    <!--</div>-->
-    <!--<button class="btn btn-success">ПОЛУЧИТЬ ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ<span class="fa fa-arrow-right"></span></button>-->
-    <!--<div class="modelAnswer jumbotron text-center"></div>-->
-    <!--</form>-->
+<section class="container-fluid section4">
+    <div class="container">
+        <h6 class="sectionTitle text-center">В чем главные преимущества<br>
+            мобильной зерносушилки Pedrotti</h6>
+        <div class="row">
+            <div class="col-md-2 picItem text-center">
+                <img src="img/gearicon.jpg" alt="gear">
+            </div>
+            <div class="col-md-3 textItem">
+                <p>Простая и надежная конструкция, которая помогает Вам зарабатывать больше</p>
+            </div>
+            <div class="col-md-2 offset-md-2 picItem">
+                <img src="img/pointericon.jpg" alt="pointer">
+            </div>
+            <div class="col-md-3 textItem">
+                <p>Не нужно разрешительных документаций от государственных органов на установку и эксплуатацию
+                    зерносушилки</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 picItem text-center">
+                <img src="img/puzzleicon.jpg" alt="puzzle">
+            </div>
+            <div class="col-md-3 textItem">
+                <p>Подбор серии и комплектации под потребности Вашей компании</p>
+            </div>
+            <div class="col-md-2 offset-md-2 picItem">
+                <img src="img/forkicon.jpg" alt="fork">
+            </div>
+            <div class="col-md-3 textItem">
+                <p>Помогает Вам стать энергетически независимым, потому что Вы сами выбираете топливо для работы
+                    зерносушилкизерносушилки</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 picItem text-center">
+                <img src="img/planticon.jpg" alt="plant">
+            </div>
+            <div class="col-md-3 textItem">
+                <p>Можно сушить зерновые и масличные культуры</p>
+            </div>
+            <div class="col-md-2 offset-md-2 picItem">
+                <img src="img/moneyicon.jpg" alt="money">
+            </div>
+            <div class="col-md-3 textItem">
+                <p>Вы грамотно распоряжаетесь урожаем, продавая его по самым выгодным ценам</p>
+            </div>
+        </div>
+        <div class="lineContainer">
+            <h4 class="text-center">Если у Вас от 300 га кукурузы и влага 25 % и больше,</h4>
+            <h4 class="text-center">мобильная зерносушилка Pedrotti окупит себя</h4>
+            <h4 class="text-center">за 1 сезон и дальше будет работать только в плюс</h4>
+        </div>
+    </div>
+</section>
 
-    <!--<hr>-->
+<section class="container-fluid section5">
+    <div class="container">
+        <h6 class="sectionTitle text-center">ТОП 3 серии зерносушилок Pedrotti</h6>
+        <div class="topRow">
+            <div class="topItem">
+                <div class="titleWrapper">
+                    <p class="itemTitle">BASIC</p>
+                </div>
+                <img src="img/basicimg.jpg" alt="basic">
+                <div class="description">
+                    <p class="techName">Объём бункера:</p>
+                    <p class="techText">12 -19 м3 (9-14 тонн)</p>
+                    <p class="subNme">Кукуруза</p>
+                    <p class="techText">(25% -14%) 40-60тонн/сутки</p>
+                    <p class="subNme">Пшеница</p>
+                    <p class="techText">(20%-15%) 50 - 90 тонн/сутки</p>
+                    <p class="subNme">Подсолнух</p>
+                    <p class="techText">(14%-8%) 35 - 50 тонн/сутки</p>
+                    <p class="techName text-center">Идеальное решение для небольших хозяйств</p>
+                </div>
+            </div>
+            <div class="topItem">
+                <div class="titleWrapper">
+                    <p class="itemTitle">BASIC</p>
+                </div>
+                <img src="img/largeimg.jpg" alt="large">
+                <div class="description">
+                    <p class="techName">Объём бункера:</p>
+                    <p class="techText">26-40м3 (18 - 30 тонн)</p>
+                    <p class="subNme">Кукуруза</p>
+                    <p class="techText">(25% -14%) 70-120 тонн/сутки</p>
+                    <p class="subNme">Пшеница</p>
+                    <p class="techText">(20%-15%) 130-195 тонн/сутки</p>
+                    <p class="subNme">Подсолнух</p>
+                    <p class="techText">(14%-8%) 90-120 тонн/сутки</p>
+                    <p class="techName text-center">Самая популярная серия</p>
+                </div>
+            </div>
+            <div class="topItem">
+                <div class="titleWrapper">
+                    <p class="itemTitle">BASIC</p>
+                </div>
+                <img src="img/xlimg.jpg" alt="xl">
+                <div class="description">
+                    <p class="techName">Объём бункера:</p>
+                    <p class="techText">50-93м3 (35 - 70 тонн)</p>
+                    <p class="subNme">Кукуруза</p>
+                    <p class="techText">(25% -14%) 150-300 тонн/сутки</p>
+                    <p class="subNme">Пшеница</p>
+                    <p class="techText">(20%-15%) 210-400 тонн/сутки</p>
+                    <p class="subNme">Подсолнух</p>
+                    <p class="techText">(14%-8%) 130-220 тонн/сутки</p>
+                    <p class="techName text-center">Серия с высокой рентабельностью</p>
+                </div>
+            </div>
+        </div>
+        <h5>запросить тенические характеристики</h5>
+        <div class="topRow">
 
-    <!--<form id="calcForm" action="" method="POST">-->
+            <div class="topItem">
+                <button class="button">для моделей BASIC</button>
+            </div>
+            <div class="topItem">
+                <button class="button">для моделей LARGE</button>
+            </div>
+            <div class="topItem">
+                <button class="button">для моделей XL</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!--<div class="form-group">-->
-    <!--<h4>Количество тонн за сезон:</h4>-->
-    <!--<input type="number" class="form-control" step="100" name="tons" value="3000" min="0">-->
-    <!--</div>-->
+<section class="container-fluid section6">
+    <div class="container">
+        <h6 class="sectionTitle text-center">калькулятор</h6>
+        <div class="row">
+            <div class="col-md-12 calcWrapper">
+                <h5 class="calcTitle">подбор зерносушилки</h5>
+                <form id="selectionForm" action="">
+                    <div class="form-line">
+                        <p class="paramName">снятие влаги</p>
+                        <div class="inputWrapper">
+                            <label>
+                                25%-14%
+                                <input class="hiddenInput" type="radio" name="moisture" value="25-14" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label>
+                                30%-14%
+                                <input class="hiddenInput" type="radio" name="moisture" value="30-14">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <p class="paramName">производительность</p>
+                        <div class="inputWrapper">
+                            <input class="performance" type="number" value="50">
+                        </div>
+                    </div>
+                    <hr>
+                </form>
+                <p class="answer text-center">С вашей производительностью вам подойдет модель:</p>
+                <p class="result">BASIC</p>
+                <button class="button">запросить характиристики</button>
+                <p class="answer text-center smallNote">* - с учётом кукурузы</p>
+            </div>
+        </div>
 
-    <!--<div class="form-group">-->
-    <!--<h4>Сколько снимать т% на 1 тонну</h4>-->
-    <!--<input type="number" class="form-control" name="prices_elevator" value="10" min="0">-->
-    <!--</div>-->
+        <div class="row">
+            <div class="col-md-12 calcWrapper">
+                <h5 class="calcTitle">стоимость сушки на разных видах топлива</h5>
+                <form id="calcForm" action="">
+                    <div class="form-line noPadding">
+                        <p class="paramName paramWide">количество тонн за сезон</p>
+                        <div class="inputWrapper inputNarrow">
+                            <input class="inputParam" type="number" name="tons" value="3000">
+                        </div>
+                    </div>
+                    <div class="form-line noPadding">
+                        <p class="paramName paramWide">сколько снимать за 1 тонну</p>
+                        <div class="inputWrapper inputNarrow">
+                            <input class="inputParam" type="number" name="prices_elevator" value="10">
+                        </div>
+                    </div>
+                    <div class="form-line noPadding">
+                        <p class="paramName paramWide">стоимость 1 л<br>
+                            дизельного топлива <span>(1,2 л/т% влаги)</span></p>
+                        <div class="inputWrapper inputNarrow">
+                            <input class="inputParam" type="number" name="diesel_price" value="27">
+                        </div>
+                    </div>
+                    <div class="form-line noPadding">
+                        <p class="paramName paramWide">стоимость 1 л газа <span>(1,4 л/т% влаги)</span></p>
+                        <div class="inputWrapper inputNarrow">
+                            <input class="inputParam" type="number" name="gas_price" value="12.5">
+                        </div>
+                    </div>
+                    <div class="form-line noPadding">
+                        <p class="paramName paramWide">стоимость 1 л пеллет <span></span>(3 кг/т% влаги)</span></p>
+                        <div class="inputWrapper inputNarrow">
+                            <input class="inputParam" type="number" name="pellet_price" value="1.6">
+                        </div>
+                    </div>
+                    <button class="button">рассчитать</button>
+                    <p class="calcResult">Для сушки <span class="tons">3000</span> тонн зерна со снятием <span class="prices_elevator">10</span> т/% влаги затраты на топливо составят:</p>
+                    <div class="form-line noPadding noMargin">
+                        <p class="paramName">на дизельном топливе</p>
+                        <div class="inputWrapper inputNarrow">
+                            <p class="priceResult diesel_price">0000</p>
+                        </div>
+                    </div>
+                    <div class="form-line noPadding noMargin">
+                        <p class="paramName">на газе</p>
+                        <div class="inputWrapper inputNarrow">
+                            <p class="priceResult gas_price">0000</p>
+                        </div>
+                    </div>
+                    <div class="form-line noPadding noMargin">
+                        <p class="paramName">на пеллетах</p>
+                        <div class="inputWrapper inputNarrow">
+                            <p class="priceResult pellet_price">0000</p>
+                        </div>
+                    </div>
+                    <hr>
+                </form>
+                <p class="answer text-center">Рассмотрите предложение о самом дешевом виде топлива:</p>
+                <button class="button">рассчитать</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!--<div class="form-group">-->
-    <!--<h4>Стоимость 1л дизельного топлива (1,2л/т% влаги)</h4>-->
-    <!--<input type="number" class="form-control" name="diesel_price" value="27" min="0">-->
-    <!--</div>-->
 
-    <!--<div class="form-group">-->
-    <!--<h4>Стоимость 1л газа (1,4л/т% влаги)</h4>-->
-    <!--<input type="number" class="form-control" name="gas_price" value="12.5" min="0">-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-    <!--<h4>Стоимость 1кг пеллет (3кг/т% влаги)</h4>-->
-    <!--<input type="number" class="form-control" name="pellet_price" value="1.6" min="0">-->
-    <!--</div>-->
-
-    <!--<button class="btn btn-success">РАССЧИТАТЬ<span class="fa fa-arrow-right"></span></button>-->
-    <!--<div class="resultAnswer jumbotron text-center"></div>-->
-    <!--</form>-->
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
-<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
-
-<script src="app.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

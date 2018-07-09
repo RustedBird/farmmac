@@ -11,22 +11,17 @@
     });
 
     $('.btn').removeAttr('disabled');
-    $(document).on('click','.ajaxForm .btn', function (event) {
+    $('.ajaxForm').on('submit', function (event) {
         event.preventDefault();
         var $this = $(this);
-        $this.closest('.ajaxForm').find("input[name='comment']").val($this.attr('data-comment'));
-        // $this.find("input[name='comment']").val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
-        var data = $this.closest('.ajaxForm').serialize(),
-            name = $this.closest('.ajaxForm').find("input[name='name']"),
-            email = $this.closest('.ajaxForm').find("input[name='email']"),
-            phone = $this.closest('.ajaxForm').find("input[name='phone']"),
-            comment = $this.closest('.ajaxForm').find("input[name='comment']"),
+        $this.find('input[name=comment]').val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
+        var data = $this.serialize(),
             config = {
                 fields: {
-                    "Name": name, // Имя посетителя, заполнившего форму
-                    "Email": email, // Email посетителя
-                    "MobilePhone": phone, // Телефон посетителя
-                    "Commentary": comment // Примечание
+                    "Name": "input[name=name]", // Имя посетителя, заполнившего форму
+                    "Email": "input[name=email]", // Email посетителя
+                    "MobilePhone": "input[name=phone]", // Телефон посетителя
+                    "Commentary": "input[name=comment]" // Примечание
                 },
                 landingId: "570cfcd4-dc74-4602-8099-1bf016246fbe",
                 serviceUrl: "https://farmmac.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
@@ -39,19 +34,19 @@
          * Пример: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
          */
 
-            landing.createObjectFromLanding(config);
+            // landing.createObjectFromLanding(config);
 
         /**
          * Функция ниже инициализирует лендинг из параметров URL.
          */
         function initLanding() {
-            landing.initLanding(config)
+            // landing.initLanding(config)
         }
         jQuery(document).ready(initLanding);
 
         $.ajax({
-            url: $this.closest('.ajaxForm').attr('action'),
-            method: $this.closest('.ajaxForm').attr('method'),
+            url: $this.attr('action'),
+            method: $this.attr('method'),
             data: data,
             dataType: 'json',
             beforeSend: function () {
@@ -66,8 +61,7 @@
             },
             error: function () {
                 console.log('Some error');
-                var a = 1+1;
-                alert(a);
+                alert('Ошибка отправки формы');
             }
         });
     });

@@ -1,0 +1,436 @@
+@font-face {
+  font-family: 'gothampro-light';
+  src: url("../fonts/gothampro-light-webfont.woff2") format("woff2"), url("../fonts/gothampro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gothampro-black';
+  src: url("../fonts/gothampro-black-webfont.woff2") format("woff2"), url("../fonts/gothampro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gothampro-medium';
+  src: url("../fonts/gothampro-medium-webfont.woff2") format("woff2"), url("../fonts/gothampro-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'webfontregular';
+  src: url("../fonts/gothampro-bold-webfont.woff2") format("woff2"), url("../fonts/gothampro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gothampro';
+  src: url("../fonts/gothampro-webfont.woff2") format("woff2"), url("../fonts/gothampro-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gothampro-italic';
+  src: url("../fonts/gothampro-italic-webfont.woff2") format("woff2"), url("../fonts/gothampro-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'bebas_neuebold';
+  src: url("../fonts/bebasneue_bold-webfont.woff2") format("woff2"), url("../fonts/bebasneue_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url("../fonts/bebasneue-regular-webfont.woff2") format("woff2"), url("../fonts/bebasneue-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/*variables*/
+/*mixins*/
+body {
+  color: #232222; }
+
+.section2 {
+  background: url("../img/bg2.jpg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: 80px 0; }
+  .section2 .sectionTitle {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase; }
+  .section2 .col-row {
+    padding: 180px 0; }
+    .section2 .col-row .col-item {
+      position: relative; }
+      .section2 .col-row .col-item .goldText {
+        font-family: 'bebas_neuebold', sans-serif;
+        font-size: 80px;
+        font-weight: 800;
+        background: linear-gradient(to bottom, #a36a21 0%, #ebbc3d 30%, #f1e080 59%, #ce9b20 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        margin-bottom: 25px; }
+        .section2 .col-row .col-item .goldText span {
+          font-size: 0.75em;
+          font-stretch: condensed;
+          letter-spacing: -6px; }
+        .section2 .col-row .col-item .goldText .smallerText {
+          font-size: 0.6em; }
+      .section2 .col-row .col-item .subText {
+        font-family: 'gothampro-bold', sans-serif;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 800;
+        color: #0260D8;
+        width: 90%;
+        position: absolute;
+        letter-spacing: -2.1px; }
+      .section2 .col-row .col-item .botText {
+        margin-top: -20px;
+        right: 30px;
+        text-align: right; }
+      .section2 .col-row .col-item .topText {
+        top: -50px;
+        left: 15px;
+        text-align: left; }
+    .section2 .col-row .col-item:last-of-type .topText {
+      top: -22px;
+      left: 15px;
+      text-align: left; }
+
+.section3 {
+  padding: 80px 0; }
+  .section3 .sectionTitle {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 100px; }
+  .section3 .picBlock {
+    text-align: center;
+    padding-top: 50px; }
+    .section3 .picBlock img {
+      width: 257px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px; }
+    .section3 .picBlock .underText {
+      font-family: 'gothampro-medium', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-top: 20px;
+      text-align: center; }
+
+.section4 {
+  background: url("../img/bg4.jpg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: 80px 0; }
+  .section4 .sectionTitle {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+  .section4 .row {
+    margin: 50px 0; }
+    .section4 .row .picItem img {
+      width: 102px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px; }
+    .section4 .row .textItem {
+      display: table;
+      height: 102px;
+      padding: 0; }
+      .section4 .row .textItem p {
+        font-family: 'gothampro-medium', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        display: table-cell;
+        vertical-align: middle;
+        letter-spacing: -0.4px; }
+  .section4 .lineContainer {
+    margin-top: 80px; }
+    .section4 .lineContainer h4 {
+      font-family: 'gothampro-black', sans-serif;
+      font-size: 32px;
+      line-height: 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #0260D8;
+      background: #ffffff;
+      margin: 10px 0; }
+      .section4 .lineContainer h4:nth-of-type(1) {
+        color: #024493; }
+      .section4 .lineContainer h4:nth-of-type(2) {
+        color: #0256ab; }
+
+.section5 {
+  padding: 80px 0;
+  background: #F4F3F2; }
+  .section5 .sectionTitle {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+  .section5 .topRow {
+    display: flex;
+    justify-content: space-between; }
+    .section5 .topRow .topItem {
+      width: 32%; }
+      .section5 .topRow .topItem .titleWrapper {
+        background: white; }
+        .section5 .topRow .topItem .titleWrapper .itemTitle {
+          font-family: 'bebas_neuebold', sans-serif;
+          font-size: 80px;
+          font-weight: 800;
+          background: linear-gradient(to bottom, #a36a21 0%, #ebbc3d 30%, #f1e080 59%, #ce9b20 90%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-align: center;
+          margin-bottom: 25px; }
+      .section5 .topRow .topItem img {
+        width: 100%;
+        height: auto; }
+      .section5 .topRow .topItem .description {
+        padding: 28px;
+        font-size: 18px;
+        background: #ffffff;
+        margin-top: 25px;
+        height: 390px; }
+        .section5 .topRow .topItem .description .techName {
+          font-family: 'gothampro-black', sans-serif;
+          font-weight: 900;
+          color: #0260D8;
+          text-transform: uppercase;
+          margin: 0; }
+          .section5 .topRow .topItem .description .techName:last-of-type {
+            margin-top: 25px; }
+        .section5 .topRow .topItem .description .techText {
+          font-family: 'gothampro-medium', sans-serif;
+          font-weight: 600;
+          margin: 0; }
+        .section5 .topRow .topItem .description .subNme {
+          font-family: 'gothampro-bold', sans-serif;
+          font-weight: 700;
+          margin-top: 15px;
+          margin-bottom: 0;
+          text-transform: uppercase; }
+      .section5 .topRow .topItem .button {
+        font-family: 'gothampro-black', sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        color: white;
+        background: #0260D8;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        text-align: center;
+        padding: 16px 0;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px; }
+  .section5 h5 {
+    font-family: 'gothampro-bold', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 35px 0;
+    text-align: center; }
+
+.section6 {
+  padding: 80px 0;
+  background: url("../img/bg6.jpg") no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .section6 .sectionTitle {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 80px; }
+  .section6 .calcWrapper {
+    background: rgba(255, 255, 255, 0.67);
+    padding: 50px;
+    margin-bottom: 35px; }
+    .section6 .calcWrapper .calcTitle {
+      font-family: 'gothampro-black', sans-serif;
+      font-size: 36px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #0260D8;
+      text-align: center; }
+    .section6 .calcWrapper .form-line {
+      margin: 35px 0;
+      padding-left: 30px; }
+      .section6 .calcWrapper .form-line .paramName {
+        display: inline-block;
+        width: 46%;
+        font-family: 'gothampro-medium', sans-serif;
+        font-size: 30px;
+        line-height: 32px;
+        font-weight: 600;
+        text-transform: uppercase;
+        vertical-align: middle;
+        margin: 0; }
+        .section6 .calcWrapper .form-line .paramName span {
+          font-size: 24px; }
+      .section6 .calcWrapper .form-line .paramWide {
+        width: 73%; }
+      .section6 .calcWrapper .form-line .inputWrapper {
+        display: inline-block;
+        width: 50%; }
+        .section6 .calcWrapper .form-line .inputWrapper label {
+          position: relative;
+          font-family: 'gothampro-medium', sans-serif;
+          font-size: 30px;
+          font-weight: 500;
+          text-transform: uppercase;
+          width: 49%;
+          padding-left: 60px; }
+          .section6 .calcWrapper .form-line .inputWrapper label .hiddenInput {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer; }
+            .section6 .calcWrapper .form-line .inputWrapper label .hiddenInput:checked + .checkmark:after {
+              display: block; }
+          .section6 .calcWrapper .form-line .inputWrapper label .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 40px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            border: 1px solid #B1ABA8;
+            transition: all 0.2s linear; }
+            .section6 .calcWrapper .form-line .inputWrapper label .checkmark:hover {
+              background: #ccc6c3; }
+            .section6 .calcWrapper .form-line .inputWrapper label .checkmark:after {
+              content: "";
+              position: absolute;
+              top: 12px;
+              left: 12px;
+              border-radius: 50%;
+              display: none;
+              width: 15px;
+              height: 15px;
+              background: #B1ABA8; }
+          .section6 .calcWrapper .form-line .inputWrapper label:hover .checkmark {
+            background: #f1ebe8; }
+        .section6 .calcWrapper .form-line .inputWrapper .performance {
+          border: 1px solid #B1ABA8;
+          height: 50px;
+          border-bottom-right-radius: 100px;
+          border-bottom-left-radius: 100px;
+          border-top-right-radius: 100px;
+          border-top-left-radius: 100px;
+          font-family: 'gothampro-medium', sans-serif;
+          font-size: 30px;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #EC0606;
+          text-align: center;
+          width: 50%; }
+        .section6 .calcWrapper .form-line .inputWrapper .inputParam {
+          border: 1px solid #B1ABA8;
+          height: 50px;
+          border-bottom-right-radius: 100px;
+          border-bottom-left-radius: 100px;
+          border-top-right-radius: 100px;
+          border-top-left-radius: 100px;
+          font-family: 'gothampro-medium', sans-serif;
+          font-size: 30px;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #EC0606;
+          text-align: center;
+          width: 100%; }
+        .section6 .calcWrapper .form-line .inputWrapper .priceResult {
+          font-family: 'gothampro-black',sans-serif;
+          font-size: 30px;
+          font-weight: 900;
+          color: #EC0606; }
+      .section6 .calcWrapper .form-line .inputNarrow {
+        width: 25%; }
+    .section6 .calcWrapper .noPadding {
+      padding-left: 15px; }
+    .section6 .calcWrapper .noMargin {
+      margin: 5px 0; }
+    .section6 .calcWrapper hr {
+      height: 3px;
+      background: #B1ABA8; }
+    .section6 .calcWrapper .answer {
+      font-family: 'gothampro', sans-serif;
+      font-size: 30px;
+      font-weight: 300;
+      margin: 40px 0; }
+    .section6 .calcWrapper .smallNote {
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 0; }
+    .section6 .calcWrapper .result {
+      font-family: 'bebas_neuebold', sans-serif;
+      font-size: 80px;
+      font-weight: 800;
+      background: linear-gradient(to bottom, #a36a21 0%, #ebbc3d 30%, #f1e080 59%, #ce9b20 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 25px; }
+    .section6 .calcWrapper .button {
+      font-family: 'gothampro-black', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: white;
+      background: #0260D8;
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      text-align: center;
+      padding: 16px 0;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px;
+      width: 375px; }
+    .section6 .calcWrapper .calcResult {
+      font-family: 'gothampro-bold', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      margin: 50px 0;
+      letter-spacing: -1.5px; }
+      .section6 .calcWrapper .calcResult span {
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid #B1ABA8;
+        background: white;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        font-family: 'gothampro-medium', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #EC0606;
+        text-align: center;
+        padding: 0 10px; }
+
+/*removing spinner for inputs*/
+/* For Firefox */
+input[type='number'] {
+  -moz-appearance: textfield; }
+
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
