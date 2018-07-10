@@ -5,35 +5,40 @@
     <title>FarmMak</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+
+<div style="height: 1000px; background: red;"></div>
+<div style="height: 1000px; background: blue;"></div>
 <section class="container-fluid section2">
     <div class="container">
         <h6 class="sectionTitle text-center">несколько фактов о нас</h6>
         <div class="row col-row">
             <div class="col-md-2 col-item">
-                <p class="goldText">9 <span>ЛЕТ</span></p>
+                <p class="goldText"><span class="count" data-count="9">0</span> <span class="addText">ЛЕТ</span></p>
                 <p class="subText botText">на рынке Украины</p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText">продукция представлена в</p>
-                <p class="goldText">15 <span class="smallerText">РЕГИОНАХ</span></p>
+                <p class="goldText"><span class="count" data-count="15">0</span> <span class="smallerText addText">РЕГИОНАХ</span></p>
                 <p class="subText botText">Украины</p>
             </div>
             <div class="col-md-2 col-item">
-                <p class="goldText">100+</p>
+                <p class="goldText"><span class="count" data-count="100">0</span><span class="addText">+</span></p>
                 <p class="subText botText">довольных клиентов</p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText">оборудование представлено в</p>
-                <p class="goldText">52 <span class="smallerText">СТРАНАХ</span></p>
+                <p class="goldText"><span class="count" data-count="52">0</span> <span class="smallerText addText">СТРАНАХ</span></p>
                 <p class="subText botText">Мира</p>
             </div>
             <div class="col-md-2 col-item">
                 <p class="subText topText">выпускается с</p>
-                <p class="goldText">1958</p>
+                <p class="goldText"><span class="count" data-count="1958">0</span></p>
                 <p class="subText botText">Года</p>
             </div>
         </div>
@@ -284,7 +289,8 @@
                         </div>
                     </div>
                     <button class="button">рассчитать</button>
-                    <p class="calcResult">Для сушки <span class="tons">3000</span> тонн зерна со снятием <span class="prices_elevator">10</span> т/% влаги затраты на топливо составят:</p>
+                    <p class="calcResult">Для сушки <span class="tons">3000</span> тонн зерна со снятием <span
+                            class="prices_elevator">10</span> т/% влаги затраты на топливо составят:</p>
                     <div class="form-line noPadding noMargin">
                         <p class="paramName">на дизельном топливе</p>
                         <div class="inputWrapper inputNarrow">
@@ -312,8 +318,288 @@
     </div>
 </section>
 
+<section class="container-fluid section8">
+    <div class="container">
+        <h5 class="sectionTitle text-center">Доверьте нам доставку и монтаж Вашей зерносушилки</h5>
+        <div class="iconRow clearfix">
+            <div class="iconItem">
+                <p class="iconCaption topPosition">Полностью сопровождаем<br>
+                    клиента от консультации до<br>
+                    постгарантийного обслуживания</p>
+                <img src="img/headphonesicon.jpg" alt="headphones">
+            </div>
+            <div class="iconItem">
+                <img src="img/headphonesicon.jpg" alt="headphones">
+                <p class="iconCaption topPosition">Всегда на связи — 24/7</p>
+            </div>
+            <div class="iconItem">
+                <p class="iconCaption sidePull">Визит сервис - менеджера в<br>
+                    течение 24 часов с момента<br> подачи заявки (в период сбора урожая)</p>
+                <img src="img/headphonesicon.jpg" alt="headphones">
+            </div>
+        </div>
+
+        <div class="iconRow clearfix">
+            <div class="iconItem">
+                <p class="iconCaption sidePull">Мы даем честную гарантию 12<br>
+                    мес: выезд, запчасть, работа -<br>
+                    бесплатно
+                </p>
+                <img src="img/headphonesicon.jpg" alt="headphones">
+            </div>
+            <div class="iconItem">
+                <img src="img/headphonesicon.jpg" alt="headphones">
+                <p class="iconCaption sidePull">Ведем учет проданного<br>
+                    оборудования по сервисному<br>
+                    регламенту
+                </p>
+            </div>
+            <div class="iconItem">
+                <img src="img/headphonesicon.jpg" alt="headphones">
+                <p class="iconCaption">Сфокусированы на одном<br>
+                    продукте, поэтому знаем<br>
+                    его ОТ и ДО</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid section9">
+    <h5 class="sectionTitle text-center">В этом уже убедились более<br>
+        100 фермеров из 15 регионов Украины
+    </h5>
+    <div id="slickSlider">
+        <div class="sliderItem">
+            <img src="img/custumer1.jpg" alt="custumer1">
+            <p class="reply">“Работаем на Pedrotti 4-й<br>
+                сезон, вопросов нет -<br>
+                довольны!”</p>
+            <p class="name">Сергей Иванович</p>
+            <p class="address">с. Вязовок, Черкасская обл.</p>
+        </div>
+        <div class="sliderItem">
+            <img src="img/custumer2.jpg" alt="custumer2">
+            <p class="reply">"Сушим себе сами с 2013<br>
+                года! Нравится в работе и по<br>
+                сервису ребята не подводили."</p>
+            <p class="name">Александр</p>
+            <p class="address">с. Алексеевка, Сумская обл.</p>
+        </div>
+        <div class="sliderItem">
+            <img src="img/custumer3.jpg" alt="custumer3">
+            <p class="reply">"Ярослав молодець, все<br>
+                працює, як і обіцяли.<br>
+                Плануємо подальшу співпрацю."</p>
+            <p class="name">Герасименко Валентина Миколаївна</p>
+            <p class="address">с. Вязовок, Черкасская обл.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid section10">
+    <div class="container">
+        <h5 class="sectionTitle text-center">На карте мы отметили населенные пункты,<br>
+            где расположены наши объекты</h5>
+    </div>
+</section>
+
+<section class="container-fluid section11">
+    <div class="container">
+        <h5 class="sectionTitle text-center">Сейчас еще выгоднее!<br>
+            Покупая зерносушилку до 30.08.2018 Вы получаете в подарок<br>
+            портативный влагомер
+        </h5>
+        <div class="col-md-6 offset-md-3 formBlock">
+            <form id="sendForm" action="">
+                <h6 class="formTitle text-center">Узнайте какая зерносушилка будет для Вас самая прибыльная<br>
+                    и окупаемая, заказав расчет окупаемости</h6>
+                <input type="text" name="name" placeholder="Имя">
+                <input type="tel" name="phone" placeholder="телефон">
+                <input type="email" name="email" placeholder="e - mail">
+                <button class="button">получить расчет</button>
+                <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid section12">
+    <div class="container">
+        <h5 class="sectionTitle text-center">Ответы на вопросы, которые часто задают нам клиенты</h5>
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                            <span>1. В чем главные преимущества мобильных зерносушилок Pedrotti?</span>
+                            <span></span>
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, minus!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                            <span>2. Какие культуры можно сушить зерносушилками Pedrotti?</span>
+                            <span></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, minus!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                            <span>3. Какие сроки поставки и монтажа зерносушилки?</span>
+                            <span></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, minus!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseFour">
+                            <span>4. Сколько зерносушилка потребляет электроэнергии?</span>
+                            <span></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, minus!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                aria-expanded="false" aria-controls="collapseFive">
+                            <span>5. Какой расход топлива (дизельное топливо, газ)?</span>
+                            <span></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, minus!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSix">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                                aria-expanded="false" aria-controls="collapseSix">
+                            <span>6. Продукт какой максимальной влажности можно сушить?</span>
+                            <span></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, minus!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                                aria-expanded="false" aria-controls="collapseSeven">
+                            <span>7. Возможно ли сушка семенного материала?</span>
+                            <span></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, minus!
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingEight">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                                aria-expanded="false" aria-controls="collapseEight">
+                            <span>8. Какой срок гарантии на зерносушилки Фрателли Педротти?</span>
+                            <span></span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                    <div class="card-body">
+                        Гарантийное обслуживание зерносушилки составляет 12 месяцев со дня ввода в эксплуатацию. Честная
+                        гарантия: выезд, замена, запуск - бесплатно. При подписании договора на техническое обслуживание
+                        срок гарантии составляет до 3 лет, при прохождении ежегодного ТО.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h6 class="subTitle text-center">Не нашли ответа на свой вопрос? Задайте его нашему менеджеру.<br>
+            Он ответит Вам в течение 24 часов.</h6>
+        <div class="col-md-6 offset-md-3 formBlock">
+            <form id="sendForm2" action="">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="tel" name="phone" placeholder="телефон">
+                <input type="email" name="email" placeholder="e - mail">
+                <button class="button">получить расчет</button>
+                <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 footContainer">
+                <h6 class="footTitle">Главный офис</h6>
+                <p class="address">
+                    ул. Лавандовая, 27-б,<br>
+                    офис 14<br>
+                    г. Кропивницкий<br>
+                    25030, Украина
+                </p>
+                <p class="phone">
+                    (050) 40 444 70<br>
+                    (096) 054 39 91
+                </p>
+                <p class="email">secretary@farmmac.com.ua</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>

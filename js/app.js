@@ -34,7 +34,7 @@
          * Пример: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
          */
 
-            // landing.createObjectFromLanding(config);
+        // landing.createObjectFromLanding(config);
 
         /**
          * Функция ниже инициализирует лендинг из параметров URL.
@@ -42,6 +42,7 @@
         function initLanding() {
             // landing.initLanding(config)
         }
+
         jQuery(document).ready(initLanding);
 
         $.ajax({
@@ -204,6 +205,38 @@
             + '<p>На газе ' + addCommas(gas_sum) + ' грн</p>'
             + '<p>На пеллетах ' + addCommas(pellet_sum) + ' грн</p>'
         )
+    });
+
+
+    $('#slickSlider').slick({
+        variableWidth: true,
+        centerMode: true,
+        slidesToShow: 1,
+        arrows: true,
+        infinite: true
+    });
+
+    $(window).scroll(function() {
+        var oTop = $('.section2').offset().top - window.innerHeight;
+        if ($(window).scrollTop() > oTop) {
+            $('.count').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({countNum: $this.text()}).animate({
+                        countNum: countTo
+                    },
+
+                    {   duration: 800,
+                        easing: 'swing',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            $this.text(this.countNum);
+                        }
+                    });
+            });
+        }
     });
 
 })(jQuery);
