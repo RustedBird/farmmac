@@ -72,6 +72,9 @@ $mainColor: #0260D8;
   font-size: 30px;
   font-weight: 800;
   text-transform: uppercase;
+  @media only screen and (max-width: 1499px) {
+    font-size: 25px;
+  }
 }
 
 @mixin goldTitle {
@@ -164,19 +167,27 @@ body {
   background-size: cover;
   background-position: bottom;
   padding: 80px 0;
+  position: relative;
+  z-index: 20;
   .sectionTitle {
     @include sectionTitle;
   }
   .col-row {
-    padding: 180px 0;
+    padding: 15% 0;
     .col-item {
       position: relative;
       .goldText {
         @include goldTitle;
+        @media screen and (max-width: 1499px) {
+          font-size: 45px;
+        }
         .addText {
           font-size: 0.75em;
           font-stretch: condensed;
           letter-spacing: -6px;
+          @media screen and (max-width: 1499px) {
+            letter-spacing: -3px;
+          }
         }
         .smallerText {
           font-size: 0.6em;
@@ -191,16 +202,27 @@ body {
         width: 90%;
         position: absolute;
         letter-spacing: -2.1px;
+        @media screen and (max-width: 1499px) {
+          font-size: 16px;
+          line-height: 19px;
+        }
       }
       .botText {
         margin-top: -20px;
         right: 30px;
         text-align: right;
+        @media screen and (max-width: 1499px) {
+          margin-top: -35px;
+        }
       }
       .topText {
         top: -50px;
         left: 15px;
         text-align: left;
+        @media screen and (max-width: 1499px) {
+          top: -22px;
+
+        }
       }
     }
     .col-item:last-of-type {
@@ -215,18 +237,33 @@ body {
 
 .section3 {
   padding: 80px 0;
+  position: relative;
+  z-index: -1;
   .sectionTitle {
     @include sectionTitle;
     margin-bottom: 100px;
+    position: relative;
+    z-index: -5;
   }
   .picBlock {
     text-align: center;
     padding-top: 50px;
+    position: relative;
+    z-index: -1;
+    transform: translateY(-2000px);
     img {
       width: 257px;
       height: auto;
       border-radius: 50%;
       box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px;
+      display: block;
+      margin: 0 auto;
+      @media screen and (max-width: 1850px) {
+        width: 190px;
+      }
+      @media screen and (max-width: 1499px) {
+        width: 130px;
+      }
     }
     .underText {
       font-family: 'gothampro-medium', sans-serif;
@@ -236,6 +273,29 @@ body {
       margin-top: 20px;
       text-align: center;
     }
+  }
+  .picBlockAnim {
+    animation-name: drop;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    &:nth-of-type(1) {
+      animation-duration: 1.5s;
+    }
+    &:nth-of-type(2) {
+      animation-duration: 2s;
+    }
+    &:nth-of-type(3) {
+      animation-duration: 2.5s;
+    }
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-2000px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
@@ -614,6 +674,8 @@ body {
       box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px;
       margin: 45px;
       margin-top: 200px;
+      transition: all 0.8s;
+      transition-delay: 0.6s;
       img {
         border-radius: 50%;
         margin: 0 auto;
@@ -651,12 +713,11 @@ body {
         opacity: 0.4;
       }
     }
-    .sliderItem.slick-active {
-      animation-name: sliderJumpUp;
-      animation-duration: 0.5s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-      animation-delay: 0.5s;
+    .sliderItem.slick-active,
+    .sliderItem.slick-center {
+      margin-top: 30px;
+      transition: all 0.8s;
+      transition-delay: 0.6s;
       &:after {
         display: none;
       }
@@ -764,6 +825,9 @@ body {
                 left: 15%;
                 top: 45%;
               }
+            }
+            .plus {
+              position: absolute;
               &:after {
                 content: '';
                 position: absolute;
@@ -875,16 +939,6 @@ body {
   }
 }
 
-
-@keyframes sliderJumpUp {
-  0% {
-    margin-top: 200px;
-  }
-  100% {
-    margin-top: 0;
-  }
-}
-
 .panel {
   border-width: 0;
   border-top-width: 1px;
@@ -905,9 +959,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 body {
   color: #6a6c6f;
-  background-color: #f1f3f6;
-  margin-top: 30px;
 }
+
+
 
 
 

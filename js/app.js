@@ -68,7 +68,8 @@
     });
 
     //Подбор модели зерносушилки
-    $('#selectionForm').on('click', '.btn', function (event) {
+
+    function selectDrier (event) {
         event.preventDefault();
         var model,
             $performance = parseInt($('.performance').val()),
@@ -173,7 +174,8 @@
             }
             $answer.html('XL ' + model);
         }
-    });
+    }
+
 
     //Рассчитываем стоимость сушки
     $('#calcForm').on('click', '.btn', function (event) {
@@ -207,7 +209,7 @@
         )
     });
 
-
+    /*Slick slider*/
     $('#slickSlider').slick({
         variableWidth: true,
         centerMode: true,
@@ -216,26 +218,66 @@
         infinite: true
     });
 
-    $(window).scroll(function() {
-        var oTop = $('.section2').offset().top - window.innerHeight;
-        if ($(window).scrollTop() > oTop) {
-            $('.count').each(function() {
+    /*Animation on scroll*/
+    $(window).scroll(function () {
+        //Animate number is section2
+        var $sec2 = $('.section2').offset().top - window.innerHeight;
+        if ($(window).scrollTop() > $sec2) {
+            $('.count').each(function () {
                 var $this = $(this),
                     countTo = $this.attr('data-count');
                 $({countNum: $this.text()}).animate({
                         countNum: countTo
                     },
 
-                    {   duration: 800,
+                    {
+                        duration: 800,
                         easing: 'swing',
-                        step: function() {
+                        step: function () {
                             $this.text(Math.floor(this.countNum));
                         },
-                        complete: function() {
+                        complete: function () {
                             $this.text(this.countNum);
                         }
                     });
             });
+        }
+        //Animate falling pics in third section
+        var $sec3 = $('.section3 .row').offset().top - window.innerHeight;
+        if ($(window).scrollTop() > $sec3) {
+            $('.picBlock').addClass('picBlockAnim');
+        }
+    });
+
+    /*this block is for debug, delete before release*/
+    /* $('.count').each(function() {
+         var $this = $(this),
+             countTo = $this.attr('data-count');
+         $({countNum: $this.text()}).animate({
+                 countNum: countTo
+             },
+
+             {   duration: 800,
+                 easing: 'swing',
+                 step: function() {
+                     $this.text(Math.floor(this.countNum));
+                 },
+                 complete: function() {
+                     $this.text(this.countNum);
+                 }
+             });
+     });*/
+    /*end of debbug clock*/
+
+
+    /*Changing + / - in accordion*/
+    $('.card-header').on('click', '.btn', function () {
+        var $this = $(this).find('span:last-of-type');
+        if ($this.hasClass('plus')) {
+            $('.card-header .btn').find('span:last-of-type').not($this).addClass('plus');
+            $this.removeClass('plus');
+        } else {
+            $this.addClass('plus');
         }
     });
 
