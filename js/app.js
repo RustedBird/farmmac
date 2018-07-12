@@ -5,23 +5,37 @@
     } else {
         console.log('your language is English');
     }
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : 'ru';
+    }
+    var langCookie = getCookie('lang');
+    console.log(langCookie);
+
 
     $('.myBtn').on('click', function () {
         $('.modal-body .btn').attr('data-comment', $(this).attr('data-comment'));
     });
 
     $('.btn').removeAttr('disabled');
-    $('.ajaxForm').on('submit', function (event) {
+    $(document).on('click','.ajaxForm .btn', function (event) {
         event.preventDefault();
         var $this = $(this);
-        $this.find('input[name=comment]').val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
-        var data = $this.serialize(),
+        $this.closest('.ajaxForm').find("input[name='comment']").val($this.attr('data-comment'));
+        // $this.find("input[name='comment']").val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
+        var data = $this.closest('.ajaxForm').serialize(),
+            name = $this.closest('.ajaxForm').find("input[name='name']"),
+            email = $this.closest('.ajaxForm').find("input[name='email']"),
+            phone = $this.closest('.ajaxForm').find("input[name='phone']"),
+            comment = $this.closest('.ajaxForm').find("input[name='comment']"),
             config = {
                 fields: {
-                    "Name": "input[name=name]", // Имя посетителя, заполнившего форму
-                    "Email": "input[name=email]", // Email посетителя
-                    "MobilePhone": "input[name=phone]", // Телефон посетителя
-                    "Commentary": "input[name=comment]" // Примечание
+                    "Name": name, // Имя посетителя, заполнившего форму
+                    "Email": email, // Email посетителя
+                    "MobilePhone": phone, // Телефон посетителя
+                    "Commentary": comment // Примечание
                 },
                 landingId: "570cfcd4-dc74-4602-8099-1bf016246fbe",
                 serviceUrl: "https://farmmac.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
@@ -42,27 +56,34 @@
         function initLanding() {
             // landing.initLanding(config)
         }
-
         jQuery(document).ready(initLanding);
 
         $.ajax({
-            url: $this.attr('action'),
-            method: $this.attr('method'),
+            url: $this.closest('.ajaxForm').attr('action'),
+            method: $this.closest('.ajaxForm').attr('method'),
             data: data,
             dataType: 'json',
             beforeSend: function () {
                 console.log("beforeSend");
             },
             success: function (response) {
-                console.log("success");
-                $('#texthere').html('Your name is ' + response.name +
-                    '<br>' + 'Your mail is ' + response.email +
-                    '<br>' + 'Your phone is ' + response.phone +
-                    '<br>' + 'Your comment is ' + response.comment);
+                console.log(response);
+                console.log(response.response);
+                var $texthere = $('#texthere');
+                if (response.response.result) {
+                    console.log("success");
+                    $texthere.html('Сообщение: ' + response.response.message);
+                } else {
+                    $texthere.html('Сообщение: ' + response.response.message);
+                    console.log("error");
+                }
+
+
             },
             error: function () {
                 console.log('Some error');
-                alert('Ошибка отправки формы');
+                var a = 1+1;
+                // alert(a);
             }
         });
     });
