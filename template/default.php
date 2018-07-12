@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/slick.css">
     <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/styles.min.css?v=1.2">
     <link rel="stylesheet" href="../css/style.css">
     <script>
         var date = new Date;
@@ -412,6 +413,44 @@
     <div class="container">
         <h5 class="sectionTitle text-center">На карте мы отметили населенные пункты,<br>
             где расположены наши объекты</h5>
+
+
+        <div id="map_ua">
+            <img src="../css/ajax-loader.gif" id="loader" alt="loader">
+        </div>
+
+        <div class="row" style="display: none">
+
+            <!-- ObfuscateMe -->
+            <span id="m31_wrapper_UQnijxw7ecZ" class="m31_encr_wrapper">
+                        <span id="m31_cyphertext_UQnijxw7ecZ" class="m31_encr_item">caefaef600f3f4cbb0fbeff7fa02fdc8f8ef00fd01faef04cef4ef00fbfbeff1bcf1fdfbbc03efb0ccf8ef00fd01faef04cef4ef00fbfbeff1bcf1fdfbbc03efcabdefcc</span>
+                        <span id="m31_token_UQnijxw7ecZ" class="m31_encr_item">91HmUzkbNLaUbnx6sYrAvTn44MAMbgB</span>
+                        <span id="m31_algorithm_UQnijxw7ecZ" class="m31_encr_item">caesar</span></span>
+            <!-- /ObfuscateMe -->
+
+            <!-- ObfuscateMe -->
+            <span id="m31_wrapper_RpRsTL5R0Vw4" class="m31_encr_wrapper">
+                        <span id="m31_cyphertext_RpRsTL5R0Vw4" class="m31_encr_item">3156155d675a5b321762565e6169642f5e5d6467355b56676262565823586462236a5617335e5d6467355b56676262565823586462236a5631245633</span>
+                        <span id="m31_token_RpRsTL5R0Vw4" class="m31_encr_item">8psyu4cB0uLZhPRCyYFbpIH8AQ3oszu2</span>
+                        <span id="m31_algorithm_RpRsTL5R0Vw4" class="m31_encr_item">caesar</span></span>
+            <!-- /ObfuscateMe -->
+
+            <!-- ObfuscateMe -->
+            <span id="m31_wrapper_vEx6APgfSu2d" class="m31_encr_wrapper">
+                        <span id="m31_cyphertext_vEx6APgfSu2d" class="m31_encr_item">5b803f879184855c418c80888b938e598f80958b8e5f8580918c8c80824d828e8c4d9480415d8f80958b8e5f8580918c8c80824d828e8c4d94805b4e805d</span>
+                        <span id="m31_token_vEx6APgfSu2d" class="m31_encr_item">Az93LEUISJXuSIZsaF4zuGJcAA1Ru6W1</span>
+                        <span id="m31_algorithm_vEx6APgfSu2d" class="m31_encr_item">caesar</span></span>
+            <!-- /ObfuscateMe -->
+        </div>
+
+        <div class="row" style="display:none;">
+            <div class="col-12">
+                <div class="card">
+                    <div id="gmap" class="card-img-bottom embed-responsive embed-responsive-16by9"> </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -609,6 +648,8 @@
 
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyCBezf_3Ccazeqo2Su_sLXJtIhvtjzu6nE"></script>
+<script type="text/javascript" src="../js/script.js?v=1.21"></script>
 <script src="../js/slick.min.js"></script>
 <script src="../js/app.js"></script>
 
