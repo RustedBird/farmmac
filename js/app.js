@@ -16,20 +16,22 @@
 
 
     $('.myBtn').on('click', function () {
-        $('.modal-body .btn').attr('data-comment', $(this).attr('data-comment'));
+        $('.modal-body .button').attr('data-comment', $(this).attr('data-comment'));
     });
 
-    $('.btn').removeAttr('disabled');
-    $(document).on('click','.ajaxForm .btn', function (event) {
+    // $('.btn').removeAttr('disabled');
+    $(document).on('click','.ajaxForm .button', function (event) {
         event.preventDefault();
-        var $this = $(this);
-        $this.closest('.ajaxForm').find("input[name='comment']").val($this.attr('data-comment'));
+        var $this = $(this),
+            $thisClosestForm = $this.closest('.ajaxForm');
+
+        $thisClosestForm.find("input[name='comment']").val($this.attr('data-comment'));
         // $this.find("input[name='comment']").val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
-        var data = $this.closest('.ajaxForm').serialize(),
-            name = $this.closest('.ajaxForm').find("input[name='name']"),
-            email = $this.closest('.ajaxForm').find("input[name='email']"),
-            phone = $this.closest('.ajaxForm').find("input[name='phone']"),
-            comment = $this.closest('.ajaxForm').find("input[name='comment']"),
+        var data = $thisClosestForm.serialize(),
+            name = $thisClosestForm.find("input[name='name']"),
+            email = $thisClosestForm.find("input[name='email']"),
+            phone = $thisClosestForm.find("input[name='phone']"),
+            comment = $thisClosestForm.find("input[name='comment']"),
             config = {
                 fields: {
                     "Name": name, // Имя посетителя, заполнившего форму
@@ -58,9 +60,11 @@
         }
         jQuery(document).ready(initLanding);
 
+        console.log(data);
+
         $.ajax({
-            url: $this.closest('.ajaxForm').attr('action'),
-            method: $this.closest('.ajaxForm').attr('method'),
+            url: $thisClosestForm.attr('action'),
+            method: $thisClosestForm.attr('method'),
             data: data,
             dataType: 'json',
             beforeSend: function () {
@@ -72,7 +76,7 @@
                 var $texthere = $('#texthere');
                 if (response.response.result) {
                     console.log("success");
-                    $texthere.html('Сообщение: ' + response.response.message);
+                    $texthere.html('Заявка отправлена успешно');
                 } else {
                     $texthere.html('Сообщение: ' + response.response.message);
                     console.log("error");
@@ -241,34 +245,18 @@
 
     /*Animation on scroll*/
     $(window).scroll(function () {
-        //Animate number is section2
-        var $sec2 = $('.section2').offset().top - window.innerHeight;
-        if ($(window).scrollTop() > $sec2) {
-            $('.count').each(function () {
-                var $this = $(this),
-                    countTo = $this.attr('data-count');
-                $({countNum: $this.text()}).animate({
-                        countNum: countTo
-                    },
-
-                    {
-                        duration: 800,
-                        easing: 'swing',
-                        step: function () {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function () {
-                            $this.text(this.countNum);
-                        }
-                    });
-            });
-        }
         //Animate falling pics in third section
         var $sec3 = $('.section3 .row').offset().top - window.innerHeight;
         if ($(window).scrollTop() > $sec3) {
+            $('body::after').css('display', 'none');
             $('.picBlock').addClass('picBlockAnim');
         }
     });
+
+    $('.counter').countUp({
+        'time': 1000
+    });
+
 
     /*this block is for debug, delete before release*/
     /* $('.count').each(function() {
@@ -301,6 +289,15 @@
             $this.addClass('plus');
         }
     });
+
+
+    $('.section5 .button').on('click', function () {
+        var $this = $(this);
+        $this.attr('data-modelname');
+        console.log($this.attr('data-modelname'));
+        $('.modal-body .itemTitle').html($this.attr('data-modelname'));
+    })
+
 
 })(jQuery);
 

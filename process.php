@@ -34,7 +34,7 @@ if ($response['result']) {
         case 'Large':
         case 'XL':
             $newMessage = new Message();
-            $newMessage->sendEmail($request);
+//            $newMessage->sendEmail($request);
             $newMessage->sendTelegram($mes);
             $mes = 'Вот обещанные характеристики Зерносушилки ' . $comment;
             $to = [$email];
@@ -45,11 +45,11 @@ if ($response['result']) {
                 'fileblob' => base64_encode($file),
                 'mimetype' => 'application/pdf'
             ]];
-            $response = $newMessage->sendEmail($request);
+//            $response = $newMessage->sendEmail($request);
             break;
         default:
             $newMessage = new Message();
-            $response = $newMessage->sendEmail($request);
+//            $response = $newMessage->sendEmail($request);
             $newMessage->sendTelegram($mes);
             break;
     }
@@ -57,7 +57,6 @@ if ($response['result']) {
 } else {
     $response['message'] = 'Поля заполнены неверно';
 }
-
 echo json_encode(['response' => $response]);
 
 class Message
@@ -66,7 +65,7 @@ class Message
     protected $api_url = 'https://api.smtp2go.com/v3/email/send';
     protected $api_key = 'api-F1266D14298611E7A1B4F23C91C88F4E';
     protected $token = '561353685:AAFVHFTMIychcLnJzi1MziPwGYng3tYHlqI';
-    protected $chat_id_list = [350981322];
+    protected $chat_id_list = [350981322, 499420246];
 
     public function sendEmail($request)
     {

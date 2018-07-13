@@ -15,44 +15,113 @@
     </script>
 </head>
 <body>
-<h1><?php echo LANG_TITLE?></h1>
-<div class="row">
+<!--<h1>--><?php //echo LANG_TITLE ?><!--</h1>-->
+<!--<div class="row">
     <div class="col-sm-1 col-sm-offset-10">
-        <h5><a href="/" onclick="document.cookie = 'lang=eng; expires=' + date.toUTCString(); location.reload(); return false;"><?php echo LANG_ENG?></a></h5>
+        <h5><a href="/"
+               onclick="document.cookie = 'lang=eng; expires=' + date.toUTCString(); location.reload(); return false;"><?php /*echo LANG_ENG */?></a>
+        </h5>
     </div>
     <div class="col-sm-1">
-        <h5><a href="/" onclick="document.cookie = 'lang=ru; expires=' +  date.toUTCString(); location.reload(); return false;"><?php echo LANG_RUS?></a></h5>
+        <h5><a href="/"
+               onclick="document.cookie = 'lang=ru; expires=' +  date.toUTCString(); location.reload(); return false;"><?php /*echo LANG_RUS */?></a>
+        </h5>
+    </div>
+</div>-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="ajaxForm" action="../process.php" method="post">
+                    <h6 class="formTitle text-center">Узнайть технические характеристики модели</h6>
+                    <p class="itemTitle">BASIC</p>
+                    <p id="texthere"></p>
+                    <input type="text" name="name" placeholder="имя" required>
+                    <input type="tel" name="phone" placeholder="телефон" required>
+                    <input type="email" name="email" placeholder="e - mail" required>
+                    <input hidden type="text" name="comment" value="">
+                    <button class="button" data-comment="init_form">запросить</button>
+                    <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
-<div style="height: 1000px; background: red;"></div>
-<div style="height: 1000px; background: blue;"></div>
+<section class="container-fluid section1">
+    <div class="container">
+        <div class="upperMenu">
+            <img class="logo" src="../img/logo.png" alt="logo">
+            <p class="lang">
+                <span>ukr</span>
+                <span>rus</span>
+            </p>
+            <p class="phones">
+                <span>(050) 404-44-70</span><br>
+                <span>(096) 054-39-91</span>
+            </p>
+            <div class="button">заказать обратный звонок</div>
+        </div>
+        <h1>Мобильная зерносушилка<br>
+            <span>Pedrotti</span>
+        </h1>
+        <div class="formBlock">
+            <div class="titleWrapper">
+                <p class="subTitle">Возврат инвестиций за один сезон</p>
+            </div>
+            <p class="smallerText">Повысьте доходность каждой собранной тонны зерна</p>
+            <div class="blockWrapper">
+                <form class="ajaxForm" action="../process.php" method="post">
+                    <h6 class="formTitle text-center">Узнайте, как быстро окупить мобильную<br> зерносушилку, получив расчет окупаемости</h6>
+                    <p id="texthere"></p>
+                    <input type="text" name="name" placeholder="имя" required>
+                    <input type="tel" name="phone" placeholder="телефон" required>
+                    <input type="email" name="email" placeholder="e - mail" required>
+                    <input hidden type="text" name="comment" value="">
+                    <button class="button" data-comment="init_form">запросить</button>
+                    <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <img class="mainImg" src="../img/maindrier.png" alt="drier">
+</section>
+
 <section class="container-fluid section2">
     <div class="container">
         <h6 class="sectionTitle text-center">несколько фактов о нас</h6>
         <div class="row col-row">
             <div class="col-md-2 col-item">
-                <p class="goldText"><span class="count" data-count="9">0</span> <span class="addText">ЛЕТ</span></p>
+                <p class="redText"><span class="counter">9</span> <span class="addText">ЛЕТ</span></p>
                 <p class="subText botText">на рынке Украины</p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText">продукция представлена в</p>
-                <p class="goldText"><span class="count" data-count="15">0</span> <span class="smallerText addText">РЕГИОНАХ</span></p>
+                <p class="redText"><span class="counter">15</span> <span class="smallerText addText">РЕГИОНАХ</span>
+                </p>
                 <p class="subText botText">Украины</p>
             </div>
             <div class="col-md-2 col-item">
-                <p class="goldText"><span class="count" data-count="100">0</span><span class="addText">+</span></p>
+                <p class="redText"><span class="counter">80</span><span class="addText">+</span></p>
                 <p class="subText botText">довольных клиентов</p>
-            </div>
-            <div class="col-md-3 col-item">
-                <p class="subText topText">оборудование представлено в</p>
-                <p class="goldText"><span class="count" data-count="52">0</span> <span class="smallerText addText">СТРАНАХ</span></p>
-                <p class="subText botText">Мира</p>
             </div>
             <div class="col-md-2 col-item">
                 <p class="subText topText">выпускается с</p>
-                <p class="goldText"><span class="count" data-count="1958">0</span></p>
+                <p class="redText"><span class="counter">1958</span></p>
                 <p class="subText botText">Года</p>
+            </div>
+            <div class="col-md-3 col-item">
+                <p class="subText topText">оборудование Pedrotti представлено в</p>
+                <p class="redText"><span class="counter">52</span> <span class="smallerText addText">СТРАНАХ</span>
+                </p>
+                <p class="subText botText">Мира</p>
             </div>
         </div>
     </div>
@@ -150,9 +219,9 @@
             </div>
         </div>
         <div class="lineContainer">
-            <h4 class="text-center">Если у Вас от 300 га кукурузы и влага 25 % и больше,</h4>
-            <h4 class="text-center">мобильная зерносушилка Pedrotti окупит себя</h4>
-            <h4 class="text-center">за 1 сезон и дальше будет работать только в плюс</h4>
+            <h4 class="text-center">Если у Вас от 300 га кукурузы и влага 25 % и больше,<br>
+                мобильная зерносушилка Pedrotti окупит себя за<br>
+                 1 сезон и дальше будет работать только в плюс</h4>
         </div>
     </div>
 </section>
@@ -217,13 +286,13 @@
         <div class="topRow">
 
             <div class="topItem">
-                <button class="button">для моделей BASIC</button>
+                <button class="button myBtn" data-toggle="modal" data-target="#exampleModalCenter" data-modelname="BASIC" data-comment="Basic">для моделей BASIC</button>
             </div>
             <div class="topItem">
-                <button class="button">для моделей LARGE</button>
+                <button class="button myBtn" data-toggle="modal" data-target="#exampleModalCenter" data-modelname="LARGE" data-comment="Large">для моделей LARGE</button>
             </div>
             <div class="topItem">
-                <button class="button">для моделей XL</button>
+                <button class="button myBtn" data-toggle="modal" data-target="#exampleModalCenter" data-modelname="XL" data-comment="XL">для моделей XL</button>
             </div>
         </div>
     </div>
@@ -259,7 +328,7 @@
                     </div>
                     <hr>
                 </form>
-                <p class="answer text-center">С вашей производительностью вам подойдет модель:</p>
+                <p class="answer text-center">С Вашей производительностью Вам подойдет серия:</p>
                 <p class="result">BASIC</p>
                 <button class="button">запросить характиристики</button>
                 <p class="answer text-center smallNote">* - с учётом кукурузы</p>
@@ -324,11 +393,38 @@
                     </div>
                     <hr>
                 </form>
-                <p class="answer text-center">Рассмотрите предложение о самом дешевом виде топлива:</p>
+                <p class="answer text-center">Рассмотрите предложение о самом выгодном виде топлива:</p>
+                <p class="subAnswer text-center">зерносушилка + твердотопливный теплогенератор</p>
                 <button class="button">рассчитать</button>
             </div>
         </div>
     </div>
+</section>
+
+<section class="container-fluid section7">
+    <div class="container">
+        <h5 class="sectionTitle text-center">главные особенности зерносушилки pedrotti</h5>
+        <div class="row">
+            <div class="col-md-6 specBlock">
+                <p class="specialty">Есть разные комплектации, поэтому можно решить задачу любой сложности</p>
+                <p class="specialty">Простой и надежный привод</p>
+                <p class="specialty">На каждый механизм свой электрический двигатель</p>
+                <p class="specialty">Центральное расположение шнека — удобная и выгодная конструкция</p>
+                <p class="specialty">Центральное расположение шнека — удобная и выгодная конструкция</p>
+                <p class="specialty">Есть комплектации с теплообменником или прямым воздухом</p>
+                <p class="specialty">Множество вариантов организации приема зерна</p>
+            </div>
+            <div class="col-md-6 specBlock">
+                <p class="specialty">3 вида систем управления и безопасности</p>
+                <p class="specialty">Полностью мобильна — не нужны строительные работы для установки </p>
+                <p class="specialty">Адаптируется к любым очистным системам и зернохранилищам</p>
+                <p class="specialty">Центральное расположение шнека — удобная и выгодная конструкция</p>
+                <p class="specialty">Можно запускать через 3 дня после поставки</p>
+                <p class="specialty">Работает на разных видах топлива: газ, дизель, биотопливо</p>
+            </div>
+        </div>
+    </div>
+    <img class="bgImg" src="../img/sec7bgpic.jpg" alt="bg">
 </section>
 
 <section class="container-fluid section8">
@@ -648,9 +744,12 @@
 
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyCBezf_3Ccazeqo2Su_sLXJtIhvtjzu6nE"></script>
+<script type="text/javascript"
+        src="http://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyCBezf_3Ccazeqo2Su_sLXJtIhvtjzu6nE"></script>
 <script type="text/javascript" src="../js/script.js?v=1.21"></script>
 <script src="../js/slick.min.js"></script>
+<script src="../js/jquery.waypoints.min.js"></script>
+<script src="../js/jquery.countup.min.js"></script>
 <script src="../js/app.js"></script>
 
 </body>

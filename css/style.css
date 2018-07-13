@@ -41,19 +41,292 @@
 /*variables*/
 /*mixins*/
 body {
-  color: #232222; }
+  color: #232222;
+  position: relative;
+  /*&:after { //white background to hide animated element whe loaded with slow connection
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: -1;
+  }*/ }
+
+.modal-body form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px; }
+  .modal-body form .formTitle {
+    font-family: 'gothampro-medium', sans-serif;
+    font-size: 20px;
+    font-weight: 600; }
+  .modal-body form input {
+    border: 1px solid #B1ABA8;
+    height: 57px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    font-family: 'gothampro-light', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    width: 75%;
+    margin: 25px auto;
+    display: block; }
+  .modal-body form .button {
+    height: 57px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    width: 75%;
+    margin: 25px auto;
+    display: block;
+    color: white;
+    background: #a50606;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+    /* IE6-9 */
+    box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
+    .modal-body form .button:focus {
+      outline: none; }
+  .modal-body form .underText {
+    font-family: 'gothampro-light', sans-serif;
+    font-size: 14px;
+    color: #3E3E3E;
+    margin-top: 30px;
+    text-align: center; }
+.modal-body form {
+  padding: 0px 40px 30px 40px; }
+.modal-body .itemTitle {
+  font-family: 'bebas_neuebold', sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  background: #8c8b88;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #171717 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, white 0%, #171717 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, white 0%, #171717 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+  /* IE6-9 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 25px; }
+
+.section1 {
+  background: url("../img/bg1.jpg") no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 5;
+  padding-bottom: 100px; }
+  .section1 .container {
+    padding: 0; }
+    .section1 .container .upperMenu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 15px 0; }
+      .section1 .container .upperMenu .logo {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 50px; }
+      .section1 .container .upperMenu .lang {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: 'gothampro-black', sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        margin: 0 50px; }
+        .section1 .container .upperMenu .lang span:last-of-type {
+          margin-left: 15px; }
+      .section1 .container .upperMenu .phones {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0; }
+        .section1 .container .upperMenu .phones span {
+          font-family: 'gothampro-medium', sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          padding: 0 8px; }
+      .section1 .container .upperMenu .button {
+        font-family: 'gothampro-black', sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        color: white;
+        background: #a50606;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+        /* IE6-9 */
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        text-align: center;
+        padding: 16px 0;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        display: inline-block;
+        width: 360px;
+        margin: 0 0 0 30px; }
+    .section1 .container h1 {
+      font-family: 'gothampro-black', sans-serif;
+      font-size: 60px;
+      font-weight: 900;
+      color: #232222;
+      text-transform: uppercase;
+      padding-left: 100px;
+      position: relative;
+      margin-top: 10px;
+      float: right;
+      letter-spacing: -2px;
+      margin-bottom: 50px; }
+      .section1 .container h1:before {
+        content: '';
+        position: absolute;
+        left: -150px;
+        top: -57px;
+        width: 265px;
+        height: 266px;
+        background: url("../img/titleicon.png"); }
+      .section1 .container h1 span {
+        font-size: 72px;
+        text-transform: uppercase; }
+    .section1 .container .formBlock {
+      text-align: right;
+      margin-top: 50px; }
+      .section1 .container .formBlock .titleWrapper {
+        background: #ffffff;
+        display: inline-block;
+        padding: 0 15px;
+        margin-right: -60px; }
+        .section1 .container .formBlock .titleWrapper .subTitle {
+          display: inline-block;
+          font-family: 'gothampro-black', sans-serif;
+          font-size: 36px;
+          font-weight: 900;
+          text-transform: uppercase;
+          background: #a50606;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+          /* IE6-9 */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin: 0; }
+      .section1 .container .formBlock .smallerText {
+        font-family: 'gothampro-black', sans-serif;
+        font-size: 30px;
+        font-weight: 900;
+        color: #232222;
+        margin: 20px -135px 0 0; }
+      .section1 .container .formBlock .blockWrapper {
+        display: inline-block;
+        margin-top: 35px; }
+        .section1 .container .formBlock .blockWrapper form {
+          background: rgba(255, 255, 255, 0.9);
+          padding: 50px; }
+          .section1 .container .formBlock .blockWrapper form .formTitle {
+            font-family: 'gothampro-medium', sans-serif;
+            font-size: 20px;
+            font-weight: 600; }
+          .section1 .container .formBlock .blockWrapper form input {
+            border: 1px solid #B1ABA8;
+            height: 57px;
+            border-bottom-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-top-left-radius: 100px;
+            font-family: 'gothampro-light', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center;
+            width: 75%;
+            margin: 25px auto;
+            display: block; }
+          .section1 .container .formBlock .blockWrapper form .button {
+            height: 57px;
+            border-bottom-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-top-left-radius: 100px;
+            font-family: 'gothampro-black', sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            text-align: center;
+            width: 75%;
+            margin: 25px auto;
+            display: block;
+            color: white;
+            background: #a50606;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+            /* IE6-9 */
+            box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
+            .section1 .container .formBlock .blockWrapper form .button:focus {
+              outline: none; }
+          .section1 .container .formBlock .blockWrapper form .underText {
+            font-family: 'gothampro-light', sans-serif;
+            font-size: 14px;
+            color: #3E3E3E;
+            margin-top: 30px;
+            text-align: center; }
+  .section1 .mainImg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1; }
 
 .section2 {
   background: url("../img/bg2.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding: 80px 0;
+  padding-top: 80px;
   position: relative;
   z-index: 20; }
   .section2 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase; }
     @media only screen and (max-width: 1499px) {
       .section2 .sectionTitle {
@@ -62,33 +335,42 @@ body {
     padding: 15% 0; }
     .section2 .col-row .col-item {
       position: relative; }
-      .section2 .col-row .col-item .goldText {
+      .section2 .col-row .col-item .redText {
         font-family: 'bebas_neuebold', sans-serif;
         font-size: 80px;
         font-weight: 800;
-        background: linear-gradient(to bottom, #a36a21 0%, #ebbc3d 30%, #f1e080 59%, #ce9b20 90%);
+        background: #a50606;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+        /* IE6-9 */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
         margin-bottom: 25px; }
         @media screen and (max-width: 1499px) {
-          .section2 .col-row .col-item .goldText {
+          .section2 .col-row .col-item .redText {
             font-size: 45px; } }
-        .section2 .col-row .col-item .goldText .addText {
+        .section2 .col-row .col-item .redText .addText {
           font-size: 0.75em;
           font-stretch: condensed;
           letter-spacing: -6px; }
           @media screen and (max-width: 1499px) {
-            .section2 .col-row .col-item .goldText .addText {
+            .section2 .col-row .col-item .redText .addText {
               letter-spacing: -3px; } }
-        .section2 .col-row .col-item .goldText .smallerText {
+        .section2 .col-row .col-item .redText .smallerText {
           font-size: 0.6em; }
       .section2 .col-row .col-item .subText {
         font-family: 'gothampro-bold', sans-serif;
         font-size: 24px;
         line-height: 28px;
         font-weight: 800;
-        color: #0260D8;
+        color: #4F4F50;
         width: 90%;
         position: absolute;
         letter-spacing: -2.1px; }
@@ -97,7 +379,7 @@ body {
             font-size: 16px;
             line-height: 19px; } }
       .section2 .col-row .col-item .botText {
-        margin-top: -20px;
+        margin-top: -35px;
         right: 30px;
         text-align: right; }
         @media screen and (max-width: 1499px) {
@@ -110,9 +392,17 @@ body {
         @media screen and (max-width: 1499px) {
           .section2 .col-row .col-item .topText {
             top: -22px; } }
+    .section2 .col-row .col-item:nth-of-type(2) .topText {
+      top: -39px;
+      left: 25px;
+      text-align: left; }
+    .section2 .col-row .col-item:nth-of-type(4) .topText {
+      top: -14px;
+      left: 25px;
+      text-align: left; }
     .section2 .col-row .col-item:last-of-type .topText {
-      top: -22px;
-      left: 15px;
+      top: -70px;
+      left: 30px;
       text-align: left; }
 
 .section3 {
@@ -123,6 +413,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase;
     margin-bottom: 100px;
     position: relative;
@@ -134,13 +425,13 @@ body {
     text-align: center;
     padding-top: 50px;
     position: relative;
-    z-index: -1;
+    z-index: -5;
     transform: translateY(-2000px); }
     .section3 .picBlock img {
       width: 257px;
       height: auto;
       border-radius: 50%;
-      box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px;
+      box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
       display: block;
       margin: 0 auto; }
       @media screen and (max-width: 1850px) {
@@ -181,6 +472,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase;
     margin-bottom: 50px; }
     @media only screen and (max-width: 1499px) {
@@ -192,7 +484,7 @@ body {
       width: 102px;
       height: auto;
       border-radius: 50%;
-      box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px; }
+      box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
     .section4 .row .textItem {
       display: table;
       height: 102px;
@@ -211,16 +503,22 @@ body {
     .section4 .lineContainer h4 {
       font-family: 'gothampro-black', sans-serif;
       font-size: 32px;
-      line-height: 48px;
+      line-height: 38px;
       font-weight: 900;
       text-transform: uppercase;
-      color: #0260D8;
-      background: #ffffff;
-      margin: 10px 0; }
-      .section4 .lineContainer h4:nth-of-type(1) {
-        color: #024493; }
-      .section4 .lineContainer h4:nth-of-type(2) {
-        color: #0256ab; }
+      margin: 10px 0;
+      background: #a50606;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+      /* IE6-9 */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
 
 .section5 {
   padding: 80px 0;
@@ -229,6 +527,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase;
     margin-bottom: 50px; }
     @media only screen and (max-width: 1499px) {
@@ -245,7 +544,16 @@ body {
           font-family: 'bebas_neuebold', sans-serif;
           font-size: 80px;
           font-weight: 800;
-          background: linear-gradient(to bottom, #a36a21 0%, #ebbc3d 30%, #f1e080 59%, #ce9b20 90%);
+          background: #8c8b88;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, white 0%, #171717 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, white 0%, #171717 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, white 0%, #171717 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+          /* IE6-9 */
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           text-align: center;
@@ -262,7 +570,7 @@ body {
         .section5 .topRow .topItem .description .techName {
           font-family: 'gothampro-black', sans-serif;
           font-weight: 900;
-          color: #0260D8;
+          color: #EC0606;
           text-transform: uppercase;
           margin: 0; }
           .section5 .topRow .topItem .description .techName:last-of-type {
@@ -273,7 +581,7 @@ body {
           margin: 0; }
         .section5 .topRow .topItem .description .subNme {
           font-family: 'gothampro-bold', sans-serif;
-          font-weight: 700;
+          font-weight: 800;
           margin-top: 15px;
           margin-bottom: 0;
           text-transform: uppercase; }
@@ -282,7 +590,16 @@ body {
         font-size: 20px;
         font-weight: 900;
         color: white;
-        background: #0260D8;
+        background: #a50606;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+        /* IE6-9 */
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
         border-top-left-radius: 100px;
@@ -293,15 +610,16 @@ body {
         display: block;
         margin: 0 auto;
         cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px; }
+        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
   .section5 h5 {
     font-family: 'gothampro-bold', sans-serif;
     font-size: 36px;
     font-weight: 800;
     text-transform: uppercase;
     width: 100%;
-    margin: 35px 0;
-    text-align: center; }
+    margin: 25px 0;
+    text-align: center;
+    color: #131313; }
 
 .section6 {
   padding: 80px 0;
@@ -312,6 +630,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase;
     padding-bottom: 80px; }
     @media only screen and (max-width: 1499px) {
@@ -326,7 +645,18 @@ body {
       font-size: 36px;
       font-weight: 900;
       text-transform: uppercase;
-      color: #0260D8;
+      background: #a50606;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+      /* IE6-9 */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       text-align: center; }
     .section6 .calcWrapper .form-line {
       margin: 35px 0;
@@ -422,7 +752,7 @@ body {
       .section6 .calcWrapper .form-line .inputNarrow {
         width: 25%; }
     .section6 .calcWrapper .noPadding {
-      padding-left: 15px; }
+      padding-left: 0; }
     .section6 .calcWrapper .noMargin {
       margin: 5px 0; }
     .section6 .calcWrapper hr {
@@ -432,7 +762,15 @@ body {
       font-family: 'gothampro', sans-serif;
       font-size: 30px;
       font-weight: 300;
-      margin: 40px 0; }
+      margin-bottom: 0;
+      letter-spacing: 1px; }
+    .section6 .calcWrapper .subAnswer {
+      font-family: 'gothampro-black', sans-serif;
+      font-size: 30px;
+      font-weight: 900;
+      color: #232222;
+      letter-spacing: -1px;
+      margin-bottom: 40px; }
     .section6 .calcWrapper .smallNote {
       font-size: 24px;
       margin-top: 40px;
@@ -441,17 +779,34 @@ body {
       font-family: 'bebas_neuebold', sans-serif;
       font-size: 80px;
       font-weight: 800;
-      background: linear-gradient(to bottom, #a36a21 0%, #ebbc3d 30%, #f1e080 59%, #ce9b20 90%);
+      background: #8c8b88;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, white 0%, #171717 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, white 0%, #171717 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, white 0%, #171717 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+      /* IE6-9 */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-align: center;
-      margin-bottom: 25px; }
+      text-align: center; }
     .section6 .calcWrapper .button {
       font-family: 'gothampro-black', sans-serif;
       font-size: 20px;
       font-weight: 900;
       color: white;
-      background: #0260D8;
+      background: #a50606;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+      /* IE6-9 */
       border-bottom-left-radius: 100px;
       border-bottom-right-radius: 100px;
       border-top-left-radius: 100px;
@@ -462,7 +817,7 @@ body {
       display: block;
       margin: 0 auto;
       cursor: pointer;
-      box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px;
+      box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
       width: 375px; }
     .section6 .calcWrapper .calcResult {
       font-family: 'gothampro-bold', sans-serif;
@@ -487,6 +842,51 @@ body {
         text-align: center;
         padding: 0 10px; }
 
+.section7 {
+  padding: 80px 0 160px 0;
+  position: relative; }
+  .section7 .sectionTitle {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #232222;
+    text-transform: uppercase;
+    margin-bottom: 80px; }
+    @media only screen and (max-width: 1499px) {
+      .section7 .sectionTitle {
+        font-size: 25px; } }
+  .section7 .container {
+    padding: 0; }
+    .section7 .container .specBlock {
+      padding: 0; }
+      .section7 .container .specBlock .specialty {
+        display: inline-block;
+        font-family: 'gothampro-medium', sans-serif;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #232222;
+        width: 360px;
+        padding: 10px 15px 10px 0;
+        text-transform: uppercase;
+        border-bottom: 1px solid #EC0606;
+        margin: 10px 0;
+        transition: all 0.2s linear; }
+        .section7 .container .specBlock .specialty:hover {
+          border-color: transparent;
+          box-shadow: rgba(0, 0, 0, 0.13) 5px 5px 20px; }
+    .section7 .container .specBlock:nth-of-type(2) {
+      text-align: right; }
+      .section7 .container .specBlock:nth-of-type(2) .specialty {
+        padding: 10px 0 10px 15px; }
+  .section7 .bgImg {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    left: 39%;
+    width: 25%;
+    height: auto; }
+
 .section8 {
   padding: 80px 0;
   background: url("../img/bg8.jpg") no-repeat;
@@ -496,6 +896,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase;
     margin-bottom: 150px; }
     @media only screen and (max-width: 1499px) {
@@ -514,7 +915,7 @@ body {
       position: relative; }
       .section8 .iconRow .iconItem img {
         border-radius: 50%;
-        box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px; }
+        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
       .section8 .iconRow .iconItem .iconCaption {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 18px;
@@ -531,6 +932,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase; }
     @media only screen and (max-width: 1499px) {
       .section9 .sectionTitle {
@@ -547,7 +949,7 @@ body {
       width: 420px;
       padding: 35px;
       text-align: center;
-      box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px;
+      box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
       margin: 45px;
       transform: scale(0.7, 0.7);
       transition: all 1s; }
@@ -618,6 +1020,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase; }
     @media only screen and (max-width: 1499px) {
       .section10 .sectionTitle {
@@ -631,6 +1034,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase;
     color: #FF0000;
     line-height: 50px;
@@ -640,8 +1044,8 @@ body {
       .section11 .sectionTitle {
         font-size: 25px; } }
   .section11 .formBlock form {
-    background: white;
-    padding: 15px; }
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px; }
     .section11 .formBlock form .formTitle {
       font-family: 'gothampro-medium', sans-serif;
       font-size: 20px;
@@ -657,7 +1061,7 @@ body {
       font-size: 20px;
       font-weight: 300;
       text-align: center;
-      width: 70%;
+      width: 75%;
       margin: 25px auto;
       display: block; }
     .section11 .formBlock form .button {
@@ -670,17 +1074,28 @@ body {
       font-size: 20px;
       font-weight: 900;
       text-align: center;
-      width: 70%;
-      margin: 20px auto;
+      width: 75%;
+      margin: 25px auto;
       display: block;
       color: white;
-      background: #0260D8;
-      box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px; }
+      background: #a50606;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+      /* IE6-9 */
+      box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
+      .section11 .formBlock form .button:focus {
+        outline: none; }
     .section11 .formBlock form .underText {
       font-family: 'gothampro-light', sans-serif;
       font-size: 14px;
       color: #3E3E3E;
-      margin-top: 50px;
+      margin-top: 30px;
       text-align: center; }
 
 .section12 {
@@ -690,6 +1105,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
     font-weight: 800;
+    color: #232222;
     text-transform: uppercase;
     margin-bottom: 80px; }
     @media only screen and (max-width: 1499px) {
@@ -713,7 +1129,7 @@ body {
             font-family: 'gothampro-black', sans-serif;
             font-size: 24px;
             font-weight: 900;
-            color: #0260D8;
+            color: #EC0606;
             text-transform: uppercase;
             padding: 0;
             white-space: normal; }
@@ -768,8 +1184,8 @@ body {
     margin-top: 60px;
     padding-top: 30px; }
     .section12 .formBlock form {
-      background: white;
-      padding: 15px; }
+      background: rgba(255, 255, 255, 0.9);
+      padding: 50px; }
       .section12 .formBlock form .formTitle {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 20px;
@@ -785,7 +1201,7 @@ body {
         font-size: 20px;
         font-weight: 300;
         text-align: center;
-        width: 70%;
+        width: 75%;
         margin: 25px auto;
         display: block; }
       .section12 .formBlock form .button {
@@ -798,17 +1214,28 @@ body {
         font-size: 20px;
         font-weight: 900;
         text-align: center;
-        width: 70%;
-        margin: 20px auto;
+        width: 75%;
+        margin: 25px auto;
         display: block;
         color: white;
-        background: #0260D8;
-        box-shadow: rgba(0, 0, 0, 0.43) 12px 12px 70px; }
+        background: #a50606;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+        /* IE6-9 */
+        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
+        .section12 .formBlock form .button:focus {
+          outline: none; }
       .section12 .formBlock form .underText {
         font-family: 'gothampro-light', sans-serif;
         font-size: 14px;
         color: #3E3E3E;
-        margin-top: 50px;
+        margin-top: 30px;
         text-align: center; }
 
 .footer {
@@ -828,7 +1255,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 24px;
     font-weight: 900;
-    color: #0260D8;
+    color: #EC0606;
     text-transform: uppercase; }
   .footer .address {
     font-family: 'gothampro-medium', sans-serif;
