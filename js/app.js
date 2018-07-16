@@ -4,7 +4,7 @@
     date.setDate(date.getDate() + 365);
 
     var cookieLang = getCookie('lang');
-    $('.lang span:contains(' + cookieLang + ')').addClass('red');
+    $('.lang span:contains(' + cookieLang + ')').addClass('active');
 
     // получаем Cookie, если не установлены, то по умолчанию rus
     function getCookie(name) {
@@ -108,6 +108,8 @@
 
     $('#askPerformance').on('click', function () {
         $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
+        var $modelName = $(this).attr('data-comment');
+        $('.modal-body .itemTitle').html($modelName);
     });
 
 
@@ -237,25 +239,29 @@
             $pellet_price = parseFloat($('[name="pellet_price"]').val()),
             $textParams = $('.calcResult');
 
+
         var diesel_sum = $tons * $prices_elevator * 1.2 * $diesel_price,
             gas_sum = $tons * $prices_elevator * 1.4 * $gas_price,
             pellet_sum = $tons * $prices_elevator * 3 * $pellet_price;
 
-        function addCommas(num) {
+        function addSpace(num) {
+            if (isNaN(num)) {
+                num = 0;
+            }
             var str = num.toString().split('.');
             if (str[0].length >= 4) {
-                //add comma every 3 digits befor decimal
+                //add comma every 3 digits before decimal
                 str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
             }
             return str.join('.');
         }
 
-        $textParams.find('span.tons').html($tons);
-        $textParams.find('span.prices_elevator').html($prices_elevator);
+        $textParams.find('span.tons').html(addSpace($tons));
+        $textParams.find('span.prices_elevator').html(addSpace($prices_elevator));
 
-        $('.diesel_price').html(addCommas(diesel_sum) + ' грн');
-        $('.gas_price').html(addCommas(gas_sum) + ' грн');
-        $('.pellet_price').html(addCommas(pellet_sum) + ' грн');
+        $('.diesel_price').html(addSpace(diesel_sum) + ' грн');
+        $('.gas_price').html(addSpace(gas_sum) + ' грн');
+        $('.pellet_price').html(addSpace(pellet_sum) + ' грн');
     });
 
     /*Slick slider*/
@@ -330,19 +336,19 @@
     $('.section5 .button').on('click', function () {
         var $this = $(this);
         $this.attr('data-modelname');
-        console.log($this.attr('data-modelname'));
         $('.modal-body .itemTitle').html($this.attr('data-modelname'));
     });
 
 
     /*Call back*/
+    var $upperForm = $('.upperMenu form');
     $('.orderCall').on('click', function (event) {
         event.preventDefault();
-        $('.upperMenu form').toggle(200);
+        $upperForm.toggle(200);
     });
 
     $(document).on('click', '.close', function () {
-        $('.upperMenu form').hide(200);
+        $upperForm.hide(200);
     });
 
     
