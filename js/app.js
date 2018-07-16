@@ -4,7 +4,7 @@
     date.setDate(date.getDate() + 365);
 
     var cookieLang = getCookie('lang');
-    $('.lang span:contains(' + $cookieLang + ')').addClass('active');
+    $('.lang span:contains(' + cookieLang + ')').addClass('red');
 
     // получаем Cookie, если не установлены, то по умолчанию rus
     function getCookie(name) {
