@@ -16,7 +16,7 @@
 
 
     $('.myBtn').on('click', function () {
-        $('.modal-body .button').attr('data-comment', $(this).attr('data-comment'));
+        $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
     });
 
     // $('.btn').removeAttr('disabled');
@@ -73,7 +73,7 @@
             success: function (response) {
                 console.log(response);
                 console.log(response.response);
-                var $texthere = $('#texthere');
+                var $texthere = $('.texthere');
                 if (response.response.result) {
                     console.log("success");
                     $texthere.html('Заявка отправлена успешно');
@@ -94,16 +94,29 @@
 
     //Подбор модели зерносушилки
 
-    function selectDrier (event) {
-        event.preventDefault();
+    $('.performance').keyup(function () {
+        modelCalc();
+    });
+
+    $('.inputWrapper input[name="moisture"]').on('click', function () {
+        modelCalc();
+    });
+
+    $('#askPerformance').on('click', function () {
+        $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
+    });
+
+
+    function modelCalc() {
         var model,
             $performance = parseInt($('.performance').val()),
             $moisture = $('[name="moisture"]:checked').val(),
-            $answer = $('.modelAnswer');
+            $answer = $('#resultTarget'),
+            $comment = $('#askPerformance');
 
-        if (isNaN($performance)) { //Проверяем выбрана ли мощность
+        /*if (isNaN($performance)) { //Проверяем выбрана ли мощность
             $answer.html('Выберите производительность');
-        } else if ($moisture === '25-14' && $performance < 80) {
+        } else*/ if ($moisture === '25-14' && $performance < 80) {
             switch (true) {
                 case $performance < 60:
                     model = 120;
@@ -113,8 +126,9 @@
                     break;
             }
             $answer.html('Basic ' + model);
+            $comment.attr('data-comment', 'Basic');
 
-        } else if ($moisture === '25-14' && 80 <= $performance < 150) {
+        } else if ($moisture === '25-14' &&  $performance >= 80 && $performance < 150) {
             switch (true) {
                 case $performance >= 80 && $performance < 100:
                     model = 200;
@@ -139,8 +153,10 @@
                     break;
             }
             $answer.html('Large ' + model);
+            $comment.attr('data-comment', 'Large');
 
-        } else if ($moisture === '25-14' && 150 <= $performance) {
+        } else if ($moisture === '25-14' && $performance >= 150) {
+
             switch (true) {
                 case $performance >= 150 && $performance < 200:
                     model = 350;
@@ -156,6 +172,7 @@
                     break;
             }
             $answer.html('XL ' + model);
+            $comment.attr('data-comment', 'XL');
 
         } else if ($moisture === '30-14' && $performance < 60) {
             switch (true) {
@@ -167,8 +184,9 @@
                     break;
             }
             $answer.html('Basic ' + model);
+            $comment.attr('data-comment', 'Basic');
 
-        } else if ($moisture === '30-14' && 60 <= $performance < 115) {
+        } else if ($moisture === '30-14' &&  $performance >= 60 && $performance < 115) {
             switch (true) {
                 case $performance >= 60 && $performance < 70:
                     model = 200;
@@ -181,8 +199,9 @@
                     break;
             }
             $answer.html('Large ' + model);
+            $comment.attr('data-comment', 'Large');
 
-        } else if ($moisture === '30-14' && 115 <= $performance) {
+        } else if ($moisture === '30-14' && $performance >= 115) {
             switch (true) {
                 case $performance >= 115 && $performance < 150:
                     model = 350;
@@ -198,19 +217,21 @@
                     break;
             }
             $answer.html('XL ' + model);
+            $comment.attr('data-comment', 'XL');
         }
     }
 
 
     //Рассчитываем стоимость сушки
-    $('#calcForm').on('click', '.btn', function (event) {
+    $('#calcForm').on('click', '.button', function (event) {
         event.preventDefault();
 
         var $tons = parseInt($('[name="tons"]').val()),
             $prices_elevator = parseFloat($('[name="prices_elevator"]').val()),
             $diesel_price = parseFloat($('[name="diesel_price"]').val()),
             $gas_price = parseFloat($('[name="gas_price"]').val()),
-            $pellet_price = parseFloat($('[name="pellet_price"]').val());
+            $pellet_price = parseFloat($('[name="pellet_price"]').val()),
+            $textParams = $('.calcResult');
 
         var diesel_sum = $tons * $prices_elevator * 1.2 * $diesel_price,
             gas_sum = $tons * $prices_elevator * 1.4 * $gas_price,
@@ -225,13 +246,12 @@
             return str.join('.');
         }
 
-        diesel_sum = addCommas(diesel_sum);
+        $textParams.find('span.tons').html($tons);
+        $textParams.find('span.prices_elevator').html($prices_elevator);
 
-        $('.resultAnswer').html(
-            '<p>На дизельном топливе ' + diesel_sum + ' грн</p>'
-            + '<p>На газе ' + addCommas(gas_sum) + ' грн</p>'
-            + '<p>На пеллетах ' + addCommas(pellet_sum) + ' грн</p>'
-        )
+        $('.diesel_price').html(addCommas(diesel_sum) + ' грн');
+        $('.gas_price').html(addCommas(gas_sum) + ' грн');
+        $('.pellet_price').html(addCommas(pellet_sum) + ' грн');
     });
 
     /*Slick slider*/
@@ -246,38 +266,49 @@
     /*Animation on scroll*/
     $(window).scroll(function () {
         //Animate falling pics in third section
-        var $sec3 = $('.section3 .row').offset().top - window.innerHeight;
+        var $sec3 = $('.section3 .row').offset().top - window.innerHeight,
+            $sec2 = $('.redText').offset().top - window.innerHeight;
+        if ($(window).scrollTop() > $sec2) {
+            $('.counterPeriod').numerator( {
+                easing: 'linear', // easing options.
+                duration: 300, // the length of the animation.
+                rounding: 0, // decimal places.
+                toValue: 9 // animate to this value.
+            } );
+            setTimeout(function () {
+                $('.counterRegion').numerator( {
+                    easing: 'linear', // easing options.
+                    duration: 300, // the length of the animation.
+                    toValue: 15 // animate to this value.
+                } );
+            }, 400);
+            setTimeout(function () {
+                $('.counterClient').numerator( {
+                    easing: 'linear', // easing options.
+                    duration: 300, // the length of the animation.
+                    toValue: 80 // animate to this value.
+                } );
+            }, 800);
+            setTimeout(function () {
+                $('.counterYear').numerator( {
+                    easing: 'linear', // easing options.
+                    duration: 300, // the length of the animation.
+                    toValue: 1958 // animate to this value.
+                } );
+            }, 1200);
+            setTimeout(function () {
+                $('.counterCountry').numerator( {
+                    easing: 'linear', // easing options.
+                    duration: 300, // the length of the animation.
+                    toValue: 52 // animate to this value.
+                } );
+            }, 1600);
+        }
         if ($(window).scrollTop() > $sec3) {
-            $('body::after').css('display', 'none');
+            $('.whiteBg').css('display', 'none');
             $('.picBlock').addClass('picBlockAnim');
         }
     });
-
-    $('.counter').countUp({
-        'time': 1000
-    });
-
-
-    /*this block is for debug, delete before release*/
-    /* $('.count').each(function() {
-         var $this = $(this),
-             countTo = $this.attr('data-count');
-         $({countNum: $this.text()}).animate({
-                 countNum: countTo
-             },
-
-             {   duration: 800,
-                 easing: 'swing',
-                 step: function() {
-                     $this.text(Math.floor(this.countNum));
-                 },
-                 complete: function() {
-                     $this.text(this.countNum);
-                 }
-             });
-     });*/
-    /*end of debbug clock*/
-
 
     /*Changing + / - in accordion*/
     $('.card-header').on('click', '.btn', function () {
@@ -291,11 +322,41 @@
     });
 
 
+    /*adding model name to modal form*/
     $('.section5 .button').on('click', function () {
         var $this = $(this);
         $this.attr('data-modelname');
         console.log($this.attr('data-modelname'));
         $('.modal-body .itemTitle').html($this.attr('data-modelname'));
+    });
+
+
+    /*Call back*/
+    $('.orderCall').on('click', function (event) {
+        event.preventDefault();
+        $('.upperMenu form').toggle(200);
+    });
+
+    $(document).on('click', '.close', function () {
+        $('.upperMenu form').hide(200);
+    });
+
+    
+    
+    
+    var $upBtn = $(".upButton");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+            $upBtn.show(300);
+        } else {
+            $upBtn.hide(300);
+        }
+    };
+
+    $(document).on('click', '.upButton', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
     })
 
 

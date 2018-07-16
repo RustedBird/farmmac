@@ -129,6 +129,16 @@ $mainColor: #EC0606;
   margin: 0 auto;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+  transition: all 0.2s;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    transform: scale(1.02);
+  }
+  @media screen and (max-width: 1440px){
+    font-size: 18px;
+  }
 }
 
 @mixin sendForm {
@@ -154,8 +164,15 @@ $mainColor: #EC0606;
       width: 75%;
       margin: 25px auto;
       display: block;
+      &:focus {
+        outline: none;
+        background: #eae4e1;
+      }
+      @media screen and (max-width: 1440px){
+        font-size: 18px;
+      }
     }
-    .button {
+    button {
       height: 57px;
       border-bottom-right-radius: 100px;
       border-bottom-left-radius: 100px;
@@ -175,8 +192,18 @@ $mainColor: #EC0606;
       background: linear-gradient(to bottom, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0); /* IE6-9 */
       box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
       &:focus {
         outline: none;
+      }
+      &:hover {
+        transform: scale(1.02);
+      }
+      @media screen and (max-width: 1440px){
+        font-size: 18px;
+        padding: 10px 0;
       }
     }
     .underText {
@@ -193,7 +220,7 @@ $mainColor: #EC0606;
 body {
   color: #232222;
   position: relative;
-   /*&:after { //white background to hide animated element whe loaded with slow connection
+   .whiteBg { //white background to hide animated element whe loaded with slow connection
      content: '';
      position: absolute;
      width: 100%;
@@ -201,8 +228,42 @@ body {
      top: 0;
      left: 0;
      background: #ffffff;
-     z-index: -1;
-   }*/
+     z-index: 0;
+   }
+  .upButton {
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    background: rgba(255, 255, 255, 0.71);
+    z-index: 99;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 40%;
+      height: 40%;
+      border-right: 5px solid #EC0606;
+      border-top: 5px solid #EC0606;
+      transform: rotate(-45deg);
+      left: 30%;
+      top: 40%;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .light {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
 }
 
 .modal-body {
@@ -261,6 +322,40 @@ body {
         display: inline-block;
         width: 360px;
         margin: 0 0 0 30px;
+        position: relative;
+        @media screen and (max-width: 1440px){
+          width: 330px;
+        }
+      }
+      @include sendForm;
+      form {
+        display: none;
+        position: absolute;
+        width: 360px;
+        background: white;
+        right: 0;
+        top: 95px;
+        padding: 20px;
+        z-index: 99;
+        .close {
+          content: '';
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          z-index: 100;
+          cursor: pointer;
+        }
+        input {
+          width: 80%;
+        }
+        .callBack {
+          width: 80%;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+      @media screen and (max-width: 1440px){
+        justify-content: center;
       }
     }
     h1 {
@@ -283,10 +378,24 @@ body {
         width: 265px;
         height: 266px;
         background: url("../img/titleicon.png");
+        background-size: cover;
+        @media screen and (max-width: 1440px){
+          left: 53px;
+          top: -27px;
+          width: 180px;
+          height: 181px;
+        }
       }
       span {
         font-size: 72px;
         text-transform: uppercase;
+      }
+      @media screen and (max-width: 1440px){
+        font-size: 38px;
+        padding-left: 215px;
+        margin-top: 40px;
+        float: none;
+        margin-bottom: 0;
       }
     }
     .formBlock {
@@ -311,6 +420,12 @@ body {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin: 0;
+          @media screen and (max-width: 1440px){
+            font-size: 24px;
+          }
+        }
+        @media screen and (max-width: 1440px){
+          margin-right: -30px;
         }
       }
       .smallerText {
@@ -319,11 +434,18 @@ body {
         font-weight: 900;
         color: #232222;
         margin: 20px -135px 0 0;
+        @media screen and (max-width: 1440px){
+          font-size: 20px;
+          margin: 13px -40px 0 0;
+        }
       }
       .blockWrapper {
         display: inline-block;
         margin-top: 35px;
         @include sendForm;
+      }
+      @media screen and (max-width: 1440px){
+        margin-top: 20px;
       }
     }
   }
@@ -991,22 +1113,25 @@ body {
       &:after {
         display: none;
       }
+      .name {
+        color: $mainColor;
+      }
     }
     .slick-arrow {
       position: absolute;
       top: 600px;
       width: 55px;
       height: 55px;
-      border-bottom: 4px solid #8C8888;
+      border-bottom: 5px solid rgba(236, 6, 6, 0.5);
       z-index: 99;
       transition: all 0.3s;
       &:hover {
-        border-color: black;
+        border-color: $mainColor;
       }
     }
     .slick-prev {
       left: 485px;
-      border-left: 4px solid #8C8888;
+      border-left: 5px solid rgba(236, 6, 6, 0.5);
       transform: rotate(45deg);
       &:before {
         opacity: 0;
@@ -1014,7 +1139,7 @@ body {
     }
     .slick-next {
       right: 485px;
-      border-right: 4px solid #8C8888;
+      border-right: 5px solid rgba(236, 6, 6, 0.5);
       transform: rotate(-45deg);
       &:before {
         opacity: 0;
@@ -1028,6 +1153,26 @@ body {
   .sectionTitle {
     @include sectionTitle;
   }
+  .subTitle {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 60px 0;
+    background: rgb(165, 6, 6); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0); /* IE6-9 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -2px;
+  }
+  .lookButton {
+    @include button;
+    width: 365px;
+  }
 }
 
 .section11 {
@@ -1036,7 +1181,7 @@ body {
   background-size: cover;
   .sectionTitle {
     @include sectionTitle;
-    color: #FF0000;
+    color: #042DFE;
     line-height: 50px;
     letter-spacing: -1.2px;
     padding-bottom: 70px;
@@ -1088,7 +1233,7 @@ body {
               position: absolute;
               right: -73px;
               top: 10px;
-              color: #4C4949;
+              color: #4B4949;
               width: 50px;
               height: 50px;
               margin-left: 15px;
@@ -1097,7 +1242,7 @@ body {
                 position: absolute;
                 width: 70%;
                 height: 12%;
-                background: #4A4949;
+                background: #4B4949;
                 left: 15%;
                 top: 45%;
               }
@@ -1133,7 +1278,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 24px;
     font-weight: 900;
-    color: #FC0629;
+    color: $mainColor;
     text-transform: uppercase;
     margin-top: 50px;
   }

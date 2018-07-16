@@ -42,8 +42,8 @@
 /*mixins*/
 body {
   color: #232222;
-  position: relative;
-  /*&:after { //white background to hide animated element whe loaded with slow connection
+  position: relative; }
+  body .whiteBg {
     content: '';
     position: absolute;
     width: 100%;
@@ -51,8 +51,37 @@ body {
     top: 0;
     left: 0;
     background: #ffffff;
-    z-index: -1;
-  }*/ }
+    z-index: 0; }
+  body .upButton {
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    background: rgba(255, 255, 255, 0.71);
+    z-index: 99;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s; }
+    body .upButton:after {
+      position: absolute;
+      content: '';
+      width: 40%;
+      height: 40%;
+      border-right: 5px solid #EC0606;
+      border-top: 5px solid #EC0606;
+      transform: rotate(-45deg);
+      left: 30%;
+      top: 40%; }
+    body .upButton:hover {
+      opacity: 1; }
+  body .light {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0; }
 
 .modal-body form {
   background: rgba(255, 255, 255, 0.9);
@@ -75,7 +104,13 @@ body {
     width: 75%;
     margin: 25px auto;
     display: block; }
-  .modal-body form .button {
+    .modal-body form input:focus {
+      outline: none;
+      background: #eae4e1; }
+    @media screen and (max-width: 1440px) {
+      .modal-body form input {
+        font-size: 18px; } }
+  .modal-body form button {
     height: 57px;
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
@@ -99,9 +134,18 @@ body {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
     /* IE6-9 */
-    box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
-    .modal-body form .button:focus {
+    box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer; }
+    .modal-body form button:focus {
       outline: none; }
+    .modal-body form button:hover {
+      transform: scale(1.02); }
+    @media screen and (max-width: 1440px) {
+      .modal-body form button {
+        font-size: 18px;
+        padding: 10px 0; } }
   .modal-body form .underText {
     font-family: 'gothampro-light', sans-serif;
     font-size: 14px;
@@ -191,9 +235,115 @@ body {
         margin: 0 auto;
         cursor: pointer;
         box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        transition: all 0.2s;
         display: inline-block;
         width: 360px;
-        margin: 0 0 0 30px; }
+        margin: 0 0 0 30px;
+        position: relative; }
+        .section1 .container .upperMenu .button:focus {
+          outline: none; }
+        .section1 .container .upperMenu .button:hover {
+          transform: scale(1.02); }
+        @media screen and (max-width: 1440px) {
+          .section1 .container .upperMenu .button {
+            font-size: 18px; } }
+        @media screen and (max-width: 1440px) {
+          .section1 .container .upperMenu .button {
+            width: 330px; } }
+      .section1 .container .upperMenu form {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 50px; }
+        .section1 .container .upperMenu form .formTitle {
+          font-family: 'gothampro-medium', sans-serif;
+          font-size: 20px;
+          font-weight: 600; }
+        .section1 .container .upperMenu form input {
+          border: 1px solid #B1ABA8;
+          height: 57px;
+          border-bottom-right-radius: 100px;
+          border-bottom-left-radius: 100px;
+          border-top-right-radius: 100px;
+          border-top-left-radius: 100px;
+          font-family: 'gothampro-light', sans-serif;
+          font-size: 20px;
+          font-weight: 300;
+          text-align: center;
+          width: 75%;
+          margin: 25px auto;
+          display: block; }
+          .section1 .container .upperMenu form input:focus {
+            outline: none;
+            background: #eae4e1; }
+          @media screen and (max-width: 1440px) {
+            .section1 .container .upperMenu form input {
+              font-size: 18px; } }
+        .section1 .container .upperMenu form button {
+          height: 57px;
+          border-bottom-right-radius: 100px;
+          border-bottom-left-radius: 100px;
+          border-top-right-radius: 100px;
+          border-top-left-radius: 100px;
+          font-family: 'gothampro-black', sans-serif;
+          font-size: 20px;
+          font-weight: 900;
+          text-align: center;
+          width: 75%;
+          margin: 25px auto;
+          display: block;
+          color: white;
+          background: #a50606;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+          /* IE6-9 */
+          box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+          transition: all 0.2s;
+          border: none;
+          cursor: pointer; }
+          .section1 .container .upperMenu form button:focus {
+            outline: none; }
+          .section1 .container .upperMenu form button:hover {
+            transform: scale(1.02); }
+          @media screen and (max-width: 1440px) {
+            .section1 .container .upperMenu form button {
+              font-size: 18px;
+              padding: 10px 0; } }
+        .section1 .container .upperMenu form .underText {
+          font-family: 'gothampro-light', sans-serif;
+          font-size: 14px;
+          color: #3E3E3E;
+          margin-top: 30px;
+          text-align: center; }
+      .section1 .container .upperMenu form {
+        display: none;
+        position: absolute;
+        width: 360px;
+        background: white;
+        right: 0;
+        top: 95px;
+        padding: 20px;
+        z-index: 99; }
+        .section1 .container .upperMenu form .close {
+          content: '';
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          z-index: 100;
+          cursor: pointer; }
+        .section1 .container .upperMenu form input {
+          width: 80%; }
+        .section1 .container .upperMenu form .callBack {
+          width: 80%;
+          padding: 0;
+          cursor: pointer; }
+      @media screen and (max-width: 1440px) {
+        .section1 .container .upperMenu {
+          justify-content: center; } }
     .section1 .container h1 {
       font-family: 'gothampro-black', sans-serif;
       font-size: 60px;
@@ -213,10 +363,24 @@ body {
         top: -57px;
         width: 265px;
         height: 266px;
-        background: url("../img/titleicon.png"); }
+        background: url("../img/titleicon.png");
+        background-size: cover; }
+        @media screen and (max-width: 1440px) {
+          .section1 .container h1:before {
+            left: 53px;
+            top: -27px;
+            width: 180px;
+            height: 181px; } }
       .section1 .container h1 span {
         font-size: 72px;
         text-transform: uppercase; }
+      @media screen and (max-width: 1440px) {
+        .section1 .container h1 {
+          font-size: 38px;
+          padding-left: 215px;
+          margin-top: 40px;
+          float: none;
+          margin-bottom: 0; } }
     .section1 .container .formBlock {
       text-align: right;
       margin-top: 50px; }
@@ -244,12 +408,22 @@ body {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin: 0; }
+          @media screen and (max-width: 1440px) {
+            .section1 .container .formBlock .titleWrapper .subTitle {
+              font-size: 24px; } }
+        @media screen and (max-width: 1440px) {
+          .section1 .container .formBlock .titleWrapper {
+            margin-right: -30px; } }
       .section1 .container .formBlock .smallerText {
         font-family: 'gothampro-black', sans-serif;
         font-size: 30px;
         font-weight: 900;
         color: #232222;
         margin: 20px -135px 0 0; }
+        @media screen and (max-width: 1440px) {
+          .section1 .container .formBlock .smallerText {
+            font-size: 20px;
+            margin: 13px -40px 0 0; } }
       .section1 .container .formBlock .blockWrapper {
         display: inline-block;
         margin-top: 35px; }
@@ -274,7 +448,13 @@ body {
             width: 75%;
             margin: 25px auto;
             display: block; }
-          .section1 .container .formBlock .blockWrapper form .button {
+            .section1 .container .formBlock .blockWrapper form input:focus {
+              outline: none;
+              background: #eae4e1; }
+            @media screen and (max-width: 1440px) {
+              .section1 .container .formBlock .blockWrapper form input {
+                font-size: 18px; } }
+          .section1 .container .formBlock .blockWrapper form button {
             height: 57px;
             border-bottom-right-radius: 100px;
             border-bottom-left-radius: 100px;
@@ -298,15 +478,27 @@ body {
             /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
             /* IE6-9 */
-            box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
-            .section1 .container .formBlock .blockWrapper form .button:focus {
+            box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer; }
+            .section1 .container .formBlock .blockWrapper form button:focus {
               outline: none; }
+            .section1 .container .formBlock .blockWrapper form button:hover {
+              transform: scale(1.02); }
+            @media screen and (max-width: 1440px) {
+              .section1 .container .formBlock .blockWrapper form button {
+                font-size: 18px;
+                padding: 10px 0; } }
           .section1 .container .formBlock .blockWrapper form .underText {
             font-family: 'gothampro-light', sans-serif;
             font-size: 14px;
             color: #3E3E3E;
             margin-top: 30px;
             text-align: center; }
+      @media screen and (max-width: 1440px) {
+        .section1 .container .formBlock {
+          margin-top: 20px; } }
   .section1 .mainImg {
     width: 100%;
     height: auto;
@@ -610,7 +802,15 @@ body {
         display: block;
         margin: 0 auto;
         cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
+        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        transition: all 0.2s; }
+        .section5 .topRow .topItem .button:focus {
+          outline: none; }
+        .section5 .topRow .topItem .button:hover {
+          transform: scale(1.02); }
+        @media screen and (max-width: 1440px) {
+          .section5 .topRow .topItem .button {
+            font-size: 18px; } }
   .section5 h5 {
     font-family: 'gothampro-bold', sans-serif;
     font-size: 36px;
@@ -818,7 +1018,15 @@ body {
       margin: 0 auto;
       cursor: pointer;
       box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+      transition: all 0.2s;
       width: 375px; }
+      .section6 .calcWrapper .button:focus {
+        outline: none; }
+      .section6 .calcWrapper .button:hover {
+        transform: scale(1.02); }
+      @media screen and (max-width: 1440px) {
+        .section6 .calcWrapper .button {
+          font-size: 18px; } }
     .section6 .calcWrapper .calcResult {
       font-family: 'gothampro-bold', sans-serif;
       font-size: 24px;
@@ -991,25 +1199,28 @@ body {
       .section9 #slickSlider .slick-active:after,
       .section9 #slickSlider .slick-center:after {
         display: none; }
+      .section9 #slickSlider .slick-active .name,
+      .section9 #slickSlider .slick-center .name {
+        color: #EC0606; }
     .section9 #slickSlider .slick-arrow {
       position: absolute;
       top: 600px;
       width: 55px;
       height: 55px;
-      border-bottom: 4px solid #8C8888;
+      border-bottom: 5px solid rgba(236, 6, 6, 0.5);
       z-index: 99;
       transition: all 0.3s; }
       .section9 #slickSlider .slick-arrow:hover {
-        border-color: black; }
+        border-color: #EC0606; }
     .section9 #slickSlider .slick-prev {
       left: 485px;
-      border-left: 4px solid #8C8888;
+      border-left: 5px solid rgba(236, 6, 6, 0.5);
       transform: rotate(45deg); }
       .section9 #slickSlider .slick-prev:before {
         opacity: 0; }
     .section9 #slickSlider .slick-next {
       right: 485px;
-      border-right: 4px solid #8C8888;
+      border-right: 5px solid rgba(236, 6, 6, 0.5);
       transform: rotate(-45deg); }
       .section9 #slickSlider .slick-next:before {
         opacity: 0; }
@@ -1025,6 +1236,61 @@ body {
     @media only screen and (max-width: 1499px) {
       .section10 .sectionTitle {
         font-size: 25px; } }
+  .section10 .subTitle {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 60px 0;
+    background: #a50606;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+    /* IE6-9 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -2px; }
+  .section10 .lookButton {
+    font-family: 'gothampro-black', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    background: #a50606;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+    /* IE6-9 */
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    text-align: center;
+    padding: 16px 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+    transition: all 0.2s;
+    width: 365px; }
+    .section10 .lookButton:focus {
+      outline: none; }
+    .section10 .lookButton:hover {
+      transform: scale(1.02); }
+    @media screen and (max-width: 1440px) {
+      .section10 .lookButton {
+        font-size: 18px; } }
 
 .section11 {
   padding: 80px 0;
@@ -1036,7 +1302,7 @@ body {
     font-weight: 800;
     color: #232222;
     text-transform: uppercase;
-    color: #FF0000;
+    color: #042DFE;
     line-height: 50px;
     letter-spacing: -1.2px;
     padding-bottom: 70px; }
@@ -1064,7 +1330,13 @@ body {
       width: 75%;
       margin: 25px auto;
       display: block; }
-    .section11 .formBlock form .button {
+      .section11 .formBlock form input:focus {
+        outline: none;
+        background: #eae4e1; }
+      @media screen and (max-width: 1440px) {
+        .section11 .formBlock form input {
+          font-size: 18px; } }
+    .section11 .formBlock form button {
       height: 57px;
       border-bottom-right-radius: 100px;
       border-bottom-left-radius: 100px;
@@ -1088,9 +1360,18 @@ body {
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
       /* IE6-9 */
-      box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
-      .section11 .formBlock form .button:focus {
+      box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer; }
+      .section11 .formBlock form button:focus {
         outline: none; }
+      .section11 .formBlock form button:hover {
+        transform: scale(1.02); }
+      @media screen and (max-width: 1440px) {
+        .section11 .formBlock form button {
+          font-size: 18px;
+          padding: 10px 0; } }
     .section11 .formBlock form .underText {
       font-family: 'gothampro-light', sans-serif;
       font-size: 14px;
@@ -1144,7 +1425,7 @@ body {
               position: absolute;
               right: -73px;
               top: 10px;
-              color: #4C4949;
+              color: #4B4949;
               width: 50px;
               height: 50px;
               margin-left: 15px; }
@@ -1153,7 +1434,7 @@ body {
                 position: absolute;
                 width: 70%;
                 height: 12%;
-                background: #4A4949;
+                background: #4B4949;
                 left: 15%;
                 top: 45%; }
             .section12 #accordion .card .card-header .mb-0 button .plus {
@@ -1177,7 +1458,7 @@ body {
     font-family: 'gothampro-black', sans-serif;
     font-size: 24px;
     font-weight: 900;
-    color: #FC0629;
+    color: #EC0606;
     text-transform: uppercase;
     margin-top: 50px; }
   .section12 .formBlock {
@@ -1204,7 +1485,13 @@ body {
         width: 75%;
         margin: 25px auto;
         display: block; }
-      .section12 .formBlock form .button {
+        .section12 .formBlock form input:focus {
+          outline: none;
+          background: #eae4e1; }
+        @media screen and (max-width: 1440px) {
+          .section12 .formBlock form input {
+            font-size: 18px; } }
+      .section12 .formBlock form button {
         height: 57px;
         border-bottom-right-radius: 100px;
         border-bottom-left-radius: 100px;
@@ -1228,9 +1515,18 @@ body {
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
         /* IE6-9 */
-        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
-        .section12 .formBlock form .button:focus {
+        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        transition: all 0.2s;
+        border: none;
+        cursor: pointer; }
+        .section12 .formBlock form button:focus {
           outline: none; }
+        .section12 .formBlock form button:hover {
+          transform: scale(1.02); }
+        @media screen and (max-width: 1440px) {
+          .section12 .formBlock form button {
+            font-size: 18px;
+            padding: 10px 0; } }
       .section12 .formBlock form .underText {
         font-family: 'gothampro-light', sans-serif;
         font-size: 14px;

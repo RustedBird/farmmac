@@ -15,6 +15,10 @@
     </script>
 </head>
 <body>
+<div class="whiteBg"></div>
+<div class="upButton">
+    <div class="arrow"></div>
+</div>
 <!--<h1>--><?php //echo LANG_TITLE ?><!--</h1>-->
 <!--<div class="row">
     <div class="col-sm-1 col-sm-offset-10">
@@ -30,7 +34,7 @@
 </div>-->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="modalOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -42,8 +46,8 @@
                 <form class="ajaxForm" action="../process.php" method="post">
                     <h6 class="formTitle text-center">Узнайть технические характеристики модели</h6>
                     <p class="itemTitle">BASIC</p>
-                    <p id="texthere"></p>
-                    <input type="text" name="name" placeholder="имя" required>
+                    <p class="texthere"></p>
+                    <input type="text" name="name" placeholder="Имя" required>
                     <input type="tel" name="phone" placeholder="телефон" required>
                     <input type="email" name="email" placeholder="e - mail" required>
                     <input hidden type="text" name="comment" value="">
@@ -55,7 +59,34 @@
     </div>
 </div>
 
+<!-- Modal from map -->
+<div class="modal fade" id="modalLook" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="ajaxForm" action="../process.php" method="post">
+                    <h6 class="formTitle text-center">Заполните форму, и мы вышле вам контакты
+                        фермерских хозяйств, где работает наше оборудование</h6>
+                    <p class="texthere"></p>
+                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="tel" name="phone" placeholder="телефон" required>
+                    <input type="email" name="email" placeholder="e - mail" required>
+                    <input hidden type="text" name="comment" value="">
+                    <button class="button" data-comment="init_form">получить контакты</button>
+                    <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="container-fluid section1">
+    <img class="light" src="../img/light.png" alt="light">
     <div class="container">
         <div class="upperMenu">
             <img class="logo" src="../img/logo.png" alt="logo">
@@ -67,7 +98,15 @@
                 <span>(050) 404-44-70</span><br>
                 <span>(096) 054-39-91</span>
             </p>
-            <div class="button">заказать обратный звонок</div>
+            <div class="button orderCall">заказать обратный звонок</div>
+            <form class="ajaxForm" action="../process.php" method="post">
+                <p class="texthere"></p>
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="tel" name="phone" placeholder="телефон" required>
+                <input type="hidden" name="comment" value="Call me back">
+                <button class="button callBack" data-comment="Call me back">заказать звонок</button>
+                <span class="close">&times;</span>
+            </form>
         </div>
         <h1>Мобильная зерносушилка<br>
             <span>Pedrotti</span>
@@ -80,12 +119,12 @@
             <div class="blockWrapper">
                 <form class="ajaxForm" action="../process.php" method="post">
                     <h6 class="formTitle text-center">Узнайте, как быстро окупить мобильную<br> зерносушилку, получив расчет окупаемости</h6>
-                    <p id="texthere"></p>
-                    <input type="text" name="name" placeholder="имя" required>
+                    <p class="texthere"></p>
+                    <input type="text" name="name" placeholder="Имя" required>
                     <input type="tel" name="phone" placeholder="телефон" required>
                     <input type="email" name="email" placeholder="e - mail" required>
                     <input hidden type="text" name="comment" value="">
-                    <button class="button" data-comment="init_form">запросить</button>
+                    <button class="button" data-comment="init_form">получить расчет</button>
                     <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
                 </form>
             </div>
@@ -99,27 +138,27 @@
         <h6 class="sectionTitle text-center">несколько фактов о нас</h6>
         <div class="row col-row">
             <div class="col-md-2 col-item">
-                <p class="redText"><span class="counter">9</span> <span class="addText">ЛЕТ</span></p>
+                <p class="redText"><span class="counterPeriod">0</span> <span class="addText">ЛЕТ</span></p>
                 <p class="subText botText">на рынке Украины</p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText">продукция представлена в</p>
-                <p class="redText"><span class="counter">15</span> <span class="smallerText addText">РЕГИОНАХ</span>
+                <p class="redText"><span class="counterRegion">0</span> <span class="smallerText addText">РЕГИОНАХ</span>
                 </p>
                 <p class="subText botText">Украины</p>
             </div>
             <div class="col-md-2 col-item">
-                <p class="redText"><span class="counter">80</span><span class="addText">+</span></p>
+                <p class="redText"><span class="counterClient">0</span><span class="addText">+</span></p>
                 <p class="subText botText">довольных клиентов</p>
             </div>
             <div class="col-md-2 col-item">
                 <p class="subText topText">выпускается с</p>
-                <p class="redText"><span class="counter">1958</span></p>
+                <p class="redText"><span class="counterYear">0</span></p>
                 <p class="subText botText">Года</p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText">оборудование Pedrotti представлено в</p>
-                <p class="redText"><span class="counter">52</span> <span class="smallerText addText">СТРАНАХ</span>
+                <p class="redText"><span class="counterCountry">0</span> <span class="smallerText addText">СТРАНАХ</span>
                 </p>
                 <p class="subText botText">Мира</p>
             </div>
@@ -286,13 +325,13 @@
         <div class="topRow">
 
             <div class="topItem">
-                <button class="button myBtn" data-toggle="modal" data-target="#exampleModalCenter" data-modelname="BASIC" data-comment="Basic">для моделей BASIC</button>
+                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="BASIC" data-comment="Basic">для моделей BASIC</button>
             </div>
             <div class="topItem">
-                <button class="button myBtn" data-toggle="modal" data-target="#exampleModalCenter" data-modelname="LARGE" data-comment="Large">для моделей LARGE</button>
+                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="LARGE" data-comment="Large">для моделей LARGE</button>
             </div>
             <div class="topItem">
-                <button class="button myBtn" data-toggle="modal" data-target="#exampleModalCenter" data-modelname="XL" data-comment="XL">для моделей XL</button>
+                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="XL" data-comment="XL">для моделей XL</button>
             </div>
         </div>
     </div>
@@ -329,8 +368,8 @@
                     <hr>
                 </form>
                 <p class="answer text-center">С Вашей производительностью Вам подойдет серия:</p>
-                <p class="result">BASIC</p>
-                <button class="button">запросить характиристики</button>
+                <p id="resultTarget" class="result">BASIC 120</p>
+                <button id="askPerformance" class="button" data-toggle="modal" data-target="#modalOrder" data-comment="Basic">запросить характиристики</button>
                 <p class="answer text-center smallNote">* - с учётом кукурузы</p>
             </div>
         </div>
@@ -376,26 +415,26 @@
                     <div class="form-line noPadding noMargin">
                         <p class="paramName">на дизельном топливе</p>
                         <div class="inputWrapper inputNarrow">
-                            <p class="priceResult diesel_price">0000</p>
+                            <p class="priceResult diesel_price">972 000 грн</p>
                         </div>
                     </div>
                     <div class="form-line noPadding noMargin">
                         <p class="paramName">на газе</p>
                         <div class="inputWrapper inputNarrow">
-                            <p class="priceResult gas_price">0000</p>
+                            <p class="priceResult gas_price">525 000 грн</p>
                         </div>
                     </div>
                     <div class="form-line noPadding noMargin">
                         <p class="paramName">на пеллетах</p>
                         <div class="inputWrapper inputNarrow">
-                            <p class="priceResult pellet_price">0000</p>
+                            <p class="priceResult pellet_price">144 000 грн</p>
                         </div>
                     </div>
                     <hr>
                 </form>
                 <p class="answer text-center">Рассмотрите предложение о самом выгодном виде топлива:</p>
                 <p class="subAnswer text-center">зерносушилка + твердотопливный теплогенератор</p>
-                <button class="button">рассчитать</button>
+                <button class="button">рассмотреть</button>
             </div>
         </div>
     </div>
@@ -435,16 +474,16 @@
                 <p class="iconCaption topPosition">Полностью сопровождаем<br>
                     клиента от консультации до<br>
                     постгарантийного обслуживания</p>
-                <img src="../img/headphonesicon.jpg" alt="headphones">
+                <img src="../img/headphones.jpg" alt="headphones">
             </div>
             <div class="iconItem">
-                <img src="../img/headphonesicon.jpg" alt="headphones">
+                <img src="../img/phone.jpg" alt="phone">
                 <p class="iconCaption topPosition">Всегда на связи — 24/7</p>
             </div>
             <div class="iconItem">
                 <p class="iconCaption sidePull">Визит сервис - менеджера в<br>
                     течение 24 часов с момента<br> подачи заявки (в период сбора урожая)</p>
-                <img src="../img/headphonesicon.jpg" alt="headphones">
+                <img src="../img/tools.jpg" alt="tools">
             </div>
         </div>
 
@@ -454,17 +493,17 @@
                     мес: выезд, запчасть, работа -<br>
                     бесплатно
                 </p>
-                <img src="../img/headphonesicon.jpg" alt="headphones">
+                <img src="../img/star.jpg" alt="star">
             </div>
             <div class="iconItem">
-                <img src="../img/headphonesicon.jpg" alt="headphones">
+                <img src="../img/book.jpg" alt="book">
                 <p class="iconCaption sidePull">Ведем учет проданного<br>
                     оборудования по сервисному<br>
                     регламенту
                 </p>
             </div>
             <div class="iconItem">
-                <img src="../img/headphonesicon.jpg" alt="headphones">
+                <img src="../img/info.jpg" alt="info">
                 <p class="iconCaption">Сфокусированы на одном<br>
                     продукте, поэтому знаем<br>
                     его ОТ и ДО</p>
@@ -517,26 +556,21 @@
 
         <div class="row" style="display: none">
 
-            <!-- ObfuscateMe -->
             <span id="m31_wrapper_UQnijxw7ecZ" class="m31_encr_wrapper">
                         <span id="m31_cyphertext_UQnijxw7ecZ" class="m31_encr_item">caefaef600f3f4cbb0fbeff7fa02fdc8f8ef00fd01faef04cef4ef00fbfbeff1bcf1fdfbbc03efb0ccf8ef00fd01faef04cef4ef00fbfbeff1bcf1fdfbbc03efcabdefcc</span>
                         <span id="m31_token_UQnijxw7ecZ" class="m31_encr_item">91HmUzkbNLaUbnx6sYrAvTn44MAMbgB</span>
                         <span id="m31_algorithm_UQnijxw7ecZ" class="m31_encr_item">caesar</span></span>
-            <!-- /ObfuscateMe -->
 
-            <!-- ObfuscateMe -->
             <span id="m31_wrapper_RpRsTL5R0Vw4" class="m31_encr_wrapper">
                         <span id="m31_cyphertext_RpRsTL5R0Vw4" class="m31_encr_item">3156155d675a5b321762565e6169642f5e5d6467355b56676262565823586462236a5617335e5d6467355b56676262565823586462236a5631245633</span>
                         <span id="m31_token_RpRsTL5R0Vw4" class="m31_encr_item">8psyu4cB0uLZhPRCyYFbpIH8AQ3oszu2</span>
                         <span id="m31_algorithm_RpRsTL5R0Vw4" class="m31_encr_item">caesar</span></span>
-            <!-- /ObfuscateMe -->
 
-            <!-- ObfuscateMe -->
             <span id="m31_wrapper_vEx6APgfSu2d" class="m31_encr_wrapper">
                         <span id="m31_cyphertext_vEx6APgfSu2d" class="m31_encr_item">5b803f879184855c418c80888b938e598f80958b8e5f8580918c8c80824d828e8c4d9480415d8f80958b8e5f8580918c8c80824d828e8c4d94805b4e805d</span>
                         <span id="m31_token_vEx6APgfSu2d" class="m31_encr_item">Az93LEUISJXuSIZsaF4zuGJcAA1Ru6W1</span>
                         <span id="m31_algorithm_vEx6APgfSu2d" class="m31_encr_item">caesar</span></span>
-            <!-- /ObfuscateMe -->
+
         </div>
 
         <div class="row" style="display:none;">
@@ -546,7 +580,9 @@
                 </div>
             </div>
         </div>
-
+        <h4 class="subTitle text-center">Вы можете приехать в любой из них и лично убедиться, как<br>
+            работает мобильная зерносушилка. Заполните форму и мы<br> отправим Вам контакты  фермерских хозяйств</h4>
+        <button class="lookButton" data-toggle="modal" data-target="#modalLook" data-comment="Look">хотим посмотреть</button>
     </div>
 </section>
 
@@ -564,7 +600,6 @@
                 <input type="tel" name="phone" placeholder="телефон">
                 <input type="email" name="email" placeholder="e - mail">
                 <button class="button">получить расчет</button>
-                <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
             </form>
         </div>
     </div>
@@ -715,7 +750,6 @@
                 <input type="tel" name="phone" placeholder="телефон">
                 <input type="email" name="email" placeholder="e - mail">
                 <button class="button">получить расчет</button>
-                <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
             </form>
         </div>
     </div>
@@ -736,7 +770,9 @@
                     (050) 40 444 70<br>
                     (096) 054 39 91
                 </p>
-                <p class="email">secretary@farmmac.com.ua</p>
+                <p class="email">secretary@farmmac.com.ua<br><br>
+                    http://farmmac.com.ua
+                </p>
             </div>
         </div>
     </div>
@@ -748,8 +784,7 @@
         src="http://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyCBezf_3Ccazeqo2Su_sLXJtIhvtjzu6nE"></script>
 <script type="text/javascript" src="../js/script.js?v=1.21"></script>
 <script src="../js/slick.min.js"></script>
-<script src="../js/jquery.waypoints.min.js"></script>
-<script src="../js/jquery.countup.min.js"></script>
+<script src="../js/jquery-numerator.js"></script>
 <script src="../js/app.js"></script>
 
 </body>
