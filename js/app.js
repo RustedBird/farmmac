@@ -1,25 +1,23 @@
 ;(function ($) {
-    var currentLocation = window.location.pathname;
-    if (currentLocation.indexOf('ua') > -1) {
-        console.log('Ваша мова українська');
-    } else {
-        console.log('your language is English');
-    }
+    // получаем Cookie, если не установлены, то по умолчанию rus
     function getCookie(name) {
         var matches = document.cookie.match(new RegExp(
             "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
         ));
-        return matches ? decodeURIComponent(matches[1]) : 'ru';
+        return matches ? decodeURIComponent(matches[1]) : 'rus';
     }
-    var langCookie = getCookie('lang');
-    console.log(langCookie);
 
+    // записываем в куки выбранный язык
+    $('.lang span').on('click', function () {
+        document.cookie = 'lang=' + $(this).html() + '; expires=' + date.toUTCString();
+        location.reload();
+        return false;
+    });
 
     $('.myBtn').on('click', function () {
         $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
     });
 
-    // $('.btn').removeAttr('disabled');
     $(document).on('click','.ajaxForm .button', function (event) {
         event.preventDefault();
         var $this = $(this),
@@ -27,7 +25,7 @@
 
         $thisClosestForm.find("input[name='comment']").val($this.attr('data-comment'));
         // $this.find("input[name='comment']").val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
-        var data = $thisClosestForm.serialize(),
+        var data = $thisClosestForm.serialize() + '&lang=' + getCookie('lang'),
             name = $thisClosestForm.find("input[name='name']"),
             email = $thisClosestForm.find("input[name='email']"),
             phone = $thisClosestForm.find("input[name='phone']"),

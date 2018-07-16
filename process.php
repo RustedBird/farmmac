@@ -6,6 +6,8 @@ $name = $post['name'];
 $email = $post['email'];
 $phone = $post['phone'];
 $comment = $post['comment'];
+$lang = $post['lang'];
+
 
 //Проверка на валидность данных
 $response['result'] = true;
@@ -35,8 +37,8 @@ if ($response['result']) {
         case 'XL':
             $newMessage = new Message();
 //            $newMessage->sendEmail($request);
-            $newMessage->sendTelegram($mes);
-            $mes = 'Вот обещанные характеристики Зерносушилки ' . $comment;
+//            $newMessage->sendTelegram($mes);
+            $mes = $newMessage->setLanguageMessage($lang) . ' ' .$comment;
             $to = [$email];
             $fileName = $comment . '.pdf';
             $file = file_get_contents($fileName);
@@ -45,7 +47,7 @@ if ($response['result']) {
                 'fileblob' => base64_encode($file),
                 'mimetype' => 'application/pdf'
             ]];
-//            $response = $newMessage->sendEmail($request);
+            $response = $newMessage->sendEmail($request);
             break;
         default:
             $newMessage = new Message();
@@ -114,6 +116,16 @@ class Message
                 . '&text='
                 . urlencode($mes));
         }
+    }
+    public function setLanguageMessage($lang){
+        switch ($lang){
+            case 'ukr':
+                $message = 'ось характеристики зерносушарки';
+                break;
+            default:
+                $message = 'Вот обещанные характеристики Зерносушилки';
+        }
+        return $message;
     }
 }
 
