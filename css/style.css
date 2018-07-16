@@ -101,6 +101,9 @@ body {
     @media screen and (max-width: 1440px) {
       .modal-body form .formTitle {
         font-size: 18px; } }
+    @media screen and (max-width: 1280px) {
+      .modal-body form .formTitle {
+        font-size: 16px; } }
   .modal-body form input {
     border: 1px solid #B1ABA8;
     padding: 16px 0;
@@ -123,8 +126,11 @@ body {
         font-size: 16px;
         padding: 10px 0;
         margin: 15px auto; } }
+    @media screen and (max-width: 1280px) {
+      .modal-body form input {
+        font-size: 14px; } }
   .modal-body form button {
-    height: 57px;
+    padding: 16px 0;
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
     border-top-right-radius: 100px;
@@ -160,6 +166,9 @@ body {
         font-size: 16px;
         padding: 10px 0;
         margin: 15px auto; } }
+    @media screen and (max-width: 1280px) {
+      .modal-body form button {
+        font-size: 14px; } }
   .modal-body form .underText {
     font-family: 'gothampro-light', sans-serif;
     font-size: 14px;
@@ -196,6 +205,9 @@ body {
   @media screen and (max-width: 1440px) {
     .modal-body .itemTitle {
       font-size: 70px; } }
+  @media screen and (max-width: 1280px) {
+    .modal-body .itemTitle {
+      font-size: 55px; } }
 
 #modalPdf .modal-dialog {
   max-width: 80%; }
@@ -207,7 +219,7 @@ body {
   overflow: hidden;
   background: url("../img/bg1.jpg") no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position: bottom center;
   position: relative;
   z-index: 5;
   padding-bottom: 100px; }
@@ -224,7 +236,12 @@ body {
         margin-right: 50px; }
         @media screen and (max-width: 1440px) {
           .section1 .container .upperMenu .logo {
-            width: 14%; } }
+            width: 14%;
+            margin-right: 0; } }
+        @media screen and (max-width: 1280px) {
+          .section1 .container .upperMenu .logo {
+            width: 12%;
+            margin-right: 0; } }
       .section1 .container .upperMenu .lang {
         display: inline-block;
         vertical-align: middle;
@@ -237,6 +254,9 @@ body {
         @media screen and (max-width: 1440px) {
           .section1 .container .upperMenu .lang {
             font-size: 18px; } }
+        @media screen and (max-width: 1280px) {
+          .section1 .container .upperMenu .lang {
+            font-size: 16px; } }
       .section1 .container .upperMenu .phones {
         display: inline-block;
         vertical-align: middle;
@@ -249,6 +269,9 @@ body {
           @media screen and (max-width: 1440px) {
             .section1 .container .upperMenu .phones span {
               font-size: 18px; } }
+          @media screen and (max-width: 1280px) {
+            .section1 .container .upperMenu .phones span {
+              font-size: 16px; } }
       .section1 .container .upperMenu .button {
         font-family: 'gothampro-black', sans-serif;
         font-size: 20px;
@@ -288,9 +311,18 @@ body {
           .section1 .container .upperMenu .button {
             font-size: 16px;
             padding: 10px 0; } }
+        @media screen and (max-width: 1280px) {
+          .section1 .container .upperMenu .button {
+            font-size: 14px; } }
         @media screen and (max-width: 1440px) {
           .section1 .container .upperMenu .button {
             width: 300px; } }
+        @media screen and (max-width: 1280px) {
+          .section1 .container .upperMenu .button {
+            width: 200px; } }
+        @media screen and (max-width: 1023px) {
+          .section1 .container .upperMenu .button {
+            display: none; } }
       .section1 .container .upperMenu form {
         background: rgba(255, 255, 255, 0.9);
         padding: 50px; }
@@ -301,6 +333,9 @@ body {
           @media screen and (max-width: 1440px) {
             .section1 .container .upperMenu form .formTitle {
               font-size: 18px; } }
+          @media screen and (max-width: 1280px) {
+            .section1 .container .upperMenu form .formTitle {
+              font-size: 16px; } }
         .section1 .container .upperMenu form input {
           border: 1px solid #B1ABA8;
           padding: 16px 0;
@@ -323,8 +358,11 @@ body {
               font-size: 16px;
               padding: 10px 0;
               margin: 15px auto; } }
+          @media screen and (max-width: 1280px) {
+            .section1 .container .upperMenu form input {
+              font-size: 14px; } }
         .section1 .container .upperMenu form button {
-          height: 57px;
+          padding: 16px 0;
           border-bottom-right-radius: 100px;
           border-bottom-left-radius: 100px;
           border-top-right-radius: 100px;
@@ -360,6 +398,9 @@ body {
               font-size: 16px;
               padding: 10px 0;
               margin: 15px auto; } }
+          @media screen and (max-width: 1280px) {
+            .section1 .container .upperMenu form button {
+              font-size: 14px; } }
         .section1 .container .upperMenu form .underText {
           font-family: 'gothampro-light', sans-serif;
           font-size: 14px;
@@ -389,12 +430,66 @@ body {
           right: 15px;
           z-index: 100;
           cursor: pointer; }
+          @media screen and (max-width: 1280px) {
+            .section1 .container .upperMenu form .close {
+              top: 5px;
+              right: 10px; } }
         .section1 .container .upperMenu form input {
           width: 80%; }
         .section1 .container .upperMenu form .callBack {
+          font-family: 'gothampro-black', sans-serif;
+          font-size: 20px;
+          font-weight: 900;
+          color: white;
+          background: #a50606;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #a50606 0%, #d14648 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+          /* IE6-9 */
+          border-bottom-left-radius: 100px;
+          border-bottom-right-radius: 100px;
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+          text-align: center;
+          padding: 16px 0;
+          width: 100%;
+          display: block;
+          margin: 0 auto;
+          cursor: pointer;
+          box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+          transition: all 0.2s;
           width: 80%;
-          padding: 0;
           cursor: pointer; }
+          .section1 .container .upperMenu form .callBack:focus {
+            outline: none; }
+          .section1 .container .upperMenu form .callBack:hover {
+            transform: scale(1.02); }
+          @media screen and (max-width: 1440px) {
+            .section1 .container .upperMenu form .callBack {
+              font-size: 16px;
+              padding: 10px 0; } }
+          @media screen and (max-width: 1280px) {
+            .section1 .container .upperMenu form .callBack {
+              font-size: 14px; } }
+        @media screen and (max-width: 1440px) {
+          .section1 .container .upperMenu form {
+            width: 300px;
+            right: 13%;
+            top: 74px; } }
+        @media screen and (max-width: 1280px) {
+          .section1 .container .upperMenu form {
+            width: 250px;
+            right: 17.3%;
+            padding: 10px; } }
+        @media screen and (max-width: 1199px) {
+          .section1 .container .upperMenu form {
+            width: 250px;
+            right: 12.3%; } }
       @media screen and (max-width: 1440px) {
         .section1 .container .upperMenu {
           justify-content: center; } }
@@ -430,10 +525,10 @@ body {
         text-transform: uppercase; }
         @media screen and (max-width: 1440px) {
           .section1 .container h1 span {
-            font-size: 54px; } }
+            font-size: 58px; } }
       @media screen and (max-width: 1440px) {
         .section1 .container h1 {
-          font-size: 38px;
+          font-size: 48px;
           padding-left: 215px;
           margin-top: 20px;
           float: none;
@@ -468,9 +563,15 @@ body {
           @media screen and (max-width: 1440px) {
             .section1 .container .formBlock .titleWrapper .subTitle {
               font-size: 24px; } }
+          @media screen and (max-width: 1280px) {
+            .section1 .container .formBlock .titleWrapper .subTitle {
+              font-size: 22px; } }
         @media screen and (max-width: 1440px) {
           .section1 .container .formBlock .titleWrapper {
             margin-right: -30px; } }
+        @media screen and (max-width: 1280px) {
+          .section1 .container .formBlock .titleWrapper {
+            margin-right: 0; } }
       .section1 .container .formBlock .smallerText {
         font-family: 'gothampro-black', sans-serif;
         font-size: 30px;
@@ -481,6 +582,10 @@ body {
           .section1 .container .formBlock .smallerText {
             font-size: 20px;
             margin: 13px -40px 0 0; } }
+        @media screen and (max-width: 1280px) {
+          .section1 .container .formBlock .smallerText {
+            font-size: 18px;
+            margin: 13px 0 0 0; } }
       .section1 .container .formBlock .blockWrapper {
         display: inline-block;
         margin-top: 35px; }
@@ -494,6 +599,9 @@ body {
             @media screen and (max-width: 1440px) {
               .section1 .container .formBlock .blockWrapper form .formTitle {
                 font-size: 18px; } }
+            @media screen and (max-width: 1280px) {
+              .section1 .container .formBlock .blockWrapper form .formTitle {
+                font-size: 16px; } }
           .section1 .container .formBlock .blockWrapper form input {
             border: 1px solid #B1ABA8;
             padding: 16px 0;
@@ -516,8 +624,11 @@ body {
                 font-size: 16px;
                 padding: 10px 0;
                 margin: 15px auto; } }
+            @media screen and (max-width: 1280px) {
+              .section1 .container .formBlock .blockWrapper form input {
+                font-size: 14px; } }
           .section1 .container .formBlock .blockWrapper form button {
-            height: 57px;
+            padding: 16px 0;
             border-bottom-right-radius: 100px;
             border-bottom-left-radius: 100px;
             border-top-right-radius: 100px;
@@ -553,6 +664,9 @@ body {
                 font-size: 16px;
                 padding: 10px 0;
                 margin: 15px auto; } }
+            @media screen and (max-width: 1280px) {
+              .section1 .container .formBlock .blockWrapper form button {
+                font-size: 14px; } }
           .section1 .container .formBlock .blockWrapper form .underText {
             font-family: 'gothampro-light', sans-serif;
             font-size: 14px;
@@ -569,9 +683,9 @@ body {
         @media screen and (max-width: 1440px) {
           .section1 .container .formBlock .blockWrapper {
             margin-top: 20px; } }
-      @media screen and (max-width: 1440px) {
+      @media screen and (max-width: 1280px) {
         .section1 .container .formBlock {
-          margin-top: 0; } }
+          margin-top: 10px; } }
   .section1 .mainImg {
     width: 100%;
     height: auto;
@@ -579,6 +693,12 @@ body {
     left: 0;
     bottom: 0;
     z-index: -1; }
+  @media screen and (max-width: 1280px) {
+    .section1 {
+      padding-bottom: 80px; } }
+  @media screen and (max-width: 1100px) {
+    .section1 {
+      padding-bottom: 40px; } }
 
 .section2 {
   background: url("../img/bg2.jpg") no-repeat;
@@ -593,6 +713,9 @@ body {
     font-weight: 800;
     color: #232222;
     text-transform: uppercase; }
+    @media screen and (max-width: 1280px) {
+      .section2 .sectionTitle {
+        font-size: 24px; } }
   .section2 .col-row {
     padding: 15% 0; }
     .section2 .col-row .col-item {
@@ -618,6 +741,9 @@ body {
         @media screen and (max-width: 1440px) {
           .section2 .col-row .col-item .redText {
             font-size: 70px; } }
+        @media screen and (max-width: 1280px) {
+          .section2 .col-row .col-item .redText {
+            font-size: 55px; } }
         .section2 .col-row .col-item .redText .addText {
           font-size: 0.75em;
           font-stretch: condensed;
@@ -637,6 +763,10 @@ body {
           .section2 .col-row .col-item .subText {
             font-size: 20px;
             line-height: 24px; } }
+        @media screen and (max-width: 1280px) {
+          .section2 .col-row .col-item .subText {
+            font-size: 16px;
+            line-height: 18px; } }
       .section2 .col-row .col-item .botText {
         margin-top: -45px;
         right: 42px;
@@ -654,6 +784,7 @@ body {
       text-align: left; }
       @media screen and (max-width: 1440px) {
         .section2 .col-row .col-item:nth-of-type(2) .topText {
+          top: -34px;
           left: 44px; } }
     .section2 .col-row .col-item:nth-of-type(4) .topText {
       top: -14px;
@@ -665,6 +796,7 @@ body {
       text-align: left; }
       @media screen and (max-width: 1440px) {
         .section2 .col-row .col-item:last-of-type .topText {
+          top: -52px;
           left: 46px; } }
     @media screen and (max-width: 1440px) {
       .section2 .col-row {
@@ -683,6 +815,9 @@ body {
     margin-bottom: 100px;
     position: relative;
     z-index: -5; }
+    @media screen and (max-width: 1280px) {
+      .section3 .sectionTitle {
+        font-size: 24px; } }
   .section3 .picBlock {
     text-align: center;
     padding-top: 50px;
@@ -709,6 +844,12 @@ body {
       line-height: 20px;
       margin-top: 20px;
       text-align: center; }
+      @media screen and (max-width: 1280px) {
+        .section3 .picBlock .underText {
+          font-size: 16px; } }
+    @media screen and (max-width: 1280px) {
+      .section3 .picBlock {
+        padding-top: 0; } }
   .section3 .picBlockAnim {
     animation-name: drop;
     animation-iteration-count: 1;
@@ -737,6 +878,9 @@ body {
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 50px; }
+    @media screen and (max-width: 1280px) {
+      .section4 .sectionTitle {
+        font-size: 24px; } }
   .section4 .row {
     margin: 50px 0; }
     .section4 .row .picItem img {
@@ -744,10 +888,16 @@ body {
       height: auto;
       border-radius: 50%;
       box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px; }
+      @media screen and (max-width: 1280px) {
+        .section4 .row .picItem img {
+          width: 85px; } }
     .section4 .row .textItem {
       display: table;
       height: 102px;
       padding: 0; }
+      @media screen and (max-width: 1280px) {
+        .section4 .row .textItem {
+          height: 85px; } }
       .section4 .row .textItem p {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 14px;
@@ -757,6 +907,9 @@ body {
         display: table-cell;
         vertical-align: middle;
         letter-spacing: -0.4px; }
+        @media screen and (max-width: 1280px) {
+          .section4 .row .textItem p {
+            font-size: 12px; } }
   .section4 .lineContainer {
     margin-top: 80px; }
     .section4 .lineContainer h4 {
@@ -782,6 +935,13 @@ body {
         .section4 .lineContainer h4 {
           font-size: 24px;
           line-height: 30px; } }
+      @media screen and (max-width: 1280px) {
+        .section4 .lineContainer h4 {
+          font-size: 22px;
+          line-height: 28px; } }
+  @media screen and (max-width: 1280px) {
+    .section4 {
+      padding: 60px 0; } }
 
 .section5 {
   padding: 80px 0;
@@ -793,6 +953,9 @@ body {
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 50px; }
+    @media screen and (max-width: 1280px) {
+      .section5 .sectionTitle {
+        font-size: 24px; } }
   .section5 .topRow {
     display: flex;
     justify-content: space-between; }
@@ -821,6 +984,9 @@ body {
           @media screen and (max-width: 1440px) {
             .section5 .topRow .topItem .titleWrapper .itemTitle {
               font-size: 65px; } }
+          @media screen and (max-width: 1280px) {
+            .section5 .topRow .topItem .titleWrapper .itemTitle {
+              font-size: 55px; } }
       .section5 .topRow .topItem img {
         width: 100%;
         height: auto; }
@@ -829,7 +995,7 @@ body {
         font-size: 18px;
         background: #ffffff;
         margin-top: 25px;
-        height: 390px; }
+        height: 435px; }
         .section5 .topRow .topItem .description .techName {
           font-family: 'gothampro-black', sans-serif;
           font-weight: 900;
@@ -838,16 +1004,23 @@ body {
           margin: 0; }
           .section5 .topRow .topItem .description .techName:last-of-type {
             margin-top: 25px; }
+          .section5 .topRow .topItem .description .techName:nth-child(3) {
+            margin-top: 20px; }
         .section5 .topRow .topItem .description .techText {
           font-family: 'gothampro-medium', sans-serif;
           font-weight: 600;
           margin: 0; }
-        .section5 .topRow .topItem .description .subNme {
+        .section5 .topRow .topItem .description .subName {
           font-family: 'gothampro-bold', sans-serif;
           font-weight: 800;
           margin-top: 15px;
           margin-bottom: 0;
           text-transform: uppercase; }
+        @media screen and (max-width: 1280px) {
+          .section5 .topRow .topItem .description {
+            height: 395px;
+            padding: 20px;
+            font-size: 16px; } }
       .section5 .topRow .topItem .button {
         font-family: 'gothampro-black', sans-serif;
         font-size: 20px;
@@ -884,6 +1057,9 @@ body {
           .section5 .topRow .topItem .button {
             font-size: 16px;
             padding: 10px 0; } }
+        @media screen and (max-width: 1280px) {
+          .section5 .topRow .topItem .button {
+            font-size: 14px; } }
   .section5 h5 {
     font-family: 'gothampro-bold', sans-serif;
     font-size: 36px;
@@ -897,6 +1073,9 @@ body {
       .section5 h5 {
         font-size: 28px;
         margin: 18px 0; } }
+    @media screen and (max-width: 1280px) {
+      .section5 h5 {
+        font-size: 24px; } }
 
 .section6 {
   padding: 80px 0;
@@ -910,6 +1089,12 @@ body {
     color: #232222;
     text-transform: uppercase;
     padding-bottom: 80px; }
+    @media screen and (max-width: 1280px) {
+      .section6 .sectionTitle {
+        font-size: 24px; } }
+    @media screen and (max-width: 1280px) {
+      .section6 .sectionTitle {
+        padding-bottom: 35px; } }
   .section6 .calcWrapper {
     background: rgba(255, 255, 255, 0.67);
     padding: 50px;
@@ -935,6 +1120,9 @@ body {
       @media screen and (max-width: 1440px) {
         .section6 .calcWrapper .calcTitle {
           font-size: 30px; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .calcTitle {
+          font-size: 24px; } }
     .section6 .calcWrapper .form-line {
       margin: 35px 0;
       padding-left: 30px; }
@@ -954,6 +1142,10 @@ body {
           .section6 .calcWrapper .form-line .paramName {
             font-size: 22px;
             line-height: 24px; } }
+        @media screen and (max-width: 1280px) {
+          .section6 .calcWrapper .form-line .paramName {
+            font-size: 20px;
+            line-height: 22px; } }
       .section6 .calcWrapper .form-line .paramWide {
         width: 73%; }
       .section6 .calcWrapper .form-line .inputWrapper {
@@ -995,12 +1187,27 @@ body {
               width: 15px;
               height: 15px;
               background: #B1ABA8; }
+              @media screen and (max-width: 1280px) {
+                .section6 .calcWrapper .form-line .inputWrapper label .checkmark:after {
+                  top: 8px;
+                  left: 8px;
+                  width: 12px;
+                  height: 12px; } }
+            @media screen and (max-width: 1280px) {
+              .section6 .calcWrapper .form-line .inputWrapper label .checkmark {
+                height: 30px;
+                width: 30px; } }
           .section6 .calcWrapper .form-line .inputWrapper label:hover .checkmark {
             background: #f1ebe8; }
           @media screen and (max-width: 1440px) {
             .section6 .calcWrapper .form-line .inputWrapper label {
               font-size: 22px;
               line-height: 24px; } }
+          @media screen and (max-width: 1280px) {
+            .section6 .calcWrapper .form-line .inputWrapper label {
+              font-size: 20px;
+              line-height: 28px;
+              padding-left: 40px; } }
         .section6 .calcWrapper .form-line .inputWrapper .performance {
           border: 1px solid #B1ABA8;
           padding: 16px 0;
@@ -1020,6 +1227,11 @@ body {
               font-size: 22px;
               padding: 10px 0;
               width: 40%; } }
+          @media screen and (max-width: 1280px) {
+            .section6 .calcWrapper .form-line .inputWrapper .performance {
+              font-size: 20px;
+              padding: 2px 0;
+              width: 30%; } }
         .section6 .calcWrapper .form-line .inputWrapper .inputParam {
           border: 1px solid #B1ABA8;
           padding: 16px 0;
@@ -1038,6 +1250,11 @@ body {
             .section6 .calcWrapper .form-line .inputWrapper .inputParam {
               font-size: 22px;
               padding: 10px 0; } }
+          @media screen and (max-width: 1280px) {
+            .section6 .calcWrapper .form-line .inputWrapper .inputParam {
+              font-size: 20px;
+              padding: 2px 0;
+              width: 75%; } }
         .section6 .calcWrapper .form-line .inputWrapper .priceResult {
           font-family: 'gothampro-black', sans-serif;
           font-size: 30px;
@@ -1046,11 +1263,17 @@ body {
           @media screen and (max-width: 1440px) {
             .section6 .calcWrapper .form-line .inputWrapper .priceResult {
               font-size: 24px; } }
+          @media screen and (max-width: 1440px) {
+            .section6 .calcWrapper .form-line .inputWrapper .priceResult {
+              font-size: 22px; } }
       .section6 .calcWrapper .form-line .inputNarrow {
         width: 25%; }
       @media screen and (max-width: 1440px) {
         .section6 .calcWrapper .form-line {
           margin: 20px 0; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .form-line {
+          margin: 10px 0; } }
     .section6 .calcWrapper .noPadding {
       padding-left: 0; }
     .section6 .calcWrapper .noMargin {
@@ -1067,6 +1290,9 @@ body {
       @media screen and (max-width: 1440px) {
         .section6 .calcWrapper .answer {
           font-size: 24px; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .answer {
+          font-size: 22px; } }
     .section6 .calcWrapper .subAnswer {
       font-family: 'gothampro-black', sans-serif;
       font-size: 30px;
@@ -1078,10 +1304,18 @@ body {
         .section6 .calcWrapper .subAnswer {
           font-size: 24px;
           margin-bottom: 20px; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .subAnswer {
+          font-size: 22px;
+          margin-bottom: 15px; } }
     .section6 .calcWrapper .smallNote {
       font-size: 24px;
       margin-top: 40px;
       margin-bottom: 0; }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .smallNote {
+          font-size: 20px;
+          margin-top: 25px; } }
     .section6 .calcWrapper .result {
       font-family: 'bebas_neuebold', sans-serif;
       font-size: 80px;
@@ -1102,6 +1336,9 @@ body {
       @media screen and (max-width: 1440px) {
         .section6 .calcWrapper .result {
           font-size: 65px; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .result {
+          font-size: 55px; } }
     .section6 .calcWrapper .button {
       font-family: 'gothampro-black', sans-serif;
       font-size: 20px;
@@ -1129,6 +1366,7 @@ body {
       cursor: pointer;
       box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
       transition: all 0.2s;
+      border: none;
       width: 300px; }
       .section6 .calcWrapper .button:focus {
         outline: none; }
@@ -1138,6 +1376,13 @@ body {
         .section6 .calcWrapper .button {
           font-size: 16px;
           padding: 10px 0; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .button {
+          font-size: 14px; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .button {
+          width: 250px;
+          margin-top: 25px; } }
     .section6 .calcWrapper .calcResult {
       font-family: 'gothampro-bold', sans-serif;
       font-size: 24px;
@@ -1160,6 +1405,22 @@ body {
         color: #EC0606;
         text-align: center;
         padding: 0 10px; }
+        @media screen and (max-width: 1440px) {
+          .section6 .calcWrapper .calcResult span {
+            font-size: 22px; } }
+        @media screen and (max-width: 1280px) {
+          .section6 .calcWrapper .calcResult span {
+            font-size: 20px; } }
+      @media screen and (max-width: 1440px) {
+        .section6 .calcWrapper .calcResult {
+          font-size: 22px; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .calcResult {
+          font-size: 20px;
+          margin: 30px 0; } }
+    @media screen and (max-width: 1280px) {
+      .section6 .calcWrapper {
+        padding: 30px; } }
 
 .section7 {
   padding: 80px 0 160px 0;
@@ -1171,10 +1432,16 @@ body {
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 80px; }
+    @media screen and (max-width: 1280px) {
+      .section7 .sectionTitle {
+        font-size: 24px; } }
   .section7 .container {
     padding: 0; }
     .section7 .container .specBlock {
-      padding: 0; }
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
       .section7 .container .specBlock .specialty {
         display: inline-block;
         font-family: 'gothampro-medium', sans-serif;
@@ -1191,16 +1458,27 @@ body {
         .section7 .container .specBlock .specialty:hover {
           border-color: transparent;
           box-shadow: rgba(0, 0, 0, 0.13) 5px 5px 20px; }
+        @media screen and (max-width: 1280px) {
+          .section7 .container .specBlock .specialty {
+            font-size: 14px;
+            line-height: 18px;
+            margin: 5px 0;
+            padding: 5px 10px 5px 5px; } }
+    .section7 .container .specBlock:last-of-type {
+      align-items: flex-end; }
     .section7 .container .specBlock:nth-of-type(2) {
       text-align: right; }
       .section7 .container .specBlock:nth-of-type(2) .specialty {
         padding: 10px 0 10px 15px; }
+        @media screen and (max-width: 1280px) {
+          .section7 .container .specBlock:nth-of-type(2) .specialty {
+            padding: 5px 5px 5px 10px; } }
   .section7 .bgImg {
     position: absolute;
     bottom: 0;
     z-index: -1;
-    left: 39%;
-    width: 25%;
+    left: 41%;
+    width: 23%;
     height: auto; }
     @media screen and (max-width: 1800px) {
       .section7 .bgImg {
@@ -1208,12 +1486,23 @@ body {
     @media screen and (max-width: 1600px) {
       .section7 .bgImg {
         bottom: 5%;
-        width: 30%; } }
+        width: 26%; } }
     @media screen and (max-width: 1440px) {
       .section7 .bgImg {
         bottom: 7%;
-        left: 36%;
-        width: 33%; } }
+        left: 40%;
+        width: 27%; } }
+    @media screen and (max-width: 1280px) {
+      .section7 .bgImg {
+        bottom: 0;
+        left: 41%;
+        width: 22%; } }
+    @media screen and (max-width: 1100px) {
+      .section7 .bgImg {
+        bottom: 5%; } }
+  @media screen and (max-width: 1280px) {
+    .section7 {
+      padding: 50px 0 80px 0; } }
 
 .section8 {
   padding: 80px 0;
@@ -1227,6 +1516,12 @@ body {
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 150px; }
+    @media screen and (max-width: 1280px) {
+      .section8 .sectionTitle {
+        font-size: 24px; } }
+    @media screen and (max-width: 1280px) {
+      .section8 .sectionTitle {
+        margin-bottom: 80px; } }
   .section8 .iconRow {
     margin: 44px 0; }
     .section8 .iconRow:last-of-type .iconItem:last-of-type {
@@ -1245,6 +1540,9 @@ body {
           .section8 .iconRow .iconItem img {
             width: 130px;
             height: auto; } }
+        @media screen and (max-width: 1440px) {
+          .section8 .iconRow .iconItem img {
+            width: 100px; } }
       .section8 .iconRow .iconItem .iconCaption {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 18px;
@@ -1254,11 +1552,20 @@ body {
         @media screen and (max-width: 1440px) {
           .section8 .iconRow .iconItem .iconCaption {
             font-size: 16px; } }
+        @media screen and (max-width: 1280px) {
+          .section8 .iconRow .iconItem .iconCaption {
+            font-size: 14px; } }
       .section8 .iconRow .iconItem .sidePull {
         right: 40px; }
         @media screen and (max-width: 1440px) {
           .section8 .iconRow .iconItem .sidePull {
             right: initial; } }
+    @media screen and (max-width: 1280px) {
+      .section8 .iconRow {
+        margin: 20px 0; } }
+  @media screen and (max-width: 1280px) {
+    .section8 {
+      padding: 50px 0; } }
 
 .section9 {
   background: #F4F3F2;
@@ -1269,6 +1576,9 @@ body {
     font-weight: 800;
     color: #232222;
     text-transform: uppercase; }
+    @media screen and (max-width: 1280px) {
+      .section9 .sectionTitle {
+        font-size: 24px; } }
   .section9 #slickSlider {
     position: relative;
     width: 1500px;
@@ -1300,10 +1610,16 @@ body {
         color: #242424;
         margin-top: 90px; }
         @media screen and (max-width: 1600px) {
+          .section9 #slickSlider .sliderItem .reply br {
+            display: none; } }
+        @media screen and (max-width: 1600px) {
           .section9 #slickSlider .sliderItem .reply {
             font-size: 20px;
             line-height: 24px;
             margin-top: 70px; } }
+        @media screen and (max-width: 1440px) {
+          .section9 #slickSlider .sliderItem .reply {
+            margin-top: 50px; } }
       .section9 #slickSlider .sliderItem .name {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 24px;
@@ -1313,6 +1629,9 @@ body {
           .section9 #slickSlider .sliderItem .name {
             font-size: 20px;
             margin-top: 50px; } }
+        @media screen and (max-width: 1440px) {
+          .section9 #slickSlider .sliderItem .name {
+            margin-top: 30px; } }
       .section9 #slickSlider .sliderItem .address {
         font-family: 'gothampro', sans-serif;
         font-size: 24px;
@@ -1323,6 +1642,9 @@ body {
           .section9 #slickSlider .sliderItem .address {
             font-size: 20px;
             margin: 25px 0 50px 0; } }
+        @media screen and (max-width: 1440px) {
+          .section9 #slickSlider .sliderItem .address {
+            margin: 15px 0 40px 0; } }
       .section9 #slickSlider .sliderItem:after {
         content: '';
         position: absolute;
@@ -1338,9 +1660,9 @@ body {
           margin: 25px; } }
       @media screen and (max-width: 1440px) {
         .section9 #slickSlider .sliderItem {
-          width: 280px;
-          margin: 15px 0;
-          padding: 25px 10px; } }
+          width: 300px;
+          margin: 20px;
+          padding: 25px; } }
     .section9 #slickSlider .slick-active,
     .section9 #slickSlider .slick-center {
       transform: scale(1, 1);
@@ -1363,7 +1685,13 @@ body {
         border-color: #EC0606; }
       @media screen and (max-width: 1600px) {
         .section9 #slickSlider .slick-arrow {
-          top: 515px; } }
+          top: 415px;
+          width: 48px;
+          height: 48px; } }
+      @media screen and (max-width: 1440px) {
+        .section9 #slickSlider .slick-arrow {
+          width: 40px;
+          height: 40px; } }
     .section9 #slickSlider .slick-prev {
       left: 485px;
       border-left: 5px solid rgba(236, 6, 6, 0.5);
@@ -1375,7 +1703,7 @@ body {
           left: 350px; } }
       @media screen and (max-width: 1440px) {
         .section9 #slickSlider .slick-prev {
-          left: 202px; } }
+          left: 298px; } }
     .section9 #slickSlider .slick-next {
       right: 485px;
       border-right: 5px solid rgba(236, 6, 6, 0.5);
@@ -1387,13 +1715,13 @@ body {
           right: 350px; } }
       @media screen and (max-width: 1440px) {
         .section9 #slickSlider .slick-next {
-          right: 202px; } }
+          right: 298px; } }
     @media screen and (max-width: 1600px) {
       .section9 #slickSlider {
         width: 1200px; } }
     @media screen and (max-width: 1440px) {
       .section9 #slickSlider {
-        width: 800px; } }
+        width: 1000px; } }
 
 .section10 {
   padding: 80px 0; }
@@ -1402,7 +1730,11 @@ body {
     font-size: 30px;
     font-weight: 800;
     color: #232222;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+    @media screen and (max-width: 1280px) {
+      .section10 .sectionTitle {
+        font-size: 24px; } }
   .section10 .subTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
@@ -1428,6 +1760,11 @@ body {
         font-size: 24px;
         line-height: 30px;
         margin: 40px 0; } }
+    @media screen and (max-width: 1280px) {
+      .section10 .subTitle {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 30px 0; } }
   .section10 .lookButton {
     font-family: 'gothampro-black', sans-serif;
     font-size: 20px;
@@ -1464,6 +1801,12 @@ body {
       .section10 .lookButton {
         font-size: 16px;
         padding: 10px 0; } }
+    @media screen and (max-width: 1280px) {
+      .section10 .lookButton {
+        font-size: 14px; } }
+  @media screen and (max-width: 1280px) {
+    .section10 {
+      padding: 50px 0; } }
 
 .section11 {
   padding: 80px 0;
@@ -1479,10 +1822,17 @@ body {
     line-height: 50px;
     letter-spacing: -1.2px;
     padding-bottom: 70px; }
+    @media screen and (max-width: 1280px) {
+      .section11 .sectionTitle {
+        font-size: 24px; } }
     @media screen and (max-width: 1440px) {
       .section11 .sectionTitle {
         font-size: 24px;
         line-height: 35px; } }
+    @media screen and (max-width: 1280px) {
+      .section11 .sectionTitle {
+        font-size: 22px;
+        line-height: 33px; } }
   .section11 .formBlock form {
     background: rgba(255, 255, 255, 0.9);
     padding: 50px; }
@@ -1493,6 +1843,9 @@ body {
       @media screen and (max-width: 1440px) {
         .section11 .formBlock form .formTitle {
           font-size: 18px; } }
+      @media screen and (max-width: 1280px) {
+        .section11 .formBlock form .formTitle {
+          font-size: 16px; } }
     .section11 .formBlock form input {
       border: 1px solid #B1ABA8;
       padding: 16px 0;
@@ -1515,8 +1868,11 @@ body {
           font-size: 16px;
           padding: 10px 0;
           margin: 15px auto; } }
+      @media screen and (max-width: 1280px) {
+        .section11 .formBlock form input {
+          font-size: 14px; } }
     .section11 .formBlock form button {
-      height: 57px;
+      padding: 16px 0;
       border-bottom-right-radius: 100px;
       border-bottom-left-radius: 100px;
       border-top-right-radius: 100px;
@@ -1552,6 +1908,9 @@ body {
           font-size: 16px;
           padding: 10px 0;
           margin: 15px auto; } }
+      @media screen and (max-width: 1280px) {
+        .section11 .formBlock form button {
+          font-size: 14px; } }
     .section11 .formBlock form .underText {
       font-family: 'gothampro-light', sans-serif;
       font-size: 14px;
@@ -1576,6 +1935,9 @@ body {
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 80px; }
+    @media screen and (max-width: 1280px) {
+      .section12 .sectionTitle {
+        font-size: 24px; } }
   .section12 #accordion {
     border-color: transparent;
     width: 100%; }
@@ -1601,6 +1963,9 @@ body {
             @media screen and (max-width: 1440px) {
               .section12 #accordion .card .card-header .mb-0 button {
                 font-size: 20px; } }
+            @media screen and (max-width: 1280px) {
+              .section12 #accordion .card .card-header .mb-0 button {
+                font-size: 18px; } }
             .section12 #accordion .card .card-header .mb-0 button span {
               line-height: 50px;
               background: white;
@@ -1649,6 +2014,12 @@ body {
         font-size: 18px;
         font-weight: 500;
         background: white; }
+        @media screen and (max-width: 1440px) {
+          .section12 #accordion .card .card-body {
+            font-size: 16px; } }
+    @media screen and (max-width: 1440px) {
+      .section12 #accordion {
+        width: calc(100% - 50px); } }
   .section12 .subTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 24px;
@@ -1656,6 +2027,12 @@ body {
     color: #EC0606;
     text-transform: uppercase;
     margin-top: 50px; }
+    @media screen and (max-width: 1280px) {
+      .section12 .subTitle br {
+        display: none; } }
+    @media screen and (max-width: 1280px) {
+      .section12 .subTitle {
+        font-size: 22px; } }
   .section12 .formBlock {
     margin-top: 60px;
     padding-top: 30px; }
@@ -1669,6 +2046,9 @@ body {
         @media screen and (max-width: 1440px) {
           .section12 .formBlock form .formTitle {
             font-size: 18px; } }
+        @media screen and (max-width: 1280px) {
+          .section12 .formBlock form .formTitle {
+            font-size: 16px; } }
       .section12 .formBlock form input {
         border: 1px solid #B1ABA8;
         padding: 16px 0;
@@ -1691,8 +2071,11 @@ body {
             font-size: 16px;
             padding: 10px 0;
             margin: 15px auto; } }
+        @media screen and (max-width: 1280px) {
+          .section12 .formBlock form input {
+            font-size: 14px; } }
       .section12 .formBlock form button {
-        height: 57px;
+        padding: 16px 0;
         border-bottom-right-radius: 100px;
         border-bottom-left-radius: 100px;
         border-top-right-radius: 100px;
@@ -1728,6 +2111,9 @@ body {
             font-size: 16px;
             padding: 10px 0;
             margin: 15px auto; } }
+        @media screen and (max-width: 1280px) {
+          .section12 .formBlock form button {
+            font-size: 14px; } }
       .section12 .formBlock form .underText {
         font-family: 'gothampro-light', sans-serif;
         font-size: 14px;
@@ -1741,6 +2127,9 @@ body {
       @media screen and (max-width: 1440px) {
         .section12 .formBlock form {
           padding: 20px 30px 15px 30px; } }
+    @media screen and (max-width: 1440px) {
+      .section12 .formBlock {
+        margin-top: 0; } }
 
 .footer {
   background: #363636;
@@ -1761,6 +2150,9 @@ body {
     font-weight: 900;
     color: #EC0606;
     text-transform: uppercase; }
+    @media screen and (max-width: 1440px) {
+      .footer .footTitle {
+        font-size: 20px; } }
   .footer .address {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
@@ -1769,6 +2161,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 30px; }
+    @media screen and (max-width: 1440px) {
+      .footer .address {
+        font-size: 18px;
+        margin-top: 20px; } }
   .footer .phone {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
@@ -1787,6 +2183,15 @@ body {
       width: 45px;
       height: 45px;
       background: url(../img/phone.png); }
+      @media screen and (max-width: 1440px) {
+        .footer .phone:before {
+          width: 40px;
+          height: 40px;
+          background-size: cover; } }
+    @media screen and (max-width: 1440px) {
+      .footer .phone {
+        font-size: 16px;
+        margin-top: 30px; } }
   .footer .email {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
@@ -1804,6 +2209,17 @@ body {
       width: 51px;
       height: 39px;
       background: url(../img/mail.png); }
+      @media screen and (max-width: 1440px) {
+        .footer .email:before {
+          width: 40px;
+          height: 40px;
+          background-size: cover; } }
+    @media screen and (max-width: 1440px) {
+      .footer .email {
+        font-size: 16px; } }
+  @media screen and (max-width: 1440px) {
+    .footer {
+      padding: 50px 0; } }
 
 .panel {
   border-width: 0;

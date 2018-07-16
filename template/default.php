@@ -254,11 +254,12 @@
                 <div class="description">
                     <p class="techName"><?= $lang['section5']['basic']['volume']?></p>
                     <p class="techText"><?= $lang['section5']['basic']['volumeText']?></p>
-                    <p class="subNme"><?= $lang['section5']['basic']['corn']?></p>
+                    <p class="techName"><?= $lang['section5']['basic']['performance']?></p>
+                    <p class="subName"><?= $lang['section5']['basic']['corn']?></p>
                     <p class="techText"><?= $lang['section5']['basic']['cornText']?></p>
-                    <p class="subNme"><?= $lang['section5']['basic']['wheat']?></p>
+                    <p class="subName"><?= $lang['section5']['basic']['wheat']?></p>
                     <p class="techText"><?= $lang['section5']['basic']['wheatText']?></p>
-                    <p class="subNme"><?= $lang['section5']['basic']['sunflower']?></p>
+                    <p class="subName"><?= $lang['section5']['basic']['sunflower']?></p>
                     <p class="techText"><?= $lang['section5']['basic']['sunflowerText']?></p>
                     <p class="techName text-center"><?= $lang['section5']['basic']['advice']?></p>
                 </div>
@@ -271,11 +272,12 @@
                 <div class="description">
                     <p class="techName"><?= $lang['section5']['large']['volume']?></p>
                     <p class="techText"><?= $lang['section5']['large']['volumeText']?></p>
-                    <p class="subNme"><?= $lang['section5']['large']['corn']?></p>
+                    <p class="techName"><?= $lang['section5']['basic']['performance']?></p>
+                    <p class="subName"><?= $lang['section5']['large']['corn']?></p>
                     <p class="techText"><?= $lang['section5']['large']['cornText']?></p>
-                    <p class="subNme"><?= $lang['section5']['large']['wheat']?></p>
+                    <p class="subName"><?= $lang['section5']['large']['wheat']?></p>
                     <p class="techText"><?= $lang['section5']['large']['wheatText']?></p>
-                    <p class="subNme"><?= $lang['section5']['large']['sunflower']?></p>
+                    <p class="subName"><?= $lang['section5']['large']['sunflower']?></p>
                     <p class="techText"><?= $lang['section5']['large']['sunflowerText']?></p>
                     <p class="techName text-center"><?= $lang['section5']['large']['advice']?></p>
                 </div>
@@ -288,11 +290,12 @@
                 <div class="description">
                     <p class="techName"><?= $lang['section5']['xl']['volume']?></p>
                     <p class="techText"><?= $lang['section5']['xl']['volumeText']?></p>
-                    <p class="subNme"><?= $lang['section5']['xl']['corn']?></p>
+                    <p class="techName"><?= $lang['section5']['basic']['performance']?></p>
+                    <p class="subName"><?= $lang['section5']['xl']['corn']?></p>
                     <p class="techText"><?= $lang['section5']['xl']['cornText']?></p>
-                    <p class="subNme"><?= $lang['section5']['xl']['wheat']?></p>
+                    <p class="subName"><?= $lang['section5']['xl']['wheat']?></p>
                     <p class="techText"><?= $lang['section5']['xl']['wheatText']?></p>
-                    <p class="subNme"><?= $lang['section5']['xl']['sunflower']?></p>
+                    <p class="subName"><?= $lang['section5']['xl']['sunflower']?></p>
                     <p class="techText"><?= $lang['section5']['xl']['sunflowerText']?></p>
                     <p class="techName text-center"><?= $lang['section5']['xl']['advice']?></p>
                 </div>
@@ -590,14 +593,14 @@
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="true" aria-controls="collapseTwo">
                             <span>2. <?= $lang['section12']['question2']?></span>
-                            <span class="plus"></span>
+                            <span class=""></span>
                         </button>
                     </h5>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body"><?= $lang['section12']['answer2']?></div>
                 </div>
             </div>
