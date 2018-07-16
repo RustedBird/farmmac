@@ -89,7 +89,7 @@
                 <span class="close">&times;</span>
             </form>
         </div>
-        <h1><?= $lang['section1']['orderCall']?><br>
+        <h1><?= $lang['section1']['title']?><br>
             <span><?= $lang['section1']['BrandName']?></span>
         </h1>
         <div class="formBlock">
@@ -413,9 +413,9 @@
                     </div>
                     <hr>
                 </form>
-                <p class="answer text-center"><?= $lang['section6']['calc2']['offerTitle']?></p>
-                <p class="subAnswer text-center"><?= $lang['section6']['calc2']['offer']?></p>
-                <button class="button"><?= $lang['section6']['calc2']['offerButton']?></button>
+                <p class="answer text-center"><?= $lang['section6']['offerTitle']?></p>
+                <p class="subAnswer text-center"><?= $lang['section6']['offer']?></p>
+                <button class="button"><?= $lang['section6']['offerButton']?></button>
             </div>
         </div>
     </div>
@@ -560,7 +560,7 @@
         <div class="col-md-6 offset-md-3 formBlock">
             <form id="sendForm" action="">
                 <h6 class="formTitle text-center"><?= $lang['form']['discountFormTitle']?></h6>
-                <input type="text" name="name" placeholder="<?= $lang['form']['discountFormButton']?>">
+                <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
                 <button class="button"><?= $lang['form']['discountFormButton']?></button>
