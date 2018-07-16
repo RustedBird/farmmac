@@ -14,7 +14,7 @@ $response['result'] = true;
 if (!Valid::not_empty($name) || !Valid::not_empty($phone) || !Valid::phone($phone)) {
     $response = ['result' => false,
         'message' => 'Поля заполнены неверно'];
-} elseif ($comment != 'Call me back') {
+} elseif ($comment != 'Call me back') { // если это не обратный звонок, то валидируем и е-меил
     $response['result'] = (bool)Valid::email($email);
 }
 
@@ -47,19 +47,19 @@ if ($response['result']) {
                 'fileblob' => base64_encode($file),
                 'mimetype' => 'application/pdf'
             ]];
-            $response = $newMessage->sendEmail($request);
+//            $response = $newMessage->sendEmail($request);
             break;
         default:
             $newMessage = new Message();
 //            $response = $newMessage->sendEmail($request);
-            $newMessage->sendTelegram($mes);
+//            $newMessage->sendTelegram($mes);
             break;
     }
 
 } else {
     $response['message'] = 'Поля заполнены неверно';
 }
-echo json_encode(['response' => $response]);
+echo json_encode($response);
 
 class Message
 {

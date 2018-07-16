@@ -98,10 +98,10 @@
                 <span>(050) 404-44-70</span><br>
                 <span>(096) 054-39-91</span>
             </p>
-            <div class="button orderCall">заказать обратный звонок</div>
+            <div class="button orderCall"><?= $langArray['rus']?></div>
             <form class="ajaxForm" action="../process.php" method="post">
                 <p class="texthere"></p>
-                <input type="text" name="name" placeholder="Имя" required>
+                <input type="text" name="name" placeholder="имя" required>
                 <input type="tel" name="phone" placeholder="телефон" required>
                 <input type="hidden" name="comment" value="Call me back">
                 <button class="button callBack" data-comment="Call me back">заказать звонок</button>

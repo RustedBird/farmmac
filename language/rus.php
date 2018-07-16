@@ -1,4 +1,20 @@
 <?php
+$lang = [
+    'section1' => [
+        'orderCall' => 'заказать обратный звонок',
+        'orderCall1' => 'заказать обратный звонок',
+
+    ],
+    'section2' => [
+        '' => ''
+    ],
+    'form' => [
+        'placeholderName' => 'имя',
+        'placeholderEmail' => 'имя',
+        'placeholderPhone' => 'телефон',
+    ]
+];
+
 
 
 //return $lang = [

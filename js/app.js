@@ -1,4 +1,11 @@
 ;(function ($) {
+
+    var date = new Date;
+    date.setDate(date.getDate() + 365);
+
+    var cookieLang = getCookie('lang');
+    $('.lang span:contains(' + $cookieLang + ')').addClass('active');
+
     // получаем Cookie, если не установлены, то по умолчанию rus
     function getCookie(name) {
         var matches = document.cookie.match(new RegExp(
@@ -6,6 +13,7 @@
         ));
         return matches ? decodeURIComponent(matches[1]) : 'rus';
     }
+
 
     // записываем в куки выбранный язык
     $('.lang span').on('click', function () {
@@ -25,7 +33,7 @@
 
         $thisClosestForm.find("input[name='comment']").val($this.attr('data-comment'));
         // $this.find("input[name='comment']").val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
-        var data = $thisClosestForm.serialize() + '&lang=' + getCookie('lang'),
+        var data = $thisClosestForm.serialize() + '&lang=' + cookieLang,
             name = $thisClosestForm.find("input[name='name']"),
             email = $thisClosestForm.find("input[name='email']"),
             phone = $thisClosestForm.find("input[name='phone']"),
@@ -70,13 +78,13 @@
             },
             success: function (response) {
                 console.log(response);
-                console.log(response.response);
+                console.log(response.result);
                 var $texthere = $('.texthere');
-                if (response.response.result) {
+                if (response.result) {
                     console.log("success");
                     $texthere.html('Заявка отправлена успешно');
                 } else {
-                    $texthere.html('Сообщение: ' + response.response.message);
+                    $texthere.html('Сообщение: ' + response.message);
                     console.log("error");
                 }
 
@@ -84,8 +92,6 @@
             },
             error: function () {
                 console.log('Some error');
-                var a = 1+1;
-                // alert(a);
             }
         });
     });
