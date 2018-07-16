@@ -73,13 +73,31 @@
                     <h6 class="formTitle text-center">Заполните форму, и мы вышле вам контакты
                         фермерских хозяйств, где работает наше оборудование</h6>
                     <p class="texthere"></p>
-                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="text" name="name" placeholder="имя" required>
                     <input type="tel" name="phone" placeholder="телефон" required>
                     <input type="email" name="email" placeholder="e - mail" required>
                     <input hidden type="text" name="comment" value="">
                     <button class="button" data-comment="init_form">получить контакты</button>
                     <p class="underText">* -это бесплатно и ни к чему не обязывает </p>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for PDF -->
+<div class="modal fade" id="modalPdf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <object data="../img/Kom_pred.pdf" type="application/pdf">
+                    <iframe src="https://docs.google.com/viewer?url=your_url_to_pdf&embedded=true"></iframe>
+                </object>
             </div>
         </div>
     </div>
@@ -120,7 +138,7 @@
                 <form class="ajaxForm" action="../process.php" method="post">
                     <h6 class="formTitle text-center">Узнайте, как быстро окупить мобильную<br> зерносушилку, получив расчет окупаемости</h6>
                     <p class="texthere"></p>
-                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="text" name="name" placeholder="имя" required>
                     <input type="tel" name="phone" placeholder="телефон" required>
                     <input type="email" name="email" placeholder="e - mail" required>
                     <input hidden type="text" name="comment" value="">
@@ -139,17 +157,17 @@
         <div class="row col-row">
             <div class="col-md-2 col-item">
                 <p class="redText"><span class="counterPeriod">0</span> <span class="addText">ЛЕТ</span></p>
-                <p class="subText botText">на рынке Украины</p>
+                <p class="subText botText">на рынке<br> Украины</p>
             </div>
             <div class="col-md-3 col-item">
-                <p class="subText topText">продукция представлена в</p>
+                <p class="subText topText">продукция<br> представлена в</p>
                 <p class="redText"><span class="counterRegion">0</span> <span class="smallerText addText">РЕГИОНАХ</span>
                 </p>
                 <p class="subText botText">Украины</p>
             </div>
             <div class="col-md-2 col-item">
                 <p class="redText"><span class="counterClient">0</span><span class="addText">+</span></p>
-                <p class="subText botText">довольных клиентов</p>
+                <p class="subText botText">довольных<br> клиентов</p>
             </div>
             <div class="col-md-2 col-item">
                 <p class="subText topText">выпускается с</p>
@@ -157,7 +175,7 @@
                 <p class="subText botText">Года</p>
             </div>
             <div class="col-md-3 col-item">
-                <p class="subText topText">оборудование Pedrotti представлено в</p>
+                <p class="subText topText">оборудование<br> Pedrotti<br> представлено в</p>
                 <p class="redText"><span class="counterCountry">0</span> <span class="smallerText addText">СТРАНАХ</span>
                 </p>
                 <p class="subText botText">Мира</p>
@@ -410,7 +428,7 @@
                         </div>
                     </div>
                     <button class="button">рассчитать</button>
-                    <p class="calcResult">Для сушки <span class="tons">3000</span> тонн зерна со снятием <span
+                    <p class="calcResult">Для сушки <span class="tons">3 000</span> тонн зерна со снятием <span
                                 class="prices_elevator">10</span> т/% влаги затраты на топливо составят:</p>
                     <div class="form-line noPadding noMargin">
                         <p class="paramName">на дизельном топливе</p>
@@ -434,7 +452,7 @@
                 </form>
                 <p class="answer text-center">Рассмотрите предложение о самом выгодном виде топлива:</p>
                 <p class="subAnswer text-center">зерносушилка + твердотопливный теплогенератор</p>
-                <button class="button">рассмотреть</button>
+                <button class="button"  data-toggle="modal" data-target="#modalPdf">рассмотреть</button>
             </div>
         </div>
     </div>
@@ -593,13 +611,15 @@
             портативный влагомер
         </h5>
         <div class="col-md-6 offset-md-3 formBlock">
-            <form id="sendForm" action="">
+            <form class="ajaxForm" id="sendForm" action="../process.php">
                 <h6 class="formTitle text-center">Узнайте какая зерносушилка будет для Вас самая прибыльная<br>
                     и окупаемая, заказав расчет окупаемости</h6>
+                <p class="texthere"></p>
                 <input type="text" name="name" placeholder="Имя">
                 <input type="tel" name="phone" placeholder="телефон">
                 <input type="email" name="email" placeholder="e - mail">
-                <button class="button">получить расчет</button>
+                <input type="hidden" name="comment" value="">
+                <button class="button" data-comment="gift">получить расчет</button>
             </form>
         </div>
     </div>
@@ -754,7 +774,7 @@
         </div>
     </div>
 </section>
-
+<!--
 <section class="container-fluid footer">
     <div class="container">
         <div class="row">
@@ -778,6 +798,7 @@
     </div>
 </section>
 
+-->
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script type="text/javascript"
