@@ -12,8 +12,8 @@
             if (e.clientY < 0) {
                 $('#modalLeave').modal('show');
                 // записываем cookie на 1 день, с которой мы не показываем окно
-                // date.setDate(date.getDate() + 1);
-                // document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
+                date.setDate(date.getDate() + 1);
+                document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
             }
         });
     }

@@ -15,7 +15,9 @@
 <div class="upButton">
     <div class="arrow"></div>
 </div>
-<div class="preloader"></div>
+<div class="preloader">
+    <p>Lorem ipsum dolor sit amet</p>
+</div>
 
 <!-- первый экран -->
 <section class="container-fluid section1">
@@ -690,7 +692,7 @@
                 <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
-                <textarea name="comment" required></textarea>
+                <textarea name="comment" required placeholder="ваш вопрос"></textarea>
                 <button class="button"><?= $lang['form']['AskFormButton']?></button>
             </form>
         </div>

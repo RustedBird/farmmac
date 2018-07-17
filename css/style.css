@@ -42,7 +42,12 @@
 /*mixins*/
 body {
   color: #232222;
-  position: relative; }
+  position: relative;
+  /*.preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }*/ }
   body .whiteBg {
     content: '';
     position: absolute;
@@ -147,6 +152,42 @@ body {
         padding: 16px 0; } }
     @media screen and (max-width: 767px) {
       .modal-body form input {
+        font-size: 18px;
+        width: 85%;
+        margin: 20px auto;
+        padding: 10px 0; } }
+  .modal-body form textarea {
+    border: 1px solid #B1ABA8;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-family: 'gothampro-light', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    width: 75%;
+    margin: 25px auto;
+    display: block;
+    min-height: 200px;
+    padding: 5px;
+    resize: none;
+    text-align: center; }
+    .modal-body form textarea:focus {
+      outline: none; }
+    @media screen and (max-width: 1440px) {
+      .modal-body form textarea {
+        font-size: 16px;
+        margin: 10px auto; } }
+    @media screen and (max-width: 1280px) {
+      .modal-body form textarea {
+        font-size: 14px; } }
+    @media screen and (max-width: 1023px) {
+      .modal-body form textarea {
+        font-size: 32px;
+        width: 85%;
+        margin: 40px auto; } }
+    @media screen and (max-width: 767px) {
+      .modal-body form textarea {
         font-size: 18px;
         width: 85%;
         margin: 20px auto;
@@ -506,6 +547,42 @@ body {
               padding: 16px 0; } }
           @media screen and (max-width: 767px) {
             .section1 .container .upperMenu form input {
+              font-size: 18px;
+              width: 85%;
+              margin: 20px auto;
+              padding: 10px 0; } }
+        .section1 .container .upperMenu form textarea {
+          border: 1px solid #B1ABA8;
+          border-bottom-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-top-right-radius: 20px;
+          border-top-left-radius: 20px;
+          font-family: 'gothampro-light', sans-serif;
+          font-size: 20px;
+          font-weight: 300;
+          width: 75%;
+          margin: 25px auto;
+          display: block;
+          min-height: 200px;
+          padding: 5px;
+          resize: none;
+          text-align: center; }
+          .section1 .container .upperMenu form textarea:focus {
+            outline: none; }
+          @media screen and (max-width: 1440px) {
+            .section1 .container .upperMenu form textarea {
+              font-size: 16px;
+              margin: 10px auto; } }
+          @media screen and (max-width: 1280px) {
+            .section1 .container .upperMenu form textarea {
+              font-size: 14px; } }
+          @media screen and (max-width: 1023px) {
+            .section1 .container .upperMenu form textarea {
+              font-size: 32px;
+              width: 85%;
+              margin: 40px auto; } }
+          @media screen and (max-width: 767px) {
+            .section1 .container .upperMenu form textarea {
               font-size: 18px;
               width: 85%;
               margin: 20px auto;
@@ -909,6 +986,42 @@ body {
                 width: 85%;
                 margin: 20px auto;
                 padding: 10px 0; } }
+          .section1 .container .formBlock .blockWrapper form textarea {
+            border: 1px solid #B1ABA8;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            font-family: 'gothampro-light', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            width: 75%;
+            margin: 25px auto;
+            display: block;
+            min-height: 200px;
+            padding: 5px;
+            resize: none;
+            text-align: center; }
+            .section1 .container .formBlock .blockWrapper form textarea:focus {
+              outline: none; }
+            @media screen and (max-width: 1440px) {
+              .section1 .container .formBlock .blockWrapper form textarea {
+                font-size: 16px;
+                margin: 10px auto; } }
+            @media screen and (max-width: 1280px) {
+              .section1 .container .formBlock .blockWrapper form textarea {
+                font-size: 14px; } }
+            @media screen and (max-width: 1023px) {
+              .section1 .container .formBlock .blockWrapper form textarea {
+                font-size: 32px;
+                width: 85%;
+                margin: 40px auto; } }
+            @media screen and (max-width: 767px) {
+              .section1 .container .formBlock .blockWrapper form textarea {
+                font-size: 18px;
+                width: 85%;
+                margin: 20px auto;
+                padding: 10px 0; } }
           .section1 .container .formBlock .blockWrapper form button {
             padding: 16px 0;
             border-bottom-right-radius: 100px;
@@ -1124,6 +1237,42 @@ body {
             padding: 16px 0; } }
         @media screen and (max-width: 767px) {
           .addSection .blockWrapper form input {
+            font-size: 18px;
+            width: 85%;
+            margin: 20px auto;
+            padding: 10px 0; } }
+      .addSection .blockWrapper form textarea {
+        border: 1px solid #B1ABA8;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        font-family: 'gothampro-light', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        width: 75%;
+        margin: 25px auto;
+        display: block;
+        min-height: 200px;
+        padding: 5px;
+        resize: none;
+        text-align: center; }
+        .addSection .blockWrapper form textarea:focus {
+          outline: none; }
+        @media screen and (max-width: 1440px) {
+          .addSection .blockWrapper form textarea {
+            font-size: 16px;
+            margin: 10px auto; } }
+        @media screen and (max-width: 1280px) {
+          .addSection .blockWrapper form textarea {
+            font-size: 14px; } }
+        @media screen and (max-width: 1023px) {
+          .addSection .blockWrapper form textarea {
+            font-size: 32px;
+            width: 85%;
+            margin: 40px auto; } }
+        @media screen and (max-width: 767px) {
+          .addSection .blockWrapper form textarea {
             font-size: 18px;
             width: 85%;
             margin: 20px auto;
@@ -3056,6 +3205,42 @@ body {
           width: 85%;
           margin: 20px auto;
           padding: 10px 0; } }
+    .section11 .formBlock form textarea {
+      border: 1px solid #B1ABA8;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      font-family: 'gothampro-light', sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      width: 75%;
+      margin: 25px auto;
+      display: block;
+      min-height: 200px;
+      padding: 5px;
+      resize: none;
+      text-align: center; }
+      .section11 .formBlock form textarea:focus {
+        outline: none; }
+      @media screen and (max-width: 1440px) {
+        .section11 .formBlock form textarea {
+          font-size: 16px;
+          margin: 10px auto; } }
+      @media screen and (max-width: 1280px) {
+        .section11 .formBlock form textarea {
+          font-size: 14px; } }
+      @media screen and (max-width: 1023px) {
+        .section11 .formBlock form textarea {
+          font-size: 32px;
+          width: 85%;
+          margin: 40px auto; } }
+      @media screen and (max-width: 767px) {
+        .section11 .formBlock form textarea {
+          font-size: 18px;
+          width: 85%;
+          margin: 20px auto;
+          padding: 10px 0; } }
     .section11 .formBlock form button {
       padding: 16px 0;
       border-bottom-right-radius: 100px;
@@ -3348,6 +3533,42 @@ body {
             padding: 16px 0; } }
         @media screen and (max-width: 767px) {
           .section12 .formBlock form input {
+            font-size: 18px;
+            width: 85%;
+            margin: 20px auto;
+            padding: 10px 0; } }
+      .section12 .formBlock form textarea {
+        border: 1px solid #B1ABA8;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        font-family: 'gothampro-light', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        width: 75%;
+        margin: 25px auto;
+        display: block;
+        min-height: 200px;
+        padding: 5px;
+        resize: none;
+        text-align: center; }
+        .section12 .formBlock form textarea:focus {
+          outline: none; }
+        @media screen and (max-width: 1440px) {
+          .section12 .formBlock form textarea {
+            font-size: 16px;
+            margin: 10px auto; } }
+        @media screen and (max-width: 1280px) {
+          .section12 .formBlock form textarea {
+            font-size: 14px; } }
+        @media screen and (max-width: 1023px) {
+          .section12 .formBlock form textarea {
+            font-size: 32px;
+            width: 85%;
+            margin: 40px auto; } }
+        @media screen and (max-width: 767px) {
+          .section12 .formBlock form textarea {
             font-size: 18px;
             width: 85%;
             margin: 20px auto;
