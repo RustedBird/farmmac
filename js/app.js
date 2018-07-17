@@ -1,10 +1,37 @@
 ;(function ($) {
+    /* Method for increment counter
+        */
+    var counter;
+    var addCounter = (function () {
+        counter = 0;
+        return function () {counter += 1; return counter}
+    })();
+    /*  yyy
+        * @returns {boolean}
+    */
+
+    function checkFunction() {
+        addCounter();
+        if (counter !== 1) {
+            return false;
+        }
+        alert('работает')
+    }
+
+    document.body.addEventListener('mouseleave', checkFunction);
+    // var a = 1;
+    // $('html').on('mouseleave', function () {
+    //     if(a == 1) {
+    //         alert('работает')
+    //         a++;
+    //     }
+    // });
 
     var date = new Date;
     date.setDate(date.getDate() + 365);
 
     var cookieLang = getCookie('lang');
-    $('.lang span:contains(' + cookieLang + ')').addClass('active');
+    $('.lang span:contains(' + cookieLang + ')').addClass('text-danger');
 
     // получаем Cookie, если не установлены, то по умолчанию rus
     function getCookie(name) {
@@ -345,6 +372,7 @@
     $('.section5 .button').on('click', function () {
         var $this = $(this);
         $this.attr('data-modelname');
+        console.log($this.attr('data-modelname'));
         $('.modal-body .itemTitle').html($this.attr('data-modelname'));
     });
 

@@ -15,56 +15,6 @@
 <div class="upButton">
     <div class="arrow"></div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="modalOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="ajaxForm" action="../process.php" method="post">
-                    <h6 class="formTitle text-center"><?= $lang['form']['characteristicFormTitle']?></h6>
-                    <p class="itemTitle">BASIC</p>
-                    <p class="texthere"></p>
-                    <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
-                    <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
-                    <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
-                    <input hidden type="text" name="comment" value="">
-                    <button class="button" data-comment="init_form"><?= $lang['form']['characteristicFormButton']?></button>
-                    <p class="underText"><?= $lang['form']['underText']?></p>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal from map -->
-<div class="modal fade" id="modalLook" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="ajaxForm" action="../process.php" method="post">
-                    <h6 class="formTitle text-center"><?= $lang['form']['mapFormTitle']?></h6>
-                    <p class="texthere"></p>
-                    <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
-                    <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
-                    <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
-                    <input hidden type="text" name="comment" value="">
-                    <button class="button" data-comment="init_form"><?= $lang['form']['mapFormButton']?></button>
-                    <p class="underText"><?= $lang['form']['underText']?></p>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- первый экран -->
 <section class="container-fluid section1">
     <img class="light" src="../img/light.png" alt="light">
@@ -447,9 +397,9 @@
                     </div>
                     <hr>
                 </form>
-                <p class="answer text-center"><?= $lang['section6']['calc2']['offerTitle']?></p>
-                <p class="subAnswer text-center"><?= $lang['section6']['calc2']['offer']?></p>
-                <button class="button"><?= $lang['section6']['calc2']['offerButton']?></button>
+                <p class="answer text-center"><?= $lang['section6']['offerTitle']?></p>
+                <p class="subAnswer text-center"><?= $lang['section6']['offer']?></p>
+                <button class="button"><?= $lang['section6']['offerButton']?></button>
             </div>
         </div>
     </div>
@@ -760,6 +710,56 @@
     </div>
 </section>
 
+<!-- Modal -->
+<div class="modal fade" id="modalOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="ajaxForm" action="../process.php" method="post">
+                    <h6 class="formTitle text-center"><?= $lang['form']['characteristicFormTitle']?></h6>
+                    <p class="itemTitle">BASIC</p>
+                    <p class="texthere"></p>
+                    <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
+                    <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
+                    <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
+                    <input hidden type="text" name="comment" value="">
+                    <button class="button" data-comment="init_form"><?= $lang['form']['characteristicFormButton']?></button>
+                    <p class="underText"><?= $lang['form']['underText']?></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal from map -->
+<div class="modal fade" id="modalLook" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="ajaxForm" action="../process.php" method="post">
+                    <h6 class="formTitle text-center"><?= $lang['form']['mapFormTitle']?></h6>
+                    <p class="texthere"></p>
+                    <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
+                    <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
+                    <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
+                    <input hidden type="text" name="comment" value="">
+                    <button class="button" data-comment="init_form"><?= $lang['form']['mapFormButton']?></button>
+                    <p class="underText"><?= $lang['form']['underText']?></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script type="text/javascript"
