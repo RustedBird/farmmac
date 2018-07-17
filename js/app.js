@@ -1,7 +1,6 @@
 ;(function ($) {
 
     var date = new Date;
-    date.setDate(date.getDate() + 365);
 
     var cookieLang = getCookie('lang');
     $('.lang span[data-lang=' + cookieLang + ']').addClass('active');
@@ -26,7 +25,7 @@
         location.reload();
         return false;
     });
-
+//подмена value у кнопки. Необхоимо для корректной отправки данных в CRM заказчика
     $(document).on('click', '.myBtn', function () {
         $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
     });
@@ -92,8 +91,6 @@
                     $texthere.html('Сообщение: ' + response.message);
                     console.log("error");
                 }
-
-
             },
             error: function () {
                 console.log('Some error');

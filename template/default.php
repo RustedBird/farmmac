@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<div class="test" style="position: fixed; top: 0; width: 100%; height: 0.1px; z-index: 9999" ></div>
 <div class="whiteBg"></div>
 <div class="upButton">
     <div class="arrow"></div>
@@ -64,7 +63,7 @@
                     <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
                     <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
                     <input hidden type="text" name="comment" value="">
-                    <button class="button" data-comment="init_form"><?= $lang['form']['mainFormButton']?></button>
+                    <button class="button" data-comment="Заявка на рассчет окупаемости"><?= $lang['form']['mainFormButton']?></button>
                     <p class="underText"><?= $lang['form']['underText']?></p>
                 </form>
             </div>
@@ -75,6 +74,7 @@
 </section>
 <!-- первый экран -->
 
+<!-- вспомогательная секция -->
 <section class="container-fluid addSection">
     <p class="smallerText"><?= $lang['section1']['smallerText'] ?></p>
     <div class="blockWrapper">
@@ -85,11 +85,12 @@
             <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone'] ?>" required>
             <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail'] ?>" required>
             <input hidden type="text" name="comment" value="">
-            <button class="button" data-comment="init_form"><?= $lang['form']['mainFormButton'] ?></button>
+            <button class="button" data-comment="Заявка на рассчет окупаемости"><?= $lang['form']['mainFormButton'] ?></button>
             <p class="underText"><?= $lang['form']['underText'] ?></p>
         </form>
     </div>
 </section>
+<!-- вспомогательная секция -->
 
 <!-- несколько фактов о нас -->
 <section class="container-fluid section2">
@@ -550,12 +551,14 @@
     <div class="container">
         <h5 class="sectionTitle text-center"><?= $lang['section11']['title']?></h5>
         <div class="col-md-6 offset-md-3 formBlock">
-            <form id="sendForm" action="">
+            <form class="ajaxForm" action="../process.php" method="post">
                 <h6 class="formTitle text-center"><?= $lang['form']['discountFormTitle']?></h6>
-                <input type="text" name="name" placeholder="<?= $lang['form']['discountFormButton']?>">
+                <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
-                <button class="button"><?= $lang['form']['discountFormButton']?></button>
+                <input hidden type="text" name="comment" value="">
+                <button class="button" data-comment="Забронировал скидку"><?= $lang['form']['discountFormButton']?></button>
+                <p class="underText"><?= $lang['form']['underText']?></p>
             </form>
         </div>
     </div>
@@ -683,10 +686,11 @@
         </div>
         <h6 class="subTitle text-center"><?= $lang['section12']['subTitle']?></h6>
         <div class="col-md-6 offset-md-3 formBlock">
-            <form id="sendForm2" action="">
+            <form class="ajaxForm" action="../process.php" method="post">
                 <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
+                <textarea name="comment" required></textarea>
                 <button class="button"><?= $lang['form']['AskFormButton']?></button>
             </form>
         </div>
@@ -756,7 +760,7 @@
                     <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
                     <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
                     <input hidden type="text" name="comment" value="">
-                    <button class="button" data-comment="init_form"><?= $lang['form']['mapFormButton']?></button>
+                    <button class="button" data-comment="Запросил контакты фермерских хозяйств"><?= $lang['form']['mapFormButton']?></button>
                     <p class="underText"><?= $lang['form']['underText']?></p>
                 </form>
             </div>
@@ -781,7 +785,7 @@
                     <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
                     <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
                     <input hidden type="text" name="comment" value="">
-                    <button class="button" data-comment="init_form"><?= $lang['form']['OnLeaveFormButton']?></button>
+                    <button class="button" data-comment="Забронировал скидку при попытке ухода"><?= $lang['form']['OnLeaveFormButton']?></button>
                     <p class="underText"><?= $lang['form']['underText']?></p>
                 </form>
             </div>
@@ -796,6 +800,8 @@
 <script type="text/javascript" src="../js/script.js?v=1.21"></script>
 <script src="../js/slick.min.js"></script>
 <script src="../js/jquery-numerator.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+<script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
 <script src="../js/app.js"></script>
 
 </body>

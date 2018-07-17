@@ -37,7 +37,7 @@ if ($response['result']) {
         case 'XL':
             $newMessage = new Message();
 //            $newMessage->sendEmail($request);
-//            $newMessage->sendTelegram($mes);
+            $newMessage->sendTelegram($mes);
             $mes = $newMessage->setLanguageMessage($lang) . ' ' .$comment;
             $to = [$email];
             $fileName = $comment . '.pdf';
@@ -52,7 +52,7 @@ if ($response['result']) {
         default:
             $newMessage = new Message();
 //            $response = $newMessage->sendEmail($request);
-//            $newMessage->sendTelegram($mes);
+            $newMessage->sendTelegram($mes);
             break;
     }
 
@@ -67,7 +67,7 @@ class Message
     protected $api_url = 'https://api.smtp2go.com/v3/email/send';
     protected $api_key = 'api-F1266D14298611E7A1B4F23C91C88F4E';
     protected $token = '561353685:AAFVHFTMIychcLnJzi1MziPwGYng3tYHlqI';
-    protected $chat_id_list = [350981322, 499420246];
+    protected $chat_id_list = [350981322];
 
     public function sendEmail($request)
     {
@@ -95,7 +95,7 @@ class Message
                 break;
             default:
                 $response['result'] = false;
-                $response['message'] = "Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону 0508878478 или отправьте письмо на почту aksenov.andrew@gmail.com";
+                $response['message'] = "Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua";
                 $result->data->error;
                 $date = date_create();
                 $fp = fopen('errors/file.txt', 'a');
