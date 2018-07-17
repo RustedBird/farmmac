@@ -41,7 +41,7 @@
             name = $thisClosestForm.find("input[name='name']"),
             email = $thisClosestForm.find("input[name='email']"),
             phone = $thisClosestForm.find("input[name='phone']"),
-            comment = $thisClosestForm.find("input[name='comment']"),
+            comment = $thisClosestForm.find("[name='comment']"),
             config = {
                 fields: {
                     "Name": name, // Имя посетителя, заполнившего форму
@@ -53,20 +53,20 @@
                 serviceUrl: "https://farmmac.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
                 redirectUrl: ""
             };
-
+        console.log(config);
         /**
          * Функция ниже создает объект из введенных данных.
          * Привяжите вызов этой функции к событию "onSubmit" формы или любому другому элементу события.
          * Пример: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
          */
 
-        // landing.createObjectFromLanding(config);
+        landing.createObjectFromLanding(config);
 
         /**
          * Функция ниже инициализирует лендинг из параметров URL.
          */
         function initLanding() {
-            // landing.initLanding(config)
+            landing.initLanding(config)
         }
         jQuery(document).ready(initLanding);
 
