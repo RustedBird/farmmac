@@ -270,7 +270,15 @@
         centerMode: true,
         slidesToShow: 1,
         arrows: true,
-        infinite: true
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     /*Animation on scroll*/
@@ -317,6 +325,7 @@
         if ($(window).scrollTop() > $sec3) {
             $('.whiteBg').css('display', 'none');
             $('.picBlock').addClass('picBlockAnim');
+            $('.section3').css('z-index', 1);
         }
     });
 
@@ -351,8 +360,6 @@
         $upperForm.hide(200);
     });
 
-    
-    
     
     var $upBtn = $(".upButton");
     window.onscroll = function() {
