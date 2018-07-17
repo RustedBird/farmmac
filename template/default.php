@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<div class="test" style="position: fixed; top: 0; width: 100%; height: 0.1px; z-index: 9999" ></div>
 <div class="whiteBg"></div>
 <div class="upButton">
     <div class="arrow"></div>
 </div>
+
 <!-- первый экран -->
 <section class="container-fluid section1">
     <img class="light" src="../img/light.png" alt="light">
@@ -760,6 +762,35 @@
         </div>
     </div>
 </div>
+
+<!-- Modal for leave -->
+<div class="modal fade" id="modalLeave" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="ajaxForm" action="../process.php" method="post">
+                    <h6 class="formTitle text-center"><?= $lang['form']['OnLeaveFormTitle']?></h6>
+                    <p class="texthere"></p>
+                    <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
+                    <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
+                    <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
+                    <input hidden type="text" name="comment" value="">
+                    <button class="button" data-comment="init_form"><?= $lang['form']['OnLeaveFormButton']?></button>
+                    <p class="underText"><?= $lang['form']['underText']?></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script type="text/javascript"

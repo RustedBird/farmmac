@@ -1,50 +1,27 @@
 ;(function ($) {
-    /* Method for increment counter
-        */
-    var counter;
-    var addCounter = (function () {
-        counter = 0;
-        return function () {counter += 1; return counter}
-    })();
-    /*  yyy
-        * @returns {boolean}
-    */
-
-    function checkFunction() {
-        addCounter();
-        if (counter !== 1) {
-            return false;
-        }
-        alert('работает')
-    }
-
-    document.body.addEventListener('mouseleave', checkFunction);
-    // var a = 1;
-    // $('html').on('mouseleave', function () {
-    //     if(a == 1) {
-    //         alert('работает')
-    //         a++;
-    //     }
-    // });
 
     var date = new Date;
-    date.setDate(date.getDate() + 365);
 
-    var cookieLang = getCookie('lang');
+    var cookieLang = getCookie('lang') ? getCookie('lang') : 'rus';
     $('.lang span:contains(' + cookieLang + ')').addClass('text-danger');
 
-    // получаем Cookie, если не установлены, то по умолчанию rus
-    function getCookie(name) {
-        var matches = document.cookie.match(new RegExp(
-            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-        ));
-        return matches ? decodeURIComponent(matches[1]) : 'rus';
+    // запуск показа модального окна на увод мышки вверх
+    var alertwin = getCookie("alertwin");
+    if (alertwin != "no") {
+        $(document).mouseleave(function(e){
+            if (e.clientY < 0) {
+                $('#modalLeave').modal('show');
+                // записываем cookie на 1 день, с которой мы не показываем окно
+                // date.setDate(date.getDate() + 1);
+                // document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
+            }
+        });
     }
-
 
     // записываем в куки выбранный язык
     $('.lang span').on('click', function () {
-        document.cookie = 'lang=' + $(this).html() + '; expires=' + date.toUTCString();
+        date.setDate(date.getDate() + 365);
+        document.cookie = 'lang=' + $(this).html() + '; path=/; expires=' + date.toUTCString();
         location.reload();
         return false;
     });
@@ -139,6 +116,13 @@
         $('.modal-body .itemTitle').html($modelName);
     });
 
+    // получаем Cookie, если не установлены, то по умолчанию undefined
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
 
     function modelCalc() {
         var model,
