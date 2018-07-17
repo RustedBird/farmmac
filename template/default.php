@@ -577,14 +577,14 @@
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
                                 aria-expanded="true" aria-controls="collapseOne">
-                            <span>1. <?= $lang['section12']['question1']?></span>
-                            <span class="plus"></span>
+                            <span>1. <?= $lang['section12']['question2']?></span>
+                            <span class=""></span>
                         </button>
                     </h5>
                 </div>
 
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body"><?= $lang['section12']['answer1']?></div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body"><?= $lang['section12']['answer2']?></div>
                 </div>
             </div>
             <div class="card">
@@ -592,13 +592,13 @@
                     <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
                                 aria-expanded="true" aria-controls="collapseTwo">
-                            <span>2. <?= $lang['section12']['question2']?></span>
-                            <span class=""></span>
+                            <span>2. <?= $lang['section12']['question1']?></span>
+                            <span class="plus"></span>
                         </button>
                     </h5>
                 </div>
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body"><?= $lang['section12']['answer2']?></div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body"><?= $lang['section12']['answer1']?></div>
                 </div>
             </div>
             <div class="card">
