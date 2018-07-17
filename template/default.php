@@ -79,6 +79,10 @@
                 <span>(050) 404-44-70</span><br>
                 <span>(096) 054-39-91</span>
             </p>
+            <p class="lang">
+                <span>ukr</span>
+                <span>rus</span>
+            </p>
             <div class="button orderCall"><?= $lang['section1']['orderCall']?></div>
             <form class="ajaxForm" action="../process.php" method="post">
                 <p class="texthere"></p>
@@ -117,6 +121,22 @@
     <img class="sign" src="../img/titleicon.png" alt="sign">
 </section>
 <!-- первый экран -->
+
+<section class="container-fluid addSection">
+    <p class="smallerText"><?= $lang['section1']['smallerText'] ?></p>
+    <div class="blockWrapper">
+        <form class="ajaxForm" action="../process.php" method="post">
+            <h6 class="formTitle text-center"><?= $lang['form']['mainFormTitle'] ?></h6>
+            <p class="texthere"></p>
+            <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName'] ?>" required>
+            <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone'] ?>" required>
+            <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail'] ?>" required>
+            <input hidden type="text" name="comment" value="">
+            <button class="button" data-comment="init_form"><?= $lang['form']['mainFormButton'] ?></button>
+            <p class="underText"><?= $lang['form']['underText'] ?></p>
+        </form>
+    </div>
+</section>
 
 <!-- несколько фактов о нас -->
 <section class="container-fluid section2">

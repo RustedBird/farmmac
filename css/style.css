@@ -834,7 +834,8 @@ body {
       @media screen and (max-width: 1023px) {
         .section1 .container .formBlock {
           text-align: center;
-          margin-top: 65px; } }
+          margin-top: 40px;
+          margin-bottom: 15px; } }
   .section1 .sign {
     display: none;
     position: absolute;
@@ -857,8 +858,8 @@ body {
     @media screen and (max-width: 1023px) {
       .section1 .mainImg {
         width: 43%;
-        left: 5%;
-        bottom: 0; } }
+        margin-left: 7%;
+        position: static; } }
   @media screen and (max-width: 1600px) {
     .section1 {
       padding-bottom: 30px; } }
@@ -871,6 +872,9 @@ body {
   @media screen and (max-width: 1100px) {
     .section1 {
       padding-bottom: 40px; } }
+  @media screen and (max-width: 1023px) {
+    .section1 {
+      padding-bottom: 0; } }
 
 .addSection {
   display: none;
