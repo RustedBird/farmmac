@@ -16,6 +16,7 @@
 <div class="upButton">
     <div class="arrow"></div>
 </div>
+<div class="preloader"></div>
 
 <!-- первый экран -->
 <section class="container-fluid section1">
@@ -24,16 +25,16 @@
         <div class="upperMenu">
             <img class="logo" src="../img/logo.png" alt="logo">
             <p class="lang">
-                <span>ukr</span>
-                <span>rus</span>
+                <span data-lang="ukr">ukr</span>
+                <span data-lang="rus">rus</span>
             </p>
             <p class="phones">
                 <span>(050) 404-44-70</span><br>
                 <span>(096) 054-39-91</span>
             </p>
             <p class="lang">
-                <span>ukr</span>
-                <span>rus</span>
+                <span data-lang="ukr">ukr</span>
+                <span data-lang="rus">rus</span>
             </p>
             <div class="button orderCall"><?= $lang['section1']['orderCall']?></div>
             <form class="ajaxForm" action="../process.php" method="post">
@@ -96,27 +97,27 @@
         <h6 class="sectionTitle text-center"><?= $lang['section2']['title']?></h6>
         <div class="row col-row">
             <div class="col-md-2 col-item">
-                <p class="redText"><span class="counterPeriod">0</span> <span class="addText"><?= $lang['section2']['counterPeriod']?></span></p>
+                <p class="redText"><span class="counter">9</span> <span class="addText"><?= $lang['section2']['counterPeriod']?></span></p>
                 <p class="subText botText"><?= $lang['section2']['counterPeriodBottomText']?></p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText"><?= $lang['section2']['counterRegionTopText']?></p>
-                <p class="redText"><span class="counterRegion">0</span> <span class="smallerText addText"><?= $lang['section2']['counterRegion']?></span>
+                <p class="redText"><span class="counter">15</span> <span class="smallerText addText"><?= $lang['section2']['counterRegion']?></span>
                 </p>
                 <p class="subText botText"><?= $lang['section2']['counterRegionBottomText']?></p>
             </div>
             <div class="col-md-2 col-item">
-                <p class="redText"><span class="counterClient">0</span><span class="addText">+</span></p>
+                <p class="redText"><span class="counter">80</span><span class="addText">+</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterClientBottomText']?></p>
             </div>
             <div class="col-md-2 col-item">
                 <p class="subText topText"><?= $lang['section2']['counterYearTopText']?></p>
-                <p class="redText"><span class="counterYear">0</span></p>
+                <p class="redText"><span class="counter">1958</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterYearBottomText']?></p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText"><?= $lang['section2']['counterCountryTopText']?></p>
-                <p class="redText"><span class="counterCountry">0</span> <span class="smallerText addText"><?= $lang['section2']['counterCountry']?></span>
+                <p class="redText"><span class="counter">52</span> <span class="smallerText addText"><?= $lang['section2']['counterCountry']?></span>
                 </p>
                 <p class="subText botText"><?= $lang['section2']['counterCountryBottomText']?></p>
             </div>
@@ -239,7 +240,7 @@
                     <p class="techName text-center"><?= $lang['section5']['basic']['advice'] ?></p>
                 </div>
                 <h5 class="askTitle"><?= $lang['section5']['getCharacteristic'] ?></h5>
-                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="BASIC"
+                <button class="myBtn hidButton" data-toggle="modal" data-target="#modalOrder" data-modelname="BASIC"
                         data-comment="Basic"><?= $lang['section5']['basic']['button'] ?></button>
             </div>
             <div class="topItem">
@@ -260,7 +261,7 @@
                     <p class="techName text-center"><?= $lang['section5']['large']['advice'] ?></p>
                 </div>
                 <h5 class="askTitle"><?= $lang['section5']['getCharacteristic'] ?></h5>
-                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="LARGE"
+                <button class="myBtn hidButton" data-toggle="modal" data-target="#modalOrder" data-modelname="LARGE"
                         data-comment="Large"><?= $lang['section5']['large']['button'] ?></button>
             </div>
             <div class="topItem">
@@ -281,7 +282,7 @@
                     <p class="techName text-center"><?= $lang['section5']['xl']['advice'] ?></p>
                 </div>
                 <h5 class="askTitle"><?= $lang['section5']['getCharacteristic'] ?></h5>
-                <button class="button myBtn hidButton" data-toggle="modal" data-target="#modalOrder" data-modelname="XL"
+                <button class="myBtn hidButton" data-toggle="modal" data-target="#modalOrder" data-modelname="XL"
                         data-comment="XL"><?= $lang['section5']['xl']['button'] ?></button>
             </div>
         </div>
@@ -787,9 +788,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>

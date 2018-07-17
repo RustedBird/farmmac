@@ -1,9 +1,10 @@
 ;(function ($) {
 
     var date = new Date;
+    date.setDate(date.getDate() + 365);
 
-    var cookieLang = getCookie('lang') ? getCookie('lang') : 'rus';
-    $('.lang span:contains(' + cookieLang + ')').addClass('text-danger');
+    var cookieLang = getCookie('lang');
+    $('.lang span[data-lang=' + cookieLang + ']').addClass('active');
 
     // запуск показа модального окна на увод мышки вверх
     var alertwin = getCookie("alertwin");
@@ -26,7 +27,7 @@
         return false;
     });
 
-    $('.myBtn').on('click', function () {
+    $(document).on('click', '.myBtn', function () {
         $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
     });
 
@@ -298,45 +299,27 @@
         var $sec3 = $('.section3 .row').offset().top - window.innerHeight,
             $sec2 = $('.redText').offset().top - window.innerHeight;
         if ($(window).scrollTop() > $sec2) {
-            $('.counterPeriod').numerator( {
-                easing: 'linear', // easing options.
-                duration: 300, // the length of the animation.
-                rounding: 0, // decimal places.
-                toValue: 9 // animate to this value.
-            } );
-            setTimeout(function () {
-                $('.counterRegion').numerator( {
-                    easing: 'linear', // easing options.
-                    duration: 300, // the length of the animation.
-                    toValue: 15 // animate to this value.
-                } );
-            }, 400);
-            setTimeout(function () {
-                $('.counterClient').numerator( {
-                    easing: 'linear', // easing options.
-                    duration: 300, // the length of the animation.
-                    toValue: 80 // animate to this value.
-                } );
-            }, 800);
-            setTimeout(function () {
-                $('.counterYear').numerator( {
-                    easing: 'linear', // easing options.
-                    duration: 300, // the length of the animation.
-                    toValue: 1958 // animate to this value.
-                } );
-            }, 1200);
-            setTimeout(function () {
-                $('.counterCountry').numerator( {
-                    easing: 'linear', // easing options.
-                    duration: 300, // the length of the animation.
-                    toValue: 52 // animate to this value.
-                } );
-            }, 1600);
+
         }
         if ($(window).scrollTop() > $sec3) {
             $('.whiteBg').css('display', 'none');
             $('.picBlock').addClass('picBlockAnim');
             $('.section3').css('z-index', 1);
+        }
+    });
+
+    //Animating number only on desktop width
+    $('.counter').each(function () {
+        var $this = $(this),
+            value = $this.html();
+        if ($(window).width() >= 1006) {
+            $this.html(0);
+            $this.numerator({
+                easing: 'swing', // easing options.
+                duration: 3000, // the length of the animation.
+                rounding: 0, // decimal places.
+                toValue: value // animate to this value.
+            });
         }
     });
 

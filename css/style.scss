@@ -79,6 +79,12 @@ $mainColor: #EC0606;
   @media screen and (max-width: 1023px) {
     font-size: 38px;
   }
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 424px) {
+    font-size: 20px;
+  }
 }
 
 @mixin redTitle {
@@ -103,6 +109,14 @@ $mainColor: #EC0606;
   @media screen and (max-width: 1023px) {
     font-size: 110px;
     line-height: 100px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  @media screen and (max-width: 424px) {
+    font-size: 57px;
+    line-height: 57px;
   }
 }
 
@@ -129,6 +143,14 @@ $mainColor: #EC0606;
     font-size: 110px;
     line-height: 100px;
   }
+  @media screen and (max-width: 767px) {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  @media screen and (max-width: 424px) {
+    font-size: 57px;
+    line-height: 57px;
+  }
 }
 
 @mixin button {
@@ -152,12 +174,17 @@ $mainColor: #EC0606;
   margin: 0 auto;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
-  transition: all 0.2s;
+  transition: all 2s;
+  -webkit-font-smoothing: antialiased;
   &:focus {
     outline: none;
   }
   &:hover {
-    //transform: scale(1.02);
+    background: rgb(97, 4, 4); /* Old browsers */
+    background: -moz-linear-gradient(top, rgb(97, 4, 4) 0%, rgba(209, 70, 72, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgb(97, 4, 4) 0%, rgba(209, 70, 72, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgb(97, 4, 4) 0%, rgba(209, 70, 72, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0); /* IE6-9 */
   }
   @media screen and (max-width: 1440px) {
     font-size: 16px;
@@ -185,6 +212,9 @@ $mainColor: #EC0606;
       @media screen and (max-width: 1023px) {
         font-size: 42px;
         margin-bottom: 35px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
       }
       br {
         @media screen and (max-width: 1023px) {
@@ -224,6 +254,12 @@ $mainColor: #EC0606;
         margin: 40px auto;
         padding: 16px 0;
       }
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+        width: 85%;
+        margin: 20px auto;
+        padding: 10px 0;
+      }
     }
     button {
       padding: 16px 0;
@@ -252,7 +288,11 @@ $mainColor: #EC0606;
         outline: none;
       }
       &:hover {
-        //transform: scale(1.02);
+        background: rgb(97, 4, 4); /* Old browsers */
+        background: -moz-linear-gradient(top, rgb(97, 4, 4) 0%, rgba(209, 70, 72, 1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgb(97, 4, 4) 0%, rgba(209, 70, 72, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgb(97, 4, 4) 0%, rgba(209, 70, 72, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0); /* IE6-9 */
       }
       @media screen and (max-width: 1440px) {
         font-size: 16px;
@@ -267,6 +307,12 @@ $mainColor: #EC0606;
         width: 85%;
         margin: 40px auto;
         padding: 16px 0;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+        width: 85%;
+        margin: 20px auto;
+        padding: 10px 0;
       }
     }
     .underText {
@@ -283,12 +329,18 @@ $mainColor: #EC0606;
       @media screen and (max-width: 1023px) {
         font-size: 21px;
       }
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+      }
     }
     @media screen and (max-width: 1600px) {
       padding: 30px;
     }
     @media screen and (max-width: 1440px) {
       padding: 20px 30px 15px 30px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 10px;
     }
   }
 }
@@ -381,6 +433,21 @@ body {
   position: relative;
   z-index: 5;
   padding-bottom: 100px;
+  @media screen and (max-width: 1600px) {
+    padding-bottom: 30px;
+  }
+  @media screen and (max-width: 1440px) {
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: 1280px) {
+    padding-bottom: 80px;
+  }
+  @media screen and (max-width: 1100px) {
+    padding-bottom: 40px;
+  }
+  @media screen and (max-width: 1023px) {
+    padding-bottom: 0;
+  }
   .container {
     padding: 0;
     .upperMenu {
@@ -430,10 +497,22 @@ body {
           span {
             display: block;
             margin: 0;
+            cursor: pointer;
+            transition: color 0.2s;
+            &:hover {
+              color: #A50606;
+            }
+          }
+          span.active {
+            color: #A50606;
           }
           @media screen and (max-width: 1023px) {
             display: block;
             line-height: 34px;
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 25px;
+            line-height: 27px;
           }
         }
       }
@@ -455,6 +534,9 @@ body {
           }
           @media screen and (max-width: 1023px) {
             font-size: 25px;
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 18px;
           }
         }
       }
@@ -578,6 +660,12 @@ body {
           @media screen and (max-width: 1023px) {
             font-size: 76px;
           }
+          @media screen and (max-width: 767px) {
+            font-size: 71px;
+          }
+          @media screen and (max-width: 424px) {
+            font-size: 57px;
+          }
         }
         @media screen and (max-width: 1600px) {
           font-size: 50px;
@@ -590,6 +678,12 @@ body {
           padding-left: 0;
           font-size: 61px;
           text-align: center;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 40px;
+        }
+        @media screen and (max-width: 424px) {
+          font-size: 32px;
         }
       }
     }
@@ -628,6 +722,10 @@ body {
             font-size: 32px;
             padding: 0 50px;
           }
+          @media screen and (max-width: 767px) {
+            font-size: 18px;
+            padding: 5px;
+          }
         }
         @media screen and (max-width: 1440px) {
           margin-right: -30px;
@@ -637,6 +735,9 @@ body {
         }
         @media screen and (max-width: 1023px) {
           width: 80%;
+        }
+        @media screen and (max-width: 767px) {
+          width: 100%;
         }
       }
       .smallerText {
@@ -659,6 +760,11 @@ body {
         }
         @media screen and (max-width: 1023px) {
           display: none;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+          line-height: 20px;
+          padding: 10px;
         }
       }
       .blockWrapper {
@@ -685,6 +791,9 @@ body {
         text-align: center;
         margin-top: 40px;
         margin-bottom: 15px;
+      }
+      @media screen and (max-width: 767px) {
+        margin-top: 15px;
       }
     }
   }
@@ -714,21 +823,6 @@ body {
       position: static;
     }
   }
-  @media screen and (max-width: 1600px) {
-    padding-bottom: 30px;
-  }
-  @media screen and (max-width: 1440px) {
-    padding-bottom: 10px;
-  }
-  @media screen and (max-width: 1280px) {
-    padding-bottom: 80px;
-  }
-  @media screen and (max-width: 1100px) {
-    padding-bottom: 40px;
-  }
-  @media screen and (max-width: 1023px) {
-    padding-bottom: 0;
-  }
 }
 
 .addSection {
@@ -748,10 +842,18 @@ body {
     background: #ffffff;
     text-align: center;
     padding: 50px 0 30px 0;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 20px;
+      padding: 15px;
+    }
   }
   .blockWrapper {
     margin: 30px;
     @include sendForm;
+    @media screen and (max-width: 767px) {
+      margin: 15px;
+    }
   }
 }
 
@@ -759,9 +861,12 @@ body {
   background: url("../img/bg2.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding-top: 80px;
+  padding-top: 60px;
   position: relative;
   z-index: 20;
+  @media screen and (max-width: 767px) {
+    padding-top: 25px;
+  }
   .sectionTitle {
     @include sectionTitle;
   }
@@ -803,6 +908,14 @@ body {
           line-height: 30px;
           margin: 10px;
         }
+        @media screen and (max-width: 767px) {
+          font-size: 22px;
+          line-height: 24px;
+        }
+        @media screen and (max-width: 424px) {
+          font-size: 16px;
+          line-height: 18px;
+        }
       }
       .botText {
         margin-top: -45px;
@@ -818,24 +931,33 @@ body {
         top: -50px;
         left: 15px;
         text-align: left;
-        @media screen and (max-width: 1023px) {
-
+        @media screen and (max-width: 424px) {
+          margin-bottom: 0;
         }
       }
       @media screen and (max-width: 1023px) {
-        max-width: 60%;
+        max-width: 100%;
         margin: 0 auto;
         margin-bottom: 70px;
+      }
+      @media screen and (max-width: 767px) {
+        margin-bottom: 50px;
+      }
+      @media screen and (max-width: 424px) {
+        margin-bottom: 35px;
       }
     }
     .col-item:nth-of-type(1) {
       @media screen and (max-width: 1023px) {
         width: 34%;
       }
+      @media screen and (max-width: 767px) {
+        width: 40%;
+      }
     }
     .col-item:nth-of-type(2) {
       @media screen and (max-width: 1023px) {
-        width: 57%;
+        width: 67%;
       }
       .topText {
         top: -39px;
@@ -851,10 +973,16 @@ body {
       @media screen and (max-width: 1023px) {
         width: 30%;
       }
+      @media screen and (max-width: 767px) {
+        width: 40%;
+      }
     }
     .col-item:nth-of-type(4) {
       @media screen and (max-width: 1023px) {
         width: 41%;
+      }
+      @media screen and (max-width: 767px) {
+        width: 54%;
       }
       .topText {
         top: -14px;
@@ -863,6 +991,9 @@ body {
       }
     }
     .col-item:last-of-type {
+      @media screen and (max-width: 767px) {
+        width: 68%;
+      }
       .topText {
         top: -70px;
         left: 30px;
@@ -890,9 +1021,13 @@ body {
 }
 
 .section3 {
-  padding: 80px 0;
+  padding: 60px 0;
   position: relative;
   z-index: -1;
+  @media screen and (max-width: 767px) {
+    padding: 25px 0;
+    padding-bottom: 0;
+  }
   .sectionTitle {
     @include sectionTitle;
     margin-bottom: 100px;
@@ -902,6 +1037,12 @@ body {
       @media screen and (max-width: 1023px) {
         display: none;
       }
+    }
+    @media screen and (max-width: 1440px) {
+      margin-bottom: 70px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 50px;
     }
   }
   .row {
@@ -914,9 +1055,6 @@ body {
       position: relative;
       z-index: -5;
       transform: translateY(-2000px);
-      @media screen and (max-width: 1023px) {
-        transform: translateY(0);
-      }
       img {
         width: 257px;
         height: auto;
@@ -933,6 +1071,9 @@ body {
         @media screen and (max-width: 1023px) {
           width: 200px;
         }
+        @media screen and (max-width: 424px) {
+          width: 120px;
+        }
       }
       .underText {
         font-family: 'gothampro-medium', sans-serif;
@@ -948,13 +1089,25 @@ body {
           font-size: 24px;
           line-height: 28px;
         }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+      @media screen and (max-width: 1440px) {
+        padding-top: 10px;
       }
       @media screen and (max-width: 1280px) {
         padding-top: 0;
       }
       @media screen and (max-width: 1023px) {
+        transform: translateY(0);
         max-width: 60%;
         margin: 90px auto;
+      }
+      @media screen and (max-width: 767px) {
+        margin: 55px auto;
+        max-width: 100%;
       }
     }
     .picBlockAnim {
@@ -990,7 +1143,13 @@ body {
   background: url("../img/bg4.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding: 80px 0;
+  padding: 60px 0;
+  @media screen and (max-width: 1280px) {
+    padding: 40px 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 25px 0;
+  }
   .sectionTitle {
     @include sectionTitle;
     margin-bottom: 50px;
@@ -1016,6 +1175,12 @@ body {
         }
         @media screen and (max-width: 1023px) {
           width: 200px;
+        }
+        @media screen and (max-width: 767px) {
+          width: 150px;
+        }
+        @media screen and (max-width: 424px) {
+          width: 100px;
         }
       }
       @media screen and (max-width: 1023px) {
@@ -1045,6 +1210,15 @@ body {
           line-height: 26px;
           text-align: center;
         }
+        @media screen and (max-width: 767px) {
+          font-size: 20px;
+          line-height: 22px;
+          text-align: center;
+        }
+        @media screen and (max-width: 424px) {
+          font-size: 12px;
+          line-height: 18px;
+        }
       }
       @media screen and (max-width: 1280px) {
         height: 85px;
@@ -1053,6 +1227,11 @@ body {
         height: initial;
         max-width: 80%;
         margin: 30px auto 90px auto;
+      }
+      @media screen and (max-width: 767px) {
+        height: initial;
+        max-width: 80%;
+        margin: 20px auto 55px auto;
       }
     }
   }
@@ -1089,16 +1268,24 @@ body {
         font-size: 30px;
         line-height: 36px;
       }
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 26px;
+      }
+      @media screen and (max-width: 424px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
-  }
-  @media screen and (max-width: 1280px) {
-    padding: 60px 0;
   }
 }
 
 .section5 {
-  padding: 80px 0;
+  padding: 60px 0;
   background: #F4F3F2;
+  @media screen and (max-width: 767px) {
+    padding: 25px 0;
+  }
   .sectionTitle {
     @include sectionTitle;
     margin-bottom: 50px;
@@ -1132,6 +1319,12 @@ body {
           @media screen and (max-width: 1023px) {
             font-size: 110px;
             margin-top: 90px;
+          }
+          @media screen and (max-width: 1023px) {
+            margin-top: 50px;
+          }
+          @media screen and (max-width: 1023px) {
+            font-size: 70px;
           }
         }
       }
@@ -1179,6 +1372,9 @@ body {
           height: initial;
           font-size: 22px;
         }
+        @media screen and (max-width: 1023px) {
+          font-size: 18px;
+        }
       }
       .askTitle {
         display: none;
@@ -1193,12 +1389,24 @@ body {
         @media screen and (max-width: 1023px) {
           display: block;
         }
+        @media screen and (max-width: 767px) {
+          font-size: 20px;
+        }
       }
       .hidButton {
         @include button;
         display: none;
         @media screen and (max-width: 1023px) {
           display: block;
+          font-size: 32px;
+          width: 85%;
+          margin: 40px auto;
+          padding: 16px 0;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+          padding: 10px 0;
+          margin: 25px auto;
         }
       }
       .button {
@@ -1210,10 +1418,19 @@ body {
           margin: 20px auto;
           padding: 16px 0;
         }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+          padding: 10px 0;
+        }
       }
       @media screen and (max-width: 1023px) {
         max-width: 80%;
         width: 80%;
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 767px) {
+        max-width: 100%;
+        width: 100%;
         margin: 0 auto;
       }
     }
@@ -1249,10 +1466,13 @@ body {
 }
 
 .section6 {
-  padding: 80px 0;
+  padding: 60px 0;
   background: url("../img/bg6.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  @media screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
   .sectionTitle {
     @include sectionTitle;
     padding-bottom: 80px;
@@ -1299,6 +1519,9 @@ body {
         margin: 0;
         span {
           font-size: 24px;
+          @media screen and (max-width: 767px) {
+            font-size: 20px;
+          }
         }
         @media screen and (max-width: 1440px) {
           font-size: 22px;
@@ -1308,9 +1531,19 @@ body {
           font-size: 20px;
           line-height: 22px;
         }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+          line-height: 20px;
+          width: 100%;
+          margin: 10px 0;
+        }
       }
       .paramWide {
         width: 73%;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          margin: 15px 0;
+        }
       }
       .inputWrapper {
         display: inline-block;
@@ -1399,13 +1632,13 @@ body {
           width: 50%;
           @media screen and (max-width: 1440px) {
             font-size: 22px;
-            padding: 10px 0;
-            width: 40%;
+            padding: 3px 0;
+            width: 30%;
           }
           @media screen and (max-width: 1280px) {
             font-size: 20px;
             padding: 2px 0;
-            width: 30%;
+            width: 25%;
           }
         }
         .inputParam {
@@ -1424,7 +1657,7 @@ body {
           width: 100%;
           @media screen and (max-width: 1440px) {
             font-size: 22px;
-            padding: 10px 0;
+            padding: 3px 0;
           }
           @media screen and (max-width: 1280px) {
             font-size: 20px;
@@ -1444,15 +1677,27 @@ body {
             font-size: 22px;
           }
         }
+        @media screen and (max-width: 1280px) {
+          width: 100%;
+        }
       }
       .inputNarrow {
         width: 25%;
+        @media screen and (max-width: 767px) {
+          width: 60%;
+          text-align: center;
+          margin: 0 auto;
+          display: block;
+        }
       }
       @media screen and (max-width: 1440px) {
         margin: 20px 0;
       }
       @media screen and (max-width: 1280px) {
         margin: 10px 0;
+      }
+      @media screen and (max-width: 767px) {
+        padding: 0;
       }
     }
     .noPadding {
@@ -1525,6 +1770,10 @@ body {
         font-size: 110px;
         margin-bottom: 0;
       }
+      @media screen and (max-width: 767px) {
+        font-size: 70px;
+        line-height: 80px;
+      }
     }
     .button {
       @include button;
@@ -1539,6 +1788,12 @@ body {
         width: 465px;
         margin: 40px auto;
         padding: 16px 0;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+        padding: 10px 0;
+        margin: 20px 0;
+        width: 100%;
       }
     }
     .calcResult {
@@ -1581,16 +1836,25 @@ body {
     @media screen and (max-width: 1280px) {
       padding: 30px;
     }
+    @media screen and (max-width: 767px) {
+      padding: 25px;
+    }
   }
 }
 
 .section7 {
-  padding: 80px 0 160px 0;
+  padding: 60px 0 160px 0;
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: 1280px) {
+    padding: 50px 0 80px 0;
+  }
   .sectionTitle {
     @include sectionTitle;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
   .container {
     padding: 0;
@@ -1614,7 +1878,7 @@ body {
           padding: 10px 15px 10px 0;
           text-transform: uppercase;
           border-bottom: 1px solid #EC0606;
-          margin: 10px 0;
+          margin: 5px 0;
           transition: all 0.2s linear;
           &:hover {
             border-color: transparent;
@@ -1629,8 +1893,14 @@ body {
           @media screen and (max-width: 1023px) {
             font-size: 21px;
             line-height: 24px;
-            margin: 16px 0;
+            margin: 10px 0;
             width: 58%;
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 16px 0;
+            width: 90%;
           }
         }
         @media screen and (max-width: 1023px) {
@@ -1694,6 +1964,9 @@ body {
     @media screen and (max-width: 1023px) {
       display: block;
     }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
   .mobilePic2 {
     display: none;
@@ -1704,26 +1977,33 @@ body {
     @media screen and (max-width: 1023px) {
       display: block;
     }
-  }
-  @media screen and (max-width: 1280px) {
-    padding: 50px 0 80px 0;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
 .section8 {
-  padding: 80px 0;
+  padding: 60px 0;
+  padding-bottom: 20px;
   background: url("../img/bg8.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  @media screen and (max-width: 1280px) {
+    padding: 40px 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 0;
+  }
   .sectionTitle {
     @include sectionTitle;
-    margin-bottom: 150px;
+    margin-bottom: 90px;
     @media screen and (max-width: 1280px) {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
   }
   .iconRow {
-    margin: 44px 0;
+    margin: 30px 0;
     &:last-of-type {
       .iconItem:last-of-type {
         margin-top: 92px;
@@ -1753,6 +2033,9 @@ body {
         @media screen and (max-width: 1023px) {
           width: 200px;
           margin: 0 auto;
+        }
+        @media screen and (max-width: 767px) {
+          width: 150px;
         }
       }
       .topImg {
@@ -1789,6 +2072,10 @@ body {
           line-height: 34px;
           padding: 0 20px;
         }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+          line-height: 22px;
+        }
       }
       .sidePull {
         right: 40px;
@@ -1807,22 +2094,43 @@ body {
       margin: 20px 0;
     }
   }
-  @media screen and (max-width: 1280px) {
-    padding: 50px 0;
-  }
 }
 
 .section9 {
   background: #F4F3F2;
-  padding: 80px 0;
+  padding: 60px 0;
+  @media screen and (max-width: 767px) {
+    padding: 30px 0;
+  }
   .sectionTitle {
     @include sectionTitle;
+    br {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
   }
   #slickSlider {
     position: relative;
     width: 1500px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 30px 0;
+    @media screen and (max-width: 1600px) {
+      width: 1200px;
+    }
+    @media screen and (max-width: 1440px) {
+      width: 1000px;
+    }
+    @media screen and (max-width: 1023px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 25px 0;
+      padding-bottom: 0;
+    }
+    @media screen and (max-width: 424px) {
+      width: 300px;
+    }
     .sliderItem {
       position: relative;
       display: inline-block;
@@ -1958,6 +2266,9 @@ body {
       @media screen and (max-width: 1023px) {
         left: 0;
       }
+      @media screen and (max-width: 767px) {
+        left: 20px;
+      }
     }
     .slick-next {
       right: 485px;
@@ -1975,21 +2286,18 @@ body {
       @media screen and (max-width: 1023px) {
         right: 0;
       }
-    }
-    @media screen and (max-width: 1600px) {
-      width: 1200px;
-    }
-    @media screen and (max-width: 1440px) {
-      width: 1000px;
-    }
-    @media screen and (max-width: 1023px) {
-      width: 400px;
+      @media screen and (max-width: 767px) {
+        right: 20px;
+      }
     }
   }
 }
 
 .section10 {
-  padding: 80px 0;
+  padding: 60px 0;
+  @media screen and (max-width: 1280px) {
+    padding: 30px 0;
+  }
   .sectionTitle {
     @include sectionTitle;
     margin-bottom: 30px;
@@ -2035,29 +2343,41 @@ body {
       margin: 30px 0;
       margin-bottom: 0;
     }
+    @media screen and (max-width: 767px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
   .lookButton {
     @include button;
     width: 365px;
+    @media screen and (max-width: 1440px) {
+      margin: 20px auto;
+      width: 250px;
+    }
     @media screen and (max-width: 1023px) {
       font-size: 25px;
       width: 465px;
-      margin: 20px auto;
       padding: 16px 0;
     }
-  }
-  @media screen and (max-width: 1280px) {
-    padding: 50px 0;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      padding: 10px 0;
+      width: 100%;
+    }
   }
 }
 
 .section11 {
-  padding: 80px 0;
+  padding: 60px 0;
   background: url("../img/bg11.jpg") no-repeat;
   background-size: cover;
+  @media screen and (max-width: 767px) {
+    padding: 25px 0;
+  }
   .sectionTitle {
     @include sectionTitle;
-    color: $mainColor;
+    color: #002AFF;
     line-height: 50px;
     letter-spacing: -1.2px;
     padding-bottom: 70px;
@@ -2078,6 +2398,11 @@ body {
       font-size: 26px;
       line-height: 33px;
     }
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 30px;
+      padding-bottom: 20px;
+    }
   }
   .formBlock {
     @include sendForm;
@@ -2091,12 +2416,17 @@ body {
 
 .section12 {
   background: #F4F3F2;
-  padding: 80px 0;
+  padding: 60px 0;
+  @media screen and (max-width: 767px) {
+    padding: 40px 0;
+  }
   .sectionTitle {
     @include sectionTitle;
     margin-bottom: 80px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 25px;
+    }
   }
-
   #accordion {
     border-color: transparent;
     width: 100%;
@@ -2125,6 +2455,9 @@ body {
             @media screen and (max-width: 1280px) {
               font-size: 18px;
             }
+            @media screen and (max-width: 767px) {
+              font-size: 14px;
+            }
             span {
               line-height: 50px;
               background: white;
@@ -2134,6 +2467,12 @@ body {
               text-align: left;
               @media screen and (max-width: 1440px) {
                 line-height: 35px;
+              }
+              @media screen and (max-width: 767px) {
+                line-height: 20px;
+              }
+              &:focus {
+                outline: none;
               }
             }
             span:last-of-type {
@@ -2148,6 +2487,9 @@ body {
                 width: 35px;
                 height: 35px;
                 right: -50px;
+              }
+              @media screen and (max-width: 767px) {
+                top: 5px;
               }
               &:before {
                 content: '';
@@ -2176,6 +2518,9 @@ body {
             text-decoration: none;
           }
         }
+        @media screen and (max-width: 767px) {
+          margin: 5px 0;
+        }
       }
       .card-body {
         font-family: 'gothampro', sans-serif;
@@ -2184,6 +2529,9 @@ body {
         background: white;
         @media screen and (max-width: 1440px) {
           font-size: 16px;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 14px;
         }
       }
     }
@@ -2238,6 +2586,9 @@ body {
     @media screen and (max-width: 1023px) {
       width: 38%;
     }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
   .footTitle {
     font-family: 'gothampro-black', sans-serif;
@@ -2285,10 +2636,16 @@ body {
         height: 40px;
         background-size: cover;
       }
+      @media screen and (max-width: 424px) {
+        left: -55px;
+      }
     }
     @media screen and (max-width: 1440px) {
       font-size: 16px;
       margin-top: 30px;
+    }
+    @media screen and (max-width: 424px) {
+      margin-left: 55px;
     }
   }
   .email {
@@ -2309,13 +2666,19 @@ body {
       height: 39px;
       background: url(../img/mail.png);
       @media screen and (max-width: 1440px) {
-        width: 40px;
+        width: 52px;
         height: 40px;
         background-size: cover;
+      }
+      @media screen and (max-width: 424px) {
+        left: -55px;
       }
     }
     @media screen and (max-width: 1440px) {
       font-size: 16px;
+    }
+    @media screen and (max-width: 424px) {
+      margin-left: 55px;
     }
   }
   @media screen and (max-width: 1440px) {
