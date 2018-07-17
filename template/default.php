@@ -113,7 +113,8 @@
             </div>
         </div>
     </div>
-    <img class="mainImg" src="../img/maindrier.png" alt="drier">
+    <img class="mainImg" src="../img/maindrieralt.png" alt="drier">
+    <img class="sign" src="../img/titleicon.png" alt="sign">
 </section>
 <!-- первый экран -->
 
@@ -246,74 +247,85 @@
 <!-- 3 серии зерносушилок -->
 <section class="container-fluid section5">
     <div class="container">
-        <h6 class="sectionTitle text-center"><?= $lang['section5']['title']?></h6>
+        <h6 class="sectionTitle text-center"><?= $lang['section5']['title'] ?></h6>
         <div class="topRow">
             <div class="topItem">
                 <div class="titleWrapper">
-                    <p class="itemTitle"><?= $lang['section5']['basic']['title']?></p>
+                    <p class="itemTitle"><?= $lang['section5']['basic']['title'] ?></p>
                 </div>
                 <img src="../img/basicimg.jpg" alt="basic">
                 <div class="description">
-                    <p class="techName"><?= $lang['section5']['basic']['volume']?></p>
-                    <p class="techText"><?= $lang['section5']['basic']['volumeText']?></p>
-                    <p class="techName"><?= $lang['section5']['basic']['performance']?></p>
-                    <p class="subName"><?= $lang['section5']['basic']['corn']?></p>
-                    <p class="techText"><?= $lang['section5']['basic']['cornText']?></p>
-                    <p class="subName"><?= $lang['section5']['basic']['wheat']?></p>
-                    <p class="techText"><?= $lang['section5']['basic']['wheatText']?></p>
-                    <p class="subName"><?= $lang['section5']['basic']['sunflower']?></p>
-                    <p class="techText"><?= $lang['section5']['basic']['sunflowerText']?></p>
-                    <p class="techName text-center"><?= $lang['section5']['basic']['advice']?></p>
+                    <p class="techName"><?= $lang['section5']['basic']['volume'] ?></p>
+                    <p class="techText"><?= $lang['section5']['basic']['volumeText'] ?></p>
+                    <p class="techName"><?= $lang['section5']['basic']['performance'] ?></p>
+                    <p class="subName"><?= $lang['section5']['basic']['corn'] ?></p>
+                    <p class="techText"><?= $lang['section5']['basic']['cornText'] ?></p>
+                    <p class="subName"><?= $lang['section5']['basic']['wheat'] ?></p>
+                    <p class="techText"><?= $lang['section5']['basic']['wheatText'] ?></p>
+                    <p class="subName"><?= $lang['section5']['basic']['sunflower'] ?></p>
+                    <p class="techText"><?= $lang['section5']['basic']['sunflowerText'] ?></p>
+                    <p class="techName text-center"><?= $lang['section5']['basic']['advice'] ?></p>
                 </div>
+                <h5 class="askTitle"><?= $lang['section5']['getCharacteristic'] ?></h5>
+                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="BASIC"
+                        data-comment="Basic"><?= $lang['section5']['basic']['button'] ?></button>
             </div>
             <div class="topItem">
                 <div class="titleWrapper">
-                    <p class="itemTitle"><?= $lang['section5']['large']['title']?></p>
+                    <p class="itemTitle"><?= $lang['section5']['large']['title'] ?></p>
                 </div>
                 <img src="../img/largeimg.jpg" alt="large">
                 <div class="description">
-                    <p class="techName"><?= $lang['section5']['large']['volume']?></p>
-                    <p class="techText"><?= $lang['section5']['large']['volumeText']?></p>
-                    <p class="techName"><?= $lang['section5']['basic']['performance']?></p>
-                    <p class="subName"><?= $lang['section5']['large']['corn']?></p>
-                    <p class="techText"><?= $lang['section5']['large']['cornText']?></p>
-                    <p class="subName"><?= $lang['section5']['large']['wheat']?></p>
-                    <p class="techText"><?= $lang['section5']['large']['wheatText']?></p>
-                    <p class="subName"><?= $lang['section5']['large']['sunflower']?></p>
-                    <p class="techText"><?= $lang['section5']['large']['sunflowerText']?></p>
-                    <p class="techName text-center"><?= $lang['section5']['large']['advice']?></p>
+                    <p class="techName"><?= $lang['section5']['large']['volume'] ?></p>
+                    <p class="techText"><?= $lang['section5']['large']['volumeText'] ?></p>
+                    <p class="techName"><?= $lang['section5']['basic']['performance'] ?></p>
+                    <p class="subName"><?= $lang['section5']['large']['corn'] ?></p>
+                    <p class="techText"><?= $lang['section5']['large']['cornText'] ?></p>
+                    <p class="subName"><?= $lang['section5']['large']['wheat'] ?></p>
+                    <p class="techText"><?= $lang['section5']['large']['wheatText'] ?></p>
+                    <p class="subName"><?= $lang['section5']['large']['sunflower'] ?></p>
+                    <p class="techText"><?= $lang['section5']['large']['sunflowerText'] ?></p>
+                    <p class="techName text-center"><?= $lang['section5']['large']['advice'] ?></p>
                 </div>
+                <h5 class="askTitle"><?= $lang['section5']['getCharacteristic'] ?></h5>
+                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="LARGE"
+                        data-comment="Large"><?= $lang['section5']['large']['button'] ?></button>
             </div>
             <div class="topItem">
                 <div class="titleWrapper">
-                    <p class="itemTitle"><?= $lang['section5']['xl']['title']?></p>
+                    <p class="itemTitle"><?= $lang['section5']['xl']['title'] ?></p>
                 </div>
                 <img src="../img/xlimg.jpg" alt="xl">
                 <div class="description">
-                    <p class="techName"><?= $lang['section5']['xl']['volume']?></p>
-                    <p class="techText"><?= $lang['section5']['xl']['volumeText']?></p>
-                    <p class="techName"><?= $lang['section5']['basic']['performance']?></p>
-                    <p class="subName"><?= $lang['section5']['xl']['corn']?></p>
-                    <p class="techText"><?= $lang['section5']['xl']['cornText']?></p>
-                    <p class="subName"><?= $lang['section5']['xl']['wheat']?></p>
-                    <p class="techText"><?= $lang['section5']['xl']['wheatText']?></p>
-                    <p class="subName"><?= $lang['section5']['xl']['sunflower']?></p>
-                    <p class="techText"><?= $lang['section5']['xl']['sunflowerText']?></p>
-                    <p class="techName text-center"><?= $lang['section5']['xl']['advice']?></p>
+                    <p class="techName"><?= $lang['section5']['xl']['volume'] ?></p>
+                    <p class="techText"><?= $lang['section5']['xl']['volumeText'] ?></p>
+                    <p class="techName"><?= $lang['section5']['basic']['performance'] ?></p>
+                    <p class="subName"><?= $lang['section5']['xl']['corn'] ?></p>
+                    <p class="techText"><?= $lang['section5']['xl']['cornText'] ?></p>
+                    <p class="subName"><?= $lang['section5']['xl']['wheat'] ?></p>
+                    <p class="techText"><?= $lang['section5']['xl']['wheatText'] ?></p>
+                    <p class="subName"><?= $lang['section5']['xl']['sunflower'] ?></p>
+                    <p class="techText"><?= $lang['section5']['xl']['sunflowerText'] ?></p>
+                    <p class="techName text-center"><?= $lang['section5']['xl']['advice'] ?></p>
                 </div>
+                <h5 class="askTitle"><?= $lang['section5']['getCharacteristic'] ?></h5>
+                <button class="button myBtn hidButton" data-toggle="modal" data-target="#modalOrder" data-modelname="XL"
+                        data-comment="XL"><?= $lang['section5']['xl']['button'] ?></button>
             </div>
         </div>
-        <h5><?= $lang['section5']['getCharacteristic']?></h5>
-        <div class="topRow">
-
+        <h5><?= $lang['section5']['getCharacteristic'] ?></h5>
+        <div class="topRow desktopRow">
             <div class="topItem">
-                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="BASIC" data-comment="Basic"><?= $lang['section5']['basic']['button']?></button>
+                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="BASIC"
+                        data-comment="Basic"><?= $lang['section5']['basic']['button'] ?></button>
             </div>
             <div class="topItem">
-                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="LARGE" data-comment="Large"><?= $lang['section5']['large']['button']?></button>
+                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="LARGE"
+                        data-comment="Large"><?= $lang['section5']['large']['button'] ?></button>
             </div>
             <div class="topItem">
-                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="XL" data-comment="XL"><?= $lang['section5']['xl']['button']?></button>
+                <button class="button myBtn" data-toggle="modal" data-target="#modalOrder" data-modelname="XL"
+                        data-comment="XL"><?= $lang['section5']['xl']['button'] ?></button>
             </div>
         </div>
     </div>
@@ -415,9 +427,9 @@
                     </div>
                     <hr>
                 </form>
-                <p class="answer text-center"><?= $lang['section6']['offerTitle']?></p>
-                <p class="subAnswer text-center"><?= $lang['section6']['offer']?></p>
-                <button class="button"><?= $lang['section6']['offerButton']?></button>
+                <p class="answer text-center"><?= $lang['section6']['calc2']['offerTitle']?></p>
+                <p class="subAnswer text-center"><?= $lang['section6']['calc2']['offer']?></p>
+                <button class="button"><?= $lang['section6']['calc2']['offerButton']?></button>
             </div>
         </div>
     </div>
@@ -427,60 +439,65 @@
 <!-- главные особенности -->
 <section class="container-fluid section7">
     <div class="container">
-        <h5 class="sectionTitle text-center"><?= $lang['section7']['title']?></h5>
+        <h5 class="sectionTitle text-center"><?= $lang['section7']['title'] ?></h5>
         <div class="row">
             <div class="col-md-6 specBlock">
-                <p class="specialty"><?= $lang['section7']['item1']?></p>
-                <p class="specialty"><?= $lang['section7']['item2']?></p>
-                <p class="specialty"><?= $lang['section7']['item3']?></p>
-                <p class="specialty"><?= $lang['section7']['item4']?></p>
-                <p class="specialty"><?= $lang['section7']['item5']?></p>
-                <p class="specialty"><?= $lang['section7']['item6']?></p>
+                <p class="specialty"><?= $lang['section7']['item1'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item2'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item3'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item4'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item5'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item6'] ?></p>
             </div>
             <div class="col-md-6 specBlock">
-                <p class="specialty"><?= $lang['section7']['item7']?></p>
-                <p class="specialty"><?= $lang['section7']['item8']?></p>
-                <p class="specialty"><?= $lang['section7']['item9']?></p>
-                <p class="specialty"><?= $lang['section7']['item10']?></p>
-                <p class="specialty"><?= $lang['section7']['item11']?></p>
+                <p class="specialty"><?= $lang['section7']['item7'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item8'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item9'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item10'] ?></p>
+                <p class="specialty"><?= $lang['section7']['item11'] ?></p>
             </div>
         </div>
     </div>
     <img class="bgImg" src="../img/sec7bgpic.jpg" alt="bg">
+    <img class="mobilePic1" src="../img/sec7bgpic.jpg" alt="bg">
+    <img class="mobilePic2" src="../img/sec7bgpic.jpg" alt="bg">
 </section>
 <!-- главные особенности -->
 
 <!-- доставка и монтаж -->
 <section class="container-fluid section8">
     <div class="container">
-        <h5 class="sectionTitle text-center"><?= $lang['section8']['title']?></h5>
+        <h5 class="sectionTitle text-center"><?= $lang['section8']['title'] ?></h5>
         <div class="iconRow clearfix">
             <div class="iconItem">
-                <p class="iconCaption topPosition"><?= $lang['section8']['item1']?></p>
-                <img src="../img/headphones.jpg" alt="headphones">
+                <img class="topImg" src="../img/headphones.jpg" alt="headphones">
+                <p class="iconCaption topPosition"><?= $lang['section8']['item1'] ?></p>
+                <img class="bottomImg" src="../img/headphones.jpg" alt="headphones">
             </div>
             <div class="iconItem">
                 <img src="../img/phone.jpg" alt="phone">
-                <p class="iconCaption topPosition"><?= $lang['section8']['item2']?></p>
+                <p class="iconCaption topPosition"><?= $lang['section8']['item2'] ?></p>
             </div>
             <div class="iconItem">
-                <p class="iconCaption sidePull"><?= $lang['section8']['item3']?></p>
-                <img src="../img/tools.jpg" alt="tools">
+                <img class="topImg" src="../img/tools.jpg" alt="tools">
+                <p class="iconCaption sidePull"><?= $lang['section8']['item3'] ?></p>
+                <img class="bottomImg" src="../img/tools.jpg" alt="tools">
             </div>
         </div>
 
         <div class="iconRow clearfix">
             <div class="iconItem">
-                <p class="iconCaption sidePull"><?= $lang['section8']['item4']?></p>
-                <img src="../img/star.jpg" alt="star">
+                <img class="topImg" src="../img/star.jpg" alt="star">
+                <p class="iconCaption sidePull"><?= $lang['section8']['item4'] ?></p>
+                <img class="bottomImg" src="../img/star.jpg" alt="star">
             </div>
             <div class="iconItem">
                 <img src="../img/book.jpg" alt="book">
-                <p class="iconCaption sidePull"><?= $lang['section8']['item5']?></p>
+                <p class="iconCaption sidePull"><?= $lang['section8']['item5'] ?></p>
             </div>
             <div class="iconItem">
                 <img src="../img/info.jpg" alt="info">
-                <p class="iconCaption"><?= $lang['section8']['item6']?></p>
+                <p class="iconCaption"><?= $lang['section8']['item6'] ?></p>
             </div>
         </div>
     </div>
@@ -562,7 +579,7 @@
         <div class="col-md-6 offset-md-3 formBlock">
             <form id="sendForm" action="">
                 <h6 class="formTitle text-center"><?= $lang['form']['discountFormTitle']?></h6>
-                <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
+                <input type="text" name="name" placeholder="<?= $lang['form']['discountFormButton']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
                 <button class="button"><?= $lang['form']['discountFormButton']?></button>
