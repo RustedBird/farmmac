@@ -556,6 +556,12 @@ body {
             line-height: 27px;
           }
         }
+        span {
+          cursor: pointer;
+        }
+        span.active {
+          color: #A50606;
+        }
       }
       .phones {
         display: inline-block;
@@ -1681,6 +1687,10 @@ body {
             padding: 2px 0;
             width: 25%;
           }
+          &:focus {
+            outline: none;
+            background: #eae4e1;
+          }
         }
         .inputParam {
           border: 1px solid #B1ABA8;
@@ -1704,6 +1714,10 @@ body {
             font-size: 20px;
             padding: 2px 0;
             width: 75%;
+          }
+          &:focus {
+            outline: none;
+            background: #eae4e1;
           }
         }
         .priceResult {
@@ -1972,6 +1986,10 @@ body {
     left: 41%;
     width: 23%;
     height: auto;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     @media screen and (max-width: 1800px) {
       bottom: 5%;
     }
@@ -2021,6 +2039,18 @@ body {
     @media screen and (max-width: 767px) {
       display: none;
     }
+  }
+}
+@keyframes floating {
+  from {
+    transform: rotate(0deg)
+    translate(-5px)
+    rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+    translate(-5px)
+    rotate(-360deg);
   }
 }
 

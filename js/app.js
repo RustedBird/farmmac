@@ -2,7 +2,7 @@
 
     var date = new Date;
 
-    var cookieLang = getCookie('lang');
+    var cookieLang = getCookie('lang') ? getCookie('lang') : 'rus';
     $('.lang span[data-lang=' + cookieLang + ']').addClass('active');
 
     // запуск показа модального окна на увод мышки вверх

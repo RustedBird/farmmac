@@ -190,8 +190,7 @@ body {
       .modal-body form textarea {
         font-size: 18px;
         width: 85%;
-        margin: 20px auto;
-        padding: 10px 0; } }
+        margin: 20px auto; } }
   .modal-body form button {
     padding: 16px 0;
     border-bottom-right-radius: 100px;
@@ -408,6 +407,10 @@ body {
             .section1 .container .upperMenu .lang:nth-child(4) {
               font-size: 25px;
               line-height: 27px; } }
+        .section1 .container .upperMenu .lang span {
+          cursor: pointer; }
+        .section1 .container .upperMenu .lang span.active {
+          color: #A50606; }
       .section1 .container .upperMenu .phones {
         display: inline-block;
         vertical-align: middle;
@@ -585,8 +588,7 @@ body {
             .section1 .container .upperMenu form textarea {
               font-size: 18px;
               width: 85%;
-              margin: 20px auto;
-              padding: 10px 0; } }
+              margin: 20px auto; } }
         .section1 .container .upperMenu form button {
           padding: 16px 0;
           border-bottom-right-radius: 100px;
@@ -1020,8 +1022,7 @@ body {
               .section1 .container .formBlock .blockWrapper form textarea {
                 font-size: 18px;
                 width: 85%;
-                margin: 20px auto;
-                padding: 10px 0; } }
+                margin: 20px auto; } }
           .section1 .container .formBlock .blockWrapper form button {
             padding: 16px 0;
             border-bottom-right-radius: 100px;
@@ -1275,8 +1276,7 @@ body {
           .addSection .blockWrapper form textarea {
             font-size: 18px;
             width: 85%;
-            margin: 20px auto;
-            padding: 10px 0; } }
+            margin: 20px auto; } }
       .addSection .blockWrapper form button {
         padding: 16px 0;
         border-bottom-right-radius: 100px;
@@ -2277,6 +2277,9 @@ body {
               font-size: 20px;
               padding: 2px 0;
               width: 25%; } }
+          .section6 .calcWrapper .form-line .inputWrapper .performance:focus {
+            outline: none;
+            background: #eae4e1; }
         .section6 .calcWrapper .form-line .inputWrapper .inputParam {
           border: 1px solid #B1ABA8;
           padding: 16px 0;
@@ -2300,6 +2303,9 @@ body {
               font-size: 20px;
               padding: 2px 0;
               width: 75%; } }
+          .section6 .calcWrapper .form-line .inputWrapper .inputParam:focus {
+            outline: none;
+            background: #eae4e1; }
         .section6 .calcWrapper .form-line .inputWrapper .priceResult {
           font-family: 'gothampro-black', sans-serif;
           font-size: 30px;
@@ -2607,7 +2613,11 @@ body {
     z-index: -1;
     left: 41%;
     width: 23%;
-    height: auto; }
+    height: auto;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
     @media screen and (max-width: 1800px) {
       .section7 .bgImg {
         bottom: 5%; } }
@@ -2656,6 +2666,11 @@ body {
       .section7 .mobilePic2 {
         display: none; } }
 
+@keyframes floating {
+  from {
+    transform: rotate(0deg) translate(-5px) rotate(0deg); }
+  to {
+    transform: rotate(360deg) translate(-5px) rotate(-360deg); } }
 .section8 {
   padding: 60px 0;
   padding-bottom: 20px;
@@ -3239,8 +3254,7 @@ body {
         .section11 .formBlock form textarea {
           font-size: 18px;
           width: 85%;
-          margin: 20px auto;
-          padding: 10px 0; } }
+          margin: 20px auto; } }
     .section11 .formBlock form button {
       padding: 16px 0;
       border-bottom-right-radius: 100px;
@@ -3571,8 +3585,7 @@ body {
           .section12 .formBlock form textarea {
             font-size: 18px;
             width: 85%;
-            margin: 20px auto;
-            padding: 10px 0; } }
+            margin: 20px auto; } }
       .section12 .formBlock form button {
         padding: 16px 0;
         border-bottom-right-radius: 100px;
