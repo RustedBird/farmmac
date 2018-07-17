@@ -71,7 +71,7 @@
         jQuery(document).ready(initLanding);
 
         console.log(data);
-
+        var $preloader = $('.preloader');
         $.ajax({
             url: $thisClosestForm.attr('action'),
             method: $thisClosestForm.attr('method'),
@@ -79,6 +79,10 @@
             dataType: 'json',
             beforeSend: function () {
                 console.log("beforeSend");
+                $preloader.find('p').html('Отправка <span>.</span><span>.</span><span>.</span>');
+                $preloader.css({opacity: 0, display: 'flex'}).animate({
+                    opacity: 1
+                }, 300);
             },
             success: function (response) {
                 console.log(response);
@@ -86,13 +90,23 @@
                 var $texthere = $('.texthere');
                 if (response.result) {
                     console.log("success");
-                    $texthere.html('Заявка отправлена успешно');
+                    $preloader.find('p').html('Успешно отправлено');
+                    setTimeout(function () {
+                        $preloader.fadeOut(300);
+                    }, 2000);
                 } else {
-                    $texthere.html('Сообщение: ' + response.message);
+                    $preloader.find('p').html('Поля неверно заполнены');
+                    setTimeout(function () {
+                        $preloader.fadeOut(300);
+                    }, 2000);
                     console.log("error");
                 }
             },
             error: function () {
+                $preloader.find('p').html('Ошибка отправки');
+                setTimeout(function () {
+                    $preloader.fadeOut(300);
+                }, 2000);
                 console.log('Some error');
             }
         });
@@ -294,8 +308,32 @@
     $(window).scroll(function () {
         //Animate falling pics in third section
         var $sec3 = $('.section3 .row').offset().top - window.innerHeight,
-            $sec2 = $('.redText').offset().top - window.innerHeight;
+            $sec2 = $('.section2').offset().top - window.innerHeight;
         if ($(window).scrollTop() > $sec2) {
+            $('.counter').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                        countNum: countTo
+                    },
+
+                    {
+                        duration: 7000,
+                        easing: 'swing',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            $this.text(this.countNum);
+                        }
+
+                    });
+            });
+
+
+
 
         }
         if ($(window).scrollTop() > $sec3) {
@@ -305,8 +343,15 @@
         }
     });
 
+
+
+
+
+
+
+
     //Animating number only on desktop width
-    $('.counter').each(function () {
+    /*$('.counter').each(function () {
         var $this = $(this),
             value = $this.html();
         if ($(window).width() >= 1006) {
@@ -318,7 +363,7 @@
                 toValue: value // animate to this value.
             });
         }
-    });
+    });*/
 
     /*Changing + / - in accordion*/
     $('.card-header').on('click', '.btn', function () {
@@ -354,6 +399,7 @@
 
     
     var $upBtn = $(".upButton");
+    $upBtn.hide();
     window.onscroll = function() {
         if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
             $upBtn.show(300);

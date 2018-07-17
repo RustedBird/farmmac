@@ -15,8 +15,8 @@
 <div class="upButton">
     <div class="arrow"></div>
 </div>
-<div class="preloader">
-    <p>Lorem ipsum dolor sit amet</p>
+<div class="preloader hidden">
+    <p></p>
 </div>
 
 <!-- первый экран -->

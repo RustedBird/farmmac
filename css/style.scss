@@ -435,11 +435,47 @@ body {
     top: 0;
     left: 0;
   }
-  /*.preloader {
+  .preloader {
     width: 100%;
     height: 100%;
     position: fixed;
-  }*/
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    display: none;
+    //display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-family: 'gothampro-black', sans-serif;
+      font-size: 70px;
+      font-weight: 900;
+      color: white;
+      span {
+        animation-name: sending;
+        animation-duration: 1.3s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        position: relative;
+        letter-spacing: 10px;
+      }
+      span:nth-of-type(2) {
+        animation-delay: -1.1s;
+      }
+      span:nth-of-type(3) {
+        animation-delay: 0.1s;
+      }
+    }
+  }
+}
+@keyframes sending {
+  0%, 60%, 100% {
+    bottom: 0;
+  }
+
+  30% {
+    bottom: 10px;
+  }
 }
 
 .modal-dialog {
@@ -1906,7 +1942,7 @@ body {
   }
   .sectionTitle {
     @include sectionTitle;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     @media screen and (max-width: 767px) {
       margin-bottom: 30px;
     }
@@ -1987,7 +2023,7 @@ body {
     width: 23%;
     height: auto;
     animation-name: floating;
-    animation-duration: 2s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     @media screen and (max-width: 1800px) {
