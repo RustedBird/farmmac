@@ -223,6 +223,7 @@ $lang = [
         'placeholderName' => 'имя',
         'placeholderEmail' => 'e - mail',
         'placeholderPhone' => 'телефон',
+        'placeholderTextarea' => 'ваш вопрос',
         'underText' => '* -это бесплатно и ни к чему не обязывает ',
         'orderCall' => 'заказать звонок'
     ]

@@ -692,8 +692,9 @@
                 <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
-                <textarea name="comment" required placeholder="ваш вопрос"></textarea>
+                <textarea name="comment" required placeholder="<?= $lang['form']['placeholderTextarea']?>"></textarea>
                 <button class="button"><?= $lang['form']['AskFormButton']?></button>
+                <p class="underText"><?= $lang['form']['underText']?></p>
             </form>
         </div>
     </div>

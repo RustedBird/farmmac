@@ -220,6 +220,7 @@ $lang = [
         'placeholderName' => 'ім’я',
         'placeholderEmail' => 'e - mail',
         'placeholderPhone' => 'телефон',
+        'placeholderTextarea' => 'ваше запитання',
         'underText' => '* -це бескоштовно і ні до чого не зобов\'язує',
         'orderCall' => 'замовити дзвінок'
     ]
