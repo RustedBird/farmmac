@@ -7,17 +7,18 @@
 
 
     // запуск показа модального окна на увод мышки вверх
-    var alertwin = getCookie("alertwin");
-    if (alertwin != "no") {
-        $(document).mouseleave(function (e) {
-            if (e.clientY < 0) {
+
+
+    $(document).mouseleave(function (e) {
+        var alertwin = getCookie("alertwin");
+        if (alertwin != "no" && e.clientY < 0) {
                 $('#modalLeave').modal('show');
                 // записываем cookie на 1 день, с которой мы не показываем окно
                 date.setDate(date.getDate() + 1);
                 document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
-            }
-        });
-    }
+        }
+    });
+
 
     // записываем в куки выбранный язык
     $('.lang span').on('click', function () {
@@ -54,7 +55,6 @@
                 serviceUrl: "https://farmmac.bpmonline.com/0/ServiceModel/GeneratedObjectWebFormService.svc/SaveWebFormObjectData",
                 redirectUrl: ""
             };
-        console.log(config);
         /**
          * Функция ниже создает объект из введенных данных.
          * Привяжите вызов этой функции к событию "onSubmit" формы или любому другому элементу события.
@@ -72,7 +72,6 @@
 
         jQuery(document).ready(initLanding);
 
-        console.log(data);
         var $preloader = $('.preloader'),
             $modal = $('#modalError');
         $.ajax({
@@ -81,17 +80,13 @@
             data: data,
             dataType: 'json',
             beforeSend: function () {
-                console.log('before send');
                 $preloader.find('p').html('Отправка <span>.</span><span>.</span><span>.</span>');
                 $preloader.css({opacity: 0, display: 'flex'}).animate({
                     opacity: 1
                 }, 500);
             },
             success: function (response) {
-                console.log(response);
-                console.log(response.result);
                 if (response) {
-                    console.log("success");
                     $preloader.fadeOut(500);
                     $modal.find('.formTitle').html(response.message);
                     $modal.modal('show');
@@ -99,14 +94,12 @@
                     $preloader.fadeOut(500);
                     $modal.find('.formTitle').html(response.message);
                     $modal.modal('show');
-                    console.log("response-error");
                 }
             },
             error: function () {
                 $preloader.fadeOut(500);
                 $modal.find('.formTitle').html('Произошла системная ошибка при отправке сообщения\\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua');
                 $modal.modal('show');
-                console.log('Some error');
             }
         });
     });
@@ -364,7 +357,6 @@
     $('.section5 .button').on('click', function () {
         var $this = $(this);
         $this.attr('data-modelname');
-        console.log($this.attr('data-modelname'));
         $('.modal-body .itemTitle').html($this.attr('data-modelname'));
     });
 
