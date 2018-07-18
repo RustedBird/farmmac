@@ -447,9 +447,27 @@ body {
     align-items: center;
     p {
       font-family: 'gothampro-black', sans-serif;
-      font-size: 70px;
+      font-size: 50px;
       font-weight: 900;
       color: white;
+      @media screen and (max-width: 1440px){
+        font-size: 30px;
+      }
+      @media screen and (max-width: 1280px){
+        font-size: 25px;
+      }
+      @media screen and (max-width: 1280px){
+        font-size: 22px;
+      }
+      @media screen and (max-width: 1023px){
+        font-size: 22px;
+      }
+      @media screen and (max-width: 767px){
+        font-size: 20px;
+      }
+      @media screen and (max-width: 424px){
+        font-size: 18px;
+      }
       span {
         animation-name: sending;
         animation-duration: 1.3s;
@@ -494,7 +512,7 @@ body {
 
 #modalPdf {
   .modal-dialog {
-    max-width: 80%;
+    //max-width: 80%;
     object {
       width: 100%;
       height: 85vh;
@@ -633,7 +651,7 @@ body {
           width: 300px;
         }
         @media screen and (max-width: 1280px) {
-          width: 200px;
+          width: 250px;
         }
         @media screen and (max-width: 1023px) {
           display: none;
@@ -648,8 +666,24 @@ body {
         right: 0;
         top: 95px;
         padding: 20px;
+        padding-bottom: 40px;
         z-index: 99;
         box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        @media screen and (max-width: 1440px) {
+          width: 300px;
+          right: 13%;
+          top: 74px;
+        }
+        @media screen and (max-width: 1280px) {
+          width: 250px;
+          right: 17.3%;
+          padding: 10px;
+          padding-bottom: 20px;
+        }
+        @media screen and (max-width: 1199px) {
+          width: 250px;
+          right: 12.3%;
+        }
         .close {
           content: '';
           position: absolute;
@@ -669,20 +703,6 @@ body {
           @include button;
           width: 80%;
           cursor: pointer;
-        }
-        @media screen and (max-width: 1440px) {
-          width: 300px;
-          right: 13%;
-          top: 74px;
-        }
-        @media screen and (max-width: 1280px) {
-          width: 250px;
-          right: 17.3%;
-          padding: 10px;
-        }
-        @media screen and (max-width: 1199px) {
-          width: 250px;
-          right: 12.3%;
         }
       }
       @media screen and (max-width: 1440px) {
@@ -898,7 +918,7 @@ body {
     bottom: 0;
     z-index: -1;
     @media screen and (max-width: 1440px) {
-      width: 19%;
+      width: 18%;
     }
     @media screen and (max-width: 1023px) {
       width: 43%;
@@ -2556,6 +2576,9 @@ body {
             text-transform: uppercase;
             padding: 0;
             white-space: normal;
+            &:focus {
+              box-shadow: none;
+            }
             @media screen and (max-width: 1440px) {
               font-size: 20px;
             }

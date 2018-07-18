@@ -100,27 +100,27 @@
         <h6 class="sectionTitle text-center"><?= $lang['section2']['title']?></h6>
         <div class="row col-row">
             <div class="col-md-2 col-item">
-                <p class="redText"><span class="counter">9</span> <span class="addText"><?= $lang['section2']['counterPeriod']?></span></p>
+                <p class="redText"><span class="counter" data-count="9">9</span> <span class="addText"><?= $lang['section2']['counterPeriod']?></span></p>
                 <p class="subText botText"><?= $lang['section2']['counterPeriodBottomText']?></p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText"><?= $lang['section2']['counterRegionTopText']?></p>
-                <p class="redText"><span class="counter">15</span> <span class="smallerText addText"><?= $lang['section2']['counterRegion']?></span>
+                <p class="redText"><span class="counter" data-count="15">15</span> <span class="smallerText addText"><?= $lang['section2']['counterRegion']?></span>
                 </p>
                 <p class="subText botText"><?= $lang['section2']['counterRegionBottomText']?></p>
             </div>
             <div class="col-md-2 col-item">
-                <p class="redText"><span class="counter">80</span><span class="addText">+</span></p>
+                <p class="redText"><span class="counter" data-count="80">80</span><span class="addText">+</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterClientBottomText']?></p>
             </div>
             <div class="col-md-2 col-item">
                 <p class="subText topText"><?= $lang['section2']['counterYearTopText']?></p>
-                <p class="redText"><span class="counter">1958</span></p>
+                <p class="redText"><span class="counter" data-count="1958">1958</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterYearBottomText']?></p>
             </div>
             <div class="col-md-3 col-item">
                 <p class="subText topText"><?= $lang['section2']['counterCountryTopText']?></p>
-                <p class="redText"><span class="counter">52</span> <span class="smallerText addText"><?= $lang['section2']['counterCountry']?></span>
+                <p class="redText"><span class="counter" data-count="52">52</span> <span class="smallerText addText"><?= $lang['section2']['counterCountry']?></span>
                 </p>
                 <p class="subText botText"><?= $lang['section2']['counterCountryBottomText']?></p>
             </div>
@@ -405,7 +405,7 @@
                 </form>
                 <p class="answer text-center"><?= $lang['section6']['offerTitle']?></p>
                 <p class="subAnswer text-center"><?= $lang['section6']['offer']?></p>
-                <button class="button"><?= $lang['section6']['offerButton']?></button>
+                <button class="button" data-toggle="modal" data-target="#modalPdf"><?= $lang['section6']['offerButton']?></button>
             </div>
         </div>
     </div>
@@ -791,6 +791,26 @@
                     <button class="button" data-comment="Забронировал скидку при попытке ухода"><?= $lang['form']['OnLeaveFormButton']?></button>
                     <p class="underText"><?= $lang['form']['underText']?></p>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for pdf-->
+<div class="modal fade" id="modalPdf" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <object data="../img/Kom_pred.pdf" type="application/pdf" width="100%" height="100%">
+                    <iframe src="../img/Kom_pred.pdf" width="100%" height="100%" style="border: none;">
+                    </iframe>
+                    <a href="../img/Kom_pred.pdf" target="_blank">Если ваш браузер не поддерживает PDF, перейдите по ссылке</a>
+                </object>
             </div>
         </div>
     </div>

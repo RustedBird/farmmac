@@ -8,7 +8,7 @@
     // запуск показа модального окна на увод мышки вверх
     var alertwin = getCookie("alertwin");
     if (alertwin != "no") {
-        $(document).mouseleave(function(e){
+        $(document).mouseleave(function (e) {
             if (e.clientY < 0) {
                 $('#modalLeave').modal('show');
                 // записываем cookie на 1 день, с которой мы не показываем окно
@@ -30,7 +30,7 @@
         $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
     });
 
-    $(document).on('click','.ajaxForm .button', function (event) {
+    $(document).on('click', '.ajaxForm .button', function (event) {
         event.preventDefault();
         var $this = $(this),
             $thisClosestForm = $this.closest('.ajaxForm');
@@ -68,6 +68,7 @@
         function initLanding() {
             landing.initLanding(config)
         }
+
         jQuery(document).ready(initLanding);
 
         console.log(data);
@@ -95,7 +96,7 @@
                         $preloader.fadeOut(300);
                     }, 2000);
                 } else {
-                    $preloader.find('p').html('Поля неверно заполнены');
+                    $preloader.find('p').html('Поля заполнены неверно');
                     setTimeout(function () {
                         $preloader.fadeOut(300);
                     }, 2000);
@@ -145,7 +146,8 @@
 
         /*if (isNaN($performance)) { //Проверяем выбрана ли мощность
             $answer.html('Выберите производительность');
-        } else*/ if ($moisture === '25-14' && $performance < 80) {
+        } else*/
+        if ($moisture === '25-14' && $performance < 80) {
             switch (true) {
                 case $performance < 60:
                     model = 120;
@@ -157,7 +159,7 @@
             $answer.html('Basic ' + model);
             $comment.attr('data-comment', 'Basic');
 
-        } else if ($moisture === '25-14' &&  $performance >= 80 && $performance < 150) {
+        } else if ($moisture === '25-14' && $performance >= 80 && $performance < 150) {
             switch (true) {
                 case $performance >= 80 && $performance < 100:
                     model = 200;
@@ -215,7 +217,7 @@
             $answer.html('Basic ' + model);
             $comment.attr('data-comment', 'Basic');
 
-        } else if ($moisture === '30-14' &&  $performance >= 60 && $performance < 115) {
+        } else if ($moisture === '30-14' && $performance >= 60 && $performance < 115) {
             switch (true) {
                 case $performance >= 60 && $performance < 70:
                     model = 200;
@@ -305,36 +307,25 @@
     });
 
     /*Animation on scroll*/
+    var a = 1;
     $(window).scroll(function () {
         //Animate falling pics in third section
         var $sec3 = $('.section3 .row').offset().top - window.innerHeight,
             $sec2 = $('.section2').offset().top - window.innerHeight;
-        if ($(window).scrollTop() > $sec2) {
-            $('.counter').each(function() {
+
+        if ($(window).scrollTop() > $sec2 && a === 1 && $(window).width() >= 1006) {
+            a++;
+            $('.counter').each(function () {
                 var $this = $(this),
-                    countTo = $this.attr('data-count');
-                $({
-                    countNum: $this.text()
-                }).animate({
-                        countNum: countTo
-                    },
-
-                    {
-                        duration: 7000,
-                        easing: 'swing',
-                        step: function() {
-                            $this.text(Math.floor(this.countNum));
-                        },
-                        complete: function() {
-                            $this.text(this.countNum);
-                        }
-
-                    });
+                    value = $this.attr('data-count');
+                $this.html(0);
+                $this.numerator({
+                    easing: 'swing', // easing options.
+                    duration: 3000, // the length of the animation.
+                    rounding: 0, // decimal places.
+                    toValue: value // animate to this value.
+                });
             });
-
-
-
-
         }
         if ($(window).scrollTop() > $sec3) {
             $('.whiteBg').css('display', 'none');
@@ -342,12 +333,6 @@
             $('.section3').css('z-index', 1);
         }
     });
-
-
-
-
-
-
 
 
     //Animating number only on desktop width
@@ -397,10 +382,10 @@
         $upperForm.hide(200);
     });
 
-    
+
     var $upBtn = $(".upButton");
     $upBtn.hide();
-    window.onscroll = function() {
+    window.onscroll = function () {
         if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
             $upBtn.show(300);
         } else {
