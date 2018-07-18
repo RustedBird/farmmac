@@ -808,11 +808,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <object data="../img/Kom_pred.pdf" type="application/pdf" width="100%" height="100%">
-                    <iframe src="../img/Kom_pred.pdf" width="100%" height="100%" style="border: none;">
-                    </iframe>
-                    <a href="../img/Kom_pred.pdf" target="_blank">Если ваш браузер не поддерживает PDF, перейдите по ссылке</a>
-                </object>
+                    <iframe src="https://drive.google.com/file/d/1s7-Yfm1H0hJyxsFqrOnBKwZvxEWjE3p8/preview"></iframe>
             </div>
         </div>
     </div>

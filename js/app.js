@@ -27,7 +27,9 @@
         return false;
     });
 //подмена value у кнопки. Необхоимо для корректной отправки данных в CRM заказчика
-    $(document).on('click', '.myBtn', function () {
+    $('html').on('click', '.myBtn', function () {
+        console.log($(this));
+        console.log('yyyy');
         $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
     });
 
@@ -36,7 +38,7 @@
         var $this = $(this),
             $thisClosestForm = $this.closest('.ajaxForm');
 
-        $thisClosestForm.find("[name='comment']").val($this.attr('data-comment'));
+        $thisClosestForm.find("input[name='comment']").val($this.attr('data-comment'));
         // $this.find("input[name='comment']").val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
         var data = $thisClosestForm.serialize() + '&lang=' + cookieLang,
             name = $thisClosestForm.find("input[name='name']"),
@@ -361,7 +363,7 @@
 
 
     /*adding model name to modal form*/
-    $('.section5 .button').on('click', function () {
+    $(document).on('click', '.section5 .myBtn', function () {
         var $this = $(this);
         $this.attr('data-modelname');
         console.log($this.attr('data-modelname'));
@@ -396,11 +398,19 @@
     }
 
 
-    $(document).on('click', '.upButton', function () {
+    /*$(document).on('click', '.upButton', function () {
         $('html, body').animate({
             scrollTop: 0
         }, 500);
     })
+
+    $('[data-target="#modalPdf"]').on('click', function () {
+        $('#modalPdf .modal-body').html('<object data="../img/Kom_pred.pdf" type="application/pdf" width="100%" height="100%">\n' +
+            '                    <iframe src="../img/Kom_pred.pdf" width="100%" height="100%" style="border: none;">\n' +
+            '                    </iframe>\n' +
+            '                    <a href="../img/Kom_pred.pdf" target="_blank">Если ваш браузер не поддерживает PDF, перейдите по ссылке</a>\n' +
+            '                </object>');
+    })*/
 
 
 })(jQuery);
