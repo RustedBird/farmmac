@@ -60,13 +60,13 @@
          * Пример: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
          */
 
-        landing.createObjectFromLanding(config);
+        // landing.createObjectFromLanding(config);
 
         /**
          * Функция ниже инициализирует лендинг из параметров URL.
          */
         function initLanding() {
-            landing.initLanding(config)
+            // landing.initLanding(config)
         }
 
         jQuery(document).ready(initLanding);
@@ -88,15 +88,14 @@
             success: function (response) {
                 console.log(response);
                 console.log(response.result);
-                var $texthere = $('.texthere');
                 if (response.result) {
                     console.log("success");
-                    $preloader.find('p').html('Успешно отправлено');
+                    $preloader.find('p').html(response.message);
                     setTimeout(function () {
                         $preloader.fadeOut(300);
                     }, 2000);
                 } else {
-                    $preloader.find('p').html('Поля заполнены неверно');
+                    $preloader.find('p').html(response.message);
                     setTimeout(function () {
                         $preloader.fadeOut(300);
                     }, 2000);

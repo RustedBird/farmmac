@@ -51,7 +51,7 @@ if ($response['result']) {
             break;
         default:
             $newMessage = new Message();
-//            $response = $newMessage->sendEmail($request);
+            $response = $newMessage->sendEmail($request);
             $newMessage->sendTelegram($mes);
             break;
     }
@@ -65,7 +65,7 @@ class Message
 {
 
     protected $api_url = 'https://api.smtp2go.com/v3/email/send';
-    protected $api_key = 'api-F1266D14298611E7A1B4F23C91C88F4E';
+    protected $api_key = '1api-F1266D14298611E7A1B4F23C91C88F4E';
     protected $token = '561353685:AAFVHFTMIychcLnJzi1MziPwGYng3tYHlqI';
     protected $chat_id_list = [350981322];
 
@@ -138,11 +138,6 @@ Class Valid
      */
     public static function not_empty($value)
     {
-//        if (is_object($value) AND $value instanceof ArrayObject)
-//        {
-//            // Get the array from the ArrayObject
-//            $value = $value->getArrayCopy();
-//        }
         if (in_array($value, array(NULL, FALSE, '', array()))) {
             return false;
         }
@@ -179,8 +174,6 @@ Class Valid
     public static function phone($number)
     {
         $pattern = '/^[0-9\-\(\)\/\+\s]*$/';
-        // Remove all non-digit characters from the number
-//        $number = preg_replace('/\D+/', '', $number);
         if ((mb_strlen($number) > 254) || !preg_match($pattern, $number)) {
             return false;
         }
