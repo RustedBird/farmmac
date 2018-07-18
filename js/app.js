@@ -36,7 +36,7 @@
         var $this = $(this),
             $thisClosestForm = $this.closest('.ajaxForm');
 
-        $thisClosestForm.find("input[name='comment']").val($this.attr('data-comment'));
+        $thisClosestForm.find("[name='comment']").val($this.attr('data-comment'));
         // $this.find("input[name='comment']").val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
         var data = $thisClosestForm.serialize() + '&lang=' + cookieLang,
             name = $thisClosestForm.find("input[name='name']"),
@@ -73,41 +73,39 @@
         jQuery(document).ready(initLanding);
 
         console.log(data);
-        var $preloader = $('.preloader');
+        var $preloader = $('.preloader'),
+            $modal = $('#modalError');
         $.ajax({
             url: $thisClosestForm.attr('action'),
             method: $thisClosestForm.attr('method'),
             data: data,
             dataType: 'json',
             beforeSend: function () {
-                console.log("beforeSend");
+                console.log('before send');
                 $preloader.find('p').html('Отправка <span>.</span><span>.</span><span>.</span>');
                 $preloader.css({opacity: 0, display: 'flex'}).animate({
                     opacity: 1
-                }, 300);
+                }, 500);
             },
             success: function (response) {
                 console.log(response);
                 console.log(response.result);
-                if (response.result) {
+                if (response) {
                     console.log("success");
-                    $preloader.find('p').html(response.message);
-                    setTimeout(function () {
-                        $preloader.fadeOut(300);
-                    }, 2000);
+                    $preloader.fadeOut(500);
+                    $modal.find('.formTitle').html(response.message);
+                    $modal.modal('show');
                 } else {
-                    $preloader.find('p').html(response.message);
-                    setTimeout(function () {
-                        $preloader.fadeOut(300);
-                    }, 2000);
-                    console.log("error");
+                    $preloader.fadeOut(500);
+                    $modal.find('.formTitle').html(response.message);
+                    $modal.modal('show');
+                    console.log("response-error");
                 }
             },
             error: function () {
-                $preloader.find('p').html('Ошибка отправки');
-                setTimeout(function () {
-                    $preloader.fadeOut(300);
-                }, 2000);
+                $preloader.fadeOut(500);
+                $modal.find('.formTitle').html('yyyyy');
+                $modal.modal('show');
                 console.log('Some error');
             }
         });
@@ -265,9 +263,9 @@
             $textParams = $('.calcResult');
 
 
-        var diesel_sum = $tons * $prices_elevator * 1.2 * $diesel_price,
-            gas_sum = $tons * $prices_elevator * 1.4 * $gas_price,
-            pellet_sum = $tons * $prices_elevator * 3 * $pellet_price;
+        var diesel_sum = Math.round($tons * $prices_elevator * 1.2 * $diesel_price),
+            gas_sum = Math.round($tons * $prices_elevator * 1.4 * $gas_price),
+            pellet_sum = Math.round($tons * $prices_elevator * 3 * $pellet_price);
 
         function addSpace(num) {
             if (isNaN(num)) {

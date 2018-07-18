@@ -2,6 +2,7 @@
 
 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
 
+
 $name = $post['name'];
 $email = $post['email'];
 $phone = $post['phone'];
@@ -59,6 +60,7 @@ if ($response['result']) {
 } else {
     $response['message'] = 'Поля заполнены неверно';
 }
+
 echo json_encode($response);
 
 class Message

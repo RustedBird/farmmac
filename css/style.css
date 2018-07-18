@@ -81,6 +81,9 @@ body {
         height: 65px;
         right: 8%;
         bottom: 8%; } }
+    @media screen and (max-width: 1023px) {
+      body .upButton {
+        display: none; } }
   body .light {
     position: absolute;
     width: 100%;
@@ -364,6 +367,21 @@ body {
 #modalPdf .modal-dialog object {
   width: 100%;
   height: 85vh; }
+
+#modalError .modal-header {
+  border: none; }
+@media screen and (max-width: 424px) {
+  #modalError .modal-body {
+    padding: 0; } }
+@media screen and (max-width: 424px) {
+  #modalError .modal-body form {
+    padding: 5px; } }
+@media screen and (max-width: 1023px) {
+  #modalError .modal-body form .formTitle {
+    font-size: 30px; } }
+@media screen and (max-width: 424px) {
+  #modalError .modal-body form .formTitle {
+    font-size: 18px; } }
 
 .section1 {
   overflow: hidden;
@@ -1443,10 +1461,11 @@ body {
   .section2 .col-row {
     padding: 15% 0; }
     .section2 .col-row .col-item {
-      position: relative; }
+      position: relative;
+      padding: 0; }
       .section2 .col-row .col-item .redText {
         font-family: 'bebas_neuebold', sans-serif;
-        font-size: 80px;
+        font-size: 78px;
         font-weight: 800;
         background: #a40a0e;
         /* Old browsers */
@@ -1557,7 +1576,7 @@ body {
       text-align: left; }
       @media screen and (max-width: 1440px) {
         .section2 .col-row .col-item:nth-of-type(2) .topText {
-          top: -34px;
+          top: -12px;
           left: 44px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(3) {
@@ -1575,16 +1594,16 @@ body {
       top: -14px;
       left: 25px;
       text-align: left; }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:last-of-type {
         width: 68%; } }
     .section2 .col-row .col-item:last-of-type .topText {
-      top: -70px;
+      top: -40px;
       left: 30px;
       text-align: left; }
       @media screen and (max-width: 1440px) {
         .section2 .col-row .col-item:last-of-type .topText {
-          top: -52px;
+          top: -41px;
           left: 46px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(even) .redText {
@@ -2361,7 +2380,7 @@ body {
           @media screen and (max-width: 1440px) {
             .section6 .calcWrapper .form-line .inputWrapper .priceResult {
               font-size: 22px; } }
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1023px) {
           .section6 .calcWrapper .form-line .inputWrapper {
             width: 100%; } }
       .section6 .calcWrapper .form-line .inputNarrow {
@@ -2637,7 +2656,7 @@ body {
             width: 90%; } }
       @media screen and (max-width: 1023px) {
         .section7 .container .row .specBlock {
-          max-width: 100%;
+          max-width: 90%;
           padding-left: 10%; } }
     .section7 .container .row .specBlock:nth-of-type(2) {
       align-items: flex-end;
@@ -2649,8 +2668,17 @@ body {
             padding: 5px 5px 5px 10px; } }
       @media screen and (max-width: 1023px) {
         .section7 .container .row .specBlock:nth-of-type(2) {
+          max-width: 90%;
+          padding: 0;
+          float: right;
           padding-right: 10%;
           margin-top: 50px; } }
+      @media screen and (max-width: 767px) {
+        .section7 .container .row .specBlock:nth-of-type(2) {
+          font-size: 16px;
+          line-height: 20px;
+          margin: 16px 0;
+          width: 90%; } }
   .section7 .bgImg {
     position: absolute;
     bottom: 0;
@@ -2693,7 +2721,22 @@ body {
     top: 14%; }
     @media screen and (max-width: 1023px) {
       .section7 .mobilePic1 {
-        display: block; } }
+        display: block;
+        width: 40%;
+        right: -25%;
+        top: 9%; } }
+    @media screen and (max-width: 950px) {
+      .section7 .mobilePic1 {
+        display: block;
+        width: 40%;
+        right: -25%;
+        top: 18%; } }
+    @media screen and (max-width: 800px) {
+      .section7 .mobilePic1 {
+        display: block;
+        width: 49%;
+        right: -25%;
+        top: 14%; } }
     @media screen and (max-width: 767px) {
       .section7 .mobilePic1 {
         display: none; } }
@@ -2705,7 +2748,22 @@ body {
     bottom: 0%; }
     @media screen and (max-width: 1023px) {
       .section7 .mobilePic2 {
-        display: block; } }
+        display: block;
+        width: 34%;
+        left: -11%;
+        bottom: -2%; } }
+    @media screen and (max-width: 950px) {
+      .section7 .mobilePic2 {
+        display: block;
+        width: 34%;
+        left: -11%;
+        bottom: 4%; } }
+    @media screen and (max-width: 800px) {
+      .section7 .mobilePic2 {
+        display: block;
+        width: 48%;
+        left: -11%;
+        bottom: 0%; } }
     @media screen and (max-width: 767px) {
       .section7 .mobilePic2 {
         display: none; } }
@@ -3832,6 +3890,11 @@ body {
     @media screen and (max-width: 424px) {
       .footer .email {
         margin-left: 55px; } }
+    .footer .email .link {
+      color: #ffffff; }
+      .footer .email .link:hover {
+        text-decoration: none;
+        color: #8d9deb; }
   @media screen and (max-width: 1440px) {
     .footer {
       padding: 50px 0; } }

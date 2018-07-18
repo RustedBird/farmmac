@@ -15,8 +15,8 @@
 <div class="upButton">
     <div class="arrow"></div>
 </div>
-<div class="preloader hidden">
-    <p></p>
+<div class="preloader">
+    <p>Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua</p>
 </div>
 
 <!-- первый экран -->
@@ -381,7 +381,7 @@
                         </div>
                     </div>
                     <button class="button"><?= $lang['section6']['calc2']['button']?></button>
-                    <p class="calcResult"><?= $lang['section6']['calc2']['resultTextPart1']?><span class="tons">3000</span><?= $lang['section6']['calc2']['resultTextPart2']?><span
+                    <p class="calcResult"><?= $lang['section6']['calc2']['resultTextPart1']?><span class="tons">3 000</span><?= $lang['section6']['calc2']['resultTextPart2']?><span
                                 class="prices_elevator">10</span><?= $lang['section6']['calc2']['resultTextPart3']?></p>
                     <div class="form-line noPadding noMargin">
                         <p class="paramName"><?= $lang['section6']['calc2']['resultDiesel']?></p>
@@ -434,9 +434,9 @@
             </div>
         </div>
     </div>
-    <img class="bgImg" src="../img/sec7bgpic.jpg" alt="bg">
-    <img class="mobilePic1" src="../img/sec7bgpic.jpg" alt="bg">
-    <img class="mobilePic2" src="../img/sec7bgpic.jpg" alt="bg">
+    <img class="bgImg" src="../img/sec7bgpic.png" alt="bg">
+    <img class="mobilePic1" src="../img/sec7bgpic.png" alt="bg">
+    <img class="mobilePic2" src="../img/sec7bgpic.png" alt="bg">
 </section>
 <!-- главные особенности -->
 
@@ -712,8 +712,10 @@
                     (050) 40 444 70<br>
                     (096) 054 39 91
                 </p>
-                <p class="email">secretary@farmmac.com.ua<br><br>
-                    http://farmmac.com.ua
+
+                <p class="email">
+                    <a class="link" href="mailto:secretary@farmmac.com.ua">secretary@farmmac.com.ua</a><br><br>
+                    <a class="link" href="http://farmmac.com.ua" target="_blank">http://farmmac.com.ua</a>
                 </p>
             </div>
         </div>
@@ -811,6 +813,24 @@
                     </iframe>
                     <a href="../img/Kom_pred.pdf" target="_blank">Если ваш браузер не поддерживает PDF, перейдите по ссылке</a>
                 </object>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for error -->
+<div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="ajaxForm" action="">
+                    <h6 class="formTitle text-center"></h6>
+                </form>
             </div>
         </div>
     </div>

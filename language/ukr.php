@@ -12,7 +12,7 @@ $lang = [
     'section2' => [
         'title' => 'кілька фактів про нас',
         'counterPeriod' => 'РОКІВ',
-        'counterPeriodBottomText' => 'на ринку України',
+        'counterPeriodBottomText' => 'на ринку' . '<br>' . 'України',
         'counterRegion' => 'РЕГІОНАХ',
         'counterRegionTopText' => 'продукція представлена у',
         'counterRegionBottomText' => 'України',
@@ -20,7 +20,7 @@ $lang = [
         'counterYearTopText' => 'виготовляється з',
         'counterYearBottomText' => 'року',
         'counterCountry' => 'КРАЇНАХ',
-        'counterCountryTopText' => 'Обладнання Pedrotti представлене у',
+        'counterCountryTopText' => 'Обладнання ' . '<br>' . 'Pedrotti представлене у',
         'counterCountryBottomText' => 'світу',
     ],
     // Зачем фермеру зерносушилка
