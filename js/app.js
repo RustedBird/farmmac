@@ -383,13 +383,18 @@
 
     var $upBtn = $(".upButton");
     $upBtn.hide();
-    window.onscroll = function () {
-        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-            $upBtn.show(300);
-        } else {
-            $upBtn.hide(300);
-        }
-    };
+
+
+    if ($(window).width() >= 1006) {
+        window.onscroll = function () {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                $upBtn.show(300);
+            } else {
+                $upBtn.hide(300);
+            }
+        };
+    }
+
 
     $(document).on('click', '.upButton', function () {
         $('html, body').animate({
