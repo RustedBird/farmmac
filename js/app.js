@@ -104,7 +104,7 @@
             },
             error: function () {
                 $preloader.fadeOut(500);
-                $modal.find('.formTitle').html('yyyyy');
+                $modal.find('.formTitle').html('Произошла системная ошибка при отправке сообщения\\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua');
                 $modal.modal('show');
                 console.log('Some error');
             }
