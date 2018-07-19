@@ -163,244 +163,252 @@ body {
 .modal-dialog {
   max-width: 600px; }
 
-.modal-body form {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 50px; }
-  .modal-body form .formTitle {
-    font-family: 'gothampro-medium', sans-serif;
-    font-size: 20px;
-    font-weight: 600; }
-    @media screen and (max-width: 1440px) {
-      .modal-body form .formTitle {
-        font-size: 18px; } }
-    @media screen and (max-width: 1280px) {
-      .modal-body form .formTitle {
-        font-size: 16px; } }
-    @media screen and (max-width: 1023px) {
-      .modal-body form .formTitle {
-        font-size: 42px;
-        margin-bottom: 35px; } }
-    @media screen and (max-width: 767px) {
-      .modal-body form .formTitle {
-        font-size: 20px; } }
-    @media screen and (max-width: 1023px) {
-      .modal-body form .formTitle br {
-        display: none; } }
-  .modal-body form input {
-    border: 1px solid #B1ABA8;
-    padding: 16px 0;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 100px;
-    font-family: 'gothampro-light', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    text-align: center;
-    width: 75%;
-    margin: 25px auto;
-    display: block; }
-    .modal-body form input:focus {
-      outline: none;
-      background: #eae4e1; }
-    @media screen and (max-width: 1440px) {
-      .modal-body form input {
-        font-size: 16px;
-        padding: 10px 0;
-        margin: 10px auto; } }
-    @media screen and (max-width: 1280px) {
-      .modal-body form input {
-        font-size: 14px; } }
-    @media screen and (max-width: 1023px) {
-      .modal-body form input {
-        font-size: 32px;
-        width: 85%;
-        margin: 40px auto;
-        padding: 16px 0; } }
-    @media screen and (max-width: 767px) {
-      .modal-body form input {
-        font-size: 18px;
-        width: 85%;
-        margin: 20px auto;
-        padding: 10px 0; } }
-  .modal-body form input[name='email']::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    font-weight: 600; }
-  .modal-body form input[name='email']::-moz-placeholder {
-    /* Firefox 19+ */
-    font-weight: 600; }
-  .modal-body form input[name='email']:-ms-input-placeholder {
-    /* IE 10+ */
-    font-weight: 600; }
-  .modal-body form input[name='email']:-moz-placeholder {
-    /* Firefox 18- */
-    font-weight: 600; }
-  .modal-body form textarea {
-    border: 1px solid #B1ABA8;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    font-family: 'gothampro-light', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    width: 75%;
-    margin: 25px auto;
-    display: block;
-    min-height: 200px;
-    padding: 5px;
-    resize: none;
-    text-align: center; }
-    .modal-body form textarea:focus {
-      outline: none; }
-    @media screen and (max-width: 1440px) {
-      .modal-body form textarea {
-        font-size: 16px;
-        margin: 10px auto; } }
-    @media screen and (max-width: 1280px) {
-      .modal-body form textarea {
-        font-size: 14px; } }
-    @media screen and (max-width: 1023px) {
-      .modal-body form textarea {
-        font-size: 32px;
-        width: 85%;
-        margin: 40px auto; } }
-    @media screen and (max-width: 767px) {
-      .modal-body form textarea {
-        font-size: 18px;
-        width: 85%;
-        margin: 20px auto; } }
-  .modal-body form button {
-    padding: 16px 0;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 100px;
-    font-family: 'gothampro-black', sans-serif;
-    font-size: 20px;
-    font-weight: 900;
-    text-align: center;
-    width: 75%;
-    margin: 25px auto;
-    display: block;
-    color: white;
-    background: #a50606;
-    /* Old browsers */
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#d14648));
-    background: -o-linear-gradient(top, #a50606 0%, #d14648 100%);
-    background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
-    /* IE6-9 */
-    -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
-    box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+.modal-content {
+  background: rgba(255, 255, 255, 0.8); }
+  .modal-content .modal-header {
     border: none;
-    cursor: pointer; }
-    .modal-body form button:focus {
-      outline: none; }
-    .modal-body form button:hover {
-      background: #610404;
+    background: rgba(255, 255, 255, 0.8); }
+  .modal-content .modal-body {
+    background: rgba(255, 255, 255, 0.8); }
+    .modal-content .modal-body form {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 50px; }
+      @media screen and (max-width: 1600px) {
+        .modal-content .modal-body form {
+          padding: 30px; } }
+      @media screen and (max-width: 1440px) {
+        .modal-content .modal-body form {
+          padding: 20px 30px 15px 30px; } }
+      @media screen and (max-width: 767px) {
+        .modal-content .modal-body form {
+          padding: 10px; } }
+      .modal-content .modal-body form .formTitle {
+        font-family: 'gothampro-medium', sans-serif;
+        font-size: 20px;
+        font-weight: 600; }
+        @media screen and (max-width: 1440px) {
+          .modal-content .modal-body form .formTitle {
+            font-size: 18px; } }
+        @media screen and (max-width: 1280px) {
+          .modal-content .modal-body form .formTitle {
+            font-size: 16px; } }
+        @media screen and (max-width: 1023px) {
+          .modal-content .modal-body form .formTitle {
+            font-size: 42px;
+            margin-bottom: 35px; } }
+        @media screen and (max-width: 767px) {
+          .modal-content .modal-body form .formTitle {
+            font-size: 20px; } }
+        @media screen and (max-width: 1023px) {
+          .modal-content .modal-body form .formTitle br {
+            display: none; } }
+      .modal-content .modal-body form input {
+        border: 1px solid #B1ABA8;
+        padding: 16px 0;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        font-family: 'gothampro-light', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        width: 75%;
+        margin: 25px auto;
+        display: block; }
+        .modal-content .modal-body form input:focus {
+          outline: none;
+          background: #eae4e1; }
+        @media screen and (max-width: 1440px) {
+          .modal-content .modal-body form input {
+            font-size: 16px;
+            padding: 10px 0;
+            margin: 10px auto; } }
+        @media screen and (max-width: 1280px) {
+          .modal-content .modal-body form input {
+            font-size: 14px; } }
+        @media screen and (max-width: 1023px) {
+          .modal-content .modal-body form input {
+            font-size: 32px;
+            width: 85%;
+            margin: 40px auto;
+            padding: 16px 0; } }
+        @media screen and (max-width: 767px) {
+          .modal-content .modal-body form input {
+            font-size: 18px;
+            width: 85%;
+            margin: 20px auto;
+            padding: 10px 0; } }
+      .modal-content .modal-body form input[name='email']::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-weight: 600; }
+      .modal-content .modal-body form input[name='email']::-moz-placeholder {
+        /* Firefox 19+ */
+        font-weight: 600; }
+      .modal-content .modal-body form input[name='email']:-ms-input-placeholder {
+        /* IE 10+ */
+        font-weight: 600; }
+      .modal-content .modal-body form input[name='email']:-moz-placeholder {
+        /* Firefox 18- */
+        font-weight: 600; }
+      .modal-content .modal-body form textarea {
+        border: 1px solid #B1ABA8;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        font-family: 'gothampro-light', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        width: 75%;
+        margin: 25px auto;
+        display: block;
+        min-height: 200px;
+        padding: 5px;
+        resize: none;
+        text-align: center; }
+        .modal-content .modal-body form textarea:focus {
+          outline: none; }
+        @media screen and (max-width: 1440px) {
+          .modal-content .modal-body form textarea {
+            font-size: 16px;
+            margin: 10px auto; } }
+        @media screen and (max-width: 1280px) {
+          .modal-content .modal-body form textarea {
+            font-size: 14px; } }
+        @media screen and (max-width: 1023px) {
+          .modal-content .modal-body form textarea {
+            font-size: 32px;
+            width: 85%;
+            margin: 40px auto; } }
+        @media screen and (max-width: 767px) {
+          .modal-content .modal-body form textarea {
+            font-size: 18px;
+            width: 85%;
+            margin: 20px auto; } }
+      .modal-content .modal-body form button {
+        padding: 16px 0;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        font-family: 'gothampro-black', sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+        width: 75%;
+        margin: 25px auto;
+        display: block;
+        color: white;
+        background: #a50606;
+        /* Old browsers */
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#d14648));
+        background: -o-linear-gradient(top, #a50606 0%, #d14648 100%);
+        background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+        /* IE6-9 */
+        -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+        border: none;
+        cursor: pointer; }
+        .modal-content .modal-body form button:focus {
+          outline: none; }
+        .modal-content .modal-body form button:hover {
+          background: #610404;
+          /* Old browsers */
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #610404 0%, #d14648 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: -webkit-gradient(linear, left top, left bottom, from(#610404), to(#d14648));
+          background: -o-linear-gradient(top, #610404 0%, #d14648 100%);
+          background: linear-gradient(to bottom, #610404 0%, #d14648 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
+          /* IE6-9 */ }
+        @media screen and (max-width: 1440px) {
+          .modal-content .modal-body form button {
+            font-size: 16px;
+            padding: 10px 0;
+            margin: 10px auto; } }
+        @media screen and (max-width: 1280px) {
+          .modal-content .modal-body form button {
+            font-size: 14px; } }
+        @media screen and (max-width: 1023px) {
+          .modal-content .modal-body form button {
+            font-size: 32px;
+            width: 85%;
+            margin: 40px auto;
+            padding: 16px 0; } }
+        @media screen and (max-width: 767px) {
+          .modal-content .modal-body form button {
+            font-size: 18px;
+            width: 85%;
+            margin: 20px auto;
+            padding: 10px 0; } }
+      .modal-content .modal-body form .underText {
+        font-family: 'gothampro-light', sans-serif;
+        font-size: 14px;
+        color: #3E3E3E;
+        margin-top: 30px;
+        text-align: center; }
+        @media screen and (max-width: 1440px) {
+          .modal-content .modal-body form .underText {
+            margin-top: 20px;
+            font-size: 12px;
+            margin-bottom: 0; } }
+        @media screen and (max-width: 1023px) {
+          .modal-content .modal-body form .underText {
+            font-size: 21px; } }
+        @media screen and (max-width: 767px) {
+          .modal-content .modal-body form .underText {
+            font-size: 18px; } }
+    .modal-content .modal-body form {
+      padding: 0px 40px 30px 40px;
+      background: none; }
+    .modal-content .modal-body .itemTitle {
+      font-family: 'bebas_neuebold', sans-serif;
+      font-size: 80px;
+      font-weight: 800;
+      background: #8c8b88;
       /* Old browsers */
       /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, #610404 0%, #d14648 100%);
+      background: -webkit-linear-gradient(top, white 0%, #171717 100%);
       /* Chrome10-25,Safari5.1-6 */
-      background: -webkit-gradient(linear, left top, left bottom, from(#610404), to(#d14648));
-      background: -o-linear-gradient(top, #610404 0%, #d14648 100%);
-      background: linear-gradient(to bottom, #610404 0%, #d14648 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(#171717));
+      background: -o-linear-gradient(top, white 0%, #171717 100%);
+      background: linear-gradient(to bottom, white 0%, #171717 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
-      /* IE6-9 */ }
-    @media screen and (max-width: 1440px) {
-      .modal-body form button {
-        font-size: 16px;
-        padding: 10px 0;
-        margin: 10px auto; } }
-    @media screen and (max-width: 1280px) {
-      .modal-body form button {
-        font-size: 14px; } }
-    @media screen and (max-width: 1023px) {
-      .modal-body form button {
-        font-size: 32px;
-        width: 85%;
-        margin: 40px auto;
-        padding: 16px 0; } }
-    @media screen and (max-width: 767px) {
-      .modal-body form button {
-        font-size: 18px;
-        width: 85%;
-        margin: 20px auto;
-        padding: 10px 0; } }
-  .modal-body form .underText {
-    font-family: 'gothampro-light', sans-serif;
-    font-size: 14px;
-    color: #3E3E3E;
-    margin-top: 30px;
-    text-align: center; }
-    @media screen and (max-width: 1440px) {
-      .modal-body form .underText {
-        margin-top: 20px;
-        font-size: 12px;
-        margin-bottom: 0; } }
-    @media screen and (max-width: 1023px) {
-      .modal-body form .underText {
-        font-size: 21px; } }
-    @media screen and (max-width: 767px) {
-      .modal-body form .underText {
-        font-size: 18px; } }
-  @media screen and (max-width: 1600px) {
-    .modal-body form {
-      padding: 30px; } }
-  @media screen and (max-width: 1440px) {
-    .modal-body form {
-      padding: 20px 30px 15px 30px; } }
-  @media screen and (max-width: 767px) {
-    .modal-body form {
-      padding: 10px; } }
-.modal-body form {
-  padding: 0px 40px 30px 40px; }
-.modal-body .itemTitle {
-  font-family: 'bebas_neuebold', sans-serif;
-  font-size: 80px;
-  font-weight: 800;
-  background: #8c8b88;
-  /* Old browsers */
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, white 0%, #171717 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#171717));
-  background: -o-linear-gradient(top, white 0%, #171717 100%);
-  background: linear-gradient(to bottom, white 0%, #171717 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
-  /* IE6-9 */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  margin-bottom: 25px; }
-  @media screen and (max-width: 1440px) {
-    .modal-body .itemTitle {
-      font-size: 70px; } }
-  @media screen and (max-width: 1280px) {
-    .modal-body .itemTitle {
-      font-size: 55px; } }
-  @media screen and (max-width: 1023px) {
-    .modal-body .itemTitle {
-      font-size: 110px;
-      line-height: 100px; } }
-  @media screen and (max-width: 767px) {
-    .modal-body .itemTitle {
-      font-size: 70px;
-      line-height: 70px; } }
-  @media screen and (max-width: 424px) {
-    .modal-body .itemTitle {
-      font-size: 57px;
-      line-height: 57px; } }
+      /* IE6-9 */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 25px; }
+      @media screen and (max-width: 1440px) {
+        .modal-content .modal-body .itemTitle {
+          font-size: 70px; } }
+      @media screen and (max-width: 1280px) {
+        .modal-content .modal-body .itemTitle {
+          font-size: 55px; } }
+      @media screen and (max-width: 1023px) {
+        .modal-content .modal-body .itemTitle {
+          font-size: 110px;
+          line-height: 100px; } }
+      @media screen and (max-width: 767px) {
+        .modal-content .modal-body .itemTitle {
+          font-size: 70px;
+          line-height: 70px; } }
+      @media screen and (max-width: 424px) {
+        .modal-content .modal-body .itemTitle {
+          font-size: 57px;
+          line-height: 57px; } }
 
 #modalPdf .modal-dialog {
   overflow: auto; }
@@ -462,25 +470,27 @@ body {
       .section1 .container .upperMenu .logo {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 50px; }
+        margin-right: 100px; }
         @media screen and (max-width: 1440px) {
           .section1 .container .upperMenu .logo {
+            position: absolute;
+            left: 10%;
             width: 14%;
             margin-right: 0; } }
         @media screen and (max-width: 1280px) {
           .section1 .container .upperMenu .logo {
-            width: 12%;
-            margin-right: 0; } }
+            width: 12%; } }
         @media screen and (max-width: 1023px) {
           .section1 .container .upperMenu .logo {
-            width: 25%; } }
+            width: 25%;
+            position: static; } }
       .section1 .container .upperMenu .lang {
         display: inline-block;
         vertical-align: middle;
         font-family: 'gothampro-black', sans-serif;
         font-size: 24px;
         font-weight: 900;
-        margin: 0 50px; }
+        margin: 0 30px; }
         .section1 .container .upperMenu .lang span:last-of-type {
           margin-left: 15px; }
         @media screen and (max-width: 1440px) {
@@ -610,6 +620,15 @@ body {
       .section1 .container .upperMenu form {
         background: rgba(255, 255, 255, 0.9);
         padding: 50px; }
+        @media screen and (max-width: 1600px) {
+          .section1 .container .upperMenu form {
+            padding: 30px; } }
+        @media screen and (max-width: 1440px) {
+          .section1 .container .upperMenu form {
+            padding: 20px 30px 15px 30px; } }
+        @media screen and (max-width: 767px) {
+          .section1 .container .upperMenu form {
+            padding: 10px; } }
         .section1 .container .upperMenu form .formTitle {
           font-family: 'gothampro-medium', sans-serif;
           font-size: 20px;
@@ -797,15 +816,6 @@ body {
           @media screen and (max-width: 767px) {
             .section1 .container .upperMenu form .underText {
               font-size: 18px; } }
-        @media screen and (max-width: 1600px) {
-          .section1 .container .upperMenu form {
-            padding: 30px; } }
-        @media screen and (max-width: 1440px) {
-          .section1 .container .upperMenu form {
-            padding: 20px 30px 15px 30px; } }
-        @media screen and (max-width: 767px) {
-          .section1 .container .upperMenu form {
-            padding: 10px; } }
       .section1 .container .upperMenu form {
         display: none;
         position: absolute;
@@ -903,9 +913,9 @@ body {
               font-size: 14px; } }
       @media screen and (max-width: 1440px) {
         .section1 .container .upperMenu {
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center; } }
+          -webkit-box-pack: flex-end;
+          -ms-flex-pack: flex-end;
+          justify-content: flex-end; } }
       @media screen and (max-width: 1023px) {
         .section1 .container .upperMenu {
           -ms-flex-pack: distribute;
@@ -1077,6 +1087,15 @@ body {
         .section1 .container .formBlock .blockWrapper form {
           background: rgba(255, 255, 255, 0.9);
           padding: 50px; }
+          @media screen and (max-width: 1600px) {
+            .section1 .container .formBlock .blockWrapper form {
+              padding: 30px; } }
+          @media screen and (max-width: 1440px) {
+            .section1 .container .formBlock .blockWrapper form {
+              padding: 20px 30px 15px 30px; } }
+          @media screen and (max-width: 767px) {
+            .section1 .container .formBlock .blockWrapper form {
+              padding: 10px; } }
           .section1 .container .formBlock .blockWrapper form .formTitle {
             font-family: 'gothampro-medium', sans-serif;
             font-size: 20px;
@@ -1134,6 +1153,18 @@ body {
                 width: 85%;
                 margin: 20px auto;
                 padding: 10px 0; } }
+          .section1 .container .formBlock .blockWrapper form input[name='email']::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            font-weight: 600; }
+          .section1 .container .formBlock .blockWrapper form input[name='email']::-moz-placeholder {
+            /* Firefox 19+ */
+            font-weight: 600; }
+          .section1 .container .formBlock .blockWrapper form input[name='email']:-ms-input-placeholder {
+            /* IE 10+ */
+            font-weight: 600; }
+          .section1 .container .formBlock .blockWrapper form input[name='email']:-moz-placeholder {
+            /* Firefox 18- */
+            font-weight: 600; }
           .section1 .container .formBlock .blockWrapper form textarea {
             border: 1px solid #B1ABA8;
             border-bottom-right-radius: 20px;
@@ -1252,15 +1283,6 @@ body {
             @media screen and (max-width: 767px) {
               .section1 .container .formBlock .blockWrapper form .underText {
                 font-size: 18px; } }
-          @media screen and (max-width: 1600px) {
-            .section1 .container .formBlock .blockWrapper form {
-              padding: 30px; } }
-          @media screen and (max-width: 1440px) {
-            .section1 .container .formBlock .blockWrapper form {
-              padding: 20px 30px 15px 30px; } }
-          @media screen and (max-width: 767px) {
-            .section1 .container .formBlock .blockWrapper form {
-              padding: 10px; } }
         @media screen and (max-width: 1600px) {
           .section1 .container .formBlock .blockWrapper {
             margin-top: 10px; } }
@@ -1302,7 +1324,8 @@ body {
     z-index: -1; }
     @media screen and (max-width: 1440px) {
       .section1 .mainImg {
-        width: 18%; } }
+        width: 18%;
+        left: 21%; } }
     @media screen and (max-width: 1023px) {
       .section1 .mainImg {
         width: 43%;
@@ -1336,6 +1359,15 @@ body {
     .addSection .blockWrapper form {
       background: rgba(255, 255, 255, 0.9);
       padding: 50px; }
+      @media screen and (max-width: 1600px) {
+        .addSection .blockWrapper form {
+          padding: 30px; } }
+      @media screen and (max-width: 1440px) {
+        .addSection .blockWrapper form {
+          padding: 20px 30px 15px 30px; } }
+      @media screen and (max-width: 767px) {
+        .addSection .blockWrapper form {
+          padding: 10px; } }
       .addSection .blockWrapper form .formTitle {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 20px;
@@ -1523,15 +1555,9 @@ body {
         @media screen and (max-width: 767px) {
           .addSection .blockWrapper form .underText {
             font-size: 18px; } }
-      @media screen and (max-width: 1600px) {
-        .addSection .blockWrapper form {
-          padding: 30px; } }
-      @media screen and (max-width: 1440px) {
-        .addSection .blockWrapper form {
-          padding: 20px 30px 15px 30px; } }
-      @media screen and (max-width: 767px) {
-        .addSection .blockWrapper form {
-          padding: 10px; } }
+    @media screen and (max-width: 1440px) {
+      .addSection .blockWrapper {
+        padding-right: 10%; } }
     @media screen and (max-width: 767px) {
       .addSection .blockWrapper {
         margin: 15px; } }
@@ -1573,27 +1599,15 @@ body {
         font-family: 'bebas_neuebold', sans-serif;
         font-size: 78px;
         font-weight: 800;
-        background: #a40a0e;
-        /* Old browsers */
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: -webkit-gradient(linear, left top, left bottom, from(#a40a0e), color-stop(36%, #a40a0e), color-stop(54%, #ea9d9e), color-stop(72%, #dd0419), to(#dd0419));
-        background: -o-linear-gradient(top, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
+        display: inline-block;
         background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a40a0e', endColorstr='#dd0419', GradientType=0);
-        /* IE6-9 */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
         margin-bottom: 25px; }
-        @media screen and (max-width: 1440px) {
-          .section2 .col-row .col-item .redText {
-            font-size: 70px; } }
         @media screen and (max-width: 1280px) {
           .section2 .col-row .col-item .redText {
-            font-size: 55px; } }
+            font-size: 70px; } }
         @media screen and (max-width: 1023px) {
           .section2 .col-row .col-item .redText {
             font-size: 110px;
@@ -1606,10 +1620,20 @@ body {
           .section2 .col-row .col-item .redText {
             font-size: 57px;
             line-height: 57px; } }
+        .section2 .col-row .col-item .redText .counter {
+          display: inline-block;
+          background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; }
         .section2 .col-row .col-item .redText .addText {
           font-size: 0.75em;
-          font-stretch: condensed;
-          letter-spacing: -6px; }
+          transform: scale(0.5, 1);
+          display: inline-block;
+          background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-left: -22%;
+          margin-right: -15%; }
         .section2 .col-row .col-item .redText .smallerText {
           font-size: 0.6em; }
       .section2 .col-row .col-item .subText {
@@ -1618,17 +1642,13 @@ body {
         line-height: 28px;
         font-weight: 800;
         color: #4F4F50;
-        width: 90%;
-        position: absolute;
-        letter-spacing: -2.1px; }
-        @media screen and (max-width: 1440px) {
-          .section2 .col-row .col-item .subText {
-            font-size: 20px;
-            line-height: 24px; } }
+        width: 100%;
+        position: absolute; }
         @media screen and (max-width: 1280px) {
           .section2 .col-row .col-item .subText {
-            font-size: 16px;
-            line-height: 18px; } }
+            font-size: 20px;
+            line-height: 18px;
+            width: 100%; } }
         @media screen and (max-width: 1023px) {
           .section2 .col-row .col-item .subText {
             position: static;
@@ -1649,7 +1669,7 @@ body {
         text-align: right; }
         @media screen and (max-width: 1440px) {
           .section2 .col-row .col-item .botText {
-            margin-top: -36px; } }
+            margin-top: -42px; } }
       .section2 .col-row .col-item .topText {
         top: -50px;
         left: 15px;
@@ -1670,48 +1690,58 @@ body {
           margin-bottom: 35px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(1) {
-        width: 34%; } }
+        width: 21%; } }
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:nth-of-type(1) {
-        width: 40%; } }
+        width: 101px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(2) {
-        width: 67%; } }
+        width: 43%; } }
+    @media screen and (max-width: 767px) {
+      .section2 .col-row .col-item:nth-of-type(2) {
+        width: 200px; } }
     .section2 .col-row .col-item:nth-of-type(2) .topText {
       top: -39px;
       left: 25px;
       text-align: left; }
-      @media screen and (max-width: 1440px) {
+      @media screen and (max-width: 1280px) {
         .section2 .col-row .col-item:nth-of-type(2) .topText {
-          top: -12px;
-          left: 44px; } }
+          top: -32px;
+          left: 25px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(3) {
-        width: 30%; } }
+        width: 21%; } }
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:nth-of-type(3) {
-        width: 40%; } }
+        width: 101px; } }
+    @media screen and (max-width: 1023px) {
+      .section2 .col-row .col-item:nth-of-type(3) .botText {
+        margin-top: -30px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(4) {
-        width: 41%; } }
+        width: 31%; } }
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:nth-of-type(4) {
-        width: 54%; } }
+        width: 156px; } }
     .section2 .col-row .col-item:nth-of-type(4) .topText {
       top: -14px;
-      left: 25px;
-      text-align: left; }
+      text-align: left;
+      margin-left: -15%; }
+    @media screen and (max-width: 1023px) {
+      .section2 .col-row .col-item:nth-of-type(4) .botText {
+        margin-top: -30px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:last-of-type {
-        width: 68%; } }
+        width: 41%; } }
+    @media screen and (max-width: 767px) {
+      .section2 .col-row .col-item:last-of-type {
+        width: 48%; } }
     .section2 .col-row .col-item:last-of-type .topText {
-      top: -40px;
-      left: 30px;
+      top: -71px;
       text-align: left; }
-      @media screen and (max-width: 1440px) {
+      @media screen and (max-width: 1280px) {
         .section2 .col-row .col-item:last-of-type .topText {
-          top: -41px;
-          left: 46px; } }
+          top: -51px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(even) .redText {
         text-align: left; } }
@@ -1725,7 +1755,8 @@ body {
 .section3 {
   padding: 60px 0;
   position: relative;
-  z-index: -1; }
+  z-index: -1;
+  overflow: hidden; }
   @media screen and (max-width: 767px) {
     .section3 {
       padding: 25px 0;
@@ -2365,8 +2396,17 @@ body {
         .section6 .calcWrapper .calcTitle {
           font-size: 24px; } }
     .section6 .calcWrapper .form-line {
-      margin: 35px 0;
+      margin: 20px 0;
       padding-left: 30px; }
+      @media screen and (max-width: 1440px) {
+        .section6 .calcWrapper .form-line {
+          margin: 15px 0; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .form-line {
+          margin: 10px 0; } }
+      @media screen and (max-width: 767px) {
+        .section6 .calcWrapper .form-line {
+          padding: 0; } }
       .section6 .calcWrapper .form-line .paramName {
         display: inline-block;
         width: 46%;
@@ -2379,9 +2419,15 @@ body {
         margin: 0; }
         .section6 .calcWrapper .form-line .paramName span {
           font-size: 24px; }
-          @media screen and (max-width: 767px) {
+          @media screen and (max-width: 1440px) {
             .section6 .calcWrapper .form-line .paramName span {
               font-size: 20px; } }
+          @media screen and (max-width: 1280px) {
+            .section6 .calcWrapper .form-line .paramName span {
+              font-size: 18px; } }
+          @media screen and (max-width: 767px) {
+            .section6 .calcWrapper .form-line .paramName span {
+              font-size: 16px; } }
         @media screen and (max-width: 1440px) {
           .section6 .calcWrapper .form-line .paramName {
             font-size: 22px;
@@ -2466,7 +2512,7 @@ body {
               padding-left: 40px; } }
         .section6 .calcWrapper .form-line .inputWrapper .performance {
           border: 1px solid #B1ABA8;
-          padding: 16px 0;
+          padding: 8px 0;
           border-bottom-right-radius: 100px;
           border-bottom-left-radius: 100px;
           border-top-right-radius: 100px;
@@ -2493,7 +2539,7 @@ body {
             background: #eae4e1; }
         .section6 .calcWrapper .form-line .inputWrapper .inputParam {
           border: 1px solid #B1ABA8;
-          padding: 16px 0;
+          padding: 8px 0;
           border-bottom-right-radius: 100px;
           border-bottom-left-radius: 100px;
           border-top-right-radius: 100px;
@@ -2539,15 +2585,6 @@ body {
             text-align: center;
             margin: 0 auto;
             display: block; } }
-      @media screen and (max-width: 1440px) {
-        .section6 .calcWrapper .form-line {
-          margin: 20px 0; } }
-      @media screen and (max-width: 1280px) {
-        .section6 .calcWrapper .form-line {
-          margin: 10px 0; } }
-      @media screen and (max-width: 767px) {
-        .section6 .calcWrapper .form-line {
-          padding: 0; } }
     .section6 .calcWrapper .noPadding {
       padding-left: 0; }
     .section6 .calcWrapper .noMargin {
@@ -2572,7 +2609,6 @@ body {
       font-size: 30px;
       font-weight: 900;
       color: #232222;
-      letter-spacing: -1px;
       margin-bottom: 40px; }
       @media screen and (max-width: 1440px) {
         .section6 .calcWrapper .subAnswer {
@@ -2655,7 +2691,7 @@ body {
       transition: all 2s;
       -webkit-font-smoothing: antialiased;
       border: none;
-      width: 300px; }
+      width: 350px; }
       .section6 .calcWrapper .button:focus {
         outline: none; }
       .section6 .calcWrapper .button:hover {
@@ -2697,8 +2733,14 @@ body {
       font-family: 'gothampro-bold', sans-serif;
       font-size: 24px;
       font-weight: 800;
-      margin: 50px 0;
-      letter-spacing: -1.5px; }
+      margin: 35px 0; }
+      @media screen and (max-width: 1440px) {
+        .section6 .calcWrapper .calcResult {
+          font-size: 22px; } }
+      @media screen and (max-width: 1280px) {
+        .section6 .calcWrapper .calcResult {
+          font-size: 20px;
+          margin: 20px 0; } }
       .section6 .calcWrapper .calcResult span {
         display: inline-block;
         vertical-align: middle;
@@ -2721,13 +2763,6 @@ body {
         @media screen and (max-width: 1280px) {
           .section6 .calcWrapper .calcResult span {
             font-size: 20px; } }
-      @media screen and (max-width: 1440px) {
-        .section6 .calcWrapper .calcResult {
-          font-size: 22px; } }
-      @media screen and (max-width: 1280px) {
-        .section6 .calcWrapper .calcResult {
-          font-size: 20px;
-          margin: 30px 0; } }
     @media screen and (max-width: 1280px) {
       .section6 .calcWrapper {
         padding: 30px; } }
@@ -3095,21 +3130,23 @@ body {
       .section9 .sectionTitle br {
         display: none; } }
   .section9 #slickSlider {
+    overflow: hidden;
     position: relative;
-    width: 1500px;
+    width: 1600px;
     margin: 0 auto;
     padding: 30px 0; }
     @media screen and (max-width: 1600px) {
       .section9 #slickSlider {
-        width: 1200px; } }
+        width: 1300px; } }
     @media screen and (max-width: 1440px) {
       .section9 #slickSlider {
         width: 1000px; } }
     @media screen and (max-width: 1023px) {
       .section9 #slickSlider {
-        width: 400px; } }
+        width: 700px; } }
     @media screen and (max-width: 767px) {
       .section9 #slickSlider {
+        width: 400px;
         padding: 25px 0;
         padding-bottom: 0; } }
     @media screen and (max-width: 424px) {
@@ -3119,24 +3156,43 @@ body {
       position: relative;
       display: inline-block;
       background: white;
-      width: 420px;
-      padding: 35px;
+      width: 700px;
+      padding: 25px;
       text-align: center;
       -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
       box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
-      margin: 45px;
+      margin: 35px;
       -webkit-transform: scale(0.7, 0.7);
       -ms-transform: scale(0.7, 0.7);
       transform: scale(0.7, 0.7);
       -webkit-transition: all 1s;
       -o-transition: all 1s;
       transition: all 1s; }
+      @media screen and (max-width: 1600px) {
+        .section9 #slickSlider .sliderItem {
+          width: 600px; } }
+      @media screen and (max-width: 1440px) {
+        .section9 #slickSlider .sliderItem {
+          width: 500px;
+          margin: 25px;
+          padding: 25px; } }
+      @media screen and (max-width: 1023px) {
+        .section9 #slickSlider .sliderItem {
+          width: 600px; } }
+      @media screen and (max-width: 767px) {
+        .section9 #slickSlider .sliderItem {
+          width: 350px;
+          padding: 25px 10px;
+          padding-bottom: 0; } }
+      @media screen and (max-width: 424px) {
+        .section9 #slickSlider .sliderItem {
+          width: 280px; } }
       .section9 #slickSlider .sliderItem img {
         border-radius: 50%;
         margin: 0 auto; }
         @media screen and (max-width: 1600px) {
           .section9 #slickSlider .sliderItem img {
-            width: 46%; } }
+            width: 29%; } }
       .section9 #slickSlider .sliderItem .reply {
         font-family: 'gothampro-italic', sans-serif;
         font-size: 24px;
@@ -3144,43 +3200,84 @@ body {
         font-style: italic;
         font-weight: 300;
         color: #242424;
-        margin-top: 90px; }
+        margin-top: 25px; }
         @media screen and (max-width: 1600px) {
           .section9 #slickSlider .sliderItem .reply br {
             display: none; } }
-        @media screen and (max-width: 1600px) {
+        @media screen and (max-width: 1800px) {
           .section9 #slickSlider .sliderItem .reply {
             font-size: 20px;
             line-height: 24px;
-            margin-top: 70px; } }
+            margin-top: 20px; } }
         @media screen and (max-width: 1440px) {
           .section9 #slickSlider .sliderItem .reply {
-            margin-top: 50px; } }
+            font-size: 18px;
+            line-height: 22px; } }
+        @media screen and (max-width: 1023px) {
+          .section9 #slickSlider .sliderItem .reply {
+            font-size: 16px;
+            line-height: 20px; } }
+        @media screen and (max-width: 767px) {
+          .section9 #slickSlider .sliderItem .reply {
+            font-size: 14px;
+            line-height: 18px; } }
       .section9 #slickSlider .sliderItem .name {
         font-family: 'gothampro-medium', sans-serif;
-        font-size: 24px;
+        font-size: 27px;
         font-weight: 600;
-        margin-top: 70px; }
+        margin-top: 50px; }
         @media screen and (max-width: 1600px) {
           .section9 #slickSlider .sliderItem .name {
-            font-size: 20px;
-            margin-top: 50px; } }
+            font-size: 24px;
+            margin-top: 40px; } }
         @media screen and (max-width: 1440px) {
           .section9 #slickSlider .sliderItem .name {
-            margin-top: 30px; } }
+            font-size: 22px;
+            margin-top: 25px; } }
+        @media screen and (max-width: 1023px) {
+          .section9 #slickSlider .sliderItem .name {
+            font-size: 20px; } }
+        @media screen and (max-width: 767px) {
+          .section9 #slickSlider .sliderItem .name {
+            font-size: 18px; } }
       .section9 #slickSlider .sliderItem .address {
         font-family: 'gothampro', sans-serif;
         font-size: 24px;
         font-weight: 300;
         color: #242424;
-        margin: 35px 0 70px 0; }
+        margin-top: 35px; }
         @media screen and (max-width: 1600px) {
           .section9 #slickSlider .sliderItem .address {
             font-size: 20px;
-            margin: 25px 0 50px 0; } }
+            margin-top: 25px; } }
         @media screen and (max-width: 1440px) {
           .section9 #slickSlider .sliderItem .address {
-            margin: 15px 0 40px 0; } }
+            font-size: 18px;
+            line-height: 22px;
+            margin-top: 15px; } }
+        @media screen and (max-width: 1023px) {
+          .section9 #slickSlider .sliderItem .address {
+            font-size: 16px;
+            line-height: 20px; } }
+        @media screen and (max-width: 767px) {
+          .section9 #slickSlider .sliderItem .address {
+            font-size: 14px;
+            line-height: 18px; } }
+      .section9 #slickSlider .sliderItem .howLong {
+        font-family: 'gothampro', sans-serif;
+        font-size: 22px; }
+        @media screen and (max-width: 1600px) {
+          .section9 #slickSlider .sliderItem .howLong {
+            font-size: 20px; } }
+        @media screen and (max-width: 1440px) {
+          .section9 #slickSlider .sliderItem .howLong {
+            font-size: 18px; } }
+        @media screen and (max-width: 1023px) {
+          .section9 #slickSlider .sliderItem .howLong {
+            font-size: 16px; } }
+        @media screen and (max-width: 767px) {
+          .section9 #slickSlider .sliderItem .howLong {
+            font-size: 14px; } }
       .section9 #slickSlider .sliderItem:after {
         content: '';
         position: absolute;
@@ -3190,15 +3287,6 @@ body {
         height: 100%;
         background: white;
         opacity: 0.4; }
-      @media screen and (max-width: 1600px) {
-        .section9 #slickSlider .sliderItem {
-          width: 380px;
-          margin: 25px; } }
-      @media screen and (max-width: 1440px) {
-        .section9 #slickSlider .sliderItem {
-          width: 300px;
-          margin: 20px;
-          padding: 25px; } }
     .section9 #slickSlider .slick-active,
     .section9 #slickSlider .slick-center {
       -webkit-transform: scale(1, 1);
@@ -3235,45 +3323,48 @@ body {
           width: 40px;
           height: 40px; } }
     .section9 #slickSlider .slick-prev {
-      left: 485px;
+      left: 22%;
       border-left: 5px solid rgba(236, 6, 6, 0.5);
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg); }
       .section9 #slickSlider .slick-prev:before {
         opacity: 0; }
-      @media screen and (max-width: 1600px) {
-        .section9 #slickSlider .slick-prev {
-          left: 350px; } }
       @media screen and (max-width: 1440px) {
         .section9 #slickSlider .slick-prev {
-          left: 298px; } }
+          left: 18%; } }
       @media screen and (max-width: 1023px) {
         .section9 #slickSlider .slick-prev {
-          left: 0; } }
+          left: 8px; } }
       @media screen and (max-width: 767px) {
         .section9 #slickSlider .slick-prev {
           left: 20px; } }
     .section9 #slickSlider .slick-next {
-      right: 485px;
+      right: 22%;
       border-right: 5px solid rgba(236, 6, 6, 0.5);
       -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg); }
       .section9 #slickSlider .slick-next:before {
         opacity: 0; }
-      @media screen and (max-width: 1600px) {
-        .section9 #slickSlider .slick-next {
-          right: 350px; } }
       @media screen and (max-width: 1440px) {
         .section9 #slickSlider .slick-next {
-          right: 298px; } }
+          right: 18%; } }
       @media screen and (max-width: 1023px) {
         .section9 #slickSlider .slick-next {
-          right: 0; } }
+          right: 8px; } }
       @media screen and (max-width: 767px) {
         .section9 #slickSlider .slick-next {
           right: 20px; } }
+
+.slick-track {
+  display: flex; }
+
+.slick-track .slick-slide {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center; }
 
 .section10 {
   padding: 60px 0; }
@@ -3321,9 +3412,8 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
     /* IE6-9 */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -2px; }
-    @media screen and (max-width: 1023px) {
+    -webkit-text-fill-color: transparent; }
+    @media screen and (max-width: 1440px) {
       .section10 .subTitle br {
         display: none; } }
     @media screen and (max-width: 1440px) {
@@ -3430,7 +3520,6 @@ body {
     text-transform: uppercase;
     color: #002AFF;
     line-height: 50px;
-    letter-spacing: -1.2px;
     padding-bottom: 70px; }
     @media screen and (max-width: 1280px) {
       .section11 .sectionTitle {
@@ -3444,7 +3533,7 @@ body {
     @media screen and (max-width: 424px) {
       .section11 .sectionTitle {
         font-size: 20px; } }
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1280px) {
       .section11 .sectionTitle br {
         display: none; } }
     @media screen and (max-width: 1440px) {
@@ -3467,6 +3556,15 @@ body {
   .section11 .formBlock form {
     background: rgba(255, 255, 255, 0.9);
     padding: 50px; }
+    @media screen and (max-width: 1600px) {
+      .section11 .formBlock form {
+        padding: 30px; } }
+    @media screen and (max-width: 1440px) {
+      .section11 .formBlock form {
+        padding: 20px 30px 15px 30px; } }
+    @media screen and (max-width: 767px) {
+      .section11 .formBlock form {
+        padding: 10px; } }
     .section11 .formBlock form .formTitle {
       font-family: 'gothampro-medium', sans-serif;
       font-size: 20px;
@@ -3654,15 +3752,6 @@ body {
       @media screen and (max-width: 767px) {
         .section11 .formBlock form .underText {
           font-size: 18px; } }
-    @media screen and (max-width: 1600px) {
-      .section11 .formBlock form {
-        padding: 30px; } }
-    @media screen and (max-width: 1440px) {
-      .section11 .formBlock form {
-        padding: 20px 30px 15px 30px; } }
-    @media screen and (max-width: 767px) {
-      .section11 .formBlock form {
-        padding: 10px; } }
   @media screen and (max-width: 1023px) {
     .section11 .formBlock {
       width: 100%;
@@ -3818,6 +3907,15 @@ body {
     .section12 .formBlock form {
       background: rgba(255, 255, 255, 0.9);
       padding: 50px; }
+      @media screen and (max-width: 1600px) {
+        .section12 .formBlock form {
+          padding: 30px; } }
+      @media screen and (max-width: 1440px) {
+        .section12 .formBlock form {
+          padding: 20px 30px 15px 30px; } }
+      @media screen and (max-width: 767px) {
+        .section12 .formBlock form {
+          padding: 10px; } }
       .section12 .formBlock form .formTitle {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 20px;
@@ -4005,15 +4103,6 @@ body {
         @media screen and (max-width: 767px) {
           .section12 .formBlock form .underText {
             font-size: 18px; } }
-      @media screen and (max-width: 1600px) {
-        .section12 .formBlock form {
-          padding: 30px; } }
-      @media screen and (max-width: 1440px) {
-        .section12 .formBlock form {
-          padding: 20px 30px 15px 30px; } }
-      @media screen and (max-width: 767px) {
-        .section12 .formBlock form {
-          padding: 10px; } }
     @media screen and (max-width: 1440px) {
       .section12 .formBlock {
         margin-top: 0; } }

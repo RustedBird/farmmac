@@ -39,7 +39,6 @@
             </p>
             <div class="button orderCall"><?= $lang['section1']['orderCall']?></div>
             <form class="ajaxForm" action="../process.php" method="post">
-                <p class="texthere"></p>
                 <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
                 <input type="hidden" name="comment" value="Call me back">
@@ -109,11 +108,11 @@
                 </p>
                 <p class="subText botText"><?= $lang['section2']['counterRegionBottomText']?></p>
             </div>
-            <div class="col-md-2 col-item">
-                <p class="redText"><span class="counter" data-count="80">80</span><span class="addText">+</span></p>
+            <div class="col-md-2 col-item text-center">
+                <p class="redText"><span class="counter" data-count="80">80</span><span>+</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterClientBottomText']?></p>
             </div>
-            <div class="col-md-2 col-item">
+            <div class="col-md-2 col-item text-center">
                 <p class="subText topText"><?= $lang['section2']['counterYearTopText']?></p>
                 <p class="redText"><span class="counter" data-count="1958">1958</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterYearBottomText']?></p>
