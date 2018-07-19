@@ -16,7 +16,7 @@
     <div class="arrow"></div>
 </div>
 <div class="preloader">
-    <p>Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua</p>
+    <p><?= $lang['preloader']['send']?> <span>.</span><span>.</span><span>.</span></p>
 </div>
 
 <!-- первый экран -->
@@ -65,7 +65,7 @@
                     <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
                     <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>" required>
                     <input hidden type="text" name="comment" value="">
-                    <button class="button" data-comment="Заявка на рассчет окупаемости"><?= $lang['form']['mainFormButton']?></button>
+                    <button class="button" data-comment="Заявка на расчет окупаемости"><?= $lang['form']['mainFormButton']?></button>
                     <p class="underText"><?= $lang['form']['underText']?></p>
                 </form>
             </div>
@@ -87,7 +87,7 @@
             <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone'] ?>" required>
             <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail'] ?>" required>
             <input hidden type="text" name="comment" value="">
-            <button class="button" data-comment="Заявка на рассчет окупаемости"><?= $lang['form']['mainFormButton'] ?></button>
+            <button class="button" data-comment="Заявка на расчет окупаемости"><?= $lang['form']['mainFormButton'] ?></button>
             <p class="underText"><?= $lang['form']['underText'] ?></p>
         </form>
     </div>

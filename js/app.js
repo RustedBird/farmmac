@@ -82,7 +82,7 @@
             data: data,
             dataType: 'json',
             beforeSend: function () {
-                $preloader.find('p').html('Отправка <span>.</span><span>.</span><span>.</span>');
+                // $preloader.find('p').html('Отправка <span>.</span><span>.</span><span>.</span>');
                 $preloader.css({opacity: 0, display: 'flex'}).animate({
                     opacity: 1
                 }, 500);
@@ -372,7 +372,6 @@
     var $upBtn = $(".upButton");
     $upBtn.hide();
 
-
     if ($(window).width() >= 1006) {
         window.onscroll = function () {
             if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
@@ -384,19 +383,19 @@
     }
 
 
-    /*$(document).on('click', '.upButton', function () {
+    $(document).on('click', '.upButton', function () {
         $('html, body').animate({
             scrollTop: 0
         }, 500);
     })
-
-    $('[data-target="#modalPdf"]').on('click', function () {
-        $('#modalPdf .modal-body').html('<object data="../img/Kom_pred.pdf" type="application/pdf" width="100%" height="100%">\n' +
-            '                    <iframe src="../img/Kom_pred.pdf" width="100%" height="100%" style="border: none;">\n' +
-            '                    </iframe>\n' +
-            '                    <a href="../img/Kom_pred.pdf" target="_blank">Если ваш браузер не поддерживает PDF, перейдите по ссылке</a>\n' +
-            '                </object>');
-    })*/
+    /*
+        $('[data-target="#modalPdf"]').on('click', function () {
+            $('#modalPdf .modal-body').html('<object data="../img/Kom_pred.pdf" type="application/pdf" width="100%" height="100%">\n' +
+                '                    <iframe src="../img/Kom_pred.pdf" width="100%" height="100%" style="border: none;">\n' +
+                '                    </iframe>\n' +
+                '                    <a href="../img/Kom_pred.pdf" target="_blank">Если ваш браузер не поддерживает PDF, перейдите по ссылке</a>\n' +
+                '                </object>');
+        })*/
 
 
 })(jQuery);

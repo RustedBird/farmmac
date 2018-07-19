@@ -1134,18 +1134,6 @@ body {
                 width: 85%;
                 margin: 20px auto;
                 padding: 10px 0; } }
-          .section1 .container .formBlock .blockWrapper form input[name='email']::-webkit-input-placeholder {
-            /* Chrome/Opera/Safari */
-            font-weight: 600; }
-          .section1 .container .formBlock .blockWrapper form input[name='email']::-moz-placeholder {
-            /* Firefox 19+ */
-            font-weight: 600; }
-          .section1 .container .formBlock .blockWrapper form input[name='email']:-ms-input-placeholder {
-            /* IE 10+ */
-            font-weight: 600; }
-          .section1 .container .formBlock .blockWrapper form input[name='email']:-moz-placeholder {
-            /* Firefox 18- */
-            font-weight: 600; }
           .section1 .container .formBlock .blockWrapper form textarea {
             border: 1px solid #B1ABA8;
             border-bottom-right-radius: 20px;
@@ -1717,7 +1705,7 @@ body {
       .section2 .col-row .col-item:last-of-type {
         width: 68%; } }
     .section2 .col-row .col-item:last-of-type .topText {
-      top: -71px;
+      top: -40px;
       left: 30px;
       text-align: left; }
       @media screen and (max-width: 1440px) {

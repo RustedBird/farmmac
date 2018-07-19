@@ -226,6 +226,9 @@ $lang = [
         'placeholderTextarea' => 'ваш вопрос',
         'underText' => '* -это бесплатно и ни к чему не обязывает ',
         'orderCall' => 'заказать звонок'
+    ],
+    'preloader' => [
+        'send' => 'Отправка'
     ]
 ];
 
