@@ -502,6 +502,24 @@
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem3']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem3']?></p>
         </div>
+        <div class="sliderItem">
+            <img src="../img/custumer3.jpg" alt="custumer3">
+            <p class="reply"><?= $lang['section9']['feedbacks']['whatItem4']?></p>
+            <p class="name"><?= $lang['section9']['feedbacks']['whoItem4']?></p>
+            <p class="address"><?= $lang['section9']['feedbacks']['fromItem4']?></p>
+        </div>
+        <div class="sliderItem">
+            <img src="../img/custumer3.jpg" alt="custumer3">
+            <p class="reply"><?= $lang['section9']['feedbacks']['whatItem5']?></p>
+            <p class="name"><?= $lang['section9']['feedbacks']['whoItem5']?></p>
+            <p class="address"><?= $lang['section9']['feedbacks']['fromItem5']?></p>
+        </div>
+        <div class="sliderItem">
+            <img src="../img/custumer3.jpg" alt="custumer3">
+            <p class="reply"><?= $lang['section9']['feedbacks']['whatItem6']?></p>
+            <p class="name"><?= $lang['section9']['feedbacks']['whoItem6']?></p>
+            <p class="address"><?= $lang['section9']['feedbacks']['fromItem6']?></p>
+        </div>
     </div>
 </section>
 <!-- slider -->
