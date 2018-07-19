@@ -1669,7 +1669,7 @@ body {
       .section2 .col-row .col-item:last-of-type {
         width: 68%; } }
     .section2 .col-row .col-item:last-of-type .topText {
-      top: -40px;
+      top: -72px;
       left: 30px;
       text-align: left; }
       @media screen and (max-width: 1440px) {

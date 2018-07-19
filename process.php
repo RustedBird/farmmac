@@ -9,12 +9,12 @@ $phone = $post['phone'];
 $comment = $post['comment'];
 $lang = $post['lang'];
 
-
+$formMessage = Message::setResponseMessage($lang);
 //Проверка на валидность данных
 $response['result'] = true;
 if (!Valid::not_empty($name) || !Valid::not_empty($phone) || !Valid::phone($phone)) {
     $response = ['result' => false,
-        'message' => 'Поля заполнены неверно'];
+                'message' => $formMessage['errorFields']];
 } elseif ($comment != 'Call me back') { // если это не обратный звонок, то валидируем и е-меил
     $response['result'] = (bool)Valid::email($email);
 }
@@ -37,7 +37,7 @@ if ($response['result']) {
         case 'Large':
         case 'XL':
             $newMessage = new Message();
-//            $newMessage->sendEmail($request);
+//            $newMessage->sendEmail($request, $formMessage);
             $newMessage->sendTelegram($mes);
             $mes = $newMessage->setLanguageMessage($lang) . ' ' .$comment;
             $to = [$email];
@@ -48,17 +48,17 @@ if ($response['result']) {
                 'fileblob' => base64_encode($file),
                 'mimetype' => 'application/pdf'
             ]];
-//            $response = $newMessage->sendEmail($request);
+            $response = $newMessage->sendEmail($request, $formMessage);
             break;
         default:
             $newMessage = new Message();
-            $response = $newMessage->sendEmail($request);
+            $response = $newMessage->sendEmail($request, $formMessage);
             $newMessage->sendTelegram($mes);
             break;
     }
 
 } else {
-    $response['message'] = 'Поля заполнены неверно';
+    $response['message'] = $formMessage['errorFields'];
 }
 
 echo json_encode($response);
@@ -71,7 +71,7 @@ class Message
     protected $token = '561353685:AAFVHFTMIychcLnJzi1MziPwGYng3tYHlqI';
     protected $chat_id_list = [350981322];
 
-    public function sendEmail($request)
+    public function sendEmail($request, $formMessage)
     {
         $request['api_key'] = $this->api_key;
         $ch = curl_init();
@@ -93,11 +93,11 @@ class Message
         switch ($httpcode) {
             case 200:
                 $response['result'] = (bool)$result->data->succeeded;
-                $response['message'] = 'Заявка успешно отправлена';
+                $response['message'] = $formMessage['success'];
                 break;
             default:
                 $response['result'] = false;
-                $response['message'] = "Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua";
+                $response['message'] = $formMessage['errorSend'];
                 $result->data->error;
                 $date = date_create();
                 $fp = fopen('errors/file.txt', 'a');
@@ -128,6 +128,22 @@ class Message
                 $message = 'Вот обещанные характеристики Зерносушилки';
         }
         return $message;
+    }
+
+    public static function setResponseMessage($lang)
+    {
+        switch ($lang) {
+            case ('ukr'):
+                $formMessage['errorFields'] = 'Поля заповнені невірно';
+                $formMessage['success'] = 'Заявку успішно відправлено';
+                $formMessage['errorSend'] = "Відбулася системна помилка при відправці повідомлення.\n Будь ласка зателефонуйте нам по телефону (050) 40 444 70 або надішліть листа на пошту secretary@farmmac.com.ua";
+                break;
+            default:
+                $formMessage['errorFields'] = 'Поля заполнены неверно';
+                $formMessage['success'] = 'Заявка успешно отправлена';
+                $formMessage['errorSend'] = "Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua";
+        }
+        return $formMessage;
     }
 }
 
