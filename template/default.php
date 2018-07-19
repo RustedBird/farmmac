@@ -489,36 +489,42 @@
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem1']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem1']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem1']?></p>
+            <p class="howLong">Зерносушарка Large 270 з 2016 року</p>
         </div>
         <div class="sliderItem">
             <img src="../img/custumer2.jpg" alt="custumer2">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem2']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem2']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem2']?></p>
+            <p class="howLong">Зерносушарка Large 270 з 2014 року</p>
         </div>
         <div class="sliderItem">
             <img src="../img/custumer3.jpg" alt="custumer3">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem3']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem3']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem3']?></p>
+            <p class="howLong">Зерносушарка Large 270 з 2013 року</p>
         </div>
         <div class="sliderItem">
             <img src="../img/custumer3.jpg" alt="custumer3">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem4']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem4']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem4']?></p>
+            <p class="howLong">Зерносушарка Large 270 з 2013 року</p>
         </div>
         <div class="sliderItem">
             <img src="../img/custumer3.jpg" alt="custumer3">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem5']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem5']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem5']?></p>
+            <p class="howLong">Зерносушарка Large 270 з 2013 року</p>
         </div>
         <div class="sliderItem">
             <img src="../img/custumer3.jpg" alt="custumer3">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem6']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem6']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem6']?></p>
+            <p class="howLong">Зерносушарка Large 270 з 2013 року</p>
         </div>
     </div>
 </section>
