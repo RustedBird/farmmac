@@ -268,6 +268,18 @@ $mainColor: #EC0606;
         padding: 10px 0;
       }
     }
+    input[name='email']::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-weight: 600;
+    }
+    input[name='email']::-moz-placeholder { /* Firefox 19+ */
+      font-weight: 600;
+    }
+    input[name='email']:-ms-input-placeholder { /* IE 10+ */
+      font-weight: 600;
+    }
+    input[name='email']:-moz-placeholder { /* Firefox 18- */
+      font-weight: 600;
+    }
     textarea {
       border: 1px solid #B1ABA8;
       border-bottom-right-radius: 20px;
@@ -412,7 +424,7 @@ body {
     width: 100px;
     height: 100px;
     position: fixed;
-    right: 10%;
+    right: 4%;
     bottom: 10%;
     background: rgba(255, 255, 255, 0.71);
     z-index: 99;
@@ -1182,7 +1194,7 @@ body {
         width: 68%;
       }
       .topText {
-        top: -40px;
+        top: -71px;
         left: 30px;
         text-align: left;
         @media screen and (max-width: 1440px) {

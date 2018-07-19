@@ -88,15 +88,9 @@
                 }, 500);
             },
             success: function (response) {
-                if (response) {
                     $preloader.fadeOut(500);
                     $modal.find('.formTitle').html(response.message);
                     $modal.modal('show');
-                } else {
-                    $preloader.fadeOut(500);
-                    $modal.find('.formTitle').html(response.message);
-                    $modal.modal('show');
-                }
             },
             error: function () {
                 $preloader.fadeOut(500);
@@ -250,17 +244,17 @@
     $('#calcForm').on('click', '.button', function (event) {
         event.preventDefault();
 
-        var $tons = parseInt($('[name="tons"]').val()),
-            $prices_elevator = parseFloat($('[name="prices_elevator"]').val()),
-            $diesel_price = parseFloat($('[name="diesel_price"]').val()),
-            $gas_price = parseFloat($('[name="gas_price"]').val()),
-            $pellet_price = parseFloat($('[name="pellet_price"]').val()),
+        var $tons = $('[name="tons"]').val(),
+            $prices_elevator = $('[name="prices_elevator"]').val(),
+            $diesel_price = $('[name="diesel_price"]').val(),
+            $gas_price = $('[name="gas_price"]').val(),
+            $pellet_price = $('[name="pellet_price"]').val(),
             $textParams = $('.calcResult');
 
 
-        var diesel_sum = Math.round($tons * $prices_elevator * 1.2 * $diesel_price),
-            gas_sum = Math.round($tons * $prices_elevator * 1.4 * $gas_price),
-            pellet_sum = Math.round($tons * $prices_elevator * 3 * $pellet_price);
+        var diesel_sum = $tons * $prices_elevator * 1.2 * $diesel_price,
+            gas_sum = $tons * $prices_elevator * 1.4 * $gas_price,
+            pellet_sum = $tons * $prices_elevator * 3 * $pellet_price;
 
         function addSpace(num) {
             if (isNaN(num)) {
@@ -277,9 +271,9 @@
         $textParams.find('span.tons').html(addSpace($tons));
         $textParams.find('span.prices_elevator').html(addSpace($prices_elevator));
 
-        $('.diesel_price').html(addSpace(diesel_sum) + ' грн');
-        $('.gas_price').html(addSpace(gas_sum) + ' грн');
-        $('.pellet_price').html(addSpace(pellet_sum) + ' грн');
+        $('.diesel_price').html(addSpace(Math.ceil(diesel_sum)) + ' грн');
+        $('.gas_price').html(addSpace(Math.ceil(gas_sum)) + ' грн');
+        $('.pellet_price').html(addSpace(Math.ceil(pellet_sum)) + ' грн');
     });
 
     /*Slick slider*/
