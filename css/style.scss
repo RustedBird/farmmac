@@ -445,7 +445,6 @@ body {
     @media screen and (max-width: 1440px) {
       width: 65px;
       height: 65px;
-      right: 8%;
       bottom: 8%;
     }
     @media screen and (max-width: 1023px) {
@@ -978,7 +977,7 @@ body {
           margin-top: 10px;
         }
         @media screen and (max-width: 1440px) {
-          margin-top: 10px;
+          padding-right: 10%;
         }
         @media screen and (max-width: 1023px) {
           display: none;
