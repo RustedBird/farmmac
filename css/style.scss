@@ -542,6 +542,7 @@ body {
 #modalPdf {
   .modal-dialog {
     max-width: 85%;
+    margin: 0 auto;
     @media screen and (max-width: 1023px) {
       max-width: 95%;
     }
