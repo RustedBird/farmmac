@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FarmMak</title>
+    <title>Farm Mac Ukraine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../img/favicon.gif" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
