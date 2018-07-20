@@ -539,7 +539,14 @@ body {
     bottom: 10px;
   }
 }
-
+#modalPdf {
+  .modal-dialog {
+    max-width: 85%;
+    @media screen and (max-width: 1023px) {
+      max-width: 95%;
+    }
+  }
+}
 .modal-dialog {
   max-width: 600px;
 }

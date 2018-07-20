@@ -12,10 +12,10 @@
     $(document).mouseleave(function (e) {
         var alertwin = getCookie("alertwin");
         if (alertwin != "no" && e.clientY < 0) {
-                $('#modalLeave').modal('show');
-                // записываем cookie на 1 день, с которой мы не показываем окно
-                date.setDate(date.getDate() + 1);
-                document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
+            $('#modalLeave').modal('show');
+            // записываем cookie на 1 день, с которой мы не показываем окно
+            date.setDate(date.getDate() + 1);
+            document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
         }
     });
 
@@ -88,9 +88,9 @@
                 }, 500);
             },
             success: function (response) {
-                    $preloader.fadeOut(500);
-                    $modal.find('.formTitle').html(response.message);
-                    $modal.modal('show');
+                $preloader.fadeOut(500);
+                $modal.find('.formTitle').html(response.message);
+                $modal.modal('show');
             },
             error: function () {
                 $preloader.fadeOut(500);
@@ -389,15 +389,11 @@
         $('html, body').animate({
             scrollTop: 0
         }, 500);
-    })
-    /*
-        $('[data-target="#modalPdf"]').on('click', function () {
-            $('#modalPdf .modal-body').html('<object data="../img/Kom_pred.pdf" type="application/pdf" width="100%" height="100%">\n' +
-                '                    <iframe src="../img/Kom_pred.pdf" width="100%" height="100%" style="border: none;">\n' +
-                '                    </iframe>\n' +
-                '                    <a href="../img/Kom_pred.pdf" target="_blank">Если ваш браузер не поддерживает PDF, перейдите по ссылке</a>\n' +
-                '                </object>');
-        })*/
+    });
+
+    $('[data-target="#modalPdf"]').on('click', function () {
+        $('#modalPdf .modal-body').html('<iframe src="https://drive.google.com/file/d/1y0asRFGGx2Mouy_FZNcW52mJPUZHzjrI/preview"></iframe>');
+    });
 
 
 })(jQuery);
