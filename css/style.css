@@ -3368,7 +3368,7 @@ body {
         .section9 #slickSlider .slick-next {
           z-index: -999; } }
     .section9 #slickSlider .slick-dots {
-      display: none;
+      display: block;
       position: absolute;
       bottom: 0px;
       width: 100%;
@@ -3376,10 +3376,11 @@ body {
       margin: 0;
       list-style: none;
       text-align: center;
-      border-radius: 50%; }
+      border-radius: 50%;
+      z-index: -999; }
       @media screen and (max-width: 767px) {
         .section9 #slickSlider .slick-dots {
-          display: block; } }
+          z-index: -999; } }
       .section9 #slickSlider .slick-dots li button:before {
         font-size: 14px; }
 
