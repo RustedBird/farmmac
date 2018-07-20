@@ -12,6 +12,7 @@ $lang = $post['lang'];
 $formMessage = Message::setResponseMessage($lang);
 //Проверка на валидность данных
 $response['result'] = true;
+$response['message'] = $formMessage['success'];
 if (!Valid::not_empty($name) || !Valid::not_empty($phone) || !Valid::phone($phone)) {
     $response = ['result' => false,
                 'message' => $formMessage['errorFields']];
@@ -27,8 +28,8 @@ if ($response['result']) {
     $to = ["Фарм Мак Україна <aksenov.andrew@gmail.com>"];
     $request = [
         'to' => &$to,
-        'sender' => 'Зерносушилки Pedrotti <noreply@farmmac.com.ua>',
-        'subject' => 'Сообщение с сайта',
+        "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+        'subject' => 'Зерносушилка Pedrotti',
         'text_body' => &$mes
     ];
 
@@ -48,11 +49,11 @@ if ($response['result']) {
                 'fileblob' => base64_encode($file),
                 'mimetype' => 'application/pdf'
             ]];
-            $response = $newMessage->sendEmail($request, $formMessage);
+//            $response = $newMessage->sendEmail($request, $formMessage);
             break;
         default:
             $newMessage = new Message();
-            $response = $newMessage->sendEmail($request, $formMessage);
+//            $response = $newMessage->sendEmail($request, $formMessage);
             $newMessage->sendTelegram($mes);
             break;
     }
@@ -67,7 +68,7 @@ class Message
 {
 
     protected $api_url = 'https://api.smtp2go.com/v3/email/send';
-    protected $api_key = '1api-F1266D14298611E7A1B4F23C91C88F4E';
+    protected $api_key = 'api-F1266D14298611E7A1B4F23C91C88F4E';
     protected $token = '561353685:AAFVHFTMIychcLnJzi1MziPwGYng3tYHlqI';
     protected $chat_id_list = [350981322];
 
@@ -75,7 +76,6 @@ class Message
     {
         $request['api_key'] = $this->api_key;
         $ch = curl_init();
-
         curl_setopt($ch, CURLOPT_URL, $this->api_url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
@@ -83,11 +83,8 @@ class Message
             'Content-Type: application/json'
         ));
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($request));
-
         $result = json_decode(curl_exec($ch));
-
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-
         curl_close($ch);
 
         switch ($httpcode) {
@@ -98,7 +95,6 @@ class Message
             default:
                 $response['result'] = false;
                 $response['message'] = $formMessage['errorSend'];
-                $result->data->error;
                 $date = date_create();
                 $fp = fopen('errors/file.txt', 'a');
                 fwrite($fp, date_format($date, 'Ymd_H:i:s') . PHP_EOL . 'Ошибка: ' . $result->data->error . PHP_EOL);
@@ -109,14 +105,10 @@ class Message
 
     public function sendTelegram($mes)
     {
-
         for ($i = 0; $i < count($this->chat_id_list); $i++) {
-            file_get_contents('https://api.telegram.org/bot'
-                . $this->token
-                . '/sendMessage?chat_id='
-                . $this->chat_id_list[$i]
-                . '&text='
-                . urlencode($mes));
+            file_get_contents('https://api.telegram.org/bot' . $this->token
+                . '/sendMessage?chat_id=' . $this->chat_id_list[$i]
+                . '&text=' . urlencode($mes));
         }
     }
     public function setLanguageMessage($lang){
@@ -129,7 +121,6 @@ class Message
         }
         return $message;
     }
-
     public static function setResponseMessage($lang)
     {
         switch ($lang) {

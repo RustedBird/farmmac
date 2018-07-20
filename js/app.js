@@ -7,8 +7,6 @@
 
 
     // запуск показа модального окна на увод мышки вверх
-
-
     $(document).mouseleave(function (e) {
         var alertwin = getCookie("alertwin");
         if (alertwin != "no" && e.clientY < 0) {
@@ -27,10 +25,8 @@
         location.reload();
         return false;
     });
-//подмена value у кнопки. Необхоимо для корректной отправки данных в CRM заказчика
+    //подмена value у кнопки. Необхоимо для корректной отправки данных в CRM заказчика
     $('html').on('click', '.myBtn', function () {
-        console.log($(this));
-        console.log('yyyy');
         $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
     });
 
@@ -394,7 +390,6 @@
     $('[data-target="#modalPdf"]').on('click', function () {
         $('#modalPdf .modal-body').html('<iframe src="https://drive.google.com/file/d/1y0asRFGGx2Mouy_FZNcW52mJPUZHzjrI/preview"></iframe>');
     });
-
 
 })(jQuery);
 
