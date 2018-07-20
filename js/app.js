@@ -283,6 +283,8 @@
         slidesToShow: 1,
         arrows: true,
         infinite: true,
+        dots: true,
+        appendDots: $('#slickSlider'),
         responsive: [
             {
                 breakpoint: 1023,

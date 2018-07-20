@@ -762,7 +762,6 @@ body {
         box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
         @media screen and (max-width: 1440px) {
           width: 300px;
-          right: 13%;
           top: 74px;
         }
         @media screen and (max-width: 1280px) {
@@ -2473,10 +2472,10 @@ body {
   #slickSlider {
     overflow: hidden;
     position: relative;
-    width: 1600px;
+    //width: 1600px;
     margin: 0 auto;
     padding: 30px 0;
-    @media screen and (max-width: 1600px) {
+    /*@media screen and (max-width: 1600px) {
       width: 1300px;
     }
     @media screen and (max-width: 1440px) {
@@ -2492,7 +2491,7 @@ body {
     }
     @media screen and (max-width: 424px) {
       width: 300px;
-    }
+    }*/
     .sliderItem {
       position: relative;
       display: inline-block;
@@ -2509,11 +2508,8 @@ body {
       -webkit-transition: all 1s;
       -o-transition: all 1s;
       transition: all 1s;
-      @media screen and (max-width: 1600px) {
-        width: 600px;
-      }
       @media screen and (max-width: 1440px) {
-        width: 500px;
+        width: 600px;
         margin: 25px;
         padding: 25px;
       }
@@ -2537,7 +2533,7 @@ body {
       }
       .reply {
         font-family: 'gothampro-italic', sans-serif;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 28px;
         font-style: italic;
         font-weight: 300;
@@ -2549,35 +2545,35 @@ body {
           }
         }
         @media screen and (max-width: 1800px) {
-          font-size: 20px;
-          line-height: 24px;
+          font-size: 18px;
+          line-height: 22px;
           margin-top: 20px;
         }
         @media screen and (max-width: 1440px) {
-          font-size: 18px;
-          line-height: 22px;
-        }
-        @media screen and (max-width: 1023px) {
           font-size: 16px;
           line-height: 20px;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 1023px) {
           font-size: 14px;
-          line-height: 18px;
+          line-height: 16px;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+          line-height: 14px;
         }
       }
       .name {
         font-family: 'gothampro-medium', sans-serif;
-        font-size: 27px;
+        font-size: 26px;
         font-weight: 600;
-        margin-top: 50px;
+        margin-top: 30px;
         @media screen and (max-width: 1600px) {
           font-size: 24px;
-          margin-top: 40px;
+          margin-top: 20px;
         }
         @media screen and (max-width: 1440px) {
           font-size: 22px;
-          margin-top: 25px;
+          margin-top: 10px;
         }
         @media screen and (max-width: 1023px) {
           font-size: 20px;
@@ -2588,18 +2584,18 @@ body {
       }
       .address {
         font-family: 'gothampro', sans-serif;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 300;
         color: #242424;
-        margin-top: 35px;
+        margin-top: 20px;
         @media screen and (max-width: 1600px) {
           font-size: 20px;
-          margin-top: 25px;
+          margin-top: 15px;
         }
         @media screen and (max-width: 1440px) {
           font-size: 18px;
           line-height: 22px;
-          margin-top: 15px;
+          margin-top: 10px;
         }
         @media screen and (max-width: 1023px) {
           font-size: 16px;
@@ -2654,7 +2650,7 @@ body {
     }
     .slick-arrow {
       position: absolute;
-      top: 600px;
+      top: 50%;
       width: 55px;
       height: 55px;
       border-bottom: 5px solid rgba(236, 6, 6, 0.5);
@@ -2666,7 +2662,6 @@ body {
         border-color: $mainColor;
       }
       @media screen and (max-width: 1600px) {
-        top: 415px;
         width: 48px;
         height: 48px;
       }
@@ -2676,7 +2671,7 @@ body {
       }
     }
     .slick-prev {
-      left: 22%;
+      left: 28%;
       border-left: 5px solid rgba(236, 6, 6, 0.5);
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -2684,18 +2679,27 @@ body {
       &:before {
         opacity: 0;
       }
-      @media screen and (max-width: 1440px) {
-        left: 18%;
+      @media screen and (max-width: 1850px) {
+        left: 24%;
+      }
+      @media screen and (max-width: 1500px) {
+        left: 22%;
+      }
+      @media screen and (max-width: 1280px) {
+        left: 17%;
       }
       @media screen and (max-width: 1023px) {
-        left: 8px;
+        left: 8%;
+      }
+      @media screen and (max-width: 900px) {
+        left: 6%;
       }
       @media screen and (max-width: 767px) {
-        left: 20px;
+        z-index: -999;
       }
     }
     .slick-next {
-      right: 22%;
+      right: 28%;
       border-right: 5px solid rgba(236, 6, 6, 0.5);
       -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
@@ -2703,14 +2707,42 @@ body {
       &:before {
         opacity: 0;
       }
-      @media screen and (max-width: 1440px) {
-        right: 18%;
+      @media screen and (max-width: 1850px) {
+        right: 24%;
+      }
+      @media screen and (max-width: 1500px) {
+        right: 22%;
+      }
+      @media screen and (max-width: 1280px) {
+        right: 17%;
       }
       @media screen and (max-width: 1023px) {
-        right: 8px;
+        right: 8%;
+      }
+      @media screen and (max-width: 900px) {
+        right: 6%;
       }
       @media screen and (max-width: 767px) {
-        right: 20px;
+        z-index: -999;
+      }
+    }
+    .slick-dots {
+      display: none;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+      border-radius: 50%;
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+      li{
+        button:before {
+          font-size: 14px;
+        }
       }
     }
   }
