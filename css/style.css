@@ -3380,7 +3380,7 @@ body {
       z-index: -999; }
       @media screen and (max-width: 767px) {
         .section9 #slickSlider .slick-dots {
-          z-index: -999; } }
+          z-index: 999; } }
       .section9 #slickSlider .slick-dots li button:before {
         font-size: 14px; }
 
