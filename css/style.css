@@ -983,8 +983,7 @@ body {
         background: #ffffff;
         display: inline-block;
         padding: 0 15px;
-        margin-right: -41px;
-        letter-spacing: -2px; }
+        margin-right: -41px; }
         .section1 .container .formBlock .titleWrapper .subTitle {
           display: inline-block;
           font-family: 'gothampro-black', sans-serif;
@@ -1039,7 +1038,6 @@ body {
         font-size: 30px;
         font-weight: 900;
         color: #232222;
-        letter-spacing: -1.2px;
         margin: 19px -117px 0 0; }
         @media screen and (max-width: 1600px) {
           .section1 .container .formBlock .smallerText {
