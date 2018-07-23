@@ -3799,7 +3799,10 @@ body {
             color: #EC0606;
             text-transform: uppercase;
             padding: 0;
-            white-space: normal; }
+            white-space: normal;
+            transition: all 0.3s; }
+            .section12 #accordion .card .card-header .mb-0 button:hover {
+              color: #610404; }
             .section12 #accordion .card .card-header .mb-0 button:focus {
               -webkit-box-shadow: none;
               box-shadow: none; }

@@ -617,8 +617,10 @@
                     <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
                                 aria-expanded="true" aria-controls="collapseTwo">
+                            <div class="wrapper">
                             <span>2. <?= $lang['section12']['question1']?></span>
                             <span class="plus"></span>
+                            </div>
                         </button>
                     </h5>
                 </div>

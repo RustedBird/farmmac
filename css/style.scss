@@ -2920,6 +2920,10 @@ body {
             text-transform: uppercase;
             padding: 0;
             white-space: normal;
+            transition: all 0.3s;
+            &:hover {
+              color: rgb(97, 4, 4);
+            }
             &:focus {
               -webkit-box-shadow: none;
               box-shadow: none;
