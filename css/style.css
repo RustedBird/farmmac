@@ -1,42 +1,37 @@
 @font-face {
   font-family: 'gothampro-light';
-  src: url("../fonts/gothampro-light-webfont.woff2") format("woff2"), url("../fonts/gothampro-light-webfont.woff") format("woff");
-  font-weight: normal;
+  src: url("../fonts/GothamPro-Light.woff2") format("woff2"), url("../fonts/GothamPro-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: 'gothampro-black';
-  src: url("../fonts/gothampro-black-webfont.woff2") format("woff2"), url("../fonts/gothampro-black-webfont.woff") format("woff");
-  font-weight: normal;
+  src: url("../fonts/GothamPro-Black.woff2") format("woff2"), url("../fonts/GothamPro-Black.woff") format("woff");
+  font-weight: 900;
   font-style: normal; }
 @font-face {
   font-family: 'gothampro-medium';
-  src: url("../fonts/gothampro-medium-webfont.woff2") format("woff2"), url("../fonts/gothampro-medium-webfont.woff") format("woff");
-  font-weight: normal;
+  src: url("../fonts/GothamPro-Medium.woff2") format("woff2"), url("../fonts/GothamPro-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal; }
 @font-face {
-  font-family: 'webfontregular';
-  src: url("../fonts/gothampro-bold-webfont.woff2") format("woff2"), url("../fonts/gothampro-bold-webfont.woff") format("woff");
-  font-weight: normal;
+  font-family: 'gothampro-bold';
+  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'gothampro';
-  src: url("../fonts/gothampro-webfont.woff2") format("woff2"), url("../fonts/gothampro-webfont.woff") format("woff");
+  src: url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'gothampro-italic';
-  src: url("../fonts/gothampro-italic-webfont.woff2") format("woff2"), url("../fonts/gothampro-italic-webfont.woff") format("woff");
+  src: url("../fonts/GothamPro-Italic.woff2") format("woff2"), url("../fonts/GothamPro-Italic.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
+  font-style: italic; }
 @font-face {
   font-family: 'bebas_neuebold';
-  src: url("../fonts/bebasneue_bold-webfont.woff2") format("woff2"), url("../fonts/bebasneue_bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'bebas_neueregular';
-  src: url("../fonts/bebasneue-regular-webfont.woff2") format("woff2"), url("../fonts/bebasneue-regular-webfont.woff") format("woff");
-  font-weight: normal;
+  src: url("../fonts/BebasNeueBold.woff2") format("woff2"), url("../fonts/BebasNeueBold.woff") format("woff");
+  font-weight: bold;
   font-style: normal; }
 /*variables*/
 /*mixins*/
@@ -86,7 +81,7 @@ body {
         bottom: 8%; } }
     @media screen and (max-width: 1023px) {
       body .upButton {
-        display: none; } }
+        z-index: -999; } }
   body .light {
     position: absolute;
     width: 100%;
@@ -191,7 +186,7 @@ body {
       .modal-content .modal-body form .formTitle {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 20px;
-        font-weight: 600; }
+        font-weight: 500; }
         @media screen and (max-width: 1440px) {
           .modal-content .modal-body form .formTitle {
             font-size: 18px; } }
@@ -219,8 +214,8 @@ body {
         font-size: 20px;
         font-weight: 300;
         text-align: center;
-        width: 75%;
-        margin: 25px auto;
+        width: 68%;
+        margin: 30px auto;
         display: block; }
         .modal-content .modal-body form input:focus {
           outline: none;
@@ -245,18 +240,6 @@ body {
             width: 85%;
             margin: 20px auto;
             padding: 10px 0; } }
-      .modal-content .modal-body form input[name='email']::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        font-weight: 600; }
-      .modal-content .modal-body form input[name='email']::-moz-placeholder {
-        /* Firefox 19+ */
-        font-weight: 600; }
-      .modal-content .modal-body form input[name='email']:-ms-input-placeholder {
-        /* IE 10+ */
-        font-weight: 600; }
-      .modal-content .modal-body form input[name='email']:-moz-placeholder {
-        /* Firefox 18- */
-        font-weight: 600; }
       .modal-content .modal-body form textarea {
         border: 1px solid #B1ABA8;
         border-bottom-right-radius: 20px;
@@ -266,7 +249,7 @@ body {
         font-family: 'gothampro-light', sans-serif;
         font-size: 20px;
         font-weight: 300;
-        width: 75%;
+        width: 68%;
         margin: 25px auto;
         display: block;
         min-height: 200px;
@@ -302,18 +285,18 @@ body {
         font-size: 20px;
         font-weight: 900;
         text-align: center;
-        width: 75%;
-        margin: 25px auto;
+        width: 68%;
+        margin: 30px auto;
         display: block;
         color: white;
         background: #a50606;
         /* Old browsers */
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+        background: -webkit-linear-gradient(top, #a40606 0%, #e02830 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#d14648));
-        background: -o-linear-gradient(top, #a50606 0%, #d14648 100%);
-        background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#e02830));
+        background: -o-linear-gradient(top, #a40606 0%, #e02830 100%);
+        background: linear-gradient(to bottom, #a40606 0%, #e02830 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
         /* IE6-9 */
@@ -361,6 +344,7 @@ body {
       .modal-content .modal-body form .underText {
         font-family: 'gothampro-light', sans-serif;
         font-size: 14px;
+        font-weight: 300;
         color: #3E3E3E;
         margin-top: 30px;
         text-align: center; }
@@ -381,7 +365,7 @@ body {
     .modal-content .modal-body .itemTitle {
       font-family: 'bebas_neuebold', sans-serif;
       font-size: 80px;
-      font-weight: 800;
+      font-weight: bold;
       background: #8c8b88;
       /* Old browsers */
       /* FF3.6-15 */
@@ -444,7 +428,7 @@ body {
   background-position: bottom center;
   position: relative;
   z-index: 5;
-  padding-bottom: 100px; }
+  padding-bottom: 30px; }
   @media screen and (max-width: 1600px) {
     .section1 {
       padding-bottom: 30px; } }
@@ -476,7 +460,7 @@ body {
       .section1 .container .upperMenu .logo {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 100px; }
+        margin-right: 65px; }
         @media screen and (max-width: 1440px) {
           .section1 .container .upperMenu .logo {
             position: absolute;
@@ -519,8 +503,6 @@ body {
             -webkit-transition: color 0.2s;
             -o-transition: color 0.2s;
             transition: color 0.2s; }
-            .section1 .container .upperMenu .lang:nth-child(4) span:hover {
-              color: #A50606; }
           .section1 .container .upperMenu .lang:nth-child(4) span.active {
             color: #A50606; }
           @media screen and (max-width: 1023px) {
@@ -533,6 +515,8 @@ body {
               line-height: 27px; } }
         .section1 .container .upperMenu .lang span {
           cursor: pointer; }
+          .section1 .container .upperMenu .lang span:hover {
+            color: #A50606; }
         .section1 .container .upperMenu .lang span.active {
           color: #A50606; }
       .section1 .container .upperMenu .phones {
@@ -543,7 +527,7 @@ body {
         .section1 .container .upperMenu .phones span {
           font-family: 'gothampro-medium', sans-serif;
           font-size: 20px;
-          font-weight: 600;
+          font-weight: 500;
           padding: 0 8px; }
           @media screen and (max-width: 1440px) {
             .section1 .container .upperMenu .phones span {
@@ -638,7 +622,7 @@ body {
         .section1 .container .upperMenu form .formTitle {
           font-family: 'gothampro-medium', sans-serif;
           font-size: 20px;
-          font-weight: 600; }
+          font-weight: 500; }
           @media screen and (max-width: 1440px) {
             .section1 .container .upperMenu form .formTitle {
               font-size: 18px; } }
@@ -666,8 +650,8 @@ body {
           font-size: 20px;
           font-weight: 300;
           text-align: center;
-          width: 75%;
-          margin: 25px auto;
+          width: 68%;
+          margin: 30px auto;
           display: block; }
           .section1 .container .upperMenu form input:focus {
             outline: none;
@@ -692,18 +676,6 @@ body {
               width: 85%;
               margin: 20px auto;
               padding: 10px 0; } }
-        .section1 .container .upperMenu form input[name='email']::-webkit-input-placeholder {
-          /* Chrome/Opera/Safari */
-          font-weight: 600; }
-        .section1 .container .upperMenu form input[name='email']::-moz-placeholder {
-          /* Firefox 19+ */
-          font-weight: 600; }
-        .section1 .container .upperMenu form input[name='email']:-ms-input-placeholder {
-          /* IE 10+ */
-          font-weight: 600; }
-        .section1 .container .upperMenu form input[name='email']:-moz-placeholder {
-          /* Firefox 18- */
-          font-weight: 600; }
         .section1 .container .upperMenu form textarea {
           border: 1px solid #B1ABA8;
           border-bottom-right-radius: 20px;
@@ -713,7 +685,7 @@ body {
           font-family: 'gothampro-light', sans-serif;
           font-size: 20px;
           font-weight: 300;
-          width: 75%;
+          width: 68%;
           margin: 25px auto;
           display: block;
           min-height: 200px;
@@ -749,18 +721,18 @@ body {
           font-size: 20px;
           font-weight: 900;
           text-align: center;
-          width: 75%;
-          margin: 25px auto;
+          width: 68%;
+          margin: 30px auto;
           display: block;
           color: white;
           background: #a50606;
           /* Old browsers */
           /* FF3.6-15 */
-          background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+          background: -webkit-linear-gradient(top, #a40606 0%, #e02830 100%);
           /* Chrome10-25,Safari5.1-6 */
-          background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#d14648));
-          background: -o-linear-gradient(top, #a50606 0%, #d14648 100%);
-          background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+          background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#e02830));
+          background: -o-linear-gradient(top, #a40606 0%, #e02830 100%);
+          background: linear-gradient(to bottom, #a40606 0%, #e02830 100%);
           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
           /* IE6-9 */
@@ -808,6 +780,7 @@ body {
         .section1 .container .upperMenu form .underText {
           font-family: 'gothampro-light', sans-serif;
           font-size: 14px;
+          font-weight: 300;
           color: #3E3E3E;
           margin-top: 30px;
           text-align: center; }
@@ -940,32 +913,31 @@ body {
         text-transform: uppercase;
         padding-left: 115px;
         position: relative;
-        margin-top: 10px;
-        letter-spacing: -2px;
-        margin-bottom: 0; }
-        .section1 .container .mainTitleWrapper h1:before {
+        margin-top: 45px;
+        margin-bottom: 0;
+        margin-right: -64px; }
+        .section1 .container .mainTitleWrapper h1 .iconImg {
           content: '';
           position: absolute;
           left: -115px;
           top: -45px;
           width: 250px;
           height: 250px;
-          background: url(../img/titleicon.png);
           background-size: cover; }
           @media screen and (max-width: 1600px) {
-            .section1 .container .mainTitleWrapper h1:before {
+            .section1 .container .mainTitleWrapper h1 .iconImg {
               left: -59px;
               top: -18%;
               width: 180px;
               height: 180px; } }
           @media screen and (max-width: 1440px) {
-            .section1 .container .mainTitleWrapper h1:before {
+            .section1 .container .mainTitleWrapper h1 .iconImg {
               left: -51px;
               top: -36%;
               width: 180px;
               height: 181px; } }
           @media screen and (max-width: 1023px) {
-            .section1 .container .mainTitleWrapper h1:before {
+            .section1 .container .mainTitleWrapper h1 .iconImg {
               display: none; } }
         .section1 .container .mainTitleWrapper h1 span {
           font-size: 72px;
@@ -995,6 +967,7 @@ body {
         @media screen and (max-width: 1023px) {
           .section1 .container .mainTitleWrapper h1 {
             padding-left: 0;
+            margin-right: 0;
             font-size: 61px;
             text-align: center; } }
         @media screen and (max-width: 767px) {
@@ -1005,12 +978,13 @@ body {
             font-size: 32px; } }
     .section1 .container .formBlock {
       text-align: right;
-      margin-top: 50px; }
+      margin-top: 35px; }
       .section1 .container .formBlock .titleWrapper {
         background: #ffffff;
         display: inline-block;
         padding: 0 15px;
-        margin-right: -60px; }
+        margin-right: -41px;
+        letter-spacing: -2px; }
         .section1 .container .formBlock .titleWrapper .subTitle {
           display: inline-block;
           font-family: 'gothampro-black', sans-serif;
@@ -1065,7 +1039,8 @@ body {
         font-size: 30px;
         font-weight: 900;
         color: #232222;
-        margin: 20px -135px 0 0; }
+        letter-spacing: -1.2px;
+        margin: 19px -117px 0 0; }
         @media screen and (max-width: 1600px) {
           .section1 .container .formBlock .smallerText {
             font-size: 25px;
@@ -1104,7 +1079,7 @@ body {
           .section1 .container .formBlock .blockWrapper form .formTitle {
             font-family: 'gothampro-medium', sans-serif;
             font-size: 20px;
-            font-weight: 600; }
+            font-weight: 500; }
             @media screen and (max-width: 1440px) {
               .section1 .container .formBlock .blockWrapper form .formTitle {
                 font-size: 18px; } }
@@ -1132,8 +1107,8 @@ body {
             font-size: 20px;
             font-weight: 300;
             text-align: center;
-            width: 75%;
-            margin: 25px auto;
+            width: 68%;
+            margin: 30px auto;
             display: block; }
             .section1 .container .formBlock .blockWrapper form input:focus {
               outline: none;
@@ -1158,18 +1133,6 @@ body {
                 width: 85%;
                 margin: 20px auto;
                 padding: 10px 0; } }
-          .section1 .container .formBlock .blockWrapper form input[name='email']::-webkit-input-placeholder {
-            /* Chrome/Opera/Safari */
-            font-weight: 600; }
-          .section1 .container .formBlock .blockWrapper form input[name='email']::-moz-placeholder {
-            /* Firefox 19+ */
-            font-weight: 600; }
-          .section1 .container .formBlock .blockWrapper form input[name='email']:-ms-input-placeholder {
-            /* IE 10+ */
-            font-weight: 600; }
-          .section1 .container .formBlock .blockWrapper form input[name='email']:-moz-placeholder {
-            /* Firefox 18- */
-            font-weight: 600; }
           .section1 .container .formBlock .blockWrapper form textarea {
             border: 1px solid #B1ABA8;
             border-bottom-right-radius: 20px;
@@ -1179,7 +1142,7 @@ body {
             font-family: 'gothampro-light', sans-serif;
             font-size: 20px;
             font-weight: 300;
-            width: 75%;
+            width: 68%;
             margin: 25px auto;
             display: block;
             min-height: 200px;
@@ -1215,18 +1178,18 @@ body {
             font-size: 20px;
             font-weight: 900;
             text-align: center;
-            width: 75%;
-            margin: 25px auto;
+            width: 68%;
+            margin: 30px auto;
             display: block;
             color: white;
             background: #a50606;
             /* Old browsers */
             /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+            background: -webkit-linear-gradient(top, #a40606 0%, #e02830 100%);
             /* Chrome10-25,Safari5.1-6 */
-            background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#d14648));
-            background: -o-linear-gradient(top, #a50606 0%, #d14648 100%);
-            background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+            background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#e02830));
+            background: -o-linear-gradient(top, #a40606 0%, #e02830 100%);
+            background: linear-gradient(to bottom, #a40606 0%, #e02830 100%);
             /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
             /* IE6-9 */
@@ -1274,6 +1237,7 @@ body {
           .section1 .container .formBlock .blockWrapper form .underText {
             font-family: 'gothampro-light', sans-serif;
             font-size: 14px;
+            font-weight: 300;
             color: #3E3E3E;
             margin-top: 30px;
             text-align: center; }
@@ -1293,7 +1257,7 @@ body {
             margin-top: 10px; } }
         @media screen and (max-width: 1440px) {
           .section1 .container .formBlock .blockWrapper {
-            padding-right: 10%; } }
+            padding-right: 5%; } }
         @media screen and (max-width: 1023px) {
           .section1 .container .formBlock .blockWrapper {
             display: none; } }
@@ -1324,9 +1288,18 @@ body {
     width: 25%;
     height: auto;
     position: absolute;
-    left: 16%;
+    left: 19%;
     bottom: 0;
     z-index: -1; }
+    @media screen and (min-width: 2000px) {
+      .section1 .mainImg {
+        width: 22%; } }
+    @media screen and (min-width: 2200px) {
+      .section1 .mainImg {
+        width: 20%; } }
+    @media screen and (min-width: 2500px) {
+      .section1 .mainImg {
+        width: 18%; } }
     @media screen and (max-width: 1440px) {
       .section1 .mainImg {
         width: 18%;
@@ -1376,7 +1349,7 @@ body {
       .addSection .blockWrapper form .formTitle {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 20px;
-        font-weight: 600; }
+        font-weight: 500; }
         @media screen and (max-width: 1440px) {
           .addSection .blockWrapper form .formTitle {
             font-size: 18px; } }
@@ -1404,8 +1377,8 @@ body {
         font-size: 20px;
         font-weight: 300;
         text-align: center;
-        width: 75%;
-        margin: 25px auto;
+        width: 68%;
+        margin: 30px auto;
         display: block; }
         .addSection .blockWrapper form input:focus {
           outline: none;
@@ -1430,18 +1403,6 @@ body {
             width: 85%;
             margin: 20px auto;
             padding: 10px 0; } }
-      .addSection .blockWrapper form input[name='email']::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        font-weight: 600; }
-      .addSection .blockWrapper form input[name='email']::-moz-placeholder {
-        /* Firefox 19+ */
-        font-weight: 600; }
-      .addSection .blockWrapper form input[name='email']:-ms-input-placeholder {
-        /* IE 10+ */
-        font-weight: 600; }
-      .addSection .blockWrapper form input[name='email']:-moz-placeholder {
-        /* Firefox 18- */
-        font-weight: 600; }
       .addSection .blockWrapper form textarea {
         border: 1px solid #B1ABA8;
         border-bottom-right-radius: 20px;
@@ -1451,7 +1412,7 @@ body {
         font-family: 'gothampro-light', sans-serif;
         font-size: 20px;
         font-weight: 300;
-        width: 75%;
+        width: 68%;
         margin: 25px auto;
         display: block;
         min-height: 200px;
@@ -1487,18 +1448,18 @@ body {
         font-size: 20px;
         font-weight: 900;
         text-align: center;
-        width: 75%;
-        margin: 25px auto;
+        width: 68%;
+        margin: 30px auto;
         display: block;
         color: white;
         background: #a50606;
         /* Old browsers */
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+        background: -webkit-linear-gradient(top, #a40606 0%, #e02830 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#d14648));
-        background: -o-linear-gradient(top, #a50606 0%, #d14648 100%);
-        background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#e02830));
+        background: -o-linear-gradient(top, #a40606 0%, #e02830 100%);
+        background: linear-gradient(to bottom, #a40606 0%, #e02830 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
         /* IE6-9 */
@@ -1546,6 +1507,7 @@ body {
       .addSection .blockWrapper form .underText {
         font-family: 'gothampro-light', sans-serif;
         font-size: 14px;
+        font-weight: 300;
         color: #3E3E3E;
         margin-top: 30px;
         text-align: center; }
@@ -1560,9 +1522,6 @@ body {
         @media screen and (max-width: 767px) {
           .addSection .blockWrapper form .underText {
             font-size: 18px; } }
-    @media screen and (max-width: 1440px) {
-      .addSection .blockWrapper {
-        padding-right: 10%; } }
     @media screen and (max-width: 767px) {
       .addSection .blockWrapper {
         margin: 15px; } }
@@ -1571,7 +1530,7 @@ body {
   background: url("../img/bg2.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding-top: 60px;
+  padding-top: 100px;
   position: relative;
   z-index: 20; }
   @media screen and (max-width: 767px) {
@@ -1580,7 +1539,7 @@ body {
   .section2 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase; }
     @media screen and (max-width: 1280px) {
@@ -1596,14 +1555,17 @@ body {
       .section2 .sectionTitle {
         font-size: 20px; } }
   .section2 .col-row {
-    padding: 15% 0; }
+    padding: 15% 0;
+    padding-bottom: 12%;
+    display: flex;
+    justify-content: space-between; }
     .section2 .col-row .col-item {
       position: relative;
       padding: 0; }
       .section2 .col-row .col-item .redText {
         font-family: 'bebas_neuebold', sans-serif;
         font-size: 78px;
-        font-weight: 800;
+        font-weight: bold;
         display: inline-block;
         background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
         -webkit-background-clip: text;
@@ -1627,28 +1589,26 @@ body {
             line-height: 57px; } }
         .section2 .col-row .col-item .redText .counter {
           display: inline-block;
-          background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
+          background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 15%, #ea9d9e 40%, #dd0419 72%, #dd0419 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent; }
         .section2 .col-row .col-item .redText .addText {
           font-size: 0.75em;
-          transform: scale(0.5, 1);
           display: inline-block;
-          background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
+          background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 15%, #ea9d9e 40%, #dd0419 72%, #dd0419 100%);
           -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin-left: -22%;
-          margin-right: -15%; }
+          -webkit-text-fill-color: transparent; }
         .section2 .col-row .col-item .redText .smallerText {
           font-size: 0.6em; }
       .section2 .col-row .col-item .subText {
         font-family: 'gothampro-bold', sans-serif;
         font-size: 24px;
         line-height: 28px;
-        font-weight: 800;
+        font-weight: bold;
         color: #4F4F50;
         width: 100%;
-        position: absolute; }
+        position: absolute;
+        letter-spacing: -1px; }
         @media screen and (max-width: 1280px) {
           .section2 .col-row .col-item .subText {
             font-size: 20px;
@@ -1658,8 +1618,7 @@ body {
           .section2 .col-row .col-item .subText {
             position: static;
             font-size: 30px;
-            line-height: 30px;
-            margin: 10px; } }
+            line-height: 30px; } }
         @media screen and (max-width: 767px) {
           .section2 .col-row .col-item .subText {
             font-size: 22px;
@@ -1670,14 +1629,12 @@ body {
             line-height: 18px; } }
       .section2 .col-row .col-item .botText {
         margin-top: -45px;
-        right: 42px;
         text-align: right; }
         @media screen and (max-width: 1440px) {
           .section2 .col-row .col-item .botText {
             margin-top: -42px; } }
       .section2 .col-row .col-item .topText {
         top: -50px;
-        left: 15px;
         text-align: left; }
         @media screen and (max-width: 424px) {
           .section2 .col-row .col-item .topText {
@@ -1695,27 +1652,24 @@ body {
           margin-bottom: 35px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(1) {
-        width: 21%; } }
+        width: 216px; } }
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:nth-of-type(1) {
-        width: 101px; } }
+        width: 112px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(2) {
-        width: 43%; } }
+        width: 316px; } }
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:nth-of-type(2) {
-        width: 200px; } }
+        width: 202px; } }
     .section2 .col-row .col-item:nth-of-type(2) .topText {
-      top: -39px;
-      left: 25px;
       text-align: left; }
       @media screen and (max-width: 1280px) {
         .section2 .col-row .col-item:nth-of-type(2) .topText {
-          top: -32px;
-          left: 25px; } }
+          top: -32px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(3) {
-        width: 21%; } }
+        width: 166px; } }
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:nth-of-type(3) {
         width: 101px; } }
@@ -1724,23 +1678,22 @@ body {
         margin-top: -30px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(4) {
-        width: 31%; } }
+        width: 229px; } }
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:nth-of-type(4) {
-        width: 156px; } }
+        width: 155px; } }
     .section2 .col-row .col-item:nth-of-type(4) .topText {
       top: -14px;
-      text-align: left;
-      margin-left: -15%; }
+      text-align: left; }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(4) .botText {
         margin-top: -30px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:last-of-type {
-        width: 41%; } }
+        width: 289px; } }
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:last-of-type {
-        width: 48%; } }
+        width: 185px; } }
     .section2 .col-row .col-item:last-of-type .topText {
       top: -71px;
       text-align: left; }
@@ -1769,7 +1722,7 @@ body {
   .section3 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 100px;
@@ -1818,9 +1771,6 @@ body {
       @media screen and (max-width: 1850px) {
         .section3 .row .picBlock img {
           width: 190px; } }
-      @media screen and (max-width: 1499px) {
-        .section3 .row .picBlock img {
-          width: 130px; } }
       @media screen and (max-width: 1023px) {
         .section3 .row .picBlock img {
           width: 200px; } }
@@ -1830,7 +1780,7 @@ body {
     .section3 .row .picBlock .underText {
       font-family: 'gothampro-medium', sans-serif;
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 20px;
       margin-top: 20px;
       text-align: center; }
@@ -1911,7 +1861,7 @@ body {
   .section4 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 50px; }
@@ -1965,7 +1915,7 @@ body {
       .section4 .row .textItem p {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         margin: 0;
         display: table-cell;
@@ -2056,7 +2006,7 @@ body {
   .section5 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 50px; }
@@ -2086,7 +2036,7 @@ body {
         .section5 .topRow .topItem .titleWrapper .itemTitle {
           font-family: 'bebas_neuebold', sans-serif;
           font-size: 80px;
-          font-weight: 800;
+          font-weight: bold;
           background: #8c8b88;
           /* Old browsers */
           /* FF3.6-15 */
@@ -2139,11 +2089,11 @@ body {
             margin-top: 20px; }
         .section5 .topRow .topItem .description .techText {
           font-family: 'gothampro-medium', sans-serif;
-          font-weight: 600;
+          font-weight: 500;
           margin: 0; }
         .section5 .topRow .topItem .description .subName {
           font-family: 'gothampro-bold', sans-serif;
-          font-weight: 800;
+          font-weight: bold;
           margin-top: 15px;
           margin-bottom: 0;
           text-transform: uppercase; }
@@ -2163,7 +2113,7 @@ body {
         display: none;
         font-family: 'gothampro-bold', sans-serif;
         font-size: 32px;
-        font-weight: 800;
+        font-weight: bold;
         text-transform: uppercase;
         width: 100%;
         margin: 25px 0;
@@ -2324,7 +2274,7 @@ body {
   .section5 h5 {
     font-family: 'gothampro-bold', sans-serif;
     font-size: 36px;
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     width: 100%;
     margin: 25px 0;
@@ -2352,7 +2302,7 @@ body {
   .section6 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     padding-bottom: 80px; }
@@ -2418,7 +2368,7 @@ body {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 30px;
         line-height: 32px;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         vertical-align: middle;
         margin: 0; }
@@ -2482,6 +2432,10 @@ body {
             -webkit-transition: all 0.2s linear;
             -o-transition: all 0.2s linear;
             transition: all 0.2s linear; }
+            @media screen and (max-width: 1440px) {
+              .section6 .calcWrapper .form-line .inputWrapper label .checkmark {
+                height: 30px;
+                width: 30px; } }
             .section6 .calcWrapper .form-line .inputWrapper label .checkmark:hover {
               background: #ccc6c3; }
             .section6 .calcWrapper .form-line .inputWrapper label .checkmark:after {
@@ -2494,16 +2448,12 @@ body {
               width: 15px;
               height: 15px;
               background: #B1ABA8; }
-              @media screen and (max-width: 1280px) {
+              @media screen and (max-width: 1440px) {
                 .section6 .calcWrapper .form-line .inputWrapper label .checkmark:after {
                   top: 8px;
                   left: 8px;
                   width: 12px;
                   height: 12px; } }
-            @media screen and (max-width: 1280px) {
-              .section6 .calcWrapper .form-line .inputWrapper label .checkmark {
-                height: 30px;
-                width: 30px; } }
           .section6 .calcWrapper .form-line .inputWrapper label:hover .checkmark {
             background: #f1ebe8; }
           @media screen and (max-width: 1440px) {
@@ -2532,7 +2482,7 @@ body {
           @media screen and (max-width: 1440px) {
             .section6 .calcWrapper .form-line .inputWrapper .performance {
               font-size: 22px;
-              padding: 3px 0;
+              padding: 0;
               width: 30%; } }
           @media screen and (max-width: 1280px) {
             .section6 .calcWrapper .form-line .inputWrapper .performance {
@@ -2559,12 +2509,13 @@ body {
           @media screen and (max-width: 1440px) {
             .section6 .calcWrapper .form-line .inputWrapper .inputParam {
               font-size: 22px;
-              padding: 3px 0; } }
+              padding: 0;
+              width: 71%; } }
           @media screen and (max-width: 1280px) {
             .section6 .calcWrapper .form-line .inputWrapper .inputParam {
               font-size: 20px;
               padding: 2px 0;
-              width: 75%; } }
+              width: 61%; } }
           .section6 .calcWrapper .form-line .inputWrapper .inputParam:focus {
             outline: none;
             background: #eae4e1; }
@@ -2600,7 +2551,7 @@ body {
     .section6 .calcWrapper .answer {
       font-family: 'gothampro', sans-serif;
       font-size: 30px;
-      font-weight: 300;
+      font-weight: normal;
       margin-bottom: 0;
       letter-spacing: 1px; }
       @media screen and (max-width: 1440px) {
@@ -2634,7 +2585,7 @@ body {
     .section6 .calcWrapper .result {
       font-family: 'bebas_neuebold', sans-serif;
       font-size: 80px;
-      font-weight: 800;
+      font-weight: bold;
       background: #8c8b88;
       /* Old browsers */
       /* FF3.6-15 */
@@ -2737,7 +2688,7 @@ body {
     .section6 .calcWrapper .calcResult {
       font-family: 'gothampro-bold', sans-serif;
       font-size: 24px;
-      font-weight: 800;
+      font-weight: bold;
       margin: 35px 0; }
       @media screen and (max-width: 1440px) {
         .section6 .calcWrapper .calcResult {
@@ -2785,7 +2736,7 @@ body {
   .section7 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 100px; }
@@ -2826,7 +2777,7 @@ body {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 18px;
         line-height: 20px;
-        font-weight: 600;
+        font-weight: 500;
         color: #232222;
         width: 360px;
         padding: 10px 15px 10px 0;
@@ -2901,6 +2852,17 @@ body {
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear; }
+    @media screen and (min-width: 2000px) {
+      .section7 .bgImg {
+        width: 20%; } }
+    @media screen and (min-width: 2200px) {
+      .section7 .bgImg {
+        width: 18%;
+        left: 43%; } }
+    @media screen and (min-width: 2500px) {
+      .section7 .bgImg {
+        width: 17%;
+        left: 44%; } }
     @media screen and (max-width: 1800px) {
       .section7 .bgImg {
         bottom: 5%; } }
@@ -3008,7 +2970,7 @@ body {
   .section8 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 90px; }
@@ -3070,7 +3032,7 @@ body {
       .section8 .iconRow .iconItem .iconCaption {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 500;
         position: relative;
         margin: 16px 0; }
         @media screen and (max-width: 1023px) {
@@ -3116,7 +3078,7 @@ body {
   .section9 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase; }
     @media screen and (max-width: 1280px) {
@@ -3198,8 +3160,8 @@ body {
         font-family: 'gothampro-italic', sans-serif;
         font-size: 20px;
         line-height: 28px;
+        font-weight: normal;
         font-style: italic;
-        font-weight: 300;
         color: #242424;
         margin-top: 25px; }
         @media screen and (max-width: 1600px) {
@@ -3225,7 +3187,7 @@ body {
       .section9 #slickSlider .sliderItem .name {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 26px;
-        font-weight: 600;
+        font-weight: 500;
         margin-top: 30px; }
         @media screen and (max-width: 1600px) {
           .section9 #slickSlider .sliderItem .name {
@@ -3244,7 +3206,7 @@ body {
       .section9 #slickSlider .sliderItem .address {
         font-family: 'gothampro', sans-serif;
         font-size: 22px;
-        font-weight: 300;
+        font-weight: normal;
         color: #242424;
         margin-top: 20px; }
         @media screen and (max-width: 1600px) {
@@ -3266,7 +3228,8 @@ body {
             line-height: 18px; } }
       .section9 #slickSlider .sliderItem .howLong {
         font-family: 'gothampro', sans-serif;
-        font-size: 22px; }
+        font-size: 22px;
+        font-weight: normal; }
         @media screen and (max-width: 1600px) {
           .section9 #slickSlider .sliderItem .howLong {
             font-size: 20px; } }
@@ -3330,6 +3293,9 @@ body {
       transform: rotate(45deg); }
       .section9 #slickSlider .slick-prev:before {
         opacity: 0; }
+      @media screen and (min-width: 2300px) {
+        .section9 #slickSlider .slick-prev {
+          left: 31%; } }
       @media screen and (max-width: 1850px) {
         .section9 #slickSlider .slick-prev {
           left: 24%; } }
@@ -3356,6 +3322,9 @@ body {
       transform: rotate(-45deg); }
       .section9 #slickSlider .slick-next:before {
         opacity: 0; }
+      @media screen and (min-width: 2300px) {
+        .section9 #slickSlider .slick-next {
+          right: 31%; } }
       @media screen and (max-width: 1850px) {
         .section9 #slickSlider .slick-next {
           right: 24%; } }
@@ -3408,7 +3377,7 @@ body {
   .section10 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 30px; }
@@ -3549,7 +3518,7 @@ body {
   .section11 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     color: #002AFF;
@@ -3602,7 +3571,7 @@ body {
     .section11 .formBlock form .formTitle {
       font-family: 'gothampro-medium', sans-serif;
       font-size: 20px;
-      font-weight: 600; }
+      font-weight: 500; }
       @media screen and (max-width: 1440px) {
         .section11 .formBlock form .formTitle {
           font-size: 18px; } }
@@ -3630,8 +3599,8 @@ body {
       font-size: 20px;
       font-weight: 300;
       text-align: center;
-      width: 75%;
-      margin: 25px auto;
+      width: 68%;
+      margin: 30px auto;
       display: block; }
       .section11 .formBlock form input:focus {
         outline: none;
@@ -3656,18 +3625,6 @@ body {
           width: 85%;
           margin: 20px auto;
           padding: 10px 0; } }
-    .section11 .formBlock form input[name='email']::-webkit-input-placeholder {
-      /* Chrome/Opera/Safari */
-      font-weight: 600; }
-    .section11 .formBlock form input[name='email']::-moz-placeholder {
-      /* Firefox 19+ */
-      font-weight: 600; }
-    .section11 .formBlock form input[name='email']:-ms-input-placeholder {
-      /* IE 10+ */
-      font-weight: 600; }
-    .section11 .formBlock form input[name='email']:-moz-placeholder {
-      /* Firefox 18- */
-      font-weight: 600; }
     .section11 .formBlock form textarea {
       border: 1px solid #B1ABA8;
       border-bottom-right-radius: 20px;
@@ -3677,7 +3634,7 @@ body {
       font-family: 'gothampro-light', sans-serif;
       font-size: 20px;
       font-weight: 300;
-      width: 75%;
+      width: 68%;
       margin: 25px auto;
       display: block;
       min-height: 200px;
@@ -3713,18 +3670,18 @@ body {
       font-size: 20px;
       font-weight: 900;
       text-align: center;
-      width: 75%;
-      margin: 25px auto;
+      width: 68%;
+      margin: 30px auto;
       display: block;
       color: white;
       background: #a50606;
       /* Old browsers */
       /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+      background: -webkit-linear-gradient(top, #a40606 0%, #e02830 100%);
       /* Chrome10-25,Safari5.1-6 */
-      background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#d14648));
-      background: -o-linear-gradient(top, #a50606 0%, #d14648 100%);
-      background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#e02830));
+      background: -o-linear-gradient(top, #a40606 0%, #e02830 100%);
+      background: linear-gradient(to bottom, #a40606 0%, #e02830 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
       /* IE6-9 */
@@ -3772,6 +3729,7 @@ body {
     .section11 .formBlock form .underText {
       font-family: 'gothampro-light', sans-serif;
       font-size: 14px;
+      font-weight: 300;
       color: #3E3E3E;
       margin-top: 30px;
       text-align: center; }
@@ -3801,7 +3759,7 @@ body {
   .section12 .sectionTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 900;
     color: #232222;
     text-transform: uppercase;
     margin-bottom: 80px; }
@@ -3911,7 +3869,7 @@ body {
       .section12 #accordion .card .card-body {
         font-family: 'gothampro', sans-serif;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: normal;
         background: white; }
         @media screen and (max-width: 1440px) {
           .section12 #accordion .card .card-body {
@@ -3953,7 +3911,7 @@ body {
       .section12 .formBlock form .formTitle {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 20px;
-        font-weight: 600; }
+        font-weight: 500; }
         @media screen and (max-width: 1440px) {
           .section12 .formBlock form .formTitle {
             font-size: 18px; } }
@@ -3981,8 +3939,8 @@ body {
         font-size: 20px;
         font-weight: 300;
         text-align: center;
-        width: 75%;
-        margin: 25px auto;
+        width: 68%;
+        margin: 30px auto;
         display: block; }
         .section12 .formBlock form input:focus {
           outline: none;
@@ -4007,18 +3965,6 @@ body {
             width: 85%;
             margin: 20px auto;
             padding: 10px 0; } }
-      .section12 .formBlock form input[name='email']::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        font-weight: 600; }
-      .section12 .formBlock form input[name='email']::-moz-placeholder {
-        /* Firefox 19+ */
-        font-weight: 600; }
-      .section12 .formBlock form input[name='email']:-ms-input-placeholder {
-        /* IE 10+ */
-        font-weight: 600; }
-      .section12 .formBlock form input[name='email']:-moz-placeholder {
-        /* Firefox 18- */
-        font-weight: 600; }
       .section12 .formBlock form textarea {
         border: 1px solid #B1ABA8;
         border-bottom-right-radius: 20px;
@@ -4028,7 +3974,7 @@ body {
         font-family: 'gothampro-light', sans-serif;
         font-size: 20px;
         font-weight: 300;
-        width: 75%;
+        width: 68%;
         margin: 25px auto;
         display: block;
         min-height: 200px;
@@ -4064,18 +4010,18 @@ body {
         font-size: 20px;
         font-weight: 900;
         text-align: center;
-        width: 75%;
-        margin: 25px auto;
+        width: 68%;
+        margin: 30px auto;
         display: block;
         color: white;
         background: #a50606;
         /* Old browsers */
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #a50606 0%, #d14648 100%);
+        background: -webkit-linear-gradient(top, #a40606 0%, #e02830 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#d14648));
-        background: -o-linear-gradient(top, #a50606 0%, #d14648 100%);
-        background: linear-gradient(to bottom, #a50606 0%, #d14648 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#a50606), to(#e02830));
+        background: -o-linear-gradient(top, #a40606 0%, #e02830 100%);
+        background: linear-gradient(to bottom, #a40606 0%, #e02830 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0);
         /* IE6-9 */
@@ -4123,6 +4069,7 @@ body {
       .section12 .formBlock form .underText {
         font-family: 'gothampro-light', sans-serif;
         font-size: 14px;
+        font-weight: 300;
         color: #3E3E3E;
         margin-top: 30px;
         text-align: center; }
@@ -4177,7 +4124,7 @@ body {
   .footer .address {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -4189,7 +4136,7 @@ body {
   .footer .phone {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -4222,7 +4169,7 @@ body {
   .footer .email {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     letter-spacing: 1px;
     margin-left: 115px;

@@ -49,6 +49,7 @@
         </div>
         <div class="mainTitleWrapper">
             <h1><?= $lang['section1']['title'] ?><br>
+                <img class="iconImg" src="" alt="">
                 <span><?= $lang['section1']['BrandName'] ?></span>
             </h1>
         </div>
@@ -72,7 +73,7 @@
         </div>
     </div>
     <img class="mainImg" src="../img/maindrieralt.png" alt="drier">
-    <img class="sign" src="../img/titleicon.png" alt="sign">
+    <img class="sign" src="" alt="sign">
 </section>
 <!-- первый экран -->
 
@@ -98,27 +99,27 @@
 <section class="container-fluid section2">
     <div class="container">
         <h6 class="sectionTitle text-center"><?= $lang['section2']['title']?></h6>
-        <div class="row col-row">
-            <div class="col-md-2 col-item">
+        <div class="col-row">
+            <div class="col-item">
                 <p class="redText"><span class="counter" data-count="9">9</span> <span class="addText"><?= $lang['section2']['counterPeriod']?></span></p>
                 <p class="subText botText"><?= $lang['section2']['counterPeriodBottomText']?></p>
             </div>
-            <div class="col-md-3 col-item">
+            <div class="col-item">
                 <p class="subText topText"><?= $lang['section2']['counterRegionTopText']?></p>
                 <p class="redText"><span class="counter" data-count="15">15</span> <span class="smallerText addText"><?= $lang['section2']['counterRegion']?></span>
                 </p>
                 <p class="subText botText"><?= $lang['section2']['counterRegionBottomText']?></p>
             </div>
-            <div class="col-md-2 col-item text-center">
+            <div class="col-item text-center">
                 <p class="redText"><span class="counter" data-count="80">80</span><span>+</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterClientBottomText']?></p>
             </div>
-            <div class="col-md-2 col-item text-center">
+            <div class="col-item">
                 <p class="subText topText"><?= $lang['section2']['counterYearTopText']?></p>
-                <p class="redText"><span class="counter" data-count="1958">1958</span></p>
+                <p class="redText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="counter" data-count="1958">1958</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterYearBottomText']?></p>
             </div>
-            <div class="col-md-3 col-item">
+            <div class="col-item">
                 <p class="subText topText"><?= $lang['section2']['counterCountryTopText']?></p>
                 <p class="redText"><span class="counter" data-count="52">52</span> <span class="smallerText addText"><?= $lang['section2']['counterCountry']?></span>
                 </p>
@@ -173,13 +174,13 @@
         <h6 class="sectionTitle text-center"><?= $lang['section4']['title']?></h6>
         <div class="row">
             <div class="col-md-2 picItem text-center">
-                <img src="../img/gearicon.jpg" alt="gear">
+                <img src="../img/gearicon.png" alt="gear">
             </div>
             <div class="col-md-3 textItem">
                 <p><?= $lang['section4']['item1']?></p>
             </div>
             <div class="col-md-2 offset-md-2 picItem">
-                <img src="../img/pointericon.jpg" alt="pointer">
+                <img src="../img/pointericon.png" alt="pointer">
             </div>
             <div class="col-md-3 textItem">
                 <p><?= $lang['section4']['item2']?></p>
@@ -187,13 +188,13 @@
         </div>
         <div class="row">
             <div class="col-md-2 picItem text-center">
-                <img src="../img/puzzleicon.jpg" alt="puzzle">
+                <img src="../img/puzzleicon.png" alt="puzzle">
             </div>
             <div class="col-md-3 textItem">
                 <p><?= $lang['section4']['item3']?></p>
             </div>
             <div class="col-md-2 offset-md-2 picItem">
-                <img src="../img/forkicon.jpg" alt="fork">
+                <img src="../img/forkicon.png" alt="fork">
             </div>
             <div class="col-md-3 textItem">
                 <p><?= $lang['section4']['item4']?></p>
@@ -201,13 +202,13 @@
         </div>
         <div class="row">
             <div class="col-md-2 picItem text-center">
-                <img src="../img/planticon.jpg" alt="plant">
+                <img src="../img/planticon.png" alt="plant">
             </div>
             <div class="col-md-3 textItem">
                 <p><?= $lang['section4']['item5']?></p>
             </div>
             <div class="col-md-2 offset-md-2 picItem">
-                <img src="../img/moneyicon.jpg" alt="money">
+                <img src="../img/moneyicon.png" alt="money">
             </div>
             <div class="col-md-3 textItem">
                 <p><?= $lang['section4']['item6']?></p>
@@ -353,31 +354,31 @@
                     <div class="form-line noPadding">
                         <p class="paramName paramWide"><?= $lang['section6']['calc2']['forSeason']?></p>
                         <div class="inputWrapper inputNarrow">
-                            <input class="inputParam" type="number" name="tons" value="3000">
+                            <input class="inputParam" type="number" name="tons" value="3000" min="0">
                         </div>
                     </div>
                     <div class="form-line noPadding">
                         <p class="paramName paramWide"><?= $lang['section6']['calc2']['forTon']?></p>
                         <div class="inputWrapper inputNarrow">
-                            <input class="inputParam" type="number" name="prices_elevator" value="10">
+                            <input class="inputParam" type="number" name="prices_elevator" value="10" min="0">
                         </div>
                     </div>
                     <div class="form-line noPadding">
                         <p class="paramName paramWide"><?= $lang['section6']['calc2']['diesel']?><span><?= $lang['section6']['calc2']['dieselSmaller']?></span></p>
                         <div class="inputWrapper inputNarrow">
-                            <input class="inputParam" type="number" name="diesel_price" value="27">
+                            <input class="inputParam" type="number" name="diesel_price" value="27" min="0">
                         </div>
                     </div>
                     <div class="form-line noPadding">
                         <p class="paramName paramWide"><?= $lang['section6']['calc2']['gas']?><span><?= $lang['section6']['calc2']['gasSmaller']?></span></p>
                         <div class="inputWrapper inputNarrow">
-                            <input class="inputParam" type="number" name="gas_price" value="12.5">
+                            <input class="inputParam" type="number" name="gas_price" value="12.5" min="0">
                         </div>
                     </div>
                     <div class="form-line noPadding">
                         <p class="paramName paramWide"><?= $lang['section6']['calc2']['pellet']?><span><?= $lang['section6']['calc2']['pelletSmaller']?></span></p>
                         <div class="inputWrapper inputNarrow">
-                            <input class="inputParam" type="number" name="pellet_price" value="1.6">
+                            <input class="inputParam" type="number" name="pellet_price" value="1.6" min="0">
                         </div>
                     </div>
                     <button class="button"><?= $lang['section6']['calc2']['button']?></button>
@@ -446,33 +447,33 @@
         <h5 class="sectionTitle text-center"><?= $lang['section8']['title'] ?></h5>
         <div class="iconRow clearfix">
             <div class="iconItem">
-                <img class="topImg" src="../img/headphones.jpg" alt="headphones">
+                <img class="topImg" src="../img/headphones.png" alt="headphones">
                 <p class="iconCaption topPosition"><?= $lang['section8']['item1'] ?></p>
-                <img class="bottomImg" src="../img/headphones.jpg" alt="headphones">
+                <img class="bottomImg" src="../img/headphones.png" alt="headphones">
             </div>
             <div class="iconItem">
-                <img src="../img/phone.jpg" alt="phone">
+                <img src="../img/phoneic.png" alt="phone">
                 <p class="iconCaption topPosition"><?= $lang['section8']['item2'] ?></p>
             </div>
             <div class="iconItem">
-                <img class="topImg" src="../img/tools.jpg" alt="tools">
+                <img class="topImg" src="../img/tools.png" alt="tools">
                 <p class="iconCaption sidePull"><?= $lang['section8']['item3'] ?></p>
-                <img class="bottomImg" src="../img/tools.jpg" alt="tools">
+                <img class="bottomImg" src="../img/tools.png" alt="tools">
             </div>
         </div>
 
         <div class="iconRow clearfix">
             <div class="iconItem">
-                <img class="topImg" src="../img/star.jpg" alt="star">
+                <img class="topImg" src="../img/star.png" alt="star">
                 <p class="iconCaption sidePull"><?= $lang['section8']['item4'] ?></p>
-                <img class="bottomImg" src="../img/star.jpg" alt="star">
+                <img class="bottomImg" src="../img/star.png" alt="star">
             </div>
             <div class="iconItem">
-                <img src="../img/book.jpg" alt="book">
+                <img src="../img/book.png" alt="book">
                 <p class="iconCaption sidePull"><?= $lang['section8']['item5'] ?></p>
             </div>
             <div class="iconItem">
-                <img src="../img/info.jpg" alt="info">
+                <img src="../img/info.png" alt="info">
                 <p class="iconCaption"><?= $lang['section8']['item6'] ?></p>
             </div>
         </div>
@@ -711,7 +712,7 @@
             </div>
         </div>
         <h6 class="subTitle text-center"><?= $lang['section12']['subTitle']?></h6>
-        <div class="col-md-6 offset-md-3 formBlock">
+        <div class="col-md-8 offset-md-2 formBlock">
             <form class="ajaxForm" action="../process.php" method="post">
                 <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">

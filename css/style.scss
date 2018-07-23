@@ -1,66 +1,57 @@
 @font-face {
   font-family: 'gothampro-light';
-  src: url('../fonts/gothampro-light-webfont.woff2') format('woff2'),
-  url('../fonts/gothampro-light-webfont.woff') format('woff');
-  font-weight: normal;
+  src: url('../fonts/GothamPro-Light.woff2') format('woff2'),
+  url('../fonts/GothamPro-Light.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'gothampro-black';
-  src: url('../fonts/gothampro-black-webfont.woff2') format('woff2'),
-  url('../fonts/gothampro-black-webfont.woff') format('woff');
-  font-weight: normal;
+  src: url('../fonts/GothamPro-Black.woff2') format('woff2'),
+  url('../fonts/GothamPro-Black.woff') format('woff');
+  font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'gothampro-medium';
-  src: url('../fonts/gothampro-medium-webfont.woff2') format('woff2'),
-  url('../fonts/gothampro-medium-webfont.woff') format('woff');
-  font-weight: normal;
+  src: url('../fonts/GothamPro-Medium.woff2') format('woff2'),
+  url('../fonts/GothamPro-Medium.woff') format('woff');
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'webfontregular';
-  src: url('../fonts/gothampro-bold-webfont.woff2') format('woff2'),
-  url('../fonts/gothampro-bold-webfont.woff') format('woff');
-  font-weight: normal;
+  font-family: 'gothampro-bold';
+  src: url('../fonts/GothamPro-Bold.woff2') format('woff2'),
+  url('../fonts/GothamPro-Bold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'gothampro';
-  src: url('../fonts/gothampro-webfont.woff2') format('woff2'),
-  url('../fonts/gothampro-webfont.woff') format('woff');
+  src: url('../fonts/GothamPro.woff2') format('woff2'),
+  url('../fonts/GothamPro.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'gothampro-italic';
-  src: url('../fonts/gothampro-italic-webfont.woff2') format('woff2'),
-  url('../fonts/gothampro-italic-webfont.woff') format('woff');
+  src: url('../fonts/GothamPro-Italic.woff2') format('woff2'),
+  url('../fonts/GothamPro-Italic.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: 'bebas_neuebold';
-  src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
-  url('../fonts/bebasneue_bold-webfont.woff') format('woff');
-  font-weight: normal;
+  src: url('../fonts/BebasNeueBold.woff2') format('woff2'),
+  url('../fonts/BebasNeueBold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'bebas_neueregular';
-  src: url('../fonts/bebasneue-regular-webfont.woff2') format('woff2'),
-  url('../fonts/bebasneue-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
 }
 
 /*variables*/
@@ -70,7 +61,7 @@ $mainColor: #EC0606;
 @mixin sectionTitle {
   font-family: 'gothampro-black', sans-serif;
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 900;
   color: #232222;
   text-transform: uppercase;
   @media screen and (max-width: 1280px) {
@@ -90,7 +81,7 @@ $mainColor: #EC0606;
 @mixin redTitle {
   font-family: 'bebas_neuebold', sans-serif;
   font-size: 78px;
-  font-weight: 800;
+  font-weight: bold;
   display: inline-block;
   background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 36%, rgba(234, 157, 158, 1) 54%, rgba(221, 4, 25, 1) 72%, rgba(221, 4, 25, 1) 100%);
   -webkit-background-clip: text;
@@ -117,7 +108,7 @@ $mainColor: #EC0606;
 @mixin greyTitle {
   font-family: 'bebas_neuebold', sans-serif;
   font-size: 80px;
-  font-weight: 800;
+  font-weight: bold;
   background: rgba(140, 139, 136, 1); /* Old browsers */ /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(23, 23, 23, 1) 100%); /* Chrome10-25,Safari5.1-6 */
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), to(rgba(23, 23, 23, 1)));
@@ -211,7 +202,7 @@ $mainColor: #EC0606;
     .formTitle {
       font-family: 'gothampro-medium', sans-serif;
       font-size: 20px;
-      font-weight: 600;
+      font-weight: 500;
       @media screen and (max-width: 1440px) {
         font-size: 18px;
       }
@@ -242,8 +233,8 @@ $mainColor: #EC0606;
       font-size: 20px;
       font-weight: 300;
       text-align: center;
-      width: 75%;
-      margin: 25px auto;
+      width: 68%;
+      margin: 30px auto;
       display: block;
       &:focus {
         outline: none;
@@ -270,18 +261,6 @@ $mainColor: #EC0606;
         padding: 10px 0;
       }
     }
-    input[name='email']::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      font-weight: 600;
-    }
-    input[name='email']::-moz-placeholder { /* Firefox 19+ */
-      font-weight: 600;
-    }
-    input[name='email']:-ms-input-placeholder { /* IE 10+ */
-      font-weight: 600;
-    }
-    input[name='email']:-moz-placeholder { /* Firefox 18- */
-      font-weight: 600;
-    }
     textarea {
       border: 1px solid #B1ABA8;
       border-bottom-right-radius: 20px;
@@ -291,7 +270,7 @@ $mainColor: #EC0606;
       font-family: 'gothampro-light', sans-serif;
       font-size: 20px;
       font-weight: 300;
-      width: 75%;
+      width: 68%;
       margin: 25px auto;
       display: block;
       min-height: 200px;
@@ -329,15 +308,15 @@ $mainColor: #EC0606;
       font-size: 20px;
       font-weight: 900;
       text-align: center;
-      width: 75%;
-      margin: 25px auto;
+      width: 68%;
+      margin: 30px auto;
       display: block;
       color: white;
       background: rgb(165, 6, 6); /* Old browsers */ /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(165, 6, 6, 1)), to(rgba(209, 70, 72, 1)));
-      background: -o-linear-gradient(top, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%);
-      background: linear-gradient(to bottom, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background: -webkit-linear-gradient(top, rgba(164, 6, 6, 1) 0%, rgba(224, 40, 48, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(165, 6, 6, 1)), to(rgba(224, 40, 48, 1)));
+      background: -o-linear-gradient(top, rgba(164, 6, 6, 1) 0%, rgba(224, 40, 48, 1) 100%);
+      background: linear-gradient(to bottom, rgba(164, 6, 6, 1) 0%, rgba(224, 40, 48, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0); /* IE6-9 */
       -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
       box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
@@ -381,6 +360,7 @@ $mainColor: #EC0606;
     .underText {
       font-family: 'gothampro-light', sans-serif;
       font-size: 14px;
+      font-weight: 300;
       color: #3E3E3E;
       margin-top: 30px;
       text-align: center;
@@ -448,7 +428,7 @@ body {
       bottom: 8%;
     }
     @media screen and (max-width: 1023px) {
-      display: none;
+      z-index: -999;
     }
   }
   .light {
@@ -615,7 +595,7 @@ body {
   background-position: bottom center;
   position: relative;
   z-index: 5;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   @media screen and (max-width: 1600px) {
     padding-bottom: 30px;
   }
@@ -647,7 +627,7 @@ body {
       .logo {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 100px;
+        margin-right: 65px;
         @media screen and (max-width: 1440px) {
           position: absolute;
           left: 10%;
@@ -692,9 +672,6 @@ body {
             -webkit-transition: color 0.2s;
             -o-transition: color 0.2s;
             transition: color 0.2s;
-            &:hover {
-              color: #A50606;
-            }
           }
           span.active {
             color: #A50606;
@@ -710,6 +687,9 @@ body {
         }
         span {
           cursor: pointer;
+          &:hover {
+            color: #A50606;
+          }
         }
         span.active {
           color: #A50606;
@@ -723,7 +703,7 @@ body {
         span {
           font-family: 'gothampro-medium', sans-serif;
           font-size: 20px;
-          font-weight: 600;
+          font-weight: 500;
           padding: 0 8px;
           @media screen and (max-width: 1440px) {
             font-size: 18px;
@@ -828,17 +808,16 @@ body {
         text-transform: uppercase;
         padding-left: 115px;
         position: relative;
-        margin-top: 10px;
-        letter-spacing: -2px;
+        margin-top: 45px;
         margin-bottom: 0;
-        &:before {
+        margin-right: -64px;
+        .iconImg {
           content: '';
           position: absolute;
           left: -115px;
           top: -45px;
           width: 250px;
           height: 250px;
-          background: url(../img/titleicon.png);
           background-size: cover;
           @media screen and (max-width: 1600px) {
             left: -59px;
@@ -884,6 +863,7 @@ body {
         }
         @media screen and (max-width: 1023px) {
           padding-left: 0;
+          margin-right: 0;
           font-size: 61px;
           text-align: center;
         }
@@ -897,12 +877,13 @@ body {
     }
     .formBlock {
       text-align: right;
-      margin-top: 50px;
+      margin-top: 35px;
       .titleWrapper {
         background: #ffffff;
         display: inline-block;
         padding: 0 15px;
-        margin-right: -60px;
+        margin-right: -41px;
+        letter-spacing: -2px;
         .subTitle {
           display: inline-block;
           font-family: 'gothampro-black', sans-serif;
@@ -954,7 +935,8 @@ body {
         font-size: 30px;
         font-weight: 900;
         color: #232222;
-        margin: 20px -135px 0 0;
+        letter-spacing: -1.2px;
+        margin: 19px -117px 0 0;
         @media screen and (max-width: 1600px) {
           font-size: 25px;
           margin: 10px -135px 0 0;
@@ -984,7 +966,7 @@ body {
           margin-top: 10px;
         }
         @media screen and (max-width: 1440px) {
-          padding-right: 10%;
+          padding-right: 5%;
         }
         @media screen and (max-width: 1023px) {
           display: none;
@@ -1020,9 +1002,18 @@ body {
     width: 25%;
     height: auto;
     position: absolute;
-    left: 16%;
+    left: 19%;
     bottom: 0;
     z-index: -1;
+    @media screen and (min-width: 2000px) {
+      width: 22%;
+    }
+    @media screen and (min-width: 2200px) {
+      width: 20%;
+    }
+    @media screen and (min-width: 2500px) {
+      width: 18%;
+    }
     @media screen and (max-width: 1440px) {
       width: 18%;
       left: 21%;
@@ -1061,9 +1052,6 @@ body {
   .blockWrapper {
     margin: 30px;
     @include sendForm;
-    @media screen and (max-width: 1440px) {
-      padding-right: 10%;
-    }
     @media screen and (max-width: 767px) {
       margin: 15px;
     }
@@ -1074,7 +1062,7 @@ body {
   background: url("../img/bg2.jpg") no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding-top: 60px;
+  padding-top: 100px;
   position: relative;
   z-index: 20;
   @media screen and (max-width: 767px) {
@@ -1085,6 +1073,9 @@ body {
   }
   .col-row {
     padding: 15% 0;
+    padding-bottom: 12%;
+    display: flex;
+    justify-content: space-between;
     .col-item {
       position: relative;
       padding: 0;
@@ -1092,19 +1083,16 @@ body {
         @include redTitle;
         .counter {
           display: inline-block;
-          background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 36%, rgba(234, 157, 158, 1) 54%, rgba(221, 4, 25, 1) 72%, rgba(221, 4, 25, 1) 100%);
+          background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 15%, rgba(234, 157, 158, 1) 40%, rgba(221, 4, 25, 1) 72%, rgba(221, 4, 25, 1) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
         .addText {
           font-size: 0.75em;
-          transform: scale(0.5, 1);
           display: inline-block;
-          background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 36%, rgba(234, 157, 158, 1) 54%, rgba(221, 4, 25, 1) 72%, rgba(221, 4, 25, 1) 100%);
+          background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 15%, rgba(234, 157, 158, 1) 40%, rgba(221, 4, 25, 1) 72%, rgba(221, 4, 25, 1) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          margin-left: -22%;
-          margin-right: -15%;
         }
         .smallerText {
           font-size: 0.6em;
@@ -1114,10 +1102,11 @@ body {
         font-family: 'gothampro-bold', sans-serif;
         font-size: 24px;
         line-height: 28px;
-        font-weight: 800;
+        font-weight: bold;
         color: #4F4F50;
         width: 100%;
         position: absolute;
+        letter-spacing: -1px;
         @media screen and (max-width: 1280px) {
           font-size: 20px;
           line-height: 18px;
@@ -1127,7 +1116,6 @@ body {
           position: static;
           font-size: 30px;
           line-height: 30px;
-          margin: 10px;
         }
         @media screen and (max-width: 767px) {
           font-size: 22px;
@@ -1140,17 +1128,13 @@ body {
       }
       .botText {
         margin-top: -45px;
-        right: 42px;
         text-align: right;
         @media screen and (max-width: 1440px) {
           margin-top: -42px;
         }
-        @media screen and (max-width: 1023px) {
-        }
       }
       .topText {
         top: -50px;
-        left: 15px;
         text-align: left;
         @media screen and (max-width: 424px) {
           margin-bottom: 0;
@@ -1170,32 +1154,29 @@ body {
     }
     .col-item:nth-of-type(1) {
       @media screen and (max-width: 1023px) {
-        width: 21%;
+        width: 216px;
       }
       @media screen and (max-width: 767px) {
-        width: 101px;
+        width: 112px;
       }
     }
     .col-item:nth-of-type(2) {
       @media screen and (max-width: 1023px) {
-        width: 43%;
+        width: 316px;
       }
       @media screen and (max-width: 767px) {
-        width: 200px;
+        width: 202px;
       }
       .topText {
-        top: -39px;
-        left: 25px;
         text-align: left;
         @media screen and (max-width: 1280px) {
           top: -32px;
-          left: 25px;
         }
       }
     }
     .col-item:nth-of-type(3) {
       @media screen and (max-width: 1023px) {
-        width: 21%;
+        width: 166px;
       }
       @media screen and (max-width: 767px) {
         width: 101px;
@@ -1208,15 +1189,14 @@ body {
     }
     .col-item:nth-of-type(4) {
       @media screen and (max-width: 1023px) {
-        width: 31%;
+        width: 229px;
       }
       @media screen and (max-width: 767px) {
-        width: 156px;
+        width: 155px;
       }
       .topText {
         top: -14px;
         text-align: left;
-        margin-left: -15%;
       }
       .botText {
         @media screen and (max-width: 1023px) {
@@ -1226,10 +1206,10 @@ body {
     }
     .col-item:last-of-type {
       @media screen and (max-width: 1023px) {
-        width: 41%;
+        width: 289px;
       }
       @media screen and (max-width: 767px) {
-        width: 48%;
+        width: 185px;
       }
       .topText {
         top: -71px;
@@ -1304,9 +1284,6 @@ body {
         @media screen and (max-width: 1850px) {
           width: 190px;
         }
-        @media screen and (max-width: 1499px) {
-          width: 130px;
-        }
         @media screen and (max-width: 1023px) {
           width: 200px;
         }
@@ -1317,7 +1294,7 @@ body {
       .underText {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 20px;
         margin-top: 20px;
         text-align: center;
@@ -1458,7 +1435,7 @@ body {
       p {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         margin: 0;
         display: table-cell;
@@ -1567,7 +1544,7 @@ body {
         .itemTitle {
           font-family: 'bebas_neuebold', sans-serif;
           font-size: 80px;
-          font-weight: 800;
+          font-weight: bold;
           background: rgba(140, 139, 136, 1); /* Old browsers */ /* FF3.6-15 */
           background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(23, 23, 23, 1) 100%); /* Chrome10-25,Safari5.1-6 */
           background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), to(rgba(23, 23, 23, 1)));
@@ -1621,12 +1598,12 @@ body {
         }
         .techText {
           font-family: 'gothampro-medium', sans-serif;
-          font-weight: 600;
+          font-weight: 500;
           margin: 0;
         }
         .subName {
           font-family: 'gothampro-bold', sans-serif;
-          font-weight: 800;
+          font-weight: bold;
           margin-top: 15px;
           margin-bottom: 0;
           text-transform: uppercase;
@@ -1648,7 +1625,7 @@ body {
         display: none;
         font-family: 'gothampro-bold', sans-serif;
         font-size: 32px;
-        font-weight: 800;
+        font-weight: bold;
         text-transform: uppercase;
         width: 100%;
         margin: 25px 0;
@@ -1714,7 +1691,7 @@ body {
   h5 {
     font-family: 'gothampro-bold', sans-serif;
     font-size: 36px;
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
     width: 100%;
     margin: 25px 0;
@@ -1791,7 +1768,7 @@ body {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 30px;
         line-height: 32px;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         vertical-align: middle;
         margin: 0;
@@ -1862,6 +1839,10 @@ body {
             -webkit-transition: all 0.2s linear;
             -o-transition: all 0.2s linear;
             transition: all 0.2s linear;
+            @media screen and (max-width: 1440px) {
+              height: 30px;
+              width: 30px;
+            }
             &:hover {
               background: #ccc6c3;
             }
@@ -1875,16 +1856,12 @@ body {
               width: 15px;
               height: 15px;
               background: #B1ABA8;
-              @media screen and (max-width: 1280px) {
+              @media screen and (max-width: 1440px) {
                 top: 8px;
                 left: 8px;
                 width: 12px;
                 height: 12px;
               }
-            }
-            @media screen and (max-width: 1280px) {
-              height: 30px;
-              width: 30px;
             }
           }
           &:hover {
@@ -1918,7 +1895,7 @@ body {
           width: 50%;
           @media screen and (max-width: 1440px) {
             font-size: 22px;
-            padding: 3px 0;
+            padding: 0;
             width: 30%;
           }
           @media screen and (max-width: 1280px) {
@@ -1947,12 +1924,13 @@ body {
           width: 100%;
           @media screen and (max-width: 1440px) {
             font-size: 22px;
-            padding: 3px 0;
+            padding: 0;
+            width: 71%;
           }
           @media screen and (max-width: 1280px) {
             font-size: 20px;
             padding: 2px 0;
-            width: 75%;
+            width: 61%;
           }
           &:focus {
             outline: none;
@@ -1998,7 +1976,7 @@ body {
     .answer {
       font-family: 'gothampro', sans-serif;
       font-size: 30px;
-      font-weight: 300;
+      font-weight: normal;
       margin-bottom: 0;
       letter-spacing: 1px;
       @media screen and (max-width: 1440px) {
@@ -2035,7 +2013,7 @@ body {
     .result {
       font-family: 'bebas_neuebold', sans-serif;
       font-size: 80px;
-      font-weight: 800;
+      font-weight: bold;
       background: rgba(140, 139, 136, 1); /* Old browsers */ /* FF3.6-15 */
       background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(23, 23, 23, 1) 100%); /* Chrome10-25,Safari5.1-6 */
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), to(rgba(23, 23, 23, 1)));
@@ -2084,7 +2062,7 @@ body {
     .calcResult {
       font-family: 'gothampro-bold', sans-serif;
       font-size: 24px;
-      font-weight: 800;
+      font-weight: bold;
       margin: 35px 0;
       @media screen and (max-width: 1440px) {
         font-size: 22px;
@@ -2163,7 +2141,7 @@ body {
           font-family: 'gothampro-medium', sans-serif;
           font-size: 18px;
           line-height: 20px;
-          font-weight: 600;
+          font-weight: 500;
           color: #232222;
           width: 360px;
           padding: 10px 15px 10px 0;
@@ -2245,6 +2223,17 @@ body {
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+    @media screen and (min-width: 2000px) {
+      width: 20%;
+    }
+    @media screen and (min-width: 2200px) {
+      width: 18%;
+      left: 43%;
+    }
+    @media screen and (min-width: 2500px) {
+      width: 17%;
+      left: 44%;
+    }
     @media screen and (max-width: 1800px) {
       bottom: 5%;
     }
@@ -2419,7 +2408,7 @@ body {
       .iconCaption {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 500;
         position: relative;
         margin: 16px 0;
         br {
@@ -2543,8 +2532,8 @@ body {
         font-family: 'gothampro-italic', sans-serif;
         font-size: 20px;
         line-height: 28px;
+        font-weight: normal;
         font-style: italic;
-        font-weight: 300;
         color: #242424;
         margin-top: 25px;
         br {
@@ -2573,7 +2562,7 @@ body {
       .name {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 26px;
-        font-weight: 600;
+        font-weight: 500;
         margin-top: 30px;
         @media screen and (max-width: 1600px) {
           font-size: 24px;
@@ -2593,7 +2582,7 @@ body {
       .address {
         font-family: 'gothampro', sans-serif;
         font-size: 22px;
-        font-weight: 300;
+        font-weight: normal;
         color: #242424;
         margin-top: 20px;
         @media screen and (max-width: 1600px) {
@@ -2617,6 +2606,7 @@ body {
       .howLong {
         font-family: 'gothampro', sans-serif;
         font-size: 22px;
+        font-weight: normal;
         @media screen and (max-width: 1600px) {
           font-size: 20px;
         }
@@ -2687,6 +2677,9 @@ body {
       &:before {
         opacity: 0;
       }
+      @media screen and (min-width: 2300px) {
+        left: 31%;
+      }
       @media screen and (max-width: 1850px) {
         left: 24%;
       }
@@ -2714,6 +2707,9 @@ body {
       transform: rotate(-45deg);
       &:before {
         opacity: 0;
+      }
+      @media screen and (min-width: 2300px) {
+        right: 31%;
       }
       @media screen and (max-width: 1850px) {
         right: 24%;
@@ -3004,7 +3000,7 @@ body {
       .card-body {
         font-family: 'gothampro', sans-serif;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: normal;
         background: white;
         @media screen and (max-width: 1440px) {
           font-size: 16px;
@@ -3082,7 +3078,7 @@ body {
   .address {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -3095,7 +3091,7 @@ body {
   .phone {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -3130,7 +3126,7 @@ body {
   .email {
     font-family: 'gothampro-medium', sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     letter-spacing: 1px;
     margin-left: 115px;

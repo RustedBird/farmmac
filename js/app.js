@@ -4,6 +4,8 @@
 
     var cookieLang = getCookie('lang') ? getCookie('lang') : 'rus';
     $('.lang span[data-lang=' + cookieLang + ']').addClass('active');
+    $('h1 .iconImg').attr('src', '../img/titleicon' + cookieLang + '.png');
+    $('.sign').attr('src', '../img/titleicon' + cookieLang + '.png');
 
 
     // запуск показа модального окна на увод мышки вверх
@@ -253,7 +255,7 @@
             pellet_sum = $tons * $prices_elevator * 3 * $pellet_price;
 
         function addSpace(num) {
-            if (isNaN(num)) {
+            if (isNaN(num) || num < 0) {
                 num = 0;
             }
             var str = num.toString().split('.');
@@ -370,7 +372,6 @@
     var $upBtn = $(".upButton");
     $upBtn.hide();
 
-    if ($(window).width() >= 1006) {
         window.onscroll = function () {
             if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
                 $upBtn.show(300);
@@ -378,7 +379,6 @@
                 $upBtn.hide(300);
             }
         };
-    }
 
 
     $(document).on('click', '.upButton', function () {
