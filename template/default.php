@@ -600,11 +600,11 @@
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                        <div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
                                 aria-expanded="true" aria-controls="collapseOne">
                             <span>1. <?= $lang['section12']['question2']?></span>
                             <span class=""></span>
-                        </button>
+                        </div>
                     </h5>
                 </div>
 
@@ -615,13 +615,13 @@
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                        <div class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
                                 aria-expanded="true" aria-controls="collapseTwo">
                             <div class="wrapper">
                             <span>2. <?= $lang['section12']['question1']?></span>
                             <span class="plus"></span>
                             </div>
-                        </button>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -631,11 +631,11 @@
             <div class="card">
                 <div class="card-header" id="headingThree">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                        <div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
                                 aria-expanded="false" aria-controls="collapseThree">
                             <span>3. <?= $lang['section12']['question3']?></span>
                             <span class="plus"></span>
-                        </button>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -645,11 +645,11 @@
             <div class="card">
                 <div class="card-header" id="headingFour">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                        <div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
                                 aria-expanded="false" aria-controls="collapseFour">
                             <span>4. <?= $lang['section12']['question4']?></span>
                             <span class="plus"></span>
-                        </button>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
@@ -659,11 +659,11 @@
             <div class="card">
                 <div class="card-header" id="headingFive">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                        <div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
                                 aria-expanded="false" aria-controls="collapseFive">
                             <span>5. <?= $lang['section12']['question5']?></span>
                             <span class="plus"></span>
-                        </button>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
@@ -673,11 +673,11 @@
             <div class="card">
                 <div class="card-header" id="headingSix">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                        <div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
                                 aria-expanded="false" aria-controls="collapseSix">
                             <span>6. <?= $lang['section12']['question6']?></span>
                             <span class="plus"></span>
-                        </button>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
@@ -687,11 +687,11 @@
             <div class="card">
                 <div class="card-header" id="headingSeven">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                        <div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
                                 aria-expanded="false" aria-controls="collapseSeven">
                             <span>7. <?= $lang['section12']['question7']?></span>
                             <span class="plus"></span>
-                        </button>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
@@ -701,11 +701,11 @@
             <div class="card">
                 <div class="card-header" id="headingEight">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                        <div class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
                                 aria-expanded="false" aria-controls="collapseEight">
                             <span>8. <?= $lang['section12']['question8']?></span>
                             <span class="plus"></span>
-                        </button>
+                        </div>
                     </h5>
                 </div>
                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">

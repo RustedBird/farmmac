@@ -3792,7 +3792,7 @@ body {
         .section12 #accordion .card .card-header .mb-0 {
           border-color: transparent;
           background: white; }
-          .section12 #accordion .card .card-header .mb-0 button {
+          .section12 #accordion .card .card-header .mb-0 .btn {
             font-family: 'gothampro-black', sans-serif;
             font-size: 24px;
             font-weight: 900;
@@ -3801,21 +3801,21 @@ body {
             padding: 0;
             white-space: normal;
             transition: all 0.3s; }
-            .section12 #accordion .card .card-header .mb-0 button:hover {
+            .section12 #accordion .card .card-header .mb-0 .btn:hover {
               color: #610404; }
-            .section12 #accordion .card .card-header .mb-0 button:focus {
+            .section12 #accordion .card .card-header .mb-0 .btn:focus {
               -webkit-box-shadow: none;
               box-shadow: none; }
             @media screen and (max-width: 1440px) {
-              .section12 #accordion .card .card-header .mb-0 button {
+              .section12 #accordion .card .card-header .mb-0 .btn {
                 font-size: 20px; } }
             @media screen and (max-width: 1280px) {
-              .section12 #accordion .card .card-header .mb-0 button {
+              .section12 #accordion .card .card-header .mb-0 .btn {
                 font-size: 18px; } }
             @media screen and (max-width: 767px) {
-              .section12 #accordion .card .card-header .mb-0 button {
+              .section12 #accordion .card .card-header .mb-0 .btn {
                 font-size: 14px; } }
-            .section12 #accordion .card .card-header .mb-0 button span {
+            .section12 #accordion .card .card-header .mb-0 .btn span {
               line-height: 50px;
               background: white;
               padding: 0 15px;
@@ -3823,14 +3823,14 @@ body {
               width: 100%;
               text-align: left; }
               @media screen and (max-width: 1440px) {
-                .section12 #accordion .card .card-header .mb-0 button span {
+                .section12 #accordion .card .card-header .mb-0 .btn span {
                   line-height: 35px; } }
               @media screen and (max-width: 767px) {
-                .section12 #accordion .card .card-header .mb-0 button span {
+                .section12 #accordion .card .card-header .mb-0 .btn span {
                   line-height: 20px; } }
-              .section12 #accordion .card .card-header .mb-0 button span:focus {
+              .section12 #accordion .card .card-header .mb-0 .btn span:focus {
                 outline: none; }
-            .section12 #accordion .card .card-header .mb-0 button span:last-of-type {
+            .section12 #accordion .card .card-header .mb-0 .btn span:last-of-type {
               position: absolute;
               right: -73px;
               top: 10px;
@@ -3839,14 +3839,14 @@ body {
               height: 50px;
               margin-left: 15px; }
               @media screen and (max-width: 1440px) {
-                .section12 #accordion .card .card-header .mb-0 button span:last-of-type {
+                .section12 #accordion .card .card-header .mb-0 .btn span:last-of-type {
                   width: 35px;
                   height: 35px;
                   right: -50px; } }
               @media screen and (max-width: 767px) {
-                .section12 #accordion .card .card-header .mb-0 button span:last-of-type {
+                .section12 #accordion .card .card-header .mb-0 .btn span:last-of-type {
                   top: 5px; } }
-              .section12 #accordion .card .card-header .mb-0 button span:last-of-type:before {
+              .section12 #accordion .card .card-header .mb-0 .btn span:last-of-type:before {
                 content: '';
                 position: absolute;
                 width: 70%;
@@ -3854,9 +3854,9 @@ body {
                 background: #4B4949;
                 left: 15%;
                 top: 45%; }
-            .section12 #accordion .card .card-header .mb-0 button .plus {
+            .section12 #accordion .card .card-header .mb-0 .btn .plus {
               position: absolute; }
-              .section12 #accordion .card .card-header .mb-0 button .plus:after {
+              .section12 #accordion .card .card-header .mb-0 .btn .plus:after {
                 content: '';
                 position: absolute;
                 height: 70%;
