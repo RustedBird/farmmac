@@ -37,8 +37,8 @@
         var $this = $(this),
             $thisClosestForm = $this.closest('.ajaxForm');
 
+        //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
         $thisClosestForm.find("input[name='comment']").val($this.attr('data-comment'));
-        // $this.find("input[name='comment']").val($this.find('.btn').attr('data-comment')); //присваиваем input type hidden value - иначе не пишется "Commentary": "#comment" в CRM
         var data = $thisClosestForm.serialize() + '&lang=' + cookieLang,
             name = $thisClosestForm.find("input[name='name']"),
             email = $thisClosestForm.find("input[name='email']"),
@@ -80,7 +80,6 @@
             data: data,
             dataType: 'json',
             beforeSend: function () {
-                // $preloader.find('p').html('Отправка <span>.</span><span>.</span><span>.</span>');
                 $preloader.css({opacity: 0, display: 'flex'}).animate({
                     opacity: 1
                 }, 500);
@@ -99,7 +98,6 @@
     });
 
     //Подбор модели зерносушилки
-
     $('.performance').keyup(function () {
         modelCalc();
     });
@@ -128,10 +126,6 @@
             $moisture = $('[name="moisture"]:checked').val(),
             $answer = $('#resultTarget'),
             $comment = $('#askPerformance');
-
-        /*if (isNaN($performance)) { //Проверяем выбрана ли мощность
-            $answer.html('Выберите производительность');
-        } else*/
         if ($moisture === '25-14' && $performance < 80) {
             switch (true) {
                 case $performance < 60:
@@ -249,7 +243,6 @@
             $pellet_price = $('[name="pellet_price"]').val(),
             $textParams = $('.calcResult');
 
-
         var diesel_sum = $tons * $prices_elevator * 1.2 * $diesel_price,
             gas_sum = $tons * $prices_elevator * 1.4 * $gas_price,
             pellet_sum = $tons * $prices_elevator * 3 * $pellet_price;
@@ -322,21 +315,6 @@
     });
 
 
-    //Animating number only on desktop width
-    /*$('.counter').each(function () {
-        var $this = $(this),
-            value = $this.html();
-        if ($(window).width() >= 1006) {
-            $this.html(0);
-            $this.numerator({
-                easing: 'swing', // easing options.
-                duration: 3000, // the length of the animation.
-                rounding: 0, // decimal places.
-                toValue: value // animate to this value.
-            });
-        }
-    });*/
-
     /*Changing + / - in accordion*/
     $('.card-header').on('click', '.btn', function () {
         var $this = $(this).find('span:last-of-type');
@@ -392,4 +370,3 @@
     });
 
 })(jQuery);
-
