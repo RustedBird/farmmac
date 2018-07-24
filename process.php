@@ -33,7 +33,7 @@ if ($response['result']) {
     ];
 
     $newMessage = new Message();
-    $newMessage->sendEmail($request, $lang);
+//    $newMessage->sendEmail($request, $lang);
     $newMessage->sendTelegram($request['html_body']);
 
     if ($comment != 'Call me back') {
