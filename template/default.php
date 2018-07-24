@@ -493,7 +493,7 @@
             <p class="howLong">Зерносушарка Large 270 з 2016 року</p>
         </div>
         <div class="sliderItem">
-            <img src="../img/custumer2.jpg" alt="custumer2">
+            <img src="../img/custumerNoAvatar.jpg" alt="custumer2">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem2']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem2']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['posItem2']?></p>
@@ -501,7 +501,7 @@
             <p class="howLong">Зерносушарка Large 270 з 2014 року</p>
         </div>
         <div class="sliderItem">
-            <img src="../img/custumer3.jpg" alt="custumer3">
+            <img src="../img/custumerNoAvatar.jpg" alt="custumer3">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem3']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem3']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem3']?></p>
