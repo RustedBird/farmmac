@@ -29,7 +29,6 @@
             <span data-lang="ukr">ukr</span>
             <span data-lang="rus">rus</span>
         </p>
-        <div class="button orderCall"><?= $lang['section1']['orderCall']?></div>
         <p class="lang">
             <span data-lang="ukr">ukr</span>
             <span data-lang="rus">rus</span>
@@ -38,6 +37,7 @@
             <span>(050) 404-44-70</span><br>
             <span>(096) 054-39-91</span>
         </p>
+        <div class="button orderCall"><?= $lang['section1']['orderCall']?></div>
         <form class="ajaxForm" action="../process.php" method="post">
             <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
             <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
@@ -587,7 +587,7 @@
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
                 <input hidden type="text" name="comment" value="">
-                <button class="button" data-comment="Личный расчет окупаемости Pedrotti"><?= $lang['form']['discountFormButton']?></button>
+                <button class="button" data-comment="Забронировал скидку"><?= $lang['form']['discountFormButton']?></button>
                 <p class="underText"><?= $lang['form']['underText']?></p>
             </form>
         </div>
@@ -722,7 +722,6 @@
                 <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
-                <input hidden type="text" name="question" value="Задал вопрос">
                 <textarea name="comment" required placeholder="<?= $lang['form']['placeholderTextarea']?>"></textarea>
                 <button class="button"><?= $lang['form']['AskFormButton']?></button>
                 <p class="underText"><?= $lang['form']['underText']?></p>
@@ -740,7 +739,7 @@
                 <h6 class="footTitle"><?= $lang['section13']['title']?></h6>
                 <p class="address"><?= $lang['section13']['address']?></p>
                 <p class="phone">
-                    (050) 404 44 70<br>
+                    (050) 40444 70<br>
                     (096) 054 39 91
                 </p>
 

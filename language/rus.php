@@ -286,7 +286,7 @@ $lang = [
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => $comment . '.pdf',
-                'fileblob' => base64_encode(file_get_contents($comment . '.pdf')),
+                'fileblob' => base64_encode(file_get_contents('Basic.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
 
@@ -308,7 +308,7 @@ $lang = [
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => $comment . '.pdf',
-                'fileblob' => base64_encode(file_get_contents($comment . '.pdf')),
+                'fileblob' => base64_encode(file_get_contents('Large.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
 
@@ -330,7 +330,7 @@ $lang = [
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => $comment . '.pdf',
-                'fileblob' => base64_encode(file_get_contents($comment . '.pdf')),
+                'fileblob' => base64_encode(file_get_contents('XL.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
 
