@@ -1,65 +1,50 @@
 <?php
 
 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_SPECIAL_CHARS);
-
-
 $name = $post['name'];
 $email = $post['email'];
 $phone = $post['phone'];
 $comment = $post['comment'];
-$lang = $post['lang'];
+$question = $post['question'];
 
-$formMessage = Message::setResponseMessage($lang);
+require_once($_SERVER['DOCUMENT_ROOT'] . "/language/" . $post['lang'] . '.php');
+
 //Проверка на валидность данных
 $response['result'] = true;
-$response['message'] = $formMessage['success'];
+$response['message'] = $lang['responseMessage']['success'];
+
 if (!Valid::not_empty($name) || !Valid::not_empty($phone) || !Valid::phone($phone)) {
     $response = ['result' => false,
-                'message' => $formMessage['errorFields']];
+                'message' => $lang['responseMessage']['errorFields']];
 } elseif ($comment != 'Call me back') { // если это не обратный звонок, то валидируем и е-меил
     $response['result'] = (bool)Valid::email($email);
 }
 
 if ($response['result']) {
-    $mes = 'Клиент: ' . $name . PHP_EOL
-        . 'Email: ' . $email . PHP_EOL
-        . 'Телефон: ' . $phone . PHP_EOL
-        . "Сообщение клиента:\n" . $comment;
-    $to = ["Фарм Мак Україна <aksenov.andrew@gmail.com>"];
+    $mes = '<pre>Клиент: ' . $name . '</pre>'
+        . '<pre>Email: ' . $email . '</pre>'
+        . '<pre>Телефон: ' . $phone . '</pre>'
+        . "<pre>Сообщение клиента:\r\n" . $comment . '</pre>';
     $request = [
-        'to' => &$to,
+        'to' => ["Фарм Мак Україна <aksenov.andrew@gmail.com>"],
         "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
-        'subject' => 'Зерносушилка Pedrotti',
-        'text_body' => &$mes
+        'subject' => 'Заявка с сайта Зерносушилки Pedrotti',
+        'html_body' => &$mes
     ];
-
-    switch ($comment) {
-        case 'Basic':
-        case 'Large':
-        case 'XL':
-            $newMessage = new Message();
-//            $newMessage->sendEmail($request, $formMessage);
-            $newMessage->sendTelegram($mes);
-            $mes = $newMessage->setLanguageMessage($lang) . ' ' .$comment;
-            $to = [$email];
-            $fileName = $comment . '.pdf';
-            $file = file_get_contents($fileName);
-            $request['attachments'] = [[
-                'filename' => $fileName,
-                'fileblob' => base64_encode($file),
-                'mimetype' => 'application/pdf'
-            ]];
-//            $response = $newMessage->sendEmail($request, $formMessage);
-            break;
-        default:
-            $newMessage = new Message();
-//            $response = $newMessage->sendEmail($request, $formMessage);
-            $newMessage->sendTelegram($mes);
-            break;
+    $newMessage = new Message();
+    $newMessage->sendEmail($request, $lang);
+    $newMessage->sendTelegram($mes);
+// так так вопрос с формы может быть любым и должен записываться в CRM, мы отправлем статичный скрытый input[name='question']
+    if ($question != '') {
+        $comment = $question;
     }
 
+    $request = $lang['emails'][$comment];
+    $response = $newMessage->sendEmail($request, $lang);
+
+
 } else {
-    $response['message'] = $formMessage['errorFields'];
+    $response['message'] = $lang['responseMessage']['errorFields'];
 }
 
 echo json_encode($response);
@@ -72,8 +57,9 @@ class Message
     protected $token = '561353685:AAFVHFTMIychcLnJzi1MziPwGYng3tYHlqI';
     protected $chat_id_list = [350981322];
 
-    public function sendEmail($request, $formMessage)
+    public function sendEmail($request, $lang)
     {
+
         $request['api_key'] = $this->api_key;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->api_url);
@@ -90,11 +76,11 @@ class Message
         switch ($httpcode) {
             case 200:
                 $response['result'] = (bool)$result->data->succeeded;
-                $response['message'] = $formMessage['success'];
+                $response['message'] = $lang['responseMessage']['success'];
                 break;
             default:
                 $response['result'] = false;
-                $response['message'] = $formMessage['errorSend'];
+                $response['message'] = $lang['responseMessage']['errorSend'];
                 $date = date_create();
                 $fp = fopen('errors/file.txt', 'a');
                 fwrite($fp, date_format($date, 'Ymd_H:i:s') . PHP_EOL . 'Ошибка: ' . $result->data->error . PHP_EOL);
@@ -108,34 +94,35 @@ class Message
         for ($i = 0; $i < count($this->chat_id_list); $i++) {
             file_get_contents('https://api.telegram.org/bot' . $this->token
                 . '/sendMessage?chat_id=' . $this->chat_id_list[$i]
-                . '&text=' . urlencode($mes));
+                . '&text=' . urlencode($mes)
+                . '&parse_mode=HTML');
         }
     }
-    public function setLanguageMessage($lang){
-        switch ($lang){
-            case 'ukr':
-                $message = 'ось характеристики зерносушарки';
-                break;
-            default:
-                $message = 'Вот обещанные характеристики Зерносушилки';
-        }
-        return $message;
-    }
-    public static function setResponseMessage($lang)
-    {
-        switch ($lang) {
-            case ('ukr'):
-                $formMessage['errorFields'] = 'Поля заповнені невірно';
-                $formMessage['success'] = 'Заявку успішно відправлено';
-                $formMessage['errorSend'] = "Відбулася системна помилка при відправці повідомлення.\n Будь ласка зателефонуйте нам по телефону (050) 40 444 70 або надішліть листа на пошту secretary@farmmac.com.ua";
-                break;
-            default:
-                $formMessage['errorFields'] = 'Поля заполнены неверно';
-                $formMessage['success'] = 'Заявка успешно отправлена';
-                $formMessage['errorSend'] = "Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua";
-        }
-        return $formMessage;
-    }
+//    public static function setLanguageMessage($lang, $comment){
+//        switch ($lang){
+//            case 'ukr':
+//                $message = 'ось характеристики зерносушарки';
+//                break;
+//            default:
+//                $message['model'] = $lang['emails']['model'];
+//        }
+//        return $message;
+//    }
+//    public static function setResponseMessage($lang)
+//    {
+//        switch ($lang) {
+//            case ('ukr'):
+//                $responseMessage['errorFields'] = 'Поля заповнені невірно';
+//                $responseMessage['success'] = 'Заявку успішно відправлено';
+//                $responseMessage['errorSend'] = "Відбулася системна помилка при відправці повідомлення.\n Будь ласка зателефонуйте нам по телефону (050) 40 444 70 або надішліть листа на пошту secretary@farmmac.com.ua";
+//                break;
+//            default:
+//                $responseMessage['errorFields'] = 'Поля заполнены неверно';
+//                $responseMessage['success'] = 'Заявка успешно отправлена';
+//                $responseMessage['errorSend'] = "Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua";
+//        }
+//        return $responseMessage;
+//    }
 }
 
 Class Valid
@@ -189,3 +176,4 @@ Class Valid
         return true;
     }
 }
+

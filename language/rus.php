@@ -246,6 +246,178 @@ $lang = [
     ],
     'preloader' => [
         'send' => 'Отправка'
+    ],
+    'emails' => [
+        'Заявка на расчет окупаемости' => [
+            'to' => [$email],
+            "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+            'subject' => 'Расчет окупаемости Pedrotti',
+            'html_body' => "<p>Здравствуйте!</p>
+                       <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
+                       <p>Вы запросили расчет окупаемости зерносушилки Pedrotti.</p>
+                       <p>Мы прикрепили его во вложении</p>
+                       <p>Вопросы Вы можете задать по номеру:</p>
+                       <p>(050) 404-44-70</p>
+                       <p>(096) 054-39-91</p>
+                       <p>или написать нам: </p>
+                       <p>secretary@farmmac.com.ua</p>
+                       <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+            'attachments' => [[
+                'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
+                'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
+                'mimetype' => 'application/pdf'
+            ]],
+        ],
+        'Basic' => [
+            'to' => [$email],
+            "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+            'subject' => 'Технические характеристики Pedrotti',
+            'html_body' => "<p>Здравствуйте!</p>
+               <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
+               <p>Вы запросили технические характеристики серии " . $comment . "</p>
+               <p>Мы прикрепили их во вложении</p>
+               <p>Вопросы Вы можете задать по номеру: </p>
+               <p>(050) 404-44-70</p>
+               <p>(096) 054-39-91</p>
+               <p>или написать нам: </p>
+               <p>secretary@farmmac.com.ua</p>
+               <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+               <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+            'attachments' => [[
+                'filename' => $comment . '.pdf',
+                'fileblob' => base64_encode(file_get_contents($comment . '.pdf')),
+                'mimetype' => 'application/pdf'
+            ]],
+
+    ],
+        'Large' => [
+            'to' => [$email],
+            "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+            'subject' => 'Технические характеристики Pedrotti',
+            'html_body' => "<p>Здравствуйте!</p>
+               <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
+               <p>Вы запросили технические характеристики серии " . $comment . "</p>
+               <p>Мы прикрепили их во вложении</p>
+               <p>Вопросы Вы можете задать по номеру: </p>
+               <p>(050) 404-44-70</p>
+               <p>(096) 054-39-91</p>
+               <p>или написать нам: </p>
+               <p>secretary@farmmac.com.ua</p>
+               <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+               <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+            'attachments' => [[
+                'filename' => $comment . '.pdf',
+                'fileblob' => base64_encode(file_get_contents($comment . '.pdf')),
+                'mimetype' => 'application/pdf'
+            ]],
+
+    ],
+        'XL' => [
+            'to' => [$email],
+            "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+            'subject' => 'Технические характеристики Pedrotti',
+            'html_body' => "<p>Здравствуйте!</p>
+               <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
+               <p>Вы запросили технические характеристики серии " . $comment . "</p>
+               <p>Мы прикрепили их во вложении</p>
+               <p>Вопросы Вы можете задать по номеру: </p>
+               <p>(050) 404-44-70</p>
+               <p>(096) 054-39-91</p>
+               <p>или написать нам: </p>
+               <p>secretary@farmmac.com.ua</p>
+               <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+               <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+            'attachments' => [[
+                'filename' => $comment . '.pdf',
+                'fileblob' => base64_encode(file_get_contents($comment . '.pdf')),
+                'mimetype' => 'application/pdf'
+            ]],
+
+    ],
+        'Запросил контакты фермерских хозяйств' => [
+            'to' => [$email],
+            "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+            'subject' => 'Хoтите посмотреть фермерские хозяйства с Pedrotti?',
+            'html_body' => "<p>Здравствуйте!</p>
+                       <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
+                       <p>Вы запросили контакты фермерских хозяйств.</p>
+                       <p>Наши менеджеры свяжутся с вами, уточнят у вас из какого вы региона, </p>
+                       <p>чтобы подобрать для вас контакты самых ближайших фермерских хозяйств.</p>
+                       <p>Вопросы Вы можете задать по номеру:</p>
+                       <p>(050) 404-44-70</p>
+                       <p>(096) 054-39-91</p>
+                       <p>или написать нам: </p>
+                       <p>secretary@farmmac.com.ua</p>
+                       <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+        ],
+        'Личный расчет окупаемости Pedrotti' => [
+            'to' => [$email],
+            "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+            'subject' => 'Личный расчет окупаемости Pedrotti',
+            'html_body' => "<p>Здравствуйте!</p>
+                       <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
+                       <p>Вы запросили личный расчет рентабельности.</p>
+                       <br>
+                       <p>Для того, чтобы нам сделать просчет лично для Вас, </p>
+                       <p>пришлите нам на почту secretary@farmmac.com.ua</p>
+                       <p>ответы на следующие 3 вопроса:</p>
+                       <ol>
+                       <li> Количество кукурузы, которую необходимо высушить за сезон (тонн)</li>
+                       <li> Влажность с которой Вы убираете кукурузу с толя (%)</li>
+                       <li> Средняя стоимость элеваторной сушки в Вашем районе за снятие 1т% влаги (грн)</li>
+                       </ol>
+                       <p>Во вложениях мы прикрепили общий расчет окупаемости.</p>
+                       <p>Вопросы Вы можете задать по номеру:</p>
+                       <p>(050) 404-44-70</p>
+                       <p>(096) 054-39-91</p>
+                       <p>или написать нам: </p>
+                       <p>secretary@farmmac.com.ua</p>
+                       <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+            'attachments' => [[
+                'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
+                'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
+                'mimetype' => 'application/pdf'
+            ]],
+        ],
+        'Задал вопрос' => [
+            'to' => [$email],
+            "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+            'subject' => 'Вопрос о Pedrotti',
+            'html_body' => "<p>Здравствуйте!</p>
+                       <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
+                       <p>Мы приняли ваш вопрос. В течении 24 часов наши менеджеры <br>свяжутся с
+Вами и ответят на все ваши вопросы.</p>
+                       <p>Также вопросы Вы можете задать по номеру:</p>
+                       <p>(050) 404-44-70</p>
+                       <p>(096) 054-39-91</p>
+                       <p>или написать нам: </p>
+                       <p>secretary@farmmac.com.ua</p>
+                       <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+        ],
+        'Забронировал скидку при попытке ухода' => [
+            'to' => [$email],
+            "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
+            'subject' => 'Получите Вашу скидку',
+            'html_body' => "<p>Здравствуйте!</p>
+                       <p>Фарм Мак Украина поздравляет Вас!</p>
+                       <p>Вы забронировали скидку на зерносушилку Pedrotti, которую можна использовать в любое время!</p>
+                       <p>Вопросы Вы можете задать по номеру:</p>
+                       <p>(050) 404-44-70</p>
+                       <p>(096) 054-39-91</p>
+                       <p>или написать нам: </p>
+                       <p>secretary@farmmac.com.ua</p>
+                       <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+        ],
+    ],
+    'responseMessage' => [
+        'errorFields' => 'Поля заполнены неверно',
+        'success' => 'Заявка успешно отправлена',
+        'errorSend' => "Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua",
     ]
 ];
 

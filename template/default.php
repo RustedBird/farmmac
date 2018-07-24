@@ -587,7 +587,7 @@
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
                 <input hidden type="text" name="comment" value="">
-                <button class="button" data-comment="Забронировал скидку"><?= $lang['form']['discountFormButton']?></button>
+                <button class="button" data-comment="Личный расчет окупаемости Pedrotti"><?= $lang['form']['discountFormButton']?></button>
                 <p class="underText"><?= $lang['form']['underText']?></p>
             </form>
         </div>
@@ -722,6 +722,7 @@
                 <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
+                <input hidden type="text" name="question" value="Задал вопрос">
                 <textarea name="comment" required placeholder="<?= $lang['form']['placeholderTextarea']?>"></textarea>
                 <button class="button"><?= $lang['form']['AskFormButton']?></button>
                 <p class="underText"><?= $lang['form']['underText']?></p>

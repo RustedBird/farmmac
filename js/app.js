@@ -7,18 +7,16 @@
     $('h1 .iconImg').attr('src', '../img/titleicon' + cookieLang + '.png');
     $('.sign').attr('src', '../img/titleicon' + cookieLang + '.png');
 
-
     // запуск показа модального окна на увод мышки вверх
     $(document).mouseleave(function (e) {
         var alertwin = getCookie("alertwin");
         if (alertwin != "no" && e.clientY < 0) {
             $('#modalLeave').modal('show');
-            // записываем cookie на 1 день, с которой мы не показываем окно
+            // записываем cookie на 1 день, с которого мы не показываем окно
             date.setDate(date.getDate() + 1);
             document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
         }
     });
-
 
     // записываем в куки выбранный язык
     $('.lang span').on('click', function () {
@@ -27,11 +25,13 @@
         location.reload();
         return false;
     });
+
     //подмена value у кнопки. Необхоимо для корректной отправки данных в CRM заказчика
     $('html').on('click', '.myBtn', function () {
         $('#modalOrder .button').attr('data-comment', $(this).attr('data-comment'));
     });
 
+    //отправка ajax
     $(document).on('click', '.ajaxForm .button', function (event) {
         event.preventDefault();
         var $this = $(this),
@@ -69,7 +69,6 @@
         function initLanding() {
             // landing.initLanding(config)
         }
-
         jQuery(document).ready(initLanding);
 
         var $preloader = $('.preloader'),
@@ -119,7 +118,7 @@
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
-
+    //Подбор модели зерносушилки
     function modelCalc() {
         var model,
             $performance = parseInt($('.performance').val()),
@@ -230,7 +229,6 @@
             $comment.attr('data-comment', 'XL');
         }
     }
-
 
     //Рассчитываем стоимость сушки
     $('#calcForm').on('click', '.button', function (event) {
