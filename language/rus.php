@@ -244,9 +244,11 @@ $lang = [
         'underText' => '* это бесплатно и ни к чему не обязывает ',
         'orderCall' => 'заказать звонок'
     ],
+    // прелоадер
     'preloader' => [
         'send' => 'Отправка'
     ],
+    // письма
     'emails' => [
         'Заявка на расчет окупаемости' => [
             'to' => [$email],
@@ -414,6 +416,7 @@ $lang = [
                        <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
     ],
+    // ответы после отправки формы
     'responseMessage' => [
         'errorFields' => 'Поля заполнены неверно',
         'success' => 'Заявка успешно отправлена',
