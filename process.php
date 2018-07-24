@@ -21,6 +21,7 @@ if (!Valid::not_empty($name) || !Valid::not_empty($phone) || !Valid::phone($phon
 }
 
 if ($response['result']) {
+
     $mes = '<pre>Клиент: ' . $name . '</pre>'
         . '<pre>Email: ' . $email . '</pre>'
         . '<pre>Телефон: ' . $phone . '</pre>'
@@ -34,14 +35,15 @@ if ($response['result']) {
     $newMessage = new Message();
     $newMessage->sendEmail($request, $lang);
     $newMessage->sendTelegram($mes);
-// так так вопрос с формы может быть любым и должен записываться в CRM, мы отправлем статичный скрытый input[name='question']
-    if ($question != '') {
-        $comment = $question;
+
+    if ($comment != 'Call me back') {
+        // так как вопрос с формы может быть любым и должен записываться в CRM, мы отправлем статичный скрытый input[name='question']
+        if ($question != '') {
+            $comment = $question;
+        }
+        $request = $lang['emails'][$comment];
+        $response = $newMessage->sendEmail($request, $lang);
     }
-
-    $request = $lang['emails'][$comment];
-    $response = $newMessage->sendEmail($request, $lang);
-
 
 } else {
     $response['message'] = $lang['responseMessage']['errorFields'];
@@ -98,31 +100,6 @@ class Message
                 . '&parse_mode=HTML');
         }
     }
-//    public static function setLanguageMessage($lang, $comment){
-//        switch ($lang){
-//            case 'ukr':
-//                $message = 'ось характеристики зерносушарки';
-//                break;
-//            default:
-//                $message['model'] = $lang['emails']['model'];
-//        }
-//        return $message;
-//    }
-//    public static function setResponseMessage($lang)
-//    {
-//        switch ($lang) {
-//            case ('ukr'):
-//                $responseMessage['errorFields'] = 'Поля заповнені невірно';
-//                $responseMessage['success'] = 'Заявку успішно відправлено';
-//                $responseMessage['errorSend'] = "Відбулася системна помилка при відправці повідомлення.\n Будь ласка зателефонуйте нам по телефону (050) 40 444 70 або надішліть листа на пошту secretary@farmmac.com.ua";
-//                break;
-//            default:
-//                $responseMessage['errorFields'] = 'Поля заполнены неверно';
-//                $responseMessage['success'] = 'Заявка успешно отправлена';
-//                $responseMessage['errorSend'] = "Произошла системная ошибка при отправке сообщения\n Пожалуйста позвоните нам по телефону (050)40 444 70 или отправьте письмо на почту secretary@farmmac.com.ua";
-//        }
-//        return $responseMessage;
-//    }
 }
 
 Class Valid

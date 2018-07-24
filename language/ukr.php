@@ -248,17 +248,17 @@ $lang = [
         'Заявка на расчет окупаемости' => [
             'to' => [$email],
             "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
-            'subject' => 'Расчет окупаемости Pedrotti',
-            'html_body' => "<p>Здравствуйте!</p>
-                       <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
-                       <p>Вы запросили расчет окупаемости зерносушилки Pedrotti.</p>
-                       <p>Мы прикрепили его во вложении ниже.</p>
-                       <p>Вопросы Вы можете задать по номеру:</p>
+            'subject' => 'Розрахунок рентабельності Pedrotti',
+            'html_body' => "<p>Вітаємо!</p>
+                       <p>Дякуємо, що захотіли дізнатися про Pedrotti більше.</p>
+                       <p>Ви запросили розрахунок ренабельності зерносушарки Pedrotti.</p>
+                       <p>Ми додали його у вкладенні</p>
+                       <p>Питання Ви можете задати за номером:</p>
                        <p>(050) 404-44-70</p>
                        <p>(096) 054-39-91</p>
-                       <p>или написать нам: </p>
+                       <p>або написати нам: </p>
                        <p>secretary@farmmac.com.ua</p>
-                       <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+                       <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
                        <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
@@ -269,20 +269,20 @@ $lang = [
         'Basic' => [
             'to' => [$email],
             "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
-            'subject' => 'Технические характеристики Pedrotti',
-            'html_body' => "<p>Здравствуйте!</p>
-               <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
-               <p>Вы запросили технические характеристики серии " . $comment . "</p>
-               <p>Мы прикрепили их во вложении ниже.</p>
-               <p>Вопросы Вы можете задать по номеру: </p>
+            'subject' => 'Технічні характеристики Pedrotti',
+            'html_body' => "<p>Вітаємо!</p>
+               <p>Дякуємо, що захотіли дізнатися про Pedrotti більше.</p>
+               <p>Ви запросили технічні характеристики серії Basic</p>
+               <p>Ми додали їх у вкладенні</p>
+               <p>Питання Ви можете задати за номером: </p>
                <p>(050) 404-44-70</p>
                <p>(096) 054-39-91</p>
-               <p>или написать нам: </p>
+               <p>або написати нам: </p>
                <p>secretary@farmmac.com.ua</p>
-               <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
+               <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
-                'filename' => $comment . '.pdf',
+                'filename' => 'Basic.pdf',
                 'fileblob' => base64_encode(file_get_contents('Basic.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
@@ -294,7 +294,7 @@ $lang = [
             'subject' => 'Технические характеристики Pedrotti',
             'html_body' => "<p>Здравствуйте!</p>
                <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
-               <p>Вы запросили технические характеристики серии " . $comment . "</p>
+               <p>Вы запросили технические характеристики серии Large</p>
                <p>Мы прикрепили их во вложении ниже.</p>
                <p>Вопросы Вы можете задать по номеру: </p>
                <p>(050) 404-44-70</p>
@@ -304,7 +304,7 @@ $lang = [
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
-                'filename' => $comment . '.pdf',
+                'filename' => 'Large.pdf',
                 'fileblob' => base64_encode(file_get_contents('Large.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
@@ -316,7 +316,7 @@ $lang = [
             'subject' => 'Технические характеристики Pedrotti',
             'html_body' => "<p>Здравствуйте!</p>
                <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
-               <p>Вы запросили технические характеристики серии " . $comment . "</p>
+               <p>Вы запросили технические характеристики серии XL</p>
                <p>Мы прикрепили их во вложении ниже.</p>
                <p>Вопросы Вы можете задать по номеру: </p>
                <p>(050) 404-44-70</p>
@@ -326,7 +326,7 @@ $lang = [
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
-                'filename' => $comment . '.pdf',
+                'filename' => 'XL.pdf',
                 'fileblob' => base64_encode(file_get_contents('XL.pdf')),
                 'mimetype' => 'application/pdf'
             ]],

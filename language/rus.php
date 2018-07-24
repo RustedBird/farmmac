@@ -285,7 +285,7 @@ $lang = [
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
-                'filename' => $comment . '.pdf',
+                'filename' => 'Basic.pdf',
                 'fileblob' => base64_encode(file_get_contents('Basic.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
@@ -307,7 +307,7 @@ $lang = [
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
-                'filename' => $comment . '.pdf',
+                'filename' => 'Large.pdf',
                 'fileblob' => base64_encode(file_get_contents('Large.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
@@ -329,7 +329,7 @@ $lang = [
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
                <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
-                'filename' => $comment . '.pdf',
+                'filename' => 'XL.pdf',
                 'fileblob' => base64_encode(file_get_contents('XL.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
