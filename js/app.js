@@ -178,7 +178,7 @@
                     model = 550;
                     break;
                 case $performance >= 300:
-                    model = 550;
+                    model = 700;
                     break;
             }
             $answer.html('XL ' + model);
@@ -205,7 +205,7 @@
                     model = 270;
                     break;
                 case $performance >= 90 && $performance < 115:
-                    model = 270;
+                    model = 300;
                     break;
             }
             $answer.html('Large ' + model);
@@ -308,9 +308,11 @@
             });
         }
         if ($(window).scrollTop() > $sec3) {
+            var $picBlock = $('.picBlock');
             $('.whiteBg').css('display', 'none');
-            $('.picBlock').addClass('picBlockAnim');
+            $picBlock.addClass('picBlockAnim');
             $('.section3').css('z-index', 1);
+            $picBlock.css('z-index', 1);
         }
     });
 
@@ -366,7 +368,7 @@
     });
 
     $('[data-target="#modalPdf"]').on('click', function () {
-        $('#modalPdf .modal-body').html('<iframe src="https://drive.google.com/file/d/1y0asRFGGx2Mouy_FZNcW52mJPUZHzjrI/preview"></iframe>');
+        $('#modalPdf .modal-body').html('<iframe src="https://drive.google.com/file/d/115ArEmrSga277KXZcd6sbDfiaPSh4fzu/preview"></iframe>');
     });
 
 })(jQuery);

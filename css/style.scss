@@ -243,7 +243,7 @@ $mainColor: #EC0606;
       @media screen and (max-width: 1440px) {
         font-size: 16px;
         padding: 10px 0;
-        margin: 10px auto;
+        margin: 20px auto;
       }
       @media screen and (max-width: 1280px) {
         font-size: 14px;
@@ -361,7 +361,7 @@ $mainColor: #EC0606;
       font-family: 'gothampro-light', sans-serif;
       font-size: 14px;
       font-weight: 300;
-      color: #3E3E3E;
+      color: #1c1c1c;
       margin-top: 30px;
       text-align: center;
       @media screen and (max-width: 1440px) {
@@ -380,7 +380,7 @@ $mainColor: #EC0606;
 }
 
 body {
-  color: #232222;
+  color: #222222;
   position: relative;
   .whiteBg { //white background to hide animated element whe loaded with slow connection
     content: '';
@@ -428,7 +428,7 @@ body {
       bottom: 8%;
     }
     @media screen and (max-width: 1023px) {
-      z-index: -999;
+      z-index: -9999;
     }
   }
   .light {
@@ -437,6 +437,7 @@ body {
     height: auto;
     top: 0;
     left: 0;
+    z-index: -1;
   }
   .preloader {
     width: 100%;
@@ -611,47 +612,108 @@ body {
   @media screen and (max-width: 1023px) {
     padding-bottom: 0;
   }
-  .container {
-    padding: 0;
-    .upperMenu {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding: 15px 0;
-      .logo {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 65px;
-        @media screen and (max-width: 1440px) {
-          position: absolute;
-          left: 10%;
-          width: 14%;
-          margin-right: 0;
+  .upperMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 0;
+    width: 80%;
+    margin: 0 auto;
+    @media screen and (max-width: 1440px) {
+      padding: 9px 0;
+      width: 82%;
+    }
+    @media screen and (max-width: 1023px) {
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+    }
+    .logo {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20%;
+      @media screen and (max-width: 1570px) {
+        margin-right: 12%;
+      }
+      @media screen and (max-width: 1440px) {
+        width: 14%;
+      }
+      @media screen and (max-width: 1280px) {
+        width: 12%;
+      }
+      @media screen and (max-width: 1023px) {
+        width: 25%;
+        position: static;
+      }
+    }
+    .lang {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: 'gothampro-black', sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      margin: 0 30px;
+      span:last-of-type {
+        margin-left: 15px;
+      }
+      @media screen and (max-width: 1440px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 1280px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+      &:nth-child(4) {
+        display: none;
+        font-size: 35px;
+        margin: 0;
+        span {
+          display: block;
+          margin: 0;
+          cursor: pointer;
+          -webkit-transition: color 0.2s;
+          -o-transition: color 0.2s;
+          transition: color 0.2s;
         }
-        @media screen and (max-width: 1280px) {
-          width: 12%;
+        span.active {
+          color: #A50606;
         }
         @media screen and (max-width: 1023px) {
-          width: 25%;
-          position: static;
+          display: block;
+          line-height: 34px;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 25px;
+          line-height: 27px;
         }
       }
-      .lang {
-        display: inline-block;
-        vertical-align: middle;
-        font-family: 'gothampro-black', sans-serif;
-        font-size: 24px;
-        font-weight: 900;
-        margin: 0 30px;
-        span:last-of-type {
-          margin-left: 15px;
+      span {
+        cursor: pointer;
+        &:hover {
+          color: #A50606;
         }
+      }
+      span.active {
+        color: #A50606;
+      }
+    }
+    .phones {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      color: #080808;
+      span {
+        font-family: 'gothampro-medium', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0 8px;
         @media screen and (max-width: 1440px) {
           font-size: 18px;
         }
@@ -659,140 +721,80 @@ body {
           font-size: 16px;
         }
         @media screen and (max-width: 1023px) {
-          display: none;
+          font-size: 25px;
         }
-        &:nth-child(4) {
-          display: none;
-          font-size: 35px;
-          margin: 0;
-          span {
-            display: block;
-            margin: 0;
-            cursor: pointer;
-            -webkit-transition: color 0.2s;
-            -o-transition: color 0.2s;
-            transition: color 0.2s;
-          }
-          span.active {
-            color: #A50606;
-          }
-          @media screen and (max-width: 1023px) {
-            display: block;
-            line-height: 34px;
-          }
-          @media screen and (max-width: 767px) {
-            font-size: 25px;
-            line-height: 27px;
-          }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
         }
-        span {
-          cursor: pointer;
-          &:hover {
-            color: #A50606;
-          }
-        }
-        span.active {
-          color: #A50606;
-        }
-      }
-      .phones {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0;
-        color: #080808;
-        span {
-          font-family: 'gothampro-medium', sans-serif;
-          font-size: 20px;
-          font-weight: 500;
-          padding: 0 8px;
-          @media screen and (max-width: 1440px) {
-            font-size: 18px;
-          }
-          @media screen and (max-width: 1280px) {
-            font-size: 16px;
-          }
-          @media screen and (max-width: 1023px) {
-            font-size: 25px;
-          }
-          @media screen and (max-width: 767px) {
-            font-size: 18px;
-          }
-        }
-      }
-      .button {
-        @include button;
-        display: inline-block;
-        width: 360px;
-        margin: 0 0 0 30px;
-        position: relative;
-        @media screen and (max-width: 1440px) {
-          width: 300px;
-        }
-        @media screen and (max-width: 1280px) {
-          width: 250px;
-        }
-        @media screen and (max-width: 1023px) {
-          display: none;
-        }
-      }
-      @include sendForm;
-      form {
-        display: none;
-        position: absolute;
-        width: 360px;
-        background: #ffffff;
-        right: 0;
-        top: 95px;
-        padding: 20px;
-        padding-bottom: 40px;
-        z-index: 99;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
-        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
-        @media screen and (max-width: 1440px) {
-          width: 300px;
-          top: 74px;
-        }
-        @media screen and (max-width: 1280px) {
-          width: 250px;
-          right: 17.3%;
-          padding: 10px;
-          padding-bottom: 20px;
-        }
-        @media screen and (max-width: 1199px) {
-          width: 250px;
-          right: 12.3%;
-        }
-        .close {
-          content: '';
-          position: absolute;
-          top: 15px;
-          right: 15px;
-          z-index: 100;
-          cursor: pointer;
-          @media screen and (max-width: 1280px) {
-            top: 5px;
-            right: 10px;
-          }
-        }
-        input {
-          width: 80%;
-        }
-        .callBack {
-          @include button;
-          width: 80%;
-          cursor: pointer;
-        }
-      }
-      @media screen and (max-width: 1440px) {
-        -webkit-box-pack: flex-end;
-        -ms-flex-pack: flex-end;
-        justify-content: flex-end;
-      }
-      @media screen and (max-width: 1023px) {
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
       }
     }
+    .button {
+      @include button;
+      display: inline-block;
+      width: 360px;
+      margin: 0 30px;
+      position: relative;
+      @media screen and (max-width: 1440px) {
+        width: 300px;
+      }
+      @media screen and (max-width: 1280px) {
+        width: 250px;
+      }
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
+    @include sendForm;
+    form {
+      display: none;
+      position: absolute;
+      width: 360px;
+      background: #ffffff;
+      right: calc(50% - 180px);
+      top: 95px;
+      padding: 20px;
+      padding-bottom: 40px;
+      z-index: 99;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+      box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+      @media screen and (max-width: 1440px) {
+        width: 300px;
+        right: calc(50% - 150px);
+        top: 74px;
+      }
+      @media screen and (max-width: 1280px) {
+        width: 250px;
+        right: calc(50% - 125px);
+        padding: 10px;
+        padding-bottom: 20px;
+      }
+      @media screen and (max-width: 1199px) {
+        width: 250px;
+      }
+      .close {
+        content: '';
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 100;
+        cursor: pointer;
+        @media screen and (max-width: 1280px) {
+          top: 5px;
+          right: 10px;
+        }
+      }
+      input {
+        width: 80%;
+      }
+      .callBack {
+        @include button;
+        width: 80%;
+        cursor: pointer;
+      }
+    }
+  }
+  .container {
+    padding: 0;
     .mainTitleWrapper {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -811,13 +813,34 @@ body {
         margin-top: 45px;
         margin-bottom: 0;
         margin-right: -64px;
+        @media screen and (max-width: 1600px) {
+          font-size: 50px;
+        }
+        @media screen and (max-width: 1440px) {
+          font-size: 42px;
+          margin-bottom: 0;
+          margin-top: 10px;
+          padding-left: 58px;
+        }
+        @media screen and (max-width: 1023px) {
+          padding-left: 0;
+          margin-right: 0;
+          font-size: 61px;
+          text-align: center;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 40px;
+        }
+        @media screen and (max-width: 424px) {
+          font-size: 32px;
+        }
         .iconImg {
           content: '';
           position: absolute;
-          left: -115px;
-          top: -45px;
-          width: 250px;
-          height: 250px;
+          left: -69px;
+          top: -23px;
+          width: 200px;
+          height: 200px;
           background-size: cover;
           @media screen and (max-width: 1600px) {
             left: -59px;
@@ -826,10 +849,10 @@ body {
             height: 180px;
           }
           @media screen and (max-width: 1440px) {
-            left: -51px;
-            top: -36%;
-            width: 180px;
-            height: 181px;
+            left: -75px;
+            top: -16%;
+            width: 140px;
+            height: 140px;
           }
           @media screen and (max-width: 1023px) {
             display: none;
@@ -854,35 +877,42 @@ body {
             font-size: 57px;
           }
         }
-        @media screen and (max-width: 1600px) {
-          font-size: 50px;
-        }
-        @media screen and (max-width: 1440px) {
-          font-size: 42px;
-          margin-bottom: 0;
-        }
-        @media screen and (max-width: 1023px) {
-          padding-left: 0;
-          margin-right: 0;
-          font-size: 61px;
-          text-align: center;
-        }
-        @media screen and (max-width: 767px) {
-          font-size: 40px;
-        }
-        @media screen and (max-width: 424px) {
-          font-size: 32px;
-        }
       }
     }
     .formBlock {
-      text-align: right;
+      text-align: center;
       margin-top: 35px;
+      -webkit-transform: translateX(28%);-ms-transform: translateX(28%);transform: translateX(28%);
+      @media screen and (max-width: 1600px) {
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 1570px) {
+        -webkit-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+        transform: translateX(20%);
+      }
+      @media screen and (max-width: 1440px) {
+        margin-top: 24px;
+        -webkit-transform: translateX(17%);
+        -ms-transform: translateX(17%);
+        transform: translateX(17%);
+      }
+      @media screen and (max-width: 1023px) {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+      }
+      @media screen and (max-width: 767px) {
+        margin-top: 15px;
+      }
       .titleWrapper {
         background: #ffffff;
         display: inline-block;
         padding: 0 15px;
-        margin-right: -41px;
         .subTitle {
           display: inline-block;
           font-family: 'gothampro-black', sans-serif;
@@ -917,7 +947,6 @@ body {
           }
         }
         @media screen and (max-width: 1440px) {
-          margin-right: -30px;
         }
         @media screen and (max-width: 1280px) {
           margin-right: 0;
@@ -925,7 +954,7 @@ body {
         @media screen and (max-width: 1023px) {
           width: 80%;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 991px) {
           width: 100%;
         }
       }
@@ -934,14 +963,13 @@ body {
         font-size: 30px;
         font-weight: 900;
         color: #232222;
-        margin: 19px -117px 0 0;
+        margin: 0 auto;
+        margin-top: 19px;
         @media screen and (max-width: 1600px) {
           font-size: 25px;
-          margin: 10px -135px 0 0;
         }
         @media screen and (max-width: 1440px) {
           font-size: 20px;
-          margin: 13px -40px 0 0;
         }
         @media screen and (max-width: 1280px) {
           font-size: 18px;
@@ -964,25 +992,10 @@ body {
           margin-top: 10px;
         }
         @media screen and (max-width: 1440px) {
-          padding-right: 5%;
         }
         @media screen and (max-width: 1023px) {
           display: none;
         }
-      }
-      @media screen and (max-width: 1600px) {
-        margin-top: 20px;
-      }
-      @media screen and (max-width: 1440px) {
-        margin-top: 0;
-      }
-      @media screen and (max-width: 1023px) {
-        text-align: center;
-        margin-top: 40px;
-        margin-bottom: 15px;
-      }
-      @media screen and (max-width: 767px) {
-        margin-top: 15px;
       }
     }
   }
@@ -1013,8 +1026,8 @@ body {
       width: 18%;
     }
     @media screen and (max-width: 1440px) {
-      width: 18%;
-      left: 21%;
+      width: 22%;
+      left: 20%;
     }
     @media screen and (max-width: 1023px) {
       width: 43%;
@@ -1072,7 +1085,11 @@ body {
   .col-row {
     padding: 15% 0;
     padding-bottom: 12%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     .col-item {
       position: relative;
@@ -1081,14 +1098,14 @@ body {
         @include redTitle;
         .counter {
           display: inline-block;
-          background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 15%, rgba(234, 157, 158, 1) 40%, rgba(221, 4, 25, 1) 72%, rgba(221, 4, 25, 1) 100%);
+          background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 20%, rgb(234, 86, 61) 40%, rgba(221, 4, 25, 1) 65%, rgba(221, 4, 25, 1) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
         .addText {
           font-size: 0.75em;
           display: inline-block;
-          background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 15%, rgba(234, 157, 158, 1) 40%, rgba(221, 4, 25, 1) 72%, rgba(221, 4, 25, 1) 100%);
+          background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 20%, rgb(234, 86, 61) 40%, rgba(221, 4, 25, 1) 65%, rgba(221, 4, 25, 1) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -1101,7 +1118,7 @@ body {
         font-size: 24px;
         line-height: 28px;
         font-weight: bold;
-        color: #4F4F50;
+        color: #333334;
         width: 100%;
         position: absolute;
         letter-spacing: -1px;
@@ -1266,19 +1283,28 @@ body {
     .picBlock {
       text-align: center;
       padding-top: 50px;
+      padding-left: 0;
+      padding-right: 0;
       position: relative;
       z-index: -5;
       -webkit-transform: translateY(-2000px);
       -ms-transform: translateY(-2000px);
       transform: translateY(-2000px);
+      &:hover {
+        img {
+          -webkit-box-shadow: rgba(0, 0, 0, 0.63) 8px 8px 30px;
+          box-shadow: rgba(0, 0, 0, 0.63) 8px 8px 30px;
+        }
+      }
       img {
         width: 257px;
         height: auto;
         border-radius: 50%;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
-        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
         display: block;
         margin: 0 auto;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        transition: all 0.3s;
         @media screen and (max-width: 1850px) {
           width: 190px;
         }
@@ -1306,6 +1332,12 @@ body {
         @media screen and (max-width: 767px) {
           font-size: 18px;
           line-height: 22px;
+        }
+      }
+      .addPadding {
+        padding: 0 10%;
+        @media screen and (max-width: 1023px) {
+          padding: 0;
         }
       }
       @media screen and (max-width: 1440px) {
@@ -1407,6 +1439,7 @@ body {
         border-radius: 50%;
         -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
         box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        transition: all 0.3s;
         @media screen and (max-width: 1280px) {
           width: 85px;
         }
@@ -1425,6 +1458,13 @@ body {
         text-align: center;
         margin: 0 auto;
       }
+      &:hover {
+        img {
+          -webkit-box-shadow: rgba(0, 0, 0, 0.63) 8px 8px 30px;
+          box-shadow: rgba(0, 0, 0, 0.63) 8px 8px 30px;
+          transform: scale(1.02);
+        }
+      }
     }
     .textItem {
       display: table;
@@ -1434,6 +1474,7 @@ body {
         font-family: 'gothampro-medium', sans-serif;
         font-size: 14px;
         font-weight: 500;
+        color: #222222;
         text-transform: uppercase;
         margin: 0;
         display: table-cell;
@@ -1481,11 +1522,11 @@ body {
       font-weight: 900;
       text-transform: uppercase;
       margin: 10px 0;
-      background: rgb(165, 6, 6); /* Old browsers */ /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(165, 6, 6, 1)), to(rgba(209, 70, 72, 1)));
-      background: -o-linear-gradient(top, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%);
-      background: linear-gradient(to bottom, rgba(165, 6, 6, 1) 0%, rgba(209, 70, 72, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background: rgba(164, 10, 14, 1); /* Old browsers */ /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgb(209, 56, 58) 0%, rgba(164, 10, 14, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, left bottom, from(rgb(209, 56, 58)), to(rgba(164, 10, 14, 1)));
+      background: -o-linear-gradient(top, rgb(209, 56, 58) 0%, rgba(164, 10, 14, 1) 100%);
+      background: linear-gradient(to bottom, rgb(209, 56, 58) 0%, rgba(164, 10, 14, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a50606', endColorstr='#d14648', GradientType=0); /* IE6-9 */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1988,7 +2029,7 @@ body {
       font-family: 'gothampro-black', sans-serif;
       font-size: 30px;
       font-weight: 900;
-      color: #232222;
+      color: #222222;
       margin-bottom: 40px;
       @media screen and (max-width: 1440px) {
         font-size: 24px;
@@ -2140,12 +2181,12 @@ body {
           font-size: 18px;
           line-height: 20px;
           font-weight: 500;
-          color: #232222;
+          color: #222222;
           width: 360px;
           padding: 10px 15px 10px 0;
           text-transform: uppercase;
           border-bottom: 1px solid #EC0606;
-          margin: 5px 0;
+          margin: 10px 0;
           -webkit-transition: all 0.2s linear;
           -o-transition: all 0.2s linear;
           transition: all 0.2s linear;
@@ -2316,8 +2357,8 @@ body {
 
 @-webkit-keyframes floating {
   from {
-    -webkit-transform: rotate(0deg) translate(-5px) rotate(0deg);
-    transform: rotate(0deg) translate(-5px) rotate(0deg);
+    -webkit-transform: rotate(0.02deg) translate(-5px) rotate(0.02deg);
+    transform: rotate(0.02deg) translate(-5px) rotate(0.02deg);
   }
   to {
     -webkit-transform: rotate(360deg) translate(-5px) rotate(-360deg);
@@ -2327,8 +2368,8 @@ body {
 
 @keyframes floating {
   from {
-    -webkit-transform: rotate(0deg) translate(-5px) rotate(0deg);
-    transform: rotate(0deg) translate(-5px) rotate(0deg);
+    -webkit-transform: rotate(0.02deg) translate(-5px) rotate(0.02deg);
+    transform: rotate(0.02deg) translate(-5px) rotate(0.02deg);
   }
   to {
     -webkit-transform: rotate(360deg) translate(-5px) rotate(-360deg);
@@ -2377,6 +2418,7 @@ body {
         border-radius: 50%;
         -webkit-box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
         box-shadow: rgba(0, 0, 0, 0.43) 8px 8px 30px;
+        transition: all 0.3s;
         @media screen and (max-width: 1440px) {
           width: 130px;
           height: auto;
@@ -2443,6 +2485,12 @@ body {
         width: 100%;
         margin: 45px auto;
       }
+      &:hover {
+        img {
+          -webkit-box-shadow: rgba(0, 0, 0, 0.63) 8px 8px 30px;
+          box-shadow: rgba(0, 0, 0, 0.63) 8px 8px 30px;
+        }
+      }
     }
     @media screen and (max-width: 1280px) {
       margin: 20px 0;
@@ -2467,26 +2515,8 @@ body {
   #slickSlider {
     overflow: hidden;
     position: relative;
-    //width: 1600px;
     margin: 0 auto;
     padding: 30px 0;
-    /*@media screen and (max-width: 1600px) {
-      width: 1300px;
-    }
-    @media screen and (max-width: 1440px) {
-      width: 1000px;
-    }
-    @media screen and (max-width: 1023px) {
-      width: 700px;
-    }
-    @media screen and (max-width: 767px) {
-      width: 400px;
-      padding: 25px 0;
-      padding-bottom: 0;
-    }
-    @media screen and (max-width: 424px) {
-      width: 300px;
-    }*/
     .sliderItem {
       position: relative;
       display: inline-block;
@@ -3188,9 +3218,6 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-body {
-  color: #6a6c6f;
-}
 
 
 

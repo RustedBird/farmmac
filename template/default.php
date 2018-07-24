@@ -23,37 +23,37 @@
 <!-- первый экран -->
 <section class="container-fluid section1">
     <img class="light" src="../img/light.png" alt="light">
+    <div class="upperMenu">
+        <img class="logo" src="../img/logo.png" alt="logo">
+        <p class="lang">
+            <span data-lang="ukr">ukr</span>
+            <span data-lang="rus">rus</span>
+        </p>
+        <div class="button orderCall"><?= $lang['section1']['orderCall']?></div>
+        <p class="lang">
+            <span data-lang="ukr">ukr</span>
+            <span data-lang="rus">rus</span>
+        </p>
+        <p class="phones">
+            <span>(050) 404-44-70</span><br>
+            <span>(096) 054-39-91</span>
+        </p>
+        <form class="ajaxForm" action="../process.php" method="post">
+            <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
+            <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
+            <input type="hidden" name="comment" value="Call me back">
+            <button class="button callBack" data-comment="Call me back"><?= $lang['form']['orderCall']?></button>
+            <span class="close">&times;</span>
+        </form>
+    </div>
     <div class="container">
-        <div class="upperMenu">
-            <img class="logo" src="../img/logo.png" alt="logo">
-            <p class="lang">
-                <span data-lang="ukr">ukr</span>
-                <span data-lang="rus">rus</span>
-            </p>
-            <p class="phones">
-                <span>(050) 404-44-70</span><br>
-                <span>(096) 054-39-91</span>
-            </p>
-            <p class="lang">
-                <span data-lang="ukr">ukr</span>
-                <span data-lang="rus">rus</span>
-            </p>
-            <div class="button orderCall"><?= $lang['section1']['orderCall']?></div>
-            <form class="ajaxForm" action="../process.php" method="post">
-                <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
-                <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
-                <input type="hidden" name="comment" value="Call me back">
-                <button class="button callBack" data-comment="Call me back"><?= $lang['form']['orderCall']?></button>
-                <span class="close">&times;</span>
-            </form>
-        </div>
         <div class="mainTitleWrapper">
             <h1><?= $lang['section1']['title'] ?><br>
                 <img class="iconImg" src="" alt="">
                 <span><?= $lang['section1']['BrandName'] ?></span>
             </h1>
         </div>
-        <div class="formBlock">
+        <div class="formBlock col-md-10 offset-md-2">
             <div class="titleWrapper">
                 <p class="subTitle"><?= $lang['section1']['subTitle']?></p>
             </div>
@@ -141,7 +141,7 @@
             </div>
             <div class="col-md-4 offset-md-1 picBlock">
                 <img src="../img/sec3Roundpic2.jpg" alt="pic2">
-                <p class="underText"><?= $lang['section3']['item2']?></p>
+                <p class="underText addPadding"><?= $lang['section3']['item2']?></p>
             </div>
             <div class="col-md-3 offset-md-1 picBlock text-right">
                 <img src="../img/sec3Roundpic3.jpg" alt="pic3">
@@ -161,7 +161,7 @@
         <div class="row">
             <div class="col-md-4 offset-md-4 picBlock">
                 <img src="../img/sec3Roundpic6.jpg" alt="pic6">
-                <p class="underText"><?= $lang['section3']['item6']?></p>
+                <p class="underText addPadding"><?= $lang['section3']['item6']?></p>
             </div>
         </div>
     </div>
@@ -496,6 +496,7 @@
             <img src="../img/custumer2.jpg" alt="custumer2">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem2']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem2']?></p>
+            <p class="address"><?= $lang['section9']['feedbacks']['posItem2']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem2']?></p>
             <p class="howLong">Зерносушарка Large 270 з 2014 року</p>
         </div>
@@ -510,6 +511,7 @@
             <img src="../img/custumer3.jpg" alt="custumer3">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem4']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem4']?></p>
+            <p class="address"><?= $lang['section9']['feedbacks']['posItem4']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem4']?></p>
             <p class="howLong">Зерносушарка Large 270 з 2013 року</p>
         </div>
@@ -524,6 +526,7 @@
             <img src="../img/custumer3.jpg" alt="custumer3">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem6']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem6']?></p>
+            <p class="address"><?= $lang['section9']['feedbacks']['posItem6']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem6']?></p>
             <p class="howLong">Зерносушарка Large 270 з 2013 року</p>
         </div>
@@ -736,7 +739,7 @@
                 <h6 class="footTitle"><?= $lang['section13']['title']?></h6>
                 <p class="address"><?= $lang['section13']['address']?></p>
                 <p class="phone">
-                    (050) 40 444 70<br>
+                    (050) 404 44 70<br>
                     (096) 054 39 91
                 </p>
 
@@ -830,7 +833,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <a href="../img/ru_basic-90.pdf" target="_blank">Скачать</a>
+                <a href="../img/payback_calculation.pdf" target="_blank">Скачать</a>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
