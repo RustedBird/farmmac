@@ -465,7 +465,6 @@ body {
         width: 82%; } }
     @media screen and (max-width: 1023px) {
       .section1 .upperMenu {
-        -ms-flex-pack: distribute;
         justify-content: space-around; } }
     @media screen and (max-width: 767px) {
       .section1 .upperMenu {

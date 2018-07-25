@@ -632,7 +632,7 @@ body {
       width: 82%;
     }
     @media screen and (max-width: 1023px) {
-      -ms-flex-pack: distribute;
+      //-ms-flex-pack: distribute;
       justify-content: space-around;
     }
     @media screen and (max-width: 767px) {

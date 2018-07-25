@@ -866,7 +866,7 @@
 
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<--!Gradient compatibility with IE -->
+<!--Gradient compatibility with IE -->
 <script>
     if ((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
         $('.gradRed').css({'background': 'none', 'color': '#CC1D22'});
