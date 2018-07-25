@@ -632,7 +632,7 @@ body {
       width: 82%;
     }
     @media screen and (max-width: 1023px) {
-      //-ms-flex-pack: distribute;
+      -ms-flex-pack: distribute;
       justify-content: space-around;
     }
     @media screen and (max-width: 767px) {
@@ -2958,6 +2958,10 @@ body {
   #accordion {
     border-color: transparent;
     width: 100%;
+    @media screen and (max-width: 1440px) {
+      //width: calc(100% - 50px);
+      width: 90%;
+    }
     .card {
       border-color: transparent;
       background-color: transparent;
@@ -2977,6 +2981,8 @@ body {
             text-transform: uppercase;
             padding: 0;
             white-space: normal;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
             &:hover {
               color: rgb(97, 4, 4);
@@ -3070,9 +3076,6 @@ body {
           font-size: 14px;
         }
       }
-    }
-    @media screen and (max-width: 1440px) {
-      width: calc(100% - 50px);
     }
   }
   .subTitle {

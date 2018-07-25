@@ -465,6 +465,7 @@ body {
         width: 82%; } }
     @media screen and (max-width: 1023px) {
       .section1 .upperMenu {
+        -ms-flex-pack: distribute;
         justify-content: space-around; } }
     @media screen and (max-width: 767px) {
       .section1 .upperMenu {
@@ -3831,6 +3832,9 @@ body {
   .section12 #accordion {
     border-color: transparent;
     width: 100%; }
+    @media screen and (max-width: 1440px) {
+      .section12 #accordion {
+        width: 90%; } }
     .section12 #accordion .card {
       border-color: transparent;
       background-color: transparent; }
@@ -3850,6 +3854,8 @@ body {
             text-transform: uppercase;
             padding: 0;
             white-space: normal;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s; }
             .section12 #accordion .card .card-header .mb-0 .btn:hover {
               color: #610404; }
@@ -3930,9 +3936,6 @@ body {
         @media screen and (max-width: 767px) {
           .section12 #accordion .card .card-body {
             font-size: 14px; } }
-    @media screen and (max-width: 1440px) {
-      .section12 #accordion {
-        width: calc(100% - 50px); } }
   .section12 .subTitle {
     font-family: 'gothampro-black', sans-serif;
     font-size: 24px;
