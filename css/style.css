@@ -1698,7 +1698,7 @@ body {
     @media screen and (max-width: 767px) {
       .section2 .col-row .col-item:nth-of-type(1) {
         width: 112px; } }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 424px) {
       .section2 .col-row .col-item:nth-of-type(1) {
         width: 112px; } }
     @media screen and (max-width: 1023px) {
