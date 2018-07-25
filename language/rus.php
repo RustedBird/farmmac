@@ -161,22 +161,27 @@ $lang = [
             'whatItem1' => '“Це вже моя друга зерносушарка Pedrotti. Першу купив б/у в Польщі. Вона проста в експлуатації. Зрозуміле меню. Стоять універсальні решета. З компанією буду працювати стільки, скільки буде працювати хозяйство. Змінювати Pedrotti ні на що не хочу. Навіть якщо буду ставити стаціонару, цю залишу як швидку допомогу. Тому що коли потрібно, ти її включив, запустив, пересушив, виключив і вона стоїть собі в уголку, їсти не просить. Машина достойна!”',
             'whoItem1' => 'Сергій Іванович',
             'fromItem1' => 'Голова ФГ “В’язівське”, Черкаська обл.',
+            'howLong1' => 'Зерносушарка Large 270 з 2016 року',
             'whatItem2' => '“Консультировались и остановился на Pedrotti, потому что она лучше и надежней. Ярослав все объяснил. Мы довольны. В самой зерносушилке много чего нравиться. Если сравнивать с конкурентами, мне нравится, что в ней стоит ремень и редуктора. В зимнее время лучше в том плане, что когда запуски, боишься, что будут какие-то обрывы. Работаем с 2014 года. Планируем работать с вами и дальше, даже подыскал вам клиента. Думает сейчас, приезжал смотрел на мою сушку. Я ему объясняю, что она лучше, надежней”',
             'whoItem2' => 'Фенько Юрій Іванович',
             'posItem2' => 'Власник',
             'fromItem2' => 'м. Полтава',
+            'howLong2' => 'Зерносушарка Large 270 з 2014 року',
             'whatItem3' => '“Купили Pedrotti, потому что фирма давно работает, отзывы хорошие, как в Украине, так и в Европе. Фермеры хорошо отзываются. Нормальная зерносушилка, сушит. Сравнивать нету с чем, так как мы пользовались только Pedrotti. Но она более надежная. Пересушили где-то 10000 тысяч, по 2000 в сезон. Уже сушка окупилась. Обслуживание мне нравится”',
             'whoItem3' => 'Олег Андрійович',
             'fromItem3' => 'Голова СФГ “Залужжя”, Київська обл.',
+            'howLong3' => 'Зерносушарка Large 270 з 2013 року',
             'whatItem4' => '“Вибрали Pedrotti за простоту в експлуатації та в обслуговуванні, доступну ціну і високу ефективність, простоту в монтажі. Pedrotti окупилась за один сезон. Під свої вимоги робимо більш зручне завантаження”',
             'whoItem4' => 'Микола Михайлович',
             'posItem4' => 'Власник',
             'fromItem4' => 'СТОВ “Дніпро”, Вінницька обл',
+            'howLong4' => 'Зерносушарка Large 270 з 2014 року',
             'whatItem5' => '“Нормальна сушарка. Компактна. Зауважень немає. Порівнюючи з іншими, я думаю, що це самий вдалий варіант. Зерносушарка показує непогані результати.
 Аналізуючи ринок на той момент, з технічної точки зору, вибрали саме цю сушарку.
 Я не жалію, що взяв Pedrotti на сьогоднішній момент. Після роботи трьох сезонів, ми думаєм вже взяти нову, більш потужну, а цю будем виставляти на продаж. Сервіс непоганий, консультація чудова”',
             'whoItem5' => 'Володимир Іванович',
             'fromItem5' => 'Голова ФГ “ОЛЬВІЯ - С”, Вінницька обл.',
+            'howLong5' => 'Зерносушарка Large 270 з 2015 року',
             'whatItem6' => '“Выбрали Pedrotti, потому что менеджеры убедили, что именно она хорошая и потому что она мобильная. Сравнивали с другими зерносушилками, у них один двигатель, а у Pedrotti - четыре.
 Потом мы поехали, увидели ее в работе и поэтому купили.
 Больше всего нас устраивает взаимопомощь и отзывчивость. То есть, в случае чего-то непонятного, мы всегда звоним, к нам откликаются, нету такого, чтобы с нами не говорили, не помогали. Самое главное - обслуживание! 
@@ -184,6 +189,7 @@ $lang = [
             'whoItem6' => 'Кухновець Валерій Миколайович',
             'posItem6' => 'Власник',
             'fromItem6' => 'Чернігівська обл.',
+            'howLong6' => 'Зерносушарка Large 270 з 2017 року',
         ]
     ],
     // Карта с клиентами
@@ -264,7 +270,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
                 'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
@@ -285,7 +291,7 @@ $lang = [
                <p>или написать нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-               <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'Basic.pdf',
                 'fileblob' => base64_encode(file_get_contents('Basic.pdf')),
@@ -307,7 +313,7 @@ $lang = [
                <p>или написать нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-               <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'Large.pdf',
                 'fileblob' => base64_encode(file_get_contents('Large.pdf')),
@@ -329,7 +335,7 @@ $lang = [
                <p>или написать нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-               <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'XL.pdf',
                 'fileblob' => base64_encode(file_get_contents('XL.pdf')),
@@ -352,7 +358,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
         'Личный расчет окупаемости Pedrotti' => [
             'to' => [$email],
@@ -377,7 +383,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
                 'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
@@ -398,7 +404,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
         'Забронировал скидку при попытке ухода' => [
             'to' => [$email],
@@ -413,7 +419,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://pishiprosto.aksenovkk.beget.tech' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
     ],
     // ответы после отправки формы
