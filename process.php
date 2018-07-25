@@ -6,7 +6,7 @@ $email = $post['email'];
 $phone = $post['phone'];
 $comment = $post['comment'];
 $question = $post['question'];
-
+var_dump($post);die();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/language/" . $post['lang'] . '.php');
 
 //Проверка на валидность данных
@@ -33,7 +33,7 @@ if ($response['result']) {
     ];
 
     $newMessage = new Message();
-//    $newMessage->sendEmail($request, $lang);
+    $newMessage->sendEmail($request, $lang);
     $newMessage->sendTelegram($request['html_body']);
 
     if ($comment != 'Call me back') {

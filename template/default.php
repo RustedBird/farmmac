@@ -587,7 +587,7 @@
                 <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>">
                 <input type="email" name="email" placeholder="<?= $lang['form']['placeholderEmail']?>">
                 <input hidden type="text" name="comment" value="">
-                <button class="button" data-comment="Забронировал скидку"><?= $lang['form']['discountFormButton']?></button>
+                <button class="button" data-comment="Личный расчет окупаемости Pedrotti"><?= $lang['form']['discountFormButton']?></button>
                 <p class="underText"><?= $lang['form']['underText']?></p>
             </form>
         </div>

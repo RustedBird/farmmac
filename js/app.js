@@ -61,13 +61,13 @@
          * Пример: <form class="mainForm" name="landingForm" onSubmit="createObject(); return false">
          */
 
-        // landing.createObjectFromLanding(config);
+        landing.createObjectFromLanding(config);
 
         /**
          * Функция ниже инициализирует лендинг из параметров URL.
          */
         function initLanding() {
-            // landing.initLanding(config)
+            landing.initLanding(config)
         }
 
         jQuery(document).ready(initLanding);
