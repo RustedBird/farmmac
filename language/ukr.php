@@ -267,7 +267,7 @@ $lang = [
                        <p>або написати нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
                 'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
@@ -288,7 +288,7 @@ $lang = [
                <p>або написати нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
-               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'Basic.pdf',
                 'fileblob' => base64_encode(file_get_contents('Basic.pdf')),
@@ -309,7 +309,7 @@ $lang = [
                <p>або написати нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
-               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'Large.pdf',
                 'fileblob' => base64_encode(file_get_contents('Large.pdf')),
@@ -330,7 +330,7 @@ $lang = [
                <p>або написати нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
-               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'XL.pdf',
                 'fileblob' => base64_encode(file_get_contents('XL.pdf')),
@@ -352,7 +352,7 @@ $lang = [
                        <p>або написати нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
         'Личный расчет окупаемости Pedrotti' => [
             'to' => [$email],
@@ -378,7 +378,7 @@ $lang = [
                        <p>або написати нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
                 'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
@@ -399,7 +399,7 @@ $lang = [
                        <p>або написати нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
         'Забронировал скидку при попытке ухода' => [
             'to' => [$email],
@@ -413,7 +413,7 @@ $lang = [
                        <p>або написати нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
     ],
     // ответы после отправки формы

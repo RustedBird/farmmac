@@ -270,7 +270,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
                 'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
@@ -283,7 +283,7 @@ $lang = [
             'subject' => 'Технические характеристики Pedrotti',
             'html_body' => "<p>Здравствуйте!</p>
                <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
-               <p>Вы запросили технические характеристики серии " . $comment . "</p>
+               <p>Вы запросили технические характеристики серии Basic</p>
                <p>Мы прикрепили их во вложении</p>
                <p>Вопросы Вы можете задать по номеру: </p>
                <p>(050) 404-44-70</p>
@@ -291,7 +291,7 @@ $lang = [
                <p>или написать нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'Basic.pdf',
                 'fileblob' => base64_encode(file_get_contents('Basic.pdf')),
@@ -305,7 +305,7 @@ $lang = [
             'subject' => 'Технические характеристики Pedrotti',
             'html_body' => "<p>Здравствуйте!</p>
                <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
-               <p>Вы запросили технические характеристики серии " . $comment . "</p>
+               <p>Вы запросили технические характеристики серии Large</p>
                <p>Мы прикрепили их во вложении</p>
                <p>Вопросы Вы можете задать по номеру: </p>
                <p>(050) 404-44-70</p>
@@ -313,7 +313,7 @@ $lang = [
                <p>или написать нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'Large.pdf',
                 'fileblob' => base64_encode(file_get_contents('Large.pdf')),
@@ -327,7 +327,7 @@ $lang = [
             'subject' => 'Технические характеристики Pedrotti',
             'html_body' => "<p>Здравствуйте!</p>
                <p>Спасибо, что захотели узнать о Pedrotti больше.</p>
-               <p>Вы запросили технические характеристики серии " . $comment . "</p>
+               <p>Вы запросили технические характеристики серии XL</p>
                <p>Мы прикрепили их во вложении</p>
                <p>Вопросы Вы можете задать по номеру: </p>
                <p>(050) 404-44-70</p>
@@ -335,7 +335,7 @@ $lang = [
                <p>или написать нам: </p>
                <p>secretary@farmmac.com.ua</p>
                <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-               <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+               <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'XL.pdf',
                 'fileblob' => base64_encode(file_get_contents('XL.pdf')),
@@ -358,7 +358,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
         'Личный расчет окупаемости Pedrotti' => [
             'to' => [$email],
@@ -383,7 +383,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
                 'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
                 'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
@@ -404,7 +404,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
         'Забронировал скидку при попытке ухода' => [
             'to' => [$email],
@@ -419,7 +419,7 @@ $lang = [
                        <p>или написать нам: </p>
                        <p>secretary@farmmac.com.ua</p>
                        <p>Фарм Мак Украина желает Вам хороших урожаев!</p>
-                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://pishiprosto.aksenovkk.beget.tech/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
+                       <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
         ],
     ],
     // ответы после отправки формы

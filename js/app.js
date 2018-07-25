@@ -2,7 +2,7 @@
 
     var date = new Date;
 
-    var cookieLang = getCookie('lang') ? getCookie('lang') : 'rus';
+    var cookieLang = getCookie('lang') || 'rus';
     $('.lang span[data-lang=' + cookieLang + ']').addClass('active');
     $('h1 .iconImg').attr('src', '../img/titleicon' + cookieLang + '.png');
     $('.sign').attr('src', '../img/titleicon' + cookieLang + '.png');
@@ -10,7 +10,7 @@
     // запуск показа модального окна на увод мышки вверх
     $(document).mouseleave(function (e) {
         var alertwin = getCookie("alertwin");
-        if (alertwin != "no" && e.clientY < 0) {
+        if (alertwin !== "no" && e.clientY < 0) {
             $('#modalLeave').modal('show');
             // записываем cookie на 1 день, с которого мы не показываем окно
             date.setDate(date.getDate() + 1);
