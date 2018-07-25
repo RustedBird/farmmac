@@ -269,8 +269,8 @@ $lang = [
                        <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
                        <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
-                'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
-                'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
+                'filename' => 'payback_calculation.pdf',
+                'fileblob' => base64_encode(file_get_contents('payback_calculation.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
         ],
@@ -380,8 +380,8 @@ $lang = [
                        <p>Фарм Мак Україна бажає Вам хороших врожаїв!</p>
                        <a href='http://farmmac.com.ua' target='_blank'><img src='http://zernosusharka.com/img/logo_blue.png' alt='logo'><br>farmmac.com.ua</a>",
             'attachments' => [[
-                'filename' => 'РАСЧЕТ ОКУПАЕМОСТИ.pdf',
-                'fileblob' => base64_encode(file_get_contents('РАСЧЕТ ОКУПАЕМОСТИ.pdf')),
+                'filename' => 'payback_calculation.pdf',
+                'fileblob' => base64_encode(file_get_contents('payback_calculation.pdf')),
                 'mimetype' => 'application/pdf'
             ]],
         ],
