@@ -69,6 +69,7 @@
         function initLanding() {
             // landing.initLanding(config)
         }
+
         jQuery(document).ready(initLanding);
 
         var $preloader = $('.preloader'),
@@ -118,6 +119,7 @@
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
+
     //Подбор модели зерносушилки
     function modelCalc() {
         var model,
@@ -350,13 +352,13 @@
     var $upBtn = $(".upButton");
     $upBtn.hide();
 
-        window.onscroll = function () {
-            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-                $upBtn.show(300);
-            } else {
-                $upBtn.hide(300);
-            }
-        };
+    window.onscroll = function () {
+        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+            $upBtn.show(300);
+        } else {
+            $upBtn.hide(300);
+        }
+    };
 
 
     $(document).on('click', '.upButton', function () {
@@ -368,5 +370,6 @@
     $('[data-target="#modalPdf"]').on('click', function () {
         $('#modalPdf .modal-body').html('<iframe src="https://drive.google.com/file/d/115ArEmrSga277KXZcd6sbDfiaPSh4fzu/preview"></iframe>');
     });
+
 
 })(jQuery);

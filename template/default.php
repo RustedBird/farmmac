@@ -55,7 +55,7 @@
         </div>
         <div class="formBlock col-md-10 offset-md-2">
             <div class="titleWrapper">
-                <p class="subTitle"><?= $lang['section1']['subTitle']?></p>
+                <p class="subTitle gradRed"><?= $lang['section1']['subTitle']?></p>
             </div>
             <p class="smallerText"><?= $lang['section1']['smallerText']?></p>
             <div class="blockWrapper">
@@ -101,27 +101,27 @@
         <h6 class="sectionTitle text-center"><?= $lang['section2']['title']?></h6>
         <div class="col-row">
             <div class="col-item">
-                <p class="redText"><span class="counter" data-count="9">9</span> <span class="addText"><?= $lang['section2']['counterPeriod']?></span></p>
+                <p class="redText"><span class="counter gradRed" data-count="9">9</span> <span class="addText gradRed"><?= $lang['section2']['counterPeriod']?></span></p>
                 <p class="subText botText"><?= $lang['section2']['counterPeriodBottomText']?></p>
             </div>
             <div class="col-item">
                 <p class="subText topText"><?= $lang['section2']['counterRegionTopText']?></p>
-                <p class="redText"><span class="counter" data-count="15">15</span> <span class="smallerText addText"><?= $lang['section2']['counterRegion']?></span>
+                <p class="redText"><span class="counter gradRed" data-count="15">15</span> <span class="smallerText addText gradRed"><?= $lang['section2']['counterRegion']?></span>
                 </p>
                 <p class="subText botText"><?= $lang['section2']['counterRegionBottomText']?></p>
             </div>
             <div class="col-item text-center">
-                <p class="redText"><span class="counter" data-count="80">80</span><span>+</span></p>
+                <p class="redText"><span class="counter gradRed" data-count="80">80</span><span class="addText gradRed">+</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterClientBottomText']?></p>
             </div>
             <div class="col-item">
                 <p class="subText topText"><?= $lang['section2']['counterYearTopText']?></p>
-                <p class="redText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="counter" data-count="1958">1958</span></p>
+                <p class="redText"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="counter gradRed" data-count="1958">1958</span></p>
                 <p class="subText botText"><?= $lang['section2']['counterYearBottomText']?></p>
             </div>
             <div class="col-item">
                 <p class="subText topText"><?= $lang['section2']['counterCountryTopText']?></p>
-                <p class="redText"><span class="counter" data-count="52">52</span> <span class="smallerText addText"><?= $lang['section2']['counterCountry']?></span>
+                <p class="redText"><span class="counter gradRed" data-count="52">52</span> <span class="smallerText addText gradRed"><?= $lang['section2']['counterCountry']?></span>
                 </p>
                 <p class="subText botText"><?= $lang['section2']['counterCountryBottomText']?></p>
             </div>
@@ -215,7 +215,7 @@
             </div>
         </div>
         <div class="lineContainer">
-            <h4 class="text-center"><?= $lang['section4']['condition']?></h4>
+            <h4 class="text-center gradRed"><?= $lang['section4']['condition']?></h4>
         </div>
     </div>
 </section>
@@ -228,7 +228,7 @@
         <div class="topRow">
             <div class="topItem">
                 <div class="titleWrapper">
-                    <p class="itemTitle"><?= $lang['section5']['basic']['title'] ?></p>
+                    <p class="itemTitle gradGrey"><?= $lang['section5']['basic']['title'] ?></p>
                 </div>
                 <img src="../img/basicimg.jpg" alt="basic">
                 <div class="description">
@@ -249,7 +249,7 @@
             </div>
             <div class="topItem">
                 <div class="titleWrapper">
-                    <p class="itemTitle"><?= $lang['section5']['large']['title'] ?></p>
+                    <p class="itemTitle gradGrey"><?= $lang['section5']['large']['title'] ?></p>
                 </div>
                 <img src="../img/largeimg.jpg" alt="large">
                 <div class="description">
@@ -270,7 +270,7 @@
             </div>
             <div class="topItem">
                 <div class="titleWrapper">
-                    <p class="itemTitle"><?= $lang['section5']['xl']['title'] ?></p>
+                    <p class="itemTitle gradGrey"><?= $lang['section5']['xl']['title'] ?></p>
                 </div>
                 <img src="../img/xlimg.jpg" alt="xl">
                 <div class="description">
@@ -315,7 +315,7 @@
         <h6 class="sectionTitle text-center"><?= $lang['section6']['title']?></h6>
         <div class="row">
             <div class="col-md-12 calcWrapper">
-                <h5 class="calcTitle"><?= $lang['section6']['calc1']['calcTitle']?></h5>
+                <h5 class="calcTitle gradRed"><?= $lang['section6']['calc1']['calcTitle']?></h5>
                 <form id="selectionForm" action="">
                     <div class="form-line">
                         <p class="paramName"><?= $lang['section6']['calc1']['removeMoisture']?></p>
@@ -341,7 +341,7 @@
                     <hr>
                 </form>
                 <p class="answer text-center"><?= $lang['section6']['calc1']['result']?></p>
-                <p id="resultTarget" class="result">BASIC 120</p>
+                <p id="resultTarget" class="result gradGrey">BASIC 120</p>
                 <button id="askPerformance" class="button" data-toggle="modal" data-target="#modalOrder" data-comment="Basic"><?= $lang['section6']['calc1']['button']?></button>
                 <p class="answer text-center smallNote"><?= $lang['section6']['calc1']['footnote']?></p>
             </div>
@@ -349,7 +349,7 @@
 
         <div class="row">
             <div class="col-md-12 calcWrapper">
-                <h5 class="calcTitle"><?= $lang['section6']['calc2']['calcTitle']?></h5>
+                <h5 class="calcTitle gradRed"><?= $lang['section6']['calc2']['calcTitle']?></h5>
                 <form id="calcForm" action="">
                     <div class="form-line noPadding">
                         <p class="paramName paramWide"><?= $lang['section6']['calc2']['forSeason']?></p>
@@ -570,7 +570,7 @@
                 </div>
             </div>
         </div>
-        <h4 class="subTitle text-center"><?= $lang['section10']['offer']?></h4>
+        <h4 class="subTitle gradRed text-center"><?= $lang['section10']['offer']?></h4>
         <button class="lookButton" data-toggle="modal" data-target="#modalLook" data-comment="Look"><?= $lang['section10']['button']?></button>
     </div>
 </section>
@@ -716,7 +716,7 @@
                 </div>
             </div>
         </div>
-        <h6 class="subTitle text-center"><?= $lang['section12']['subTitle']?></h6>
+        <h6 class="subTitle gradRed text-center"><?= $lang['section12']['subTitle']?></h6>
         <div class="col-md-8 offset-md-2 formBlock">
             <form class="ajaxForm" action="../process.php" method="post">
                 <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>">
@@ -765,7 +765,7 @@
             <div class="modal-body">
                 <form class="ajaxForm" action="../process.php" method="post">
                     <h6 class="formTitle text-center"><?= $lang['form']['characteristicFormTitle']?></h6>
-                    <p class="itemTitle">BASIC</p>
+                    <p class="itemTitle gradGrey">BASIC</p>
                     <p class="texthere"></p>
                     <input type="text" name="name" placeholder="<?= $lang['form']['placeholderName']?>" required>
                     <input type="tel" name="phone" placeholder="<?= $lang['form']['placeholderPhone']?>" required>
@@ -866,6 +866,13 @@
 
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<--!Gradient compability with IE -->
+<script>
+    if ((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+        $('.gradRed').css({'background': 'none', 'color': '#CC1D22'});
+        $('.gradGrey').css({'background': 'none', 'color': '#696969'});
+    }
+</script>
 <script type="text/javascript"
         src="http://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyCBezf_3Ccazeqo2Su_sLXJtIhvtjzu6nE"></script>
 <script type="text/javascript" src="../js/script.js?v=1.21"></script>

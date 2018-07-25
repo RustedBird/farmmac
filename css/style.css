@@ -81,7 +81,8 @@ body {
         bottom: 8%; } }
     @media screen and (max-width: 1023px) {
       body .upButton {
-        z-index: -9999; } }
+        z-index: -999;
+        opacity: 0; } }
   body .light {
     position: absolute;
     width: 100%;
@@ -588,6 +589,8 @@ body {
       -o-transition: all 2s;
       transition: all 2s;
       -webkit-font-smoothing: antialiased;
+      border: none;
+      border: none;
       display: inline-block;
       width: 360px;
       margin: 0 30px;
@@ -881,6 +884,8 @@ body {
         -o-transition: all 2s;
         transition: all 2s;
         -webkit-font-smoothing: antialiased;
+        border: none;
+        border: none;
         width: 80%;
         cursor: pointer; }
         .section1 .upperMenu form .callBack:focus {
@@ -1603,9 +1608,9 @@ body {
         font-size: 78px;
         font-weight: bold;
         display: inline-block;
-        background: linear-gradient(to bottom, #a40a0e 0%, #a40a0e 36%, #ea9d9e 54%, #dd0419 72%, #dd0419 100%);
+        /*background: linear-gradient(to bottom, rgba(164, 10, 14, 1) 0%, rgba(164, 10, 14, 1) 36%, rgba(234, 157, 158, 1) 54%, rgba(221, 4, 25, 1) 72%, rgba(221, 4, 25, 1) 100%);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;*/
         text-align: center;
         margin-bottom: 25px; }
         @media screen and (max-width: 1280px) {
@@ -1635,7 +1640,7 @@ body {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent; }
         .section2 .col-row .col-item .redText .smallerText {
-          font-size: 0.6em; }
+          font-size: 0.8em; }
       .section2 .col-row .col-item .subText {
         font-family: 'gothampro-bold', sans-serif;
         font-size: 24px;
@@ -2210,7 +2215,9 @@ body {
         -o-transition: all 2s;
         transition: all 2s;
         -webkit-font-smoothing: antialiased;
-        display: none; }
+        border: none;
+        display: none;
+        border: none; }
         .section5 .topRow .topItem .hidButton:focus {
           outline: none; }
         .section5 .topRow .topItem .hidButton:hover {
@@ -2276,6 +2283,7 @@ body {
         -o-transition: all 2s;
         transition: all 2s;
         -webkit-font-smoothing: antialiased;
+        border: none;
         width: 90%; }
         .section5 .topRow .topItem .button:focus {
           outline: none; }
@@ -2699,6 +2707,7 @@ body {
       -o-transition: all 2s;
       transition: all 2s;
       -webkit-font-smoothing: antialiased;
+      border: none;
       border: none;
       width: 350px; }
       .section6 .calcWrapper .button:focus {
@@ -3511,6 +3520,7 @@ body {
     -o-transition: all 2s;
     transition: all 2s;
     -webkit-font-smoothing: antialiased;
+    border: none;
     width: 365px; }
     .section10 .lookButton:focus {
       outline: none; }
