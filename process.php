@@ -21,20 +21,23 @@ if (!Valid::not_empty($name) || !Valid::not_empty($phone) || !Valid::phone($phon
 }
 
 if ($response['result']) {
-
+    $messageToTelegram = 'Клиент: ' . $name . PHP_EOL
+                        . 'Email: ' . $email . PHP_EOL
+                        . 'Телефон: ' . $phone . PHP_EOL
+                        . "Сообщение клиента:\r\n" . $comment;
     $request = [
         'to' => ["Фарм Мак Україна <aksenov.andrew@gmail.com>"],
         "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
         'subject' => 'Заявка с сайта Зерносушилки Pedrotti',
-        'html_body' => '<pre>Клиент: ' . $name . '</pre>'
-                     . '<pre>Email: ' . $email . '</pre>'
-                     . '<pre>Телефон: ' . $phone . '</pre>'
-                     . "<pre>Сообщение клиента:\r\n" . $comment . '</pre>'
+        'html_body' => 'Клиент: ' . $name . '<br>'
+                     . 'Email: ' . $email . '<br>'
+                     . 'Телефон: ' . $phone . '<br>'
+                     . "Сообщение клиента:\r\n" . $comment
     ];
 
     $newMessage = new Message();
     $newMessage->sendEmail($request, $lang);
-    $newMessage->sendTelegram($request['html_body']);
+    $newMessage->sendTelegram($messageToTelegram);
 
     if ($comment != 'Call me back') {
         // так как вопрос с формы может быть любым и должен записываться в CRM, мы отправлем статичный скрытый input[name='question']
