@@ -56,7 +56,6 @@ echo json_encode($response);
 
 class Message
 {
-
     protected $api_url = 'https://api.smtp2go.com/v3/email/send';
     protected $api_key = 'api-F1266D14298611E7A1B4F23C91C88F4E';
     protected $token = '561353685:AAFVHFTMIychcLnJzi1MziPwGYng3tYHlqI';
@@ -110,25 +109,22 @@ Class Valid
     /**
      * Checks if a field is not empty.
      *
+     * @param $value
      * @return  boolean
      */
     public static function not_empty($value)
     {
+        // Value cannot be NULL, FALSE, '', or an empty array
         if (in_array($value, array(NULL, FALSE, '', array()))) {
             return false;
         }
-        // Value cannot be NULL, FALSE, '', or an empty array
         return true;
     }
 
     /**
      * Check an email address for correct format.
      *
-     * @link  http://www.iamcal.com/publish/articles/php/parsing_email/
-     * @link  http://www.w3.org/Protocols/rfc822/
-     *
      * @param   string $email email address
-     * @param   boolean $strict strict RFC compatibility
      * @return  boolean
      */
     public static function email($email)
@@ -144,7 +140,6 @@ Class Valid
      * Checks if a phone number is valid.
      *
      * @param   string $number phone number to check
-     * @param   array $lengths
      * @return  boolean
      */
     public static function phone($number)

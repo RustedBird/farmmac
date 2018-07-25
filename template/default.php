@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Farm Mac Ukraine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Узнайте какая зерносушилка будет для Вас самая прибыльная и окупаемая, заказав расчет окупаемости">
+    <meta name="keywords" content="зерносушилка, мобильная зерносушилка, мобильная зерносушилка купить Украина,  мобільна зерносушарка, зерносушарка">
     <link rel="icon" href="../img/favicon.gif" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/slick.css">
