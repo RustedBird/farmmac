@@ -458,7 +458,7 @@
             <div class="iconItem">
                 <img class="topImg" src="../img/tools.png" alt="tools">
                 <p class="iconCaption sidePull"><?= $lang['section8']['item3'] ?></p>
-                <img class="bottomImg" src="../img/tools.png" alt="tools">
+                <img class="bottomImg sidePull" src="../img/tools.png" alt="tools">
             </div>
         </div>
 
@@ -466,7 +466,7 @@
             <div class="iconItem">
                 <img class="topImg" src="../img/star.png" alt="star">
                 <p class="iconCaption sidePull"><?= $lang['section8']['item4'] ?></p>
-                <img class="bottomImg" src="../img/star.png" alt="star">
+                <img class="bottomImg sidePull" src="../img/star.png" alt="star">
             </div>
             <div class="iconItem">
                 <img src="../img/book.png" alt="book">
@@ -866,7 +866,7 @@
 
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<--!Gradient compability with IE -->
+<--!Gradient compatibility with IE -->
 <script>
     if ((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
         $('.gradRed').css({'background': 'none', 'color': '#CC1D22'});

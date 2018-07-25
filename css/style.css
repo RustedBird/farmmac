@@ -3118,7 +3118,8 @@ body {
             font-size: 18px;
             line-height: 22px; } }
       .section8 .iconRow .iconItem .sidePull {
-        right: 40px; }
+        right: 40px;
+        position: relative; }
         @media screen and (max-width: 1440px) {
           .section8 .iconRow .iconItem .sidePull {
             right: initial; } }

@@ -2503,6 +2503,7 @@ body {
       }
       .sidePull {
         right: 40px;
+        position: relative;
         @media screen and (max-width: 1440px) {
           right: initial;
         }
