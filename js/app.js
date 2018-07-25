@@ -368,7 +368,7 @@
     });
 
     $('[data-target="#modalPdf"]').on('click', function () {
-        $('#modalPdf .modal-body').html('<iframe src="https://drive.google.com/file/d/115ArEmrSga277KXZcd6sbDfiaPSh4fzu/preview"></iframe>');
+        $('#modalPdf .modal-body').html('<iframe src="https://drive.google.com/file/d/1iemSjn2cMoNjij93Y8yw9ZX8i_zUD-A7/preview"></iframe>');
     });
 
 

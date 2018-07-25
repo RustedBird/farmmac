@@ -48,6 +48,7 @@ body {
     background: #ffffff;
     z-index: 0; }
   body .upButton {
+    display: none;
     width: 100px;
     height: 100px;
     position: fixed;
@@ -953,23 +954,23 @@ body {
         .section1 .container .mainTitleWrapper h1 .iconImg {
           content: '';
           position: absolute;
-          left: -69px;
-          top: -23px;
-          width: 200px;
-          height: 200px;
+          left: -229px;
+          top: -63px;
+          width: 300px;
+          height: 300px;
           background-size: cover; }
           @media screen and (max-width: 1600px) {
             .section1 .container .mainTitleWrapper h1 .iconImg {
-              left: -59px;
-              top: -18%;
-              width: 180px;
-              height: 180px; } }
+              left: -178px;
+              top: -43%;
+              width: 250px;
+              height: 250px; } }
           @media screen and (max-width: 1440px) {
             .section1 .container .mainTitleWrapper h1 .iconImg {
-              left: -75px;
-              top: -16%;
-              width: 140px;
-              height: 140px; } }
+              left: -157px;
+              top: -28%;
+              height: 180px;
+              width: 180px; } }
           @media screen and (max-width: 1023px) {
             .section1 .container .mainTitleWrapper h1 .iconImg {
               display: none; } }
@@ -1704,10 +1705,12 @@ body {
       .section2 .col-row .col-item:nth-of-type(2) {
         width: 202px; } }
     .section2 .col-row .col-item:nth-of-type(2) .topText {
-      text-align: left; }
+      text-align: left;
+      left: 9px;
+      top: -37px; }
       @media screen and (max-width: 1280px) {
         .section2 .col-row .col-item:nth-of-type(2) .topText {
-          top: -32px; } }
+          top: -25px; } }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(3) {
         width: 166px; } }
@@ -1724,7 +1727,7 @@ body {
       .section2 .col-row .col-item:nth-of-type(4) {
         width: 155px; } }
     .section2 .col-row .col-item:nth-of-type(4) .topText {
-      top: -14px;
+      top: -12px;
       text-align: left; }
     @media screen and (max-width: 1023px) {
       .section2 .col-row .col-item:nth-of-type(4) .botText {
@@ -3094,7 +3097,7 @@ body {
           display: none; } }
       .section8 .iconRow .iconItem .iconCaption {
         font-family: 'gothampro-medium', sans-serif;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 500;
         position: relative;
         margin: 16px 0; }
@@ -3103,10 +3106,11 @@ body {
             display: none; } }
         @media screen and (max-width: 1440px) {
           .section8 .iconRow .iconItem .iconCaption {
-            font-size: 16px; } }
+            font-size: 18px;
+            line-height: initial; } }
         @media screen and (max-width: 1280px) {
           .section8 .iconRow .iconItem .iconCaption {
-            font-size: 14px; } }
+            font-size: 16px; } }
         @media screen and (max-width: 1023px) {
           .section8 .iconRow .iconItem .iconCaption {
             font-size: 32px;
@@ -3925,7 +3929,7 @@ body {
       .section12 #accordion .card .card-body {
         font-family: 'gothampro', sans-serif;
         font-size: 18px;
-        font-weight: normal;
+        font-weight: bold;
         background: white; }
         @media screen and (max-width: 1440px) {
           .section12 #accordion .card .card-body {

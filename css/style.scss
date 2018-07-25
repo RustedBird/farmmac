@@ -394,7 +394,7 @@ body {
     z-index: 0;
   }
   .upButton {
-    //display: none;
+    display: none;
     width: 100px;
     height: 100px;
     position: fixed;
@@ -847,22 +847,22 @@ body {
         .iconImg {
           content: '';
           position: absolute;
-          left: -69px;
-          top: -23px;
-          width: 200px;
-          height: 200px;
+          left: -229px;
+          top: -63px;
+          width: 300px;
+          height: 300px;
           background-size: cover;
           @media screen and (max-width: 1600px) {
-            left: -59px;
-            top: -18%;
-            width: 180px;
-            height: 180px;
+            left: -178px;
+            top: -43%;
+            width: 250px;
+            height: 250px;
           }
           @media screen and (max-width: 1440px) {
-            left: -75px;
-            top: -16%;
-            width: 140px;
-            height: 140px;
+            left: -157px;
+            top: -28%;
+            height: 180px;
+            width: 180px;
           }
           @media screen and (max-width: 1023px) {
             display: none;
@@ -1211,8 +1211,10 @@ body {
       }
       .topText {
         text-align: left;
+        left: 9px;
+        top: -37px;
         @media screen and (max-width: 1280px) {
-          top: -32px;
+          top: -25px;
         }
       }
     }
@@ -1237,7 +1239,7 @@ body {
         width: 155px;
       }
       .topText {
-        top: -14px;
+        top: -12px;
         text-align: left;
       }
       .botText {
@@ -2475,7 +2477,7 @@ body {
       }
       .iconCaption {
         font-family: 'gothampro-medium', sans-serif;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 500;
         position: relative;
         margin: 16px 0;
@@ -2485,10 +2487,11 @@ body {
           }
         }
         @media screen and (max-width: 1440px) {
-          font-size: 16px;
+          font-size: 18px;
+          line-height: initial;
         }
         @media screen and (max-width: 1280px) {
-          font-size: 14px;
+          font-size: 16px;
         }
         @media screen and (max-width: 1023px) {
           font-size: 32px;
@@ -3063,7 +3066,7 @@ body {
       .card-body {
         font-family: 'gothampro', sans-serif;
         font-size: 18px;
-        font-weight: normal;
+        font-weight: bold;
         background: white;
         @media screen and (max-width: 1440px) {
           font-size: 16px;

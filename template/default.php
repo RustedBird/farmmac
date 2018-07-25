@@ -34,8 +34,8 @@
             <span data-lang="rus">rus</span>
         </p>
         <p class="phones">
-            <span>(050) 404-44-70</span><br>
-            <span>(096) 054-39-91</span>
+            <span>(050) 404 44 70</span><br>
+            <span>(096) 054 39 91</span>
         </p>
         <div class="button orderCall"><?= $lang['section1']['orderCall']?></div>
         <form class="ajaxForm" action="../process.php" method="post">
@@ -470,7 +470,7 @@
             </div>
             <div class="iconItem">
                 <img src="../img/book.png" alt="book">
-                <p class="iconCaption sidePull"><?= $lang['section8']['item5'] ?></p>
+                <p class="iconCaption"><?= $lang['section8']['item5'] ?></p>
             </div>
             <div class="iconItem">
                 <img src="../img/info.png" alt="info">
@@ -740,7 +740,7 @@
                 <h6 class="footTitle"><?= $lang['section13']['title']?></h6>
                 <p class="address"><?= $lang['section13']['address']?></p>
                 <p class="phone">
-                    (050) 40444 70<br>
+                    (050) 404 44 70<br>
                     (096) 054 39 91
                 </p>
 
@@ -834,7 +834,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <a href="../img/payback_calculation.pdf" target="_blank">Скачать</a>
+                <a href="../img/теплогенератор.pdf" target="_blank">Скачать</a>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
