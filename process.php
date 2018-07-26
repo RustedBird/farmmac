@@ -26,7 +26,7 @@ if ($response['result']) {
                         . 'Телефон: ' . $phone . PHP_EOL
                         . "Сообщение клиента:\r\n" . $comment;
     $request = [
-        'to' => ["Фарм Мак Україна <aksenov.andrew@gmail.com>"], //secretary@farmmac.com.ua
+        'to' => ["Фарм Мак Україна <secretary@farmmac.com.ua>"],
         "sender" => "Farm Mac Ukraine <noreply@farmmac.com.ua>",
         'subject' => 'Заявка с сайта Зерносушилки Pedrotti',
         'html_body' => 'Клиент: ' . $name . '<br>'
@@ -56,12 +56,10 @@ echo json_encode($response);
 
 class Message
 {
-    protected $api_url = 'https://api.smtp2go.com/v3/email/send';
-    protected $api_key = 'api-F1266D14298611E7A1B4F23C91C88F4E';
-    protected $token = '561353685:AAFVHFTMIychcLnJzi1MziPwGYng3tYHlqI';
-//    protected $token = '602132189:AAGKqeo0lAlNVQeCleHJM64d0uAt3M8cT_0';
-    protected $chat_id_list = [350981322];
-//    protected $chat_id_list = [508425896,674294241,482016306];
+    protected $api_url;
+    protected $api_key;
+    protected $token;
+    protected $chat_id_list;
 
     public function sendEmail($request, $lang)
     {
