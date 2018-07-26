@@ -918,7 +918,29 @@ body {
       display: flex;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+      position: relative; }
+      .section1 .container .mainTitleWrapper .iconImg {
+        position: absolute;
+        left: -14%;
+        top: -10%;
+        width: 300px;
+        height: 300px; }
+        @media screen and (max-width: 1600px) {
+          .section1 .container .mainTitleWrapper .iconImg {
+            left: -3%;
+            top: -8%;
+            width: 250px;
+            height: 250px; } }
+        @media screen and (max-width: 1440px) {
+          .section1 .container .mainTitleWrapper .iconImg {
+            left: 4%;
+            top: -16%;
+            height: 180px;
+            width: 180px; } }
+        @media screen and (max-width: 1023px) {
+          .section1 .container .mainTitleWrapper .iconImg {
+            display: none; } }
       .section1 .container .mainTitleWrapper h1 {
         font-family: 'gothampro-black', sans-serif;
         font-size: 60px;
@@ -951,29 +973,6 @@ body {
         @media screen and (max-width: 424px) {
           .section1 .container .mainTitleWrapper h1 {
             font-size: 32px; } }
-        .section1 .container .mainTitleWrapper h1 .iconImg {
-          content: '';
-          position: absolute;
-          left: -229px;
-          top: -63px;
-          width: 300px;
-          height: 300px;
-          background-size: cover; }
-          @media screen and (max-width: 1600px) {
-            .section1 .container .mainTitleWrapper h1 .iconImg {
-              left: -178px;
-              top: -43%;
-              width: 250px;
-              height: 250px; } }
-          @media screen and (max-width: 1440px) {
-            .section1 .container .mainTitleWrapper h1 .iconImg {
-              left: -157px;
-              top: -28%;
-              height: 180px;
-              width: 180px; } }
-          @media screen and (max-width: 1023px) {
-            .section1 .container .mainTitleWrapper h1 .iconImg {
-              display: none; } }
         .section1 .container .mainTitleWrapper h1 span {
           font-size: 72px;
           text-transform: uppercase; }

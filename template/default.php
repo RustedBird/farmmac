@@ -50,8 +50,8 @@
     </div>
     <div class="container">
         <div class="mainTitleWrapper">
+            <img class="iconImg" src="" alt="sign">
             <h1><?= $lang['section1']['title'] ?><br>
-                <img class="iconImg" src="" alt="">
                 <span><?= $lang['section1']['BrandName'] ?></span>
             </h1>
         </div>

@@ -812,6 +812,29 @@ body {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
+      position: relative;
+      .iconImg {
+        position: absolute;
+        left: -14%;
+        top: -10%;
+        width: 300px;
+        height: 300px;
+        @media screen and (max-width: 1600px) {
+          left: -3%;
+          top: -8%;
+          width: 250px;
+          height: 250px;
+        }
+        @media screen and (max-width: 1440px) {
+          left: 4%;
+          top: -16%;
+          height: 180px;
+          width: 180px;
+        }
+        @media screen and (max-width: 1023px) {
+          display: none;
+        }
+      }
       h1 {
         font-family: 'gothampro-black', sans-serif;
         font-size: 60px;
@@ -843,30 +866,6 @@ body {
         }
         @media screen and (max-width: 424px) {
           font-size: 32px;
-        }
-        .iconImg {
-          content: '';
-          position: absolute;
-          left: -229px;
-          top: -63px;
-          width: 300px;
-          height: 300px;
-          background-size: cover;
-          @media screen and (max-width: 1600px) {
-            left: -178px;
-            top: -43%;
-            width: 250px;
-            height: 250px;
-          }
-          @media screen and (max-width: 1440px) {
-            left: -157px;
-            top: -28%;
-            height: 180px;
-            width: 180px;
-          }
-          @media screen and (max-width: 1023px) {
-            display: none;
-          }
         }
         span {
           font-size: 72px;
