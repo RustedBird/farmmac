@@ -1305,10 +1305,10 @@ body {
       .section1 .sign {
         display: block; } }
   .section1 .mainImg {
-    width: 25%;
+    width: 26%;
     height: auto;
     position: absolute;
-    left: 19%;
+    left: 17%;
     bottom: 0;
     z-index: -1; }
     @media screen and (min-width: 2000px) {
@@ -1320,19 +1320,26 @@ body {
     @media screen and (min-width: 2500px) {
       .section1 .mainImg {
         width: 18%; } }
+    @media screen and (max-width: 1700px) {
+      .section1 .mainImg {
+        width: 30%;
+        left: 13%; } }
     @media screen and (max-width: 1440px) {
       .section1 .mainImg {
-        width: 21%;
-        left: 20%; } }
+        width: 22%;
+        left: 19%; } }
     @media screen and (max-width: 1380px) {
       .section1 .mainImg {
-        width: 22%; } }
+        width: 24%;
+        left: 17%; } }
     @media screen and (max-width: 1280px) {
       .section1 .mainImg {
-        width: 25%; } }
+        width: 27%;
+        left: 14%; } }
     @media screen and (max-width: 1200px) {
       .section1 .mainImg {
-        width: 26%; } }
+        width: 29%;
+        left: 14%; } }
     @media screen and (max-width: 1100px) {
       .section1 .mainImg {
         width: 28%;
