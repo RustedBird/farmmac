@@ -1022,14 +1022,19 @@ body {
     width: 26%;
     height: auto;
     position: absolute;
-    left: 17%;
+    left: 17.5%;
     bottom: 0;
     z-index: -1;
+    @media screen and (min-width: 2500px) {
+      width: 19%;
+      left: 26%;
+    }
     @media screen and (min-width: 2000px) {
       width: 22%;
     }
     @media screen and (min-width: 2200px) {
       width: 20%;
+      left: 25%;
     }
     @media screen and (min-width: 2500px) {
       width: 18%;
@@ -1037,6 +1042,10 @@ body {
     @media screen and (max-width: 1700px) {
       width: 30%;
       left: 13%;
+    }
+    @media screen and (max-width: 1600px) {
+      width: 28%;
+      left: 17%;
     }
     @media screen and (max-width: 1440px) {
       width: 22%;
