@@ -510,7 +510,7 @@
             <p class="howLong"><?= $lang['section9']['feedbacks']['howLong3']?></p>
         </div>
         <div class="sliderItem">
-            <img src="../img/custumerNoAvatar.jpg" alt="custumer3">
+            <img src="../img/custumer4.jpg" alt="custumer4">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem4']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem4']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['posItem4']?></p>
@@ -518,14 +518,14 @@
             <p class="howLong"><?= $lang['section9']['feedbacks']['howLong4']?></p>
         </div>
         <div class="sliderItem">
-            <img src="../img/custumerNoAvatar.jpg" alt="custumer3">
+            <img src="../img/custumerNoAvatar.jpg" alt="custumer5">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem5']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem5']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['fromItem5']?></p>
             <p class="howLong"><?= $lang['section9']['feedbacks']['howLong5']?></p>
         </div>
         <div class="sliderItem">
-            <img src="../img/custumerNoAvatar.jpg" alt="custumer3">
+            <img src="../img/custumerNoAvatar.jpg" alt="custumer6">
             <p class="reply"><?= $lang['section9']['feedbacks']['whatItem6']?></p>
             <p class="name"><?= $lang['section9']['feedbacks']['whoItem6']?></p>
             <p class="address"><?= $lang['section9']['feedbacks']['posItem6']?></p>
