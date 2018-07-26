@@ -50,7 +50,7 @@
     </div>
     <div class="container">
         <div class="mainTitleWrapper">
-            <img class="iconImg" src="" alt="sign">
+            <img class="iconImg" src="../img/titleicon<?= $lang['section1']['sign'] ?>.png" alt="sign">
             <h1><?= $lang['section1']['title'] ?><br>
                 <span><?= $lang['section1']['BrandName'] ?></span>
             </h1>
@@ -75,7 +75,7 @@
         </div>
     </div>
     <img class="mainImg" src="../img/maindrieralt.png" alt="drier">
-    <img class="sign" src="" alt="sign">
+    <img class="sign" src="../img/titleicon<?= $lang['section1']['sign'] ?>.png" alt="sign">
 </section>
 <!-- первый экран -->
 

@@ -4,8 +4,6 @@
 
     var cookieLang = getCookie('lang') || 'rus';
     $('.lang span[data-lang=' + cookieLang + ']').addClass('active');
-    $('.mainTitleWrapper .iconImg').attr('src', '../img/titleicon' + cookieLang + '.png');
-    $('.sign').attr('src', '../img/titleicon' + cookieLang + '.png');
 
     // запуск показа модального окна на увод мышки вверх
     $(document).mouseleave(function (e) {
